@@ -1,0 +1,1 @@
+# Loads processed CSV datasets for a given task. Validates schema. Returns List[Dict].

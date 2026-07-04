@@ -1,0 +1,1 @@
+# Loads and validates YAML config files. Sets global random seed. Returns config object.

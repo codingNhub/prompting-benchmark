@@ -1,0 +1,1 @@
+# Paired bootstrap resampling. Returns 95% confidence interval for any metric function.

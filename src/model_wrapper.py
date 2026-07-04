@@ -1,0 +1,1 @@
+# Sends prompts to Groq or Together.ai API. Handles rate limits and retries. Returns raw response.

@@ -1,0 +1,1 @@
+# Makes src/ a Python package — allows importing from src.module_name

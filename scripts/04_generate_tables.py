@@ -1,0 +1,1 @@
+# Reads results_master.csv and generates LaTeX tables for the paper. Never edit tables manually.

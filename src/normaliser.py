@@ -1,0 +1,1 @@
+# Applies 5 normalisation rules to extract clean labels from raw model responses.
