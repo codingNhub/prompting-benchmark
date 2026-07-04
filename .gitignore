@@ -1,3 +1,18 @@
+# ── PROJECT SPECIFIC ──────────────────────────────────
+# API keys — NEVER commit the real config
+configs/config.yaml
+
+# Large data — reproduced by running scripts
+datasets/raw/
+
+# Raw predictions — too large for GitHub
+outputs/predictions/raw/
+outputs/predictions/normalised/
+outputs/predictions/flagged/
+
+# Logs
+logs/*.log
+# ──────────────────────────────────────────────────────
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
