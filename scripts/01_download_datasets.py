@@ -137,5 +137,34 @@ download_dataset(
     text_column="sentence1",
     label_column="label"
 )
+# ── URDU SENTIMENT: Roman Urdu ────────────────────────────────
+download_dataset(
+    task_name="urdu_sentiment",
+    hf_name="community-datasets/roman_urdu",
+    hf_config=None,
+    split="train",
+    label_map={0: "Negative", 1: "Neutral", 2: "Positive"},
+    text_column="sentence",
+    label_column="sentiment"
+)
 
+# ── URDU NER: mirfan899/urdu-ner ──────────────────────────────
+download_dataset(
+    task_name="urdu_ner",
+    hf_name="mirfan899/urdu-ner",
+    hf_config=None,
+    split="train",
+    label_map={
+        0: "DATE",
+        1: "PERSON",
+        2: "ORGANIZATION",
+        3: "O",
+        4: "NUMBER",
+        5: "LOCATION",
+        6: "DESIGNATION",
+        7: "TIME"
+    },
+    text_column="tokens",
+    label_column="ner_tags"
+)
 print("All datasets downloaded successfully.")
