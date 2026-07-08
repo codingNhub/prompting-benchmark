@@ -11,8 +11,8 @@ experiment:
   n_examples: 100
 
 models:
-  primary: llama3-8b-8192
-  secondary: mixtral-8x7b-32768
+  primary: openai/gpt-oss-20b
+  secondary: qwen/qwen3.6-27b
   active: primary
 
 api:
