@@ -1,0 +1,145 @@
+metadata:
+  technique: few_shot
+  version: "1.0"
+  created: "2026-07-08"
+  description: >
+    Three examples shown before the question. Examples shuffled per
+    instance using random seed to prevent recency bias. The model
+    learns the expected output format from the examples.
+
+tasks:
+  sentiment:
+    examples:
+      - text: "I absolutely loved this movie, best I have seen in years."
+        label: "Positive"
+      - text: "The service was terrible and the food was cold."
+        label: "Negative"
+      - text: "The package arrived on the expected delivery date."
+        label: "Neutral"
+    template: |
+      Classify the sentiment of each sentence.
+      Choose exactly one label: Positive, Negative, or Neutral.
+
+      Sentence: {example_1_text}
+      Sentiment: {example_1_label}
+
+      Sentence: {example_2_text}
+      Sentiment: {example_2_label}
+
+      Sentence: {example_3_text}
+      Sentiment: {example_3_label}
+
+      Sentence: {input_text}
+      Sentiment:
+    expected_labels: ["Positive", "Negative", "Neutral"]
+    shuffle_examples: true
+
+  ner:
+    examples:
+      - text: "Imran Khan visited Lahore yesterday."
+        entities: "Imran Khan | PERSON\nLahore | LOCATION"
+      - text: "Google announced new products at their headquarters."
+        entities: "Google | ORGANIZATION"
+      - text: "Sara studied at Oxford University in England."
+        entities: "Sara | PERSON\nOxford University | ORGANIZATION\nEngland | LOCATION"
+    template: |
+      Identify all named entities in each sentence.
+      Format each entity as: ENTITY | TYPE
+      Types are: PERSON, ORGANIZATION, LOCATION, OTHER
+
+      Sentence: {example_1_text}
+      Entities: {example_1_entities}
+
+      Sentence: {example_2_text}
+      Entities: {example_2_entities}
+
+      Sentence: {example_3_text}
+      Entities: {example_3_entities}
+
+      Sentence: {input_text}
+      Entities:
+    expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
+    shuffle_examples: true
+
+  summarisation:
+    examples:
+      - text: "Scientists at NASA have discovered water ice beneath the surface of Mars using radar imaging from orbiting spacecraft."
+        summary: "NASA scientists have found water ice under Mars's surface using orbital radar."
+      - text: "The Pakistani government announced a new policy to reduce electricity costs for households consuming less than 200 units per month."
+        summary: "Pakistan introduced cheaper electricity rates for low-consumption households."
+      - text: "A new study shows that regular walking for thirty minutes daily reduces the risk of heart disease by up to forty percent."
+        summary: "Daily thirty-minute walks can cut heart disease risk by forty percent."
+    template: |
+      Write a one-sentence summary of each article.
+
+      Article: {example_1_text}
+      Summary: {example_1_summary}
+
+      Article: {example_2_text}
+      Summary: {example_2_summary}
+
+      Article: {example_3_text}
+      Summary: {example_3_summary}
+
+      Article: {input_text}
+      Summary:
+    expected_labels: []
+    shuffle_examples: true
+
+  qa:
+    examples:
+      - question: "What is the capital of France?"
+        answer: "Paris"
+      - question: "How many days are in a leap year?"
+        answer: "366"
+      - question: "Who wrote Romeo and Juliet?"
+        answer: "William Shakespeare"
+    template: |
+      Answer each question in as few words as possible.
+
+      Question: {example_1_question}
+      Answer: {example_1_answer}
+
+      Question: {example_2_question}
+      Answer: {example_2_answer}
+
+      Question: {example_3_question}
+      Answer: {example_3_answer}
+
+      Question: {input_text}
+      Answer:
+    expected_labels: []
+    shuffle_examples: true
+
+  paraphrase:
+    examples:
+      - sentence1: "The boy kicked the ball into the net."
+        sentence2: "The child scored a goal by kicking the ball."
+        label: "Paraphrase"
+      - sentence1: "The shop opens at nine in the morning."
+        sentence2: "The restaurant serves dinner until midnight."
+        label: "Not Paraphrase"
+      - sentence1: "She completed the assignment before the deadline."
+        sentence2: "She finished her work ahead of the due date."
+        label: "Paraphrase"
+    template: |
+      Do the two sentences express the same meaning?
+      Choose exactly one label: Paraphrase or Not Paraphrase.
+
+      Sentence 1: {example_1_sentence1}
+      Sentence 2: {example_1_sentence2}
+      Label: {example_1_label}
+
+      Sentence 1: {example_2_sentence1}
+      Sentence 2: {example_2_sentence2}
+      Label: {example_2_label}
+
+      Sentence 1: {example_3_sentence1}
+      Sentence 2: {example_3_sentence2}
+      Label: {example_3_label}
+
+      Sentence 1: {input_text}
+      Sentence 2: {input_text_2}
+      Label:
+    expected_labels: ["Paraphrase", "Not Paraphrase"]
+    shuffle_examples: true

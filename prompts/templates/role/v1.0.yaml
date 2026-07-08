@@ -1,0 +1,74 @@
+metadata:
+  technique: role
+  version: "1.0"
+  created: "2026-07-08"
+  description: >
+    Role prompting. Assigns a specific expert role before the
+    instruction. Shifts the model toward expert-level language
+    and domain-appropriate reasoning patterns.
+
+tasks:
+  sentiment:
+    template: |
+      You are a senior data annotation specialist with 10 years of
+      experience labelling social media text for sentiment analysis.
+      Your labels are always precise and consistent.
+
+      Classify the sentiment of the following sentence.
+      Choose exactly one label: Positive, Negative, or Neutral.
+
+      Sentence: {input_text}
+      Sentiment:
+    expected_labels: ["Positive", "Negative", "Neutral"]
+
+  ner:
+    template: |
+      You are an expert computational linguist specialising in
+      named entity recognition for news text. You identify entities
+      with high precision and never miss a named entity.
+
+      Identify all named entities in the following sentence.
+      Format each entity as: ENTITY | TYPE
+      Types are: PERSON, ORGANIZATION, LOCATION, OTHER
+
+      Sentence: {input_text}
+      Entities:
+    expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
+
+  summarisation:
+    template: |
+      You are a senior editor at a major news agency with 15 years
+      of experience writing concise, accurate headlines and summaries.
+      You always capture the essential point in as few words as possible.
+
+      Write a one-sentence summary of the following article.
+
+      Article: {input_text}
+      Summary:
+    expected_labels: []
+
+  qa:
+    template: |
+      You are a knowledgeable research assistant with expertise across
+      history, science, geography, and general knowledge. You give
+      precise, concise answers without unnecessary explanation.
+
+      Answer the following question in as few words as possible.
+
+      Question: {input_text}
+      Answer:
+    expected_labels: []
+
+  paraphrase:
+    template: |
+      You are a professional linguist specialising in semantic
+      equivalence and paraphrase detection. You carefully analyse
+      whether two sentences convey the same core meaning.
+
+      Do the following two sentences express the same meaning?
+      Choose exactly one label: Paraphrase or Not Paraphrase.
+
+      Sentence 1: {input_text}
+      Sentence 2: {input_text_2}
+      Label:
+    expected_labels: ["Paraphrase", "Not Paraphrase"]

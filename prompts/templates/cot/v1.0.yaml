@@ -1,0 +1,69 @@
+metadata:
+  technique: cot
+  version: "1.0"
+  created: "2026-07-08"
+  description: >
+    Zero-shot chain of thought. Adds "Let us think step by step"
+    before the answer slot. Forces the model to reason before
+    committing to a label. Grounded in Kojima et al. 2022.
+
+tasks:
+  sentiment:
+    template: |
+      Classify the sentiment of the following sentence.
+      Choose exactly one label: Positive, Negative, or Neutral.
+
+      Sentence: {input_text}
+
+      Let us think step by step.
+      Reasoning:
+      Final sentiment label:
+    expected_labels: ["Positive", "Negative", "Neutral"]
+
+  ner:
+    template: |
+      Identify all named entities in the following sentence.
+      For each entity found, write it as: ENTITY | TYPE
+      Types are: PERSON, ORGANIZATION, LOCATION, OTHER
+
+      Sentence: {input_text}
+
+      Let us think step by step.
+      Reasoning:
+      Entities:
+    expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
+
+  summarisation:
+    template: |
+      Write a one-sentence summary of the following article.
+
+      Article: {input_text}
+
+      Let us think step by step about the main point of this article.
+      Reasoning:
+      Summary:
+    expected_labels: []
+
+  qa:
+    template: |
+      Answer the following question.
+
+      Question: {input_text}
+
+      Let us think step by step.
+      Reasoning:
+      Answer:
+    expected_labels: []
+
+  paraphrase:
+    template: |
+      Do the following two sentences express the same meaning?
+      Choose exactly one label: Paraphrase or Not Paraphrase.
+
+      Sentence 1: {input_text}
+      Sentence 2: {input_text_2}
+
+      Let us think step by step.
+      Reasoning:
+      Label:
+    expected_labels: ["Paraphrase", "Not Paraphrase"]

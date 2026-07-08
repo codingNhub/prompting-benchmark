@@ -1,0 +1,183 @@
+metadata:
+  technique: few_shot_cot
+  version: "1.0"
+  created: "2026-07-08"
+  description: >
+    Few-shot combined with chain of thought. Three examples each
+    showing a full reasoning chain before the final answer. The
+    model learns both the output format and the reasoning pattern
+    from the examples. Most complex and most expensive technique.
+    Expected to perform best on complex tasks at highest token cost.
+
+tasks:
+  sentiment:
+    examples:
+      - text: "I absolutely loved this movie, best I have seen in years."
+        reasoning: "The words 'absolutely loved' and 'best' are strong positive expressions. The speaker is clearly happy and satisfied with their experience."
+        label: "Positive"
+      - text: "The service was terrible and the food arrived cold."
+        reasoning: "The word 'terrible' expresses strong disapproval. Cold food is a negative experience. Both observations point to dissatisfaction."
+        label: "Negative"
+      - text: "The package arrived on the expected delivery date."
+        reasoning: "This sentence states a fact about delivery timing. There is no emotional language, no approval or disapproval expressed. It is purely informational."
+        label: "Neutral"
+    template: |
+      Classify the sentiment of each sentence. Think through your
+      reasoning before giving the final label.
+
+      Sentence: {example_1_text}
+      Reasoning: {example_1_reasoning}
+      Sentiment: {example_1_label}
+
+      Sentence: {example_2_text}
+      Reasoning: {example_2_reasoning}
+      Sentiment: {example_2_label}
+
+      Sentence: {example_3_text}
+      Reasoning: {example_3_reasoning}
+      Sentiment: {example_3_label}
+
+      Sentence: {input_text}
+      Reasoning:
+      Sentiment:
+    expected_labels: ["Positive", "Negative", "Neutral"]
+    shuffle_examples: true
+
+  ner:
+    examples:
+      - text: "Imran Khan visited Lahore to meet with Punjab government officials."
+        reasoning: "Imran Khan is a person name. Lahore is a city in Pakistan so it is a location. Punjab government is an organization."
+        entities: "Imran Khan | PERSON\nLahore | LOCATION\nPunjab government | ORGANIZATION"
+      - text: "Google announced its new AI model at a conference in San Francisco."
+        reasoning: "Google is a technology company so it is an organization. San Francisco is a city in the United States so it is a location."
+        entities: "Google | ORGANIZATION\nSan Francisco | LOCATION"
+      - text: "Sara Ahmed studied medicine at Aga Khan University in Karachi."
+        reasoning: "Sara Ahmed is a person name. Aga Khan University is an educational institution so it is an organization. Karachi is a city in Pakistan so it is a location."
+        entities: "Sara Ahmed | PERSON\nAga Khan University | ORGANIZATION\nKarachi | LOCATION"
+    template: |
+      Identify named entities in each sentence. Think through your
+      reasoning before listing the entities.
+
+      Sentence: {example_1_text}
+      Reasoning: {example_1_reasoning}
+      Entities: {example_1_entities}
+
+      Sentence: {example_2_text}
+      Reasoning: {example_2_reasoning}
+      Entities: {example_2_entities}
+
+      Sentence: {example_3_text}
+      Reasoning: {example_3_reasoning}
+      Entities: {example_3_entities}
+
+      Sentence: {input_text}
+      Reasoning:
+      Entities:
+    expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
+    shuffle_examples: true
+
+  summarisation:
+    examples:
+      - text: "Scientists at NASA have discovered water ice beneath the surface of Mars using radar imaging from orbiting spacecraft, raising new possibilities for future human missions."
+        reasoning: "The main subject is NASA scientists. The key event is discovering water ice on Mars. The significance is implications for human missions. The summary should capture the discovery and its importance."
+        summary: "NASA scientists discovered water ice beneath Mars's surface, opening new possibilities for future human missions."
+      - text: "The Pakistani government announced a new policy to reduce electricity costs for households consuming less than 200 units per month starting from next quarter."
+        reasoning: "The main subject is the Pakistani government. The key event is a new electricity pricing policy. The target group is low-consumption households. The summary should capture who did what for whom."
+        summary: "Pakistan introduced reduced electricity rates for low-consumption households starting next quarter."
+      - text: "A new study published in Nature shows that regular walking for thirty minutes daily can reduce the risk of heart disease by up to forty percent in adults over fifty."
+        reasoning: "The main subject is a new medical study. The key finding is that walking reduces heart disease risk. The specific details are thirty minutes daily and forty percent reduction. The summary should capture the finding and the key numbers."
+        summary: "A new study found that thirty minutes of daily walking reduces heart disease risk by forty percent in adults over fifty."
+    template: |
+      Write a one-sentence summary of each article. Think through
+      the main point before writing your summary.
+
+      Article: {example_1_text}
+      Reasoning: {example_1_reasoning}
+      Summary: {example_1_summary}
+
+      Article: {example_2_text}
+      Reasoning: {example_2_reasoning}
+      Summary: {example_2_summary}
+
+      Article: {example_3_text}
+      Reasoning: {example_3_reasoning}
+      Summary: {example_3_summary}
+
+      Article: {input_text}
+      Reasoning:
+      Summary:
+    expected_labels: []
+    shuffle_examples: true
+
+  qa:
+    examples:
+      - question: "What is the capital of France?"
+        reasoning: "France is a country in Western Europe. Its capital city where the government is located is Paris."
+        answer: "Paris"
+      - question: "How many sides does a hexagon have?"
+        reasoning: "The prefix hex means six in Greek. A hexagon is a polygon with six sides."
+        answer: "Six"
+      - question: "Who wrote the play Romeo and Juliet?"
+        reasoning: "Romeo and Juliet is one of the most famous plays in English literature. It was written by the English playwright William Shakespeare in the late sixteenth century."
+        answer: "William Shakespeare"
+    template: |
+      Answer each question. Think through your reasoning before
+      giving the final answer.
+
+      Question: {example_1_question}
+      Reasoning: {example_1_reasoning}
+      Answer: {example_1_answer}
+
+      Question: {example_2_question}
+      Reasoning: {example_2_reasoning}
+      Answer: {example_2_answer}
+
+      Question: {example_3_question}
+      Reasoning: {example_3_reasoning}
+      Answer: {example_3_answer}
+
+      Question: {input_text}
+      Reasoning:
+      Answer:
+    expected_labels: []
+    shuffle_examples: true
+
+  paraphrase:
+    examples:
+      - sentence1: "The boy kicked the ball into the net."
+        sentence2: "The child scored a goal by kicking the ball."
+        reasoning: "Both sentences describe the same event — a young person kicking a ball into a goal. Boy and child refer to the same type of person. Kicked the ball into the net and scored a goal by kicking are different ways of saying the same thing."
+        label: "Paraphrase"
+      - sentence1: "The shop opens at nine in the morning."
+        sentence2: "The restaurant serves dinner until midnight."
+        reasoning: "The first sentence is about a shop opening time. The second sentence is about a restaurant closing time for dinner. These are completely different places, different times, and different events. The meanings are not the same."
+        label: "Not Paraphrase"
+      - sentence1: "She completed the assignment before the deadline."
+        sentence2: "She finished her work ahead of the due date."
+        reasoning: "Completed and finished mean the same thing. Assignment and work refer to the same thing. Before the deadline and ahead of the due date mean the same thing. Both sentences say the same thing in different words."
+        label: "Paraphrase"
+    template: |
+      Decide if the two sentences express the same meaning. Think
+      through your reasoning before giving the final label.
+
+      Sentence 1: {example_1_sentence1}
+      Sentence 2: {example_1_sentence2}
+      Reasoning: {example_1_reasoning}
+      Label: {example_1_label}
+
+      Sentence 1: {example_2_sentence1}
+      Sentence 2: {example_2_sentence2}
+      Reasoning: {example_2_reasoning}
+      Label: {example_2_label}
+
+      Sentence 1: {example_3_sentence1}
+      Sentence 2: {example_3_sentence2}
+      Reasoning: {example_3_reasoning}
+      Label: {example_3_label}
+
+      Sentence 1: {input_text}
+      Sentence 2: {input_text_2}
+      Reasoning:
+      Label:
+    expected_labels: ["Paraphrase", "Not Paraphrase"]
+    shuffle_examples: true

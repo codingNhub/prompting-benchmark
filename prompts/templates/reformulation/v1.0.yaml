@@ -1,0 +1,90 @@
+metadata:
+  technique: reformulation
+  version: "1.0"
+  created: "2026-07-08"
+  description: >
+    Instruction reformulation. Rewrites the instruction with explicit
+    constraints, positive phrasing, and exact output format specified.
+    No examples, no reasoning — just a more precise instruction than
+    zero-shot. Reduces ambiguity and parser failures.
+
+tasks:
+  sentiment:
+    template: |
+      Read the sentence below and classify its sentiment.
+
+      Rules:
+      - Use exactly one of these three labels: Positive, Negative, Neutral
+      - Positive means the sentence expresses approval, happiness, or satisfaction
+      - Negative means the sentence expresses disapproval, sadness, or dissatisfaction
+      - Neutral means the sentence is factual or expresses no clear emotion
+      - Write only the label, nothing else
+
+      Sentence: {input_text}
+      Sentiment:
+    expected_labels: ["Positive", "Negative", "Neutral"]
+
+  ner:
+    template: |
+      Read the sentence below and extract all named entities.
+
+      Rules:
+      - Write each entity on a new line in this exact format: ENTITY | TYPE
+      - Use only these types: PERSON, ORGANIZATION, LOCATION, OTHER
+      - PERSON means a real human name
+      - ORGANIZATION means a company, institution, or group
+      - LOCATION means a city, country, or geographical place
+      - OTHER means a named entity that does not fit the above types
+      - If no entities exist, write: NONE
+      - Do not include common nouns, only proper named entities
+
+      Sentence: {input_text}
+      Entities:
+    expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
+
+  summarisation:
+    template: |
+      Read the article below and write a summary.
+
+      Rules:
+      - Write exactly one sentence
+      - Your sentence must capture the single most important point
+      - Do not copy sentences from the article — use your own words
+      - Do not start with phrases like "This article" or "The text"
+      - Maximum 30 words
+
+      Article: {input_text}
+      Summary:
+    expected_labels: []
+
+  qa:
+    template: |
+      Read the question below and write the answer.
+
+      Rules:
+      - Answer in as few words as possible — ideally one to three words
+      - Write only the answer, no explanation
+      - Do not write full sentences
+      - If the answer is a name, write only the name
+      - If the answer is a number, write only the number
+
+      Question: {input_text}
+      Answer:
+    expected_labels: []
+
+  paraphrase:
+    template: |
+      Read the two sentences below and decide if they express the same meaning.
+
+      Rules:
+      - Write exactly one of these two labels: Paraphrase or Not Paraphrase
+      - Paraphrase means both sentences convey the same core meaning even if
+        the words or structure are different
+      - Not Paraphrase means the sentences have different meanings or one
+        contains information the other does not
+      - Write only the label, nothing else
+
+      Sentence 1: {input_text}
+      Sentence 2: {input_text_2}
+      Label:
+    expected_labels: ["Paraphrase", "Not Paraphrase"]
