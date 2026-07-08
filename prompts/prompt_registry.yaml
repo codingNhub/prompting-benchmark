@@ -1,0 +1,17 @@
+# Prompt Registry
+# Records which version of each technique is currently active.
+# Update version number if any prompt template changes.
+# All results in results_master.csv are traceable to these versions.
+
+active_versions:
+  zero_shot: "1.0"
+  few_shot: "1.0"
+  cot: "1.0"
+  role: "1.0"
+  reformulation: "1.0"
+  self_consistency: "1.0"
+  structured_output: "1.0"
+  few_shot_cot: "1.0"
+
+last_updated: "2026-07-08"
+notes: "Initial versions — all templates created for v1.0 study"
