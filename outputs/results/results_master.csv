@@ -1,0 +1,2 @@
+experiment_id,date,model,technique,task,language,token_input_avg,token_output_avg,prompt_version,random_seed,flagged_count,notes,macro_f1,accuracy
+zero_shot_sentiment_english_openai/gpt-oss-20b_20260710_214129,2026-07-10,openai/gpt-oss-20b,zero_shot,sentiment,english,120.1,94.7,1.0,42,1,,0.6895,0.697
