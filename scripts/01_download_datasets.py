@@ -34,6 +34,9 @@ def download_dataset(task_name, hf_name, hf_config, split, label_map, text_colum
     sampled = data.select(indices)
 
     # Build list of clean examples
+    
+    examples = []
+   # Build list of clean examples
     examples = []
     for item in sampled:
         raw_text = item[text_column]
@@ -51,13 +54,20 @@ def download_dataset(task_name, hf_name, hf_config, split, label_map, text_colum
             else:
                 label = str(raw_label).strip()
 
+        # Save second sentence for paraphrase task
+        text_2 = item.get("sentence2", None)
+        if text_2:
+            text_2 = text_2.strip()
+
         if text:
-            examples.append({
+            entry = {
                 "id": len(examples),
                 "text": text,
                 "label": label
-            })
-
+            }
+            if text_2:
+                entry["text_2"] = text_2
+            examples.append(entry)
     # Convert to DataFrame and save as CSV
     df = pd.DataFrame(examples)
     os.makedirs(f"datasets/processed/{task_name}", exist_ok=True)

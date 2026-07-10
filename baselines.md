@@ -47,3 +47,6 @@
 - mirfan899/urdu-ner: community dataset, annotation quality varies — acknowledge in limitations
 - Urdu NER baseline is approximate — treat with caution in comparison
 - paperswithcode.com shut down July 2025 — use Hugging Face leaderboards instead
+
+Label scheme confirmed from mirfan899/Urdu GitHub repository.
+Tags: DATE(0), PERSON(1), ORGANIZATION(2), O(3), NUMBER(4), LOCATION(5), DESIGNATION(6), TIME(7)
