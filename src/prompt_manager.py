@@ -52,25 +52,31 @@ def build_prompt(technique: str, task: str, example: dict,
         text_2 = example.get("text_2", "")
         prompt = prompt.replace("{input_text_2}", text_2)
 
-  # Fill in few-shot examples if needed
+# Fill in few-shot examples
     if few_shot_pool and "{example_1_text}" in prompt:
-        # Use fixed seed for deterministic selection
-        rng = random.Random(42)
-        demos = rng.sample(few_shot_pool, min(3, len(few_shot_pool)))
+        # For few_shot_cot — use YAML examples only, never the random pool
+        # This keeps sentence/reasoning/label coherent
+        if "examples" in template["tasks"][task]:
+            yaml_examples = template["tasks"][task]["examples"]
+            rng = random.Random(42)
+            demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
+            for i, demo in enumerate(demos, start=1):
+                n = str(i)
+                for key, value in demo.items():
+                    prompt = prompt.replace(f"{{example_{n}_{key}}}", str(value))
+        else:
+            # For few_shot — use random pool
+            rng = random.Random(42)
+            demos = rng.sample(few_shot_pool, min(3, len(few_shot_pool)))
+            for i, demo in enumerate(demos, start=1):
+                n = str(i)
+                prompt = prompt.replace(f"{{example_{n}_text}}", demo.get("text", ""))
+                prompt = prompt.replace(f"{{example_{n}_label}}", demo.get("label", ""))
+                prompt = prompt.replace(f"{{example_{n}_sentence1}}", demo.get("text", ""))
+                prompt = prompt.replace(f"{{example_{n}_sentence2}}", demo.get("text_2", ""))
 
-        for i, demo in enumerate(demos, start=1):
-            n = str(i)
-            prompt = prompt.replace(f"{{example_{n}_text}}", demo.get("text", ""))
-            prompt = prompt.replace(f"{{example_{n}_label}}", demo.get("label", ""))
-            prompt = prompt.replace(f"{{example_{n}_summary}}", demo.get("label", ""))
-            prompt = prompt.replace(f"{{example_{n}_answer}}", demo.get("label", ""))
-
-            # Paraphrase demos need sentence1 and sentence2
-            prompt = prompt.replace(f"{{example_{n}_sentence1}}", demo.get("text", ""))
-            prompt = prompt.replace(f"{{example_{n}_sentence2}}", demo.get("text_2", ""))
-
-    # Fill in hardcoded examples from template YAML for few_shot_cot
-    if "examples" in template["tasks"][task]:
+    # Fill YAML examples for techniques that use them (non-few-shot)
+    elif "examples" in template["tasks"][task] and "{example_1_text}" in prompt:
         yaml_examples = template["tasks"][task]["examples"]
         rng = random.Random(42)
         demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
