@@ -52,10 +52,11 @@ def build_prompt(technique: str, task: str, example: dict,
         text_2 = example.get("text_2", "")
         prompt = prompt.replace("{input_text_2}", text_2)
 
-    # Fill in few-shot examples if needed
+  # Fill in few-shot examples if needed
     if few_shot_pool and "{example_1_text}" in prompt:
-        # Pick 3 examples randomly — shuffle to prevent recency bias
-        demos = random.sample(few_shot_pool, min(3, len(few_shot_pool)))
+        # Use fixed seed for deterministic selection
+        rng = random.Random(42)
+        demos = rng.sample(few_shot_pool, min(3, len(few_shot_pool)))
 
         for i, demo in enumerate(demos, start=1):
             n = str(i)
@@ -71,8 +72,8 @@ def build_prompt(technique: str, task: str, example: dict,
     # Fill in hardcoded examples from template YAML for few_shot_cot
     if "examples" in template["tasks"][task]:
         yaml_examples = template["tasks"][task]["examples"]
-        demos = random.sample(yaml_examples, min(3, len(yaml_examples)))
-
+        rng = random.Random(42)
+        demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
         for i, demo in enumerate(demos, start=1):
             n = str(i)
             for key, value in demo.items():

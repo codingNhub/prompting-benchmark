@@ -33,20 +33,26 @@ def download_dataset(task_name, hf_name, hf_config, split, label_map, text_colum
     indices = random.sample(range(len(data)), n_samples)
     sampled = data.select(indices)
 
-    # Build list of clean examples
-    
-    examples = []
-   # Build list of clean examples
+# Build list of clean examples
     examples = []
     for item in sampled:
         raw_text = item[text_column]
+        raw_label = item[label_column]
 
+        # Handle list-type columns (NER tokens and tags)
         if isinstance(raw_text, list):
-            text = " ".join(raw_text)
-            label = item[label_column]
+            text = " ".join(str(t) for t in raw_text)
+
+            # Apply label_map to each tag in the list
+            if label_map and isinstance(raw_label, list):
+                label = [label_map.get(tag, "O") for tag in raw_label]
+            else:
+                label = raw_label
+
+        # Handle scalar columns (all other tasks)
         else:
             text = raw_text.strip()
-            raw_label = item[label_column]
+
             if label_map:
                 label = label_map[raw_label]
             elif isinstance(raw_label, dict):
@@ -68,14 +74,12 @@ def download_dataset(task_name, hf_name, hf_config, split, label_map, text_colum
             if text_2:
                 entry["text_2"] = text_2
             examples.append(entry)
-    # Convert to DataFrame and save as CSV
+# Convert to DataFrame and save as CSV
     df = pd.DataFrame(examples)
     os.makedirs(f"datasets/processed/{task_name}", exist_ok=True)
     df.to_csv(output_path, index=False, encoding="utf-8")
     print(f"Saved {len(df)} examples to {output_path}")
     return df
-
-
 # ── SENTIMENT: TweetEval ──────────────────────────────────────
 download_dataset(
     task_name="sentiment",

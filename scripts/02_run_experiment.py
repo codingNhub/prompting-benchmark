@@ -5,11 +5,11 @@ from src.experiment_runner import run_experiment
 
 print("Running first experiment: zero_shot + sentiment + english")
 result = run_experiment(
-    technique="zero_shot",
+    technique="cot",
     task="sentiment",
     language="english"
 )
 
 print("\n=== RESULTS ===")
 for key, value in result.items():
-    print(f"{key}: {value}")
+    print(f"{key}: {value}")    

@@ -1,2 +1,5 @@
 experiment_id,date,model,technique,task,language,token_input_avg,token_output_avg,prompt_version,random_seed,flagged_count,notes,macro_f1,accuracy
-zero_shot_sentiment_english_openai/gpt-oss-20b_20260710_214129,2026-07-10,openai/gpt-oss-20b,zero_shot,sentiment,english,120.1,94.7,1.0,42,1,,0.6895,0.697
+zero_shot_sentiment_english_openai/gpt-oss-20b_20260712_124856,7/12/2026,openai/gpt-oss-20b,zero_shot,sentiment,english,120.1,97.8,1,42,3,,0.6263,0.6289
+few_shot_sentiment_english_openai/gpt-oss-20b_20260712_125652,7/12/2026,openai/gpt-oss-20b,few_shot,sentiment,english,203.6,136.1,1,42,7,,0.7312,0.726
+,,,,,,,,,,,,,
+cot_sentiment_english_openai/gpt-oss-20b_20260712_174336,2026-07-12,openai/gpt-oss-20b,cot,sentiment,english,131.1,175.7,1.0,42,15,,0.6843,0.6824

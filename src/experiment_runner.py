@@ -1,13 +1,10 @@
-
-
 # Orchestrates a single experiment run — one technique on one task on one model.
 
 import os
 import csv
-import time
 import random
 from datetime import datetime
-
+from src.normaliser import normalise, normalise_ner, normalise_cot
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
 from src.prompt_manager import build_prompt
@@ -21,10 +18,6 @@ logger = get_logger("experiment_runner")
 
 def run_experiment(technique: str, task: str, language: str = "english",
                    config_path: str = "configs/config.yaml") -> dict:
-    """
-    Runs one complete experiment.
-    Returns a dict with all results and metrics.
-    """
 
     logger.info(f"Starting experiment — technique={technique}, task={task}, language={language}")
 
@@ -40,8 +33,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
     # Load dataset
     examples = load_dataset(task, language)
 
-    # For few-shot techniques — split into pool and test set
-    # Use first 20 as pool, rest as test (never overlap)
+    # Split pool and test set
     if technique in ("few_shot", "few_shot_cot"):
         pool = examples[:20]
         test_examples = examples[20:]
@@ -49,7 +41,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
         pool = None
         test_examples = examples
 
-    # Storage for predictions and references
+    # Storage
     predictions = []
     references = []
     raw_results = []
@@ -63,10 +55,8 @@ def run_experiment(technique: str, task: str, language: str = "english",
     # Run each example
     for example in test_examples:
         try:
-            # Build prompt
             prompt = build_prompt(technique, task, example, few_shot_pool=pool)
 
-            # Handle self-consistency — run n times and take majority vote
             if technique == "self_consistency":
                 n_samples = template["tasks"][task].get("n_samples", 3)
                 sc_config = dict(config)
@@ -82,7 +72,6 @@ def run_experiment(technique: str, task: str, language: str = "english",
                         votes.append(result["label"])
 
                 if votes:
-                    # Majority vote
                     prediction = max(set(votes), key=votes.count)
                     status = "ok"
                 else:
@@ -94,25 +83,26 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 output_tokens = 0
 
             else:
-                # Standard single call
                 response = call_model(prompt, config)
                 input_tokens = response["input_tokens"]
                 output_tokens = response["output_tokens"]
 
-                # Normalise response
                 if task in ("ner", "urdu_ner"):
                     entities = normalise_ner(response["raw_text"])
                     prediction = entities
                     status = "ok"
                 else:
-                    result = normalise(response["raw_text"], valid_labels)
+                    # Use CoT-specific normaliser for chain of thought
+                    if technique in ("cot", "few_shot_cot"):
+                        result = normalise_cot(response["raw_text"], valid_labels)
+                    else:
+                        result = normalise(response["raw_text"], valid_labels)
                     prediction = result["label"]
                     status = result["status"]
+                    # Save raw response for flagged examples
+                    if status != "ok":
+                        flagged_count += 1
 
-                if status != "ok":
-                    flagged_count += 1
-
-            # Store results
             predictions.append(prediction)
             references.append(example["label"])
 
@@ -122,6 +112,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 "reference": example["label"],
                 "prediction": str(prediction),
                 "status": status,
+                "raw_response": response["raw_text"] if "response" in dir() else "",
                 "input_tokens": input_tokens,
                 "output_tokens": output_tokens
             })
@@ -132,7 +123,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
             predictions.append(None)
             references.append(example["label"])
 
-    # Filter out failed predictions before computing metrics
+    # Filter failed predictions
     valid_pairs = [(p, r) for p, r in zip(predictions, references) if p is not None]
     if not valid_pairs:
         logger.error("No valid predictions — cannot compute metrics")
@@ -166,9 +157,19 @@ def run_experiment(technique: str, task: str, language: str = "english",
     }
     result_row.update(metrics)
 
-    # Save to results_master.csv
+    # Save summary to results_master.csv — only once
     save_results(result_row)
 
+    # Save individual predictions including raw responses
+    pred_path = f"outputs/predictions/{technique}_{task}_{language}.csv"
+    os.makedirs("outputs/predictions", exist_ok=True)
+    with open(pred_path, "w", newline="", encoding="utf-8") as f:
+        if raw_results:
+            writer = csv.DictWriter(f, fieldnames=raw_results[0].keys())
+            writer.writeheader()
+            writer.writerows(raw_results)
+
+    logger.info(f"Predictions saved to {pred_path}")
     logger.info(f"Experiment complete — {technique}/{task} — metrics: {metrics}")
     return result_row
 
