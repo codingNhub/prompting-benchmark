@@ -175,16 +175,38 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
 
 def save_results(result_row: dict):
-    """Appends one result row to results_master.csv."""
+    """Appends one result row to results_master.csv.
+    Always writes all columns — missing metrics get empty string.
+    This prevents column misalignment across different task types.
+    """
 
     os.makedirs("outputs/results", exist_ok=True)
     path = "outputs/results/results_master.csv"
+
+    # Define all possible columns — every row uses this fixed schema
+    all_columns = [
+        "experiment_id", "date", "model", "technique", "task", "language",
+        "token_input_avg", "token_output_avg", "prompt_version",
+        "random_seed", "flagged_count", "notes",
+        # Sentiment and paraphrase metrics
+        "macro_f1", "accuracy",
+        # NER metrics
+        "entity_f1", "precision", "recall",
+        # Summarisation metrics
+        "rouge_l", "bert_f1",
+        # QA metrics
+        "exact_match", "token_f1"
+    ]
+
+    # Fill missing columns with empty string
+    complete_row = {col: result_row.get(col, "") for col in all_columns}
+
     file_exists = os.path.exists(path)
 
     with open(path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=result_row.keys())
+        writer = csv.DictWriter(f, fieldnames=all_columns)
         if not file_exists:
             writer.writeheader()
-        writer.writerow(result_row)
+        writer.writerow(complete_row)
 
     logger.info(f"Result saved to {path}")
