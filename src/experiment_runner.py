@@ -87,11 +87,15 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 input_tokens = response["input_tokens"]
                 output_tokens = response["output_tokens"]
 
-                if task in ("ner", "urdu_ner"):
-                    entities = normalise_ner(response["raw_text"])
-                    prediction = entities
+            if task in ("ner", "urdu_ner"):
+                entities = normalise_ner(response["raw_text"])
+                prediction = entities
+                if entities:
                     status = "ok"
                 else:
+                    status = "failed"
+                    flagged_count += 1
+            else:
                     # Use CoT-specific normaliser for chain of thought
                     if technique in ("cot", "few_shot_cot"):
                         result = normalise_cot(response["raw_text"], valid_labels)
