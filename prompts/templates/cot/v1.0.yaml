@@ -17,7 +17,8 @@ tasks:
 
       Let us think step by step.
       Reasoning:
-      Final sentiment label:
+      Then give your final answer wrapped in <answer></answer> tags,
+      e.g. <answer>Positive</answer>.
     expected_labels: ["Positive", "Negative", "Neutral"]
 
   ner:
@@ -30,7 +31,8 @@ tasks:
 
       Let us think step by step.
       Reasoning:
-      Entities:
+      Then wrap your entire entity list (or NONE) in a single <answer></answer>
+      tag, e.g. <answer>Paris | LOCATION</answer>.
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
 
   summarisation:
@@ -41,7 +43,8 @@ tasks:
 
       Let us think step by step about the main point of this article.
       Reasoning:
-      Summary:
+      Then wrap your one-sentence summary in <answer></answer> tags,
+      e.g. <answer>Your summary here.</answer>.
     expected_labels: []
 
   qa:
@@ -52,7 +55,8 @@ tasks:
 
       Let us think step by step.
       Reasoning:
-      Answer:
+      Then wrap your final answer in <answer></answer> tags,
+      e.g. <answer>Paris</answer>.
     expected_labels: []
 
   paraphrase:
@@ -65,5 +69,6 @@ tasks:
 
       Let us think step by step.
       Reasoning:
-      Label:
+      Then give your final answer wrapped in <answer></answer> tags,
+      e.g. <answer>Paraphrase</answer>.
     expected_labels: ["Paraphrase", "Not Paraphrase"]

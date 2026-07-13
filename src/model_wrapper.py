@@ -18,6 +18,7 @@ def call_model(prompt, config):
     rate_limit_delay = config.get("api", {}).get("rate_limit_delay", 2.0)
     retry_attempts = config.get("api", {}).get("retry_attempts", 3)
     retry_wait = config.get("api", {}).get("retry_wait", 60)
+    seed = config.get("experiment", {}).get("random_seed", 42)
 
     # Set up API client
     if provider == "groq":
@@ -32,11 +33,17 @@ def call_model(prompt, config):
     # Try sending the prompt with retry logic
     for attempt in range(retry_attempts):
         try:
+            # Groq and Together both expose an OpenAI-compatible `seed` param for
+            # best-effort reproducibility at temperature 0. Neither provider
+            # guarantees bit-identical output across calls (backend routing/
+            # sharding can still vary) — this reduces non-determinism, it does
+            # not eliminate it.
             response = client.chat.completions.create(
                 model=model_name,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
-                max_tokens=max_tokens
+                max_tokens=max_tokens,
+                seed=seed
             )
 
             raw_text = response.choices[0].message.content

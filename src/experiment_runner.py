@@ -4,16 +4,20 @@ import os
 import csv
 import random
 from datetime import datetime
-from src.normaliser import normalise, normalise_ner, normalise_cot
+from collections import Counter
+from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
 from src.prompt_manager import build_prompt
 from src.model_wrapper import call_model
-from src.normaliser import normalise, normalise_ner
 from src.metric_engine import compute_metrics
 from src.logger import get_logger
 
 logger = get_logger("experiment_runner")
+
+# Sentinel prediction for parse failures. Guaranteed to never match a real
+# label/answer, so it is always scored as wrong instead of being dropped.
+PARSE_FAILURE_LABEL = "[PARSE_FAILURE]"
 
 
 def run_experiment(technique: str, task: str, language: str = "english",
@@ -33,13 +37,10 @@ def run_experiment(technique: str, task: str, language: str = "english",
     # Load dataset
     examples = load_dataset(task, language)
 
-    # Split pool and test set
-    if technique in ("few_shot", "few_shot_cot"):
-        pool = examples[:20]
-        test_examples = examples[20:]
-    else:
-        pool = None
-        test_examples = examples
+    # All 8 techniques evaluate on the same test set. Few-shot demos come
+    # from the hand-written YAML examples, not from this dataset pool.
+    pool = examples
+    test_examples = examples
 
     # Storage
     predictions = []
@@ -55,7 +56,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
     # Run each example
     for example in test_examples:
         try:
-            prompt = build_prompt(technique, task, example, few_shot_pool=pool)
+            prompt = build_prompt(technique, task, example, few_shot_pool=pool, example_id=example["id"])
 
             if technique == "self_consistency":
                 n_samples = template["tasks"][task].get("n_samples", 3)
@@ -64,23 +65,63 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 sc_config["inference"]["temperature_default"] = config.get(
                     "inference", {}).get("temperature_self_consistency", 0.7)
 
+                ner_task = task in ("ner", "urdu_ner")
                 votes = []
+                entity_samples = []
+                input_tokens_total = 0
+                output_tokens_total = 0
                 for _ in range(n_samples):
                     response = call_model(prompt, sc_config)
-                    result = normalise(response["raw_text"], valid_labels)
-                    if result["status"] == "ok":
-                        votes.append(result["label"])
+                    input_tokens_total += response["input_tokens"]
+                    output_tokens_total += response["output_tokens"]
+                    if ner_task:
+                        tag_result = normalise(response["raw_text"])
+                        if tag_result["status"] == "ok":
+                            entity_samples.append(set(parse_ner_entities(tag_result["label"])))
+                    else:
+                        result = normalise(response["raw_text"], valid_labels)
+                        if result["status"] == "ok":
+                            votes.append(result["label"])
 
-                if votes:
-                    prediction = max(set(votes), key=votes.count)
+                if ner_task:
+                    # An entity counts if it appears in a majority of the samples.
+                    entity_votes = Counter(e for sample in entity_samples for e in sample)
+                    majority = len(entity_samples) // 2 + 1
+                    prediction = [e for e, c in entity_votes.items() if c >= majority]
+                    status = "ok" if prediction else "failed"
+                    if status == "failed":
+                        flagged_count += 1
+                elif votes:
+                    # sorted() before max() ensures ties break alphabetically,
+                    # independent of Python's per-process set/hash ordering.
+                    prediction = max(sorted(set(votes)), key=votes.count)
                     status = "ok"
                 else:
                     prediction = None
                     status = "failed"
                     flagged_count += 1
 
-                input_tokens = 0
-                output_tokens = 0
+                input_tokens = input_tokens_total / n_samples
+                output_tokens = output_tokens_total / n_samples
+
+                if prediction is None:
+                    prediction = PARSE_FAILURE_LABEL
+
+                predictions.append(prediction)
+                references.append(example["label"])
+
+                raw_results.append({
+                    "id": example["id"],
+                    "text": example["text"][:100],
+                    "reference": example["label"],
+                    "prediction": str(prediction),
+                    "status": status,
+                    "raw_response": response["raw_text"] if "response" in dir() else "",
+                    "input_tokens": input_tokens,
+                    "output_tokens": output_tokens
+                })
+
+                continue
 
             else:
                 response = call_model(prompt, config)
@@ -88,7 +129,8 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 output_tokens = response["output_tokens"]
 
             if task in ("ner", "urdu_ner"):
-                entities = normalise_ner(response["raw_text"])
+                tag_result = normalise(response["raw_text"])
+                entities = parse_ner_entities(tag_result["label"]) if tag_result["status"] == "ok" else []
                 prediction = entities
                 if entities:
                     status = "ok"
@@ -96,16 +138,16 @@ def run_experiment(technique: str, task: str, language: str = "english",
                     status = "failed"
                     flagged_count += 1
             else:
-                    # Use CoT-specific normaliser for chain of thought
-                    if technique in ("cot", "few_shot_cot"):
-                        result = normalise_cot(response["raw_text"], valid_labels)
-                    else:
-                        result = normalise(response["raw_text"], valid_labels)
-                    prediction = result["label"]
-                    status = result["status"]
-                    # Save raw response for flagged examples
-                    if status != "ok":
-                        flagged_count += 1
+                # One universal normaliser for every technique — the <answer>
+                # tag contract makes CoT and non-CoT parsing identical.
+                result = normalise(response["raw_text"], valid_labels)
+                prediction = result["label"]
+                status = result["status"]
+                if status != "ok":
+                    flagged_count += 1
+
+            if prediction is None:
+                prediction = PARSE_FAILURE_LABEL
 
             predictions.append(prediction)
             references.append(example["label"])
@@ -124,19 +166,16 @@ def run_experiment(technique: str, task: str, language: str = "english",
         except Exception as e:
             logger.error(f"Error on example {example['id']}: {e}")
             flagged_count += 1
-            predictions.append(None)
+            predictions.append([] if task in ("ner", "urdu_ner") else PARSE_FAILURE_LABEL)
             references.append(example["label"])
 
-    # Filter failed predictions
-    valid_pairs = [(p, r) for p, r in zip(predictions, references) if p is not None]
-    if not valid_pairs:
-        logger.error("No valid predictions — cannot compute metrics")
+    # Parse failures are kept as wrong predictions, not dropped — see PARSE_FAILURE_LABEL.
+    if not predictions:
+        logger.error("No predictions — cannot compute metrics")
         return {}
 
-    valid_preds, valid_refs = zip(*valid_pairs)
-
     # Compute metrics
-    metrics = compute_metrics(task, list(valid_preds), list(valid_refs))
+    metrics = compute_metrics(task, predictions, references)
 
     # Token averages
     token_inputs = [r["input_tokens"] for r in raw_results if r["input_tokens"] > 0]
@@ -155,6 +194,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
         "token_input_avg": round(avg_input, 1),
         "token_output_avg": round(avg_output, 1),
         "prompt_version": "1.0",
+        "normaliser_version": NORMALISER_VERSION,
         "random_seed": seed,
         "flagged_count": flagged_count,
         "notes": ""
@@ -190,7 +230,7 @@ def save_results(result_row: dict):
     # Define all possible columns — every row uses this fixed schema
     all_columns = [
         "experiment_id", "date", "model", "technique", "task", "language",
-        "token_input_avg", "token_output_avg", "prompt_version",
+        "token_input_avg", "token_output_avg", "prompt_version", "normaliser_version",
         "random_seed", "flagged_count", "notes",
         # Sentiment and paraphrase metrics
         "macro_f1", "accuracy",

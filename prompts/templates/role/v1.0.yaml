@@ -16,9 +16,9 @@ tasks:
 
       Classify the sentiment of the following sentence.
       Choose exactly one label: Positive, Negative, or Neutral.
+      Wrap your final answer in <answer></answer> tags, e.g. <answer>Positive</answer>.
 
       Sentence: {input_text}
-      Sentiment:
     expected_labels: ["Positive", "Negative", "Neutral"]
 
   ner:
@@ -30,9 +30,9 @@ tasks:
       Identify all named entities in the following sentence.
       Format each entity as: ENTITY | TYPE
       Types are: PERSON, ORGANIZATION, LOCATION, OTHER
+      Wrap your entire entity list (or NONE) in a single <answer></answer> tag.
 
       Sentence: {input_text}
-      Entities:
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
 
   summarisation:
@@ -42,9 +42,9 @@ tasks:
       You always capture the essential point in as few words as possible.
 
       Write a one-sentence summary of the following article.
+      Wrap your summary in <answer></answer> tags.
 
       Article: {input_text}
-      Summary:
     expected_labels: []
 
   qa:
@@ -54,9 +54,9 @@ tasks:
       precise, concise answers without unnecessary explanation.
 
       Answer the following question in as few words as possible.
+      Wrap your answer in <answer></answer> tags, e.g. <answer>Paris</answer>.
 
       Question: {input_text}
-      Answer:
     expected_labels: []
 
   paraphrase:
@@ -67,8 +67,8 @@ tasks:
 
       Do the following two sentences express the same meaning?
       Choose exactly one label: Paraphrase or Not Paraphrase.
+      Wrap your final answer in <answer></answer> tags, e.g. <answer>Paraphrase</answer>.
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}
-      Label:
     expected_labels: ["Paraphrase", "Not Paraphrase"]

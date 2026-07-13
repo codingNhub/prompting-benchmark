@@ -14,12 +14,12 @@ tasks:
       Read the sentence below and classify its sentiment.
       Use this exact format and nothing else:
 
-      Sentiment: [POSITIVE or NEGATIVE or NEUTRAL]
+      Sentiment: <answer>POSITIVE or NEGATIVE or NEUTRAL</answer>
       Confidence: [HIGH or MEDIUM or LOW]
       Reason: [one phrase explaining why]
 
       Sentence: {input_text}
-    expected_labels: ["POSITIVE", "NEGATIVE", "NEUTRAL"]
+    expected_labels: ["Positive", "Negative", "Neutral"]
 
   ner:
     template: |
@@ -30,9 +30,9 @@ tasks:
 
       Valid types: PERSON, ORGANIZATION, LOCATION, OTHER
       If no entities found, write: NONE
+      Wrap your entire entity list (or NONE) in a single <answer></answer> tag.
 
       Sentence: {input_text}
-      Entities:
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
 
   summarisation:
@@ -41,7 +41,7 @@ tasks:
 
       Main topic: [one or two words]
       Key event: [one sentence describing what happened]
-      Summary: [one concise sentence capturing the full main point]
+      Summary: <answer>[one concise sentence capturing the full main point]</answer>
 
       Article: {input_text}
     expected_labels: []
@@ -51,7 +51,7 @@ tasks:
       Read the question below and complete this template exactly:
 
       Question type: [PERSON or PLACE or DATE or NUMBER or OTHER]
-      Answer: [as few words as possible]
+      Answer: <answer>[as few words as possible]</answer>
 
       Question: {input_text}
     expected_labels: []
@@ -62,8 +62,8 @@ tasks:
 
       Shared meaning: [yes or no]
       Key difference: [describe the difference or write NONE if same meaning]
-      Label: [PARAPHRASE or NOT PARAPHRASE]
+      Label: <answer>PARAPHRASE or NOT PARAPHRASE</answer>
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}
-    expected_labels: ["PARAPHRASE", "NOT PARAPHRASE"]
+    expected_labels: ["Paraphrase", "Not Paraphrase"]

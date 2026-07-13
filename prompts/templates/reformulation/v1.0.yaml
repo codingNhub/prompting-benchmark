@@ -18,10 +18,10 @@ tasks:
       - Positive means the sentence expresses approval, happiness, or satisfaction
       - Negative means the sentence expresses disapproval, sadness, or dissatisfaction
       - Neutral means the sentence is factual or expresses no clear emotion
-      - Write only the label, nothing else
+      - Wrap the label in <answer></answer> tags, e.g. <answer>Positive</answer>
+      - Write nothing outside the tags
 
       Sentence: {input_text}
-      Sentiment:
     expected_labels: ["Positive", "Negative", "Neutral"]
 
   ner:
@@ -37,9 +37,9 @@ tasks:
       - OTHER means a named entity that does not fit the above types
       - If no entities exist, write: NONE
       - Do not include common nouns, only proper named entities
+      - Wrap the entire entity list (or NONE) in a single <answer></answer> tag
 
       Sentence: {input_text}
-      Entities:
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
 
   summarisation:
@@ -52,9 +52,9 @@ tasks:
       - Do not copy sentences from the article — use your own words
       - Do not start with phrases like "This article" or "The text"
       - Maximum 30 words
+      - Wrap the summary in <answer></answer> tags
 
       Article: {input_text}
-      Summary:
     expected_labels: []
 
   qa:
@@ -67,9 +67,9 @@ tasks:
       - Do not write full sentences
       - If the answer is a name, write only the name
       - If the answer is a number, write only the number
+      - Wrap the answer in <answer></answer> tags, e.g. <answer>Paris</answer>
 
       Question: {input_text}
-      Answer:
     expected_labels: []
 
   paraphrase:
@@ -82,9 +82,8 @@ tasks:
         the words or structure are different
       - Not Paraphrase means the sentences have different meanings or one
         contains information the other does not
-      - Write only the label, nothing else
+      - Wrap the label in <answer></answer> tags, e.g. <answer>Paraphrase</answer>
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}
-      Label:
     expected_labels: ["Paraphrase", "Not Paraphrase"]

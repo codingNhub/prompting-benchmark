@@ -30,7 +30,8 @@ def load_template(technique: str, version: str = "1.0") -> dict:
 
 
 def build_prompt(technique: str, task: str, example: dict,
-                 few_shot_pool: list = None, version: str = "1.0") -> str:
+                 few_shot_pool: list = None, version: str = "1.0",
+                 example_id: int = 0) -> str:
     """
     Builds a complete prompt string from template + example data.
 
@@ -58,7 +59,7 @@ def build_prompt(technique: str, task: str, example: dict,
         # This keeps sentence/reasoning/label coherent
         if "examples" in template["tasks"][task]:
             yaml_examples = template["tasks"][task]["examples"]
-            rng = random.Random(42)
+            rng = random.Random(42 + example_id)
             demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
             for i, demo in enumerate(demos, start=1):
                 n = str(i)
@@ -66,7 +67,7 @@ def build_prompt(technique: str, task: str, example: dict,
                     prompt = prompt.replace(f"{{example_{n}_{key}}}", str(value))
         else:
             # For few_shot — use random pool
-            rng = random.Random(42)
+            rng = random.Random(42 + example_id)
             demos = rng.sample(few_shot_pool, min(3, len(few_shot_pool)))
             for i, demo in enumerate(demos, start=1):
                 n = str(i)
@@ -78,7 +79,7 @@ def build_prompt(technique: str, task: str, example: dict,
     # Fill YAML examples for techniques that use them (non-few-shot)
     elif "examples" in template["tasks"][task] and "{example_1_text}" in prompt:
         yaml_examples = template["tasks"][task]["examples"]
-        rng = random.Random(42)
+        rng = random.Random(42 + example_id)
         demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
         for i, demo in enumerate(demos, start=1):
             n = str(i)

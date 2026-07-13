@@ -3,94 +3,63 @@ from src.logger import get_logger
 
 logger = get_logger("normaliser")
 
+# Bump this whenever normalise()'s extraction logic changes, so results_master.csv
+# can distinguish predictions parsed under different normaliser behavior.
+NORMALISER_VERSION = "2.0"
 
-def normalise(raw_text: str, valid_labels: list) -> dict:
+ANSWER_TAG_RE = re.compile(r"<answer>(.*?)</answer>", re.DOTALL | re.IGNORECASE)
+
+
+def normalise(raw_text: str, valid_labels: list = None) -> dict:
     """
-    Applies 5 normalisation rules to extract clean labels from raw model responses.
-    Returns a dict with label, status (ok/ambiguous/failed), and raw response.
+    Universal normaliser for every technique and task. Extracts the content
+    between <answer> and </answer> tags — the structured-output contract
+    every prompt template now requires. Works identically whether or not
+    reasoning text precedes the tag, so no technique-specific branching
+    is needed. A missing tag is a parse failure, not a guess.
+
+    valid_labels: for closed-label tasks (sentiment, paraphrase, NER types),
+    the extracted content must exactly match one label (case-insensitive).
+    Leave as None for free-text tasks (summarisation, qa) or for NER's
+    raw entity-list content, where the extracted text is returned as-is.
     """
     if not raw_text or not raw_text.strip():
         return {"label": None, "status": "failed", "raw": raw_text}
 
-    text = raw_text.lower().strip()
+    match = ANSWER_TAG_RE.search(raw_text)
+    if not match:
+        logger.warning(f"Parse failure — no <answer> tag in: {raw_text[:80]}")
+        return {"label": None, "status": "failed", "raw": raw_text}
 
-    # Sort labels by length descending — check longer labels first
-    # This prevents "Paraphrase" matching inside "Not Paraphrase"
-    sorted_labels = sorted(valid_labels, key=len, reverse=True)
+    content = match.group(1).strip()
+    if not content:
+        logger.warning(f"Parse failure — empty <answer> tag in: {raw_text[:80]}")
+        return {"label": None, "status": "failed", "raw": raw_text}
 
-    found = []
-    matched_positions = []
-
-    for label in sorted_labels:
-        pattern = r'\b' + re.escape(label.lower()) + r'\b'
-        match = re.search(pattern, text)
-        if match:
-            start, end = match.start(), match.end()
-            overlap = any(s < end and start < e for s, e in matched_positions)
-            if not overlap:
-                found.append(label)
-                matched_positions.append((start, end))
-
-    if len(found) > 1:
-        logger.warning(f"Ambiguous response — found {found} in: {raw_text[:80]}")
+    if valid_labels:
+        content_lower = content.lower()
+        exact = [label for label in valid_labels if label.lower() == content_lower]
+        if len(exact) == 1:
+            logger.info(f"Normalised: '{exact[0]}' from <answer> tag")
+            return {"label": exact[0], "status": "ok", "raw": raw_text}
+        logger.warning(f"Ambiguous <answer> content '{content}' — expected one of {valid_labels}")
         return {"label": None, "status": "ambiguous", "raw": raw_text}
 
-    if len(found) == 0:
-        logger.warning(f"Parse failure — no label found in: {raw_text[:80]}")
-        return {"label": None, "status": "failed", "raw": raw_text}
-
-    logger.info(f"Normalised: '{found[0]}' from response: {raw_text[:60]}")
-    return {"label": found[0], "status": "ok", "raw": raw_text}
+    logger.info(f"Normalised free-text answer from <answer> tag: {content[:60]}")
+    return {"label": content, "status": "ok", "raw": raw_text}
 
 
-def normalise_cot(raw_text: str, valid_labels: list) -> dict:
+def parse_ner_entities(text: str) -> list:
     """
-    Extracts label from CoT responses by looking at the final lines only.
-    CoT reasoning contains all label words so full-text search fails.
-    Searches from bottom up and returns first line with exactly one label.
-    """
-    if not raw_text or not raw_text.strip():
-        return {"label": None, "status": "failed", "raw": raw_text}
-
-    lines = [l.strip() for l in raw_text.strip().split("\n") if l.strip()]
-
-    for line in reversed(lines):
-        line_lower = line.lower()
-        sorted_labels = sorted(valid_labels, key=len, reverse=True)
-        found = []
-        matched_positions = []
-
-        for label in sorted_labels:
-            pattern = r'\b' + re.escape(label.lower()) + r'\b'
-            match = re.search(pattern, line_lower)
-            if match:
-                start, end = match.start(), match.end()
-                overlap = any(s < end and start < e for s, e in matched_positions)
-                if not overlap:
-                    found.append(label)
-                    matched_positions.append((start, end))
-
-        if len(found) == 1:
-            logger.info(f"CoT normalised: '{found[0]}' from last lines")
-            return {"label": found[0], "status": "ok", "raw": raw_text}
-
-    # If nothing found in last lines, fall back to full text search
-    return normalise(raw_text, valid_labels)
-
-
-def normalise_ner(raw_text: str) -> list:
-    """
-    Parses NER model output in ENTITY | TYPE format.
-    Returns a list of (entity, type) tuples.
+    Deserialises ENTITY | TYPE lines — already extracted from an <answer>
+    tag by normalise() — into a list of (entity, type) tuples.
     Silently skips malformed lines.
     """
-    if not raw_text or not raw_text.strip():
+    if not text or not text.strip() or text.strip().upper() == "NONE":
         return []
 
     entities = []
-    lines = raw_text.strip().split("\n")
-
-    for line in lines:
+    for line in text.strip().split("\n"):
         line = line.strip()
         if not line or line.upper() == "NONE":
             continue

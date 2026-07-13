@@ -87,8 +87,14 @@ def compute_summarisation(predictions: list, references: list) -> dict:
 def compute_qa(predictions: list, references: list) -> dict:
     """Exact match and token-level F1 for QA."""
 
+    import re
+    import string
+
     def normalize(text):
-        return text.lower().strip()
+        text = text.lower()
+        text = re.sub(r"\b(a|an|the)\b", " ", text)
+        text = "".join(ch for ch in text if ch not in string.punctuation)
+        return " ".join(text.split())
 
     def token_f1(pred, ref):
         pred_tokens = normalize(pred).split()

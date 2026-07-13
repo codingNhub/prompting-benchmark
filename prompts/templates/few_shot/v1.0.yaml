@@ -19,18 +19,18 @@ tasks:
     template: |
       Classify the sentiment of each sentence.
       Choose exactly one label: Positive, Negative, or Neutral.
+      Wrap your final answer in <answer></answer> tags, e.g. <answer>Positive</answer>.
 
       Sentence: {example_1_text}
-      Sentiment: {example_1_label}
+      Sentiment: <answer>{example_1_label}</answer>
 
       Sentence: {example_2_text}
-      Sentiment: {example_2_label}
+      Sentiment: <answer>{example_2_label}</answer>
 
       Sentence: {example_3_text}
-      Sentiment: {example_3_label}
+      Sentiment: <answer>{example_3_label}</answer>
 
       Sentence: {input_text}
-      Sentiment:
     expected_labels: ["Positive", "Negative", "Neutral"]
     shuffle_examples: true
 
@@ -46,18 +46,18 @@ tasks:
       Identify all named entities in each sentence.
       Format each entity as: ENTITY | TYPE
       Types are: PERSON, ORGANIZATION, LOCATION, OTHER
+      Wrap your entire entity list (or NONE) in a single <answer></answer> tag.
 
       Sentence: {example_1_text}
-      Entities: {example_1_entities}
+      Entities: <answer>{example_1_entities}</answer>
 
       Sentence: {example_2_text}
-      Entities: {example_2_entities}
+      Entities: <answer>{example_2_entities}</answer>
 
       Sentence: {example_3_text}
-      Entities: {example_3_entities}
+      Entities: <answer>{example_3_entities}</answer>
 
       Sentence: {input_text}
-      Entities:
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
     shuffle_examples: true
 
@@ -71,18 +71,18 @@ tasks:
         summary: "Daily thirty-minute walks can cut heart disease risk by forty percent."
     template: |
       Write a one-sentence summary of each article.
+      Wrap your summary in <answer></answer> tags.
 
       Article: {example_1_text}
-      Summary: {example_1_summary}
+      Summary: <answer>{example_1_summary}</answer>
 
       Article: {example_2_text}
-      Summary: {example_2_summary}
+      Summary: <answer>{example_2_summary}</answer>
 
       Article: {example_3_text}
-      Summary: {example_3_summary}
+      Summary: <answer>{example_3_summary}</answer>
 
       Article: {input_text}
-      Summary:
     expected_labels: []
     shuffle_examples: true
 
@@ -96,18 +96,18 @@ tasks:
         answer: "William Shakespeare"
     template: |
       Answer each question in as few words as possible.
+      Wrap your answer in <answer></answer> tags.
 
       Question: {example_1_question}
-      Answer: {example_1_answer}
+      Answer: <answer>{example_1_answer}</answer>
 
       Question: {example_2_question}
-      Answer: {example_2_answer}
+      Answer: <answer>{example_2_answer}</answer>
 
       Question: {example_3_question}
-      Answer: {example_3_answer}
+      Answer: <answer>{example_3_answer}</answer>
 
       Question: {input_text}
-      Answer:
     expected_labels: []
     shuffle_examples: true
 
@@ -125,21 +125,21 @@ tasks:
     template: |
       Do the two sentences express the same meaning?
       Choose exactly one label: Paraphrase or Not Paraphrase.
+      Wrap your final answer in <answer></answer> tags, e.g. <answer>Paraphrase</answer>.
 
       Sentence 1: {example_1_sentence1}
       Sentence 2: {example_1_sentence2}
-      Label: {example_1_label}
+      Label: <answer>{example_1_label}</answer>
 
       Sentence 1: {example_2_sentence1}
       Sentence 2: {example_2_sentence2}
-      Label: {example_2_label}
+      Label: <answer>{example_2_label}</answer>
 
       Sentence 1: {example_3_sentence1}
       Sentence 2: {example_3_sentence2}
-      Label: {example_3_label}
+      Label: <answer>{example_3_label}</answer>
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}
-      Label:
     expected_labels: ["Paraphrase", "Not Paraphrase"]
     shuffle_examples: true
