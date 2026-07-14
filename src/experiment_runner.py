@@ -153,6 +153,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 "reference": example["label"],
                 "prediction": str(prediction),
                 "status": status,
+                "failure_reason": result.get("reason", "") if isinstance(result, dict) else "",
                 "raw_response": response["raw_text"] if "response" in dir() else "",
                 "input_tokens": input_tokens,
                 "output_tokens": output_tokens

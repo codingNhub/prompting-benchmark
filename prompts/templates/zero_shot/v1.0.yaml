@@ -7,7 +7,7 @@ metadata:
     All other techniques are compared against this baseline.
 
 tasks:
- sentiment:
+  sentiment:
     template: |
       Classify the sentiment of the following sentence.
       Choose exactly one: Positive, Negative, or Neutral.

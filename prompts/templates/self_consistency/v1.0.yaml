@@ -10,7 +10,7 @@ metadata:
     Grounded in Wang et al. 2022.
 
 tasks:
- sentiment:
+  sentiment:
     template: |
       Classify the sentiment of the following sentence.
       Choose exactly one: Positive, Negative, or Neutral.

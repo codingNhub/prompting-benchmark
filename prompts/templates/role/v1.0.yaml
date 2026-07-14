@@ -8,7 +8,7 @@ metadata:
     and domain-appropriate reasoning patterns.
 
 tasks:
-sentiment:
+  sentiment:
     template: |
       You are a sentiment analysis expert with years of experience
       classifying social media text.

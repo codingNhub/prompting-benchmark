@@ -9,7 +9,7 @@ metadata:
     zero-shot. Reduces ambiguity and parser failures.
 
 tasks:
-sentiment:
+  sentiment:
     template: |
       Read the sentence below and determine its emotional tone.
 

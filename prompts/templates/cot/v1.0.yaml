@@ -11,13 +11,12 @@ tasks:
   sentiment:
     template: |
       Classify the sentiment of the following sentence.
-      Think through your reasoning first, then write your final answer
-      inside answer tags on the last line.
+      First explain your reasoning, then write your final answer in answer tags.
 
       Sentence: {input_text}
 
-      Reasoning:
-      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
+      Reasoning: [think step by step here]
+      Final answer: <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
     expected_labels: ["Positive", "Negative", "Neutral"]
   ner:
     template: |

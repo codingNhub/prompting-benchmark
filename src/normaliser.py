@@ -11,43 +11,42 @@ ANSWER_TAG_RE = re.compile(r"<answer>(.*?)</answer>", re.DOTALL | re.IGNORECASE)
 
 
 def normalise(raw_text: str, valid_labels: list = None) -> dict:
-    """
-    Universal normaliser for every technique and task. Extracts the content
-    between <answer> and </answer> tags — the structured-output contract
-    every prompt template now requires. Works identically whether or not
-    reasoning text precedes the tag, so no technique-specific branching
-    is needed. A missing tag is a parse failure, not a guess.
-
-    valid_labels: for closed-label tasks (sentiment, paraphrase, NER types),
-    the extracted content must exactly match one label (case-insensitive).
-    Leave as None for free-text tasks (summarisation, qa) or for NER's
-    raw entity-list content, where the extracted text is returned as-is.
-    """
     if not raw_text or not raw_text.strip():
-        return {"label": None, "status": "failed", "raw": raw_text}
+        return {"label": None, "status": "failed", 
+                "reason": "empty_response", "raw": raw_text}
+
+    # Check for content refusal
+    refusal_phrases = ["i cannot", "i'm sorry", "i am sorry", 
+                       "i can't help", "i'm not able", "i cannot help",
+                       "not appropriate", "inappropriate"]
+    raw_lower = raw_text.lower()
+    if any(phrase in raw_lower for phrase in refusal_phrases):
+        if not ANSWER_TAG_RE.search(raw_text):
+            return {"label": None, "status": "failed",
+                    "reason": "content_refusal", "raw": raw_text}
 
     match = ANSWER_TAG_RE.search(raw_text)
     if not match:
-        logger.warning(f"Parse failure — no <answer> tag in: {raw_text[:80]}")
-        return {"label": None, "status": "failed", "raw": raw_text}
+        return {"label": None, "status": "failed",
+                "reason": "no_tag", "raw": raw_text}
 
     content = match.group(1).strip()
     if not content:
-        logger.warning(f"Parse failure — empty <answer> tag in: {raw_text[:80]}")
-        return {"label": None, "status": "failed", "raw": raw_text}
+        return {"label": None, "status": "failed",
+                "reason": "empty_tag", "raw": raw_text}
 
     if valid_labels:
         content_lower = content.lower()
         exact = [label for label in valid_labels if label.lower() == content_lower]
         if len(exact) == 1:
             logger.info(f"Normalised: '{exact[0]}' from <answer> tag")
-            return {"label": exact[0], "status": "ok", "raw": raw_text}
-        logger.warning(f"Ambiguous <answer> content '{content}' — expected one of {valid_labels}")
-        return {"label": None, "status": "ambiguous", "raw": raw_text}
+            return {"label": exact[0], "status": "ok", 
+                    "reason": "", "raw": raw_text}
+        return {"label": None, "status": "ambiguous",
+                "reason": "ambiguous_content", "raw": raw_text}
 
     logger.info(f"Normalised free-text answer from <answer> tag: {content[:60]}")
-    return {"label": content, "status": "ok", "raw": raw_text}
-
+    return {"label": content, "status": "ok", "reason": "", "raw": raw_text}
 
 def parse_ner_entities(text: str) -> list:
     """
