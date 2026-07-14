@@ -9,21 +9,19 @@ metadata:
     zero-shot. Reduces ambiguity and parser failures.
 
 tasks:
-  sentiment:
+sentiment:
     template: |
-      Read the sentence below and classify its sentiment.
+      Read the sentence below and determine its emotional tone.
 
       Rules:
-      - Use exactly one of these three labels: Positive, Negative, Neutral
-      - Positive means the sentence expresses approval, happiness, or satisfaction
-      - Negative means the sentence expresses disapproval, sadness, or dissatisfaction
-      - Neutral means the sentence is factual or expresses no clear emotion
-      - Wrap the label in <answer></answer> tags, e.g. <answer>Positive</answer>
-      - Write nothing outside the tags
+      - Positive means approval, happiness, or satisfaction
+      - Negative means disapproval, sadness, or dissatisfaction
+      - Neutral means factual or no clear emotion
+      - Write only your answer inside answer tags
 
       Sentence: {input_text}
+      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
     expected_labels: ["Positive", "Negative", "Neutral"]
-
   ner:
     template: |
       Read the sentence below and extract all named entities.

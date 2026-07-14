@@ -128,27 +128,22 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 input_tokens = response["input_tokens"]
                 output_tokens = response["output_tokens"]
 
+          
             if task in ("ner", "urdu_ner"):
-                tag_result = normalise(response["raw_text"])
-                entities = parse_ner_entities(tag_result["label"]) if tag_result["status"] == "ok" else []
-                prediction = entities
-                if entities:
-                    status = "ok"
-                else:
-                    status = "failed"
-                    flagged_count += 1
+               tag_result = normalise(response["raw_text"])
+               if tag_result["status"] == "ok":
+                   entities = parse_ner_entities(tag_result["label"])
+                   prediction = entities
+                   status = "ok"  # Empty list is valid — means no entities found
             else:
-                # One universal normaliser for every technique — the <answer>
-                # tag contract makes CoT and non-CoT parsing identical.
-                result = normalise(response["raw_text"], valid_labels)
-                prediction = result["label"]
-                status = result["status"]
-                if status != "ok":
-                    flagged_count += 1
+        # No <answer> tag at all — genuine parse failure
+               prediction = []
+               status = "failed"
+               flagged_count += 1
 
             if prediction is None:
                 prediction = PARSE_FAILURE_LABEL
-
+                
             predictions.append(prediction)
             references.append(example["label"])
 

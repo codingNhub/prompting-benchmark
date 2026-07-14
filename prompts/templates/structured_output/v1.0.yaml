@@ -6,63 +6,70 @@ metadata:
     Structured output prompting. Specifies exact output format using
     a template the model must follow. Reduces parser failures and
     produces consistent, machine-readable responses.
-    Particularly useful for NER and mixed-sentiment cases.
 
 tasks:
   sentiment:
     template: |
       Read the sentence below and classify its sentiment.
-      Use this exact format and nothing else:
 
-      Sentiment: <answer>POSITIVE or NEGATIVE or NEUTRAL</answer>
       Confidence: [HIGH or MEDIUM or LOW]
       Reason: [one phrase explaining why]
 
-      Sentence: {input_text}
-    expected_labels: ["Positive", "Negative", "Neutral"]
+      Write your final answer inside answer tags on the last line.
 
+      Sentence: {input_text}
+      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
+    expected_labels: ["Positive", "Negative", "Neutral"]
   ner:
     template: |
       Read the sentence below and extract all named entities.
-      Use this exact format for each entity found:
-
-      ENTITY | TYPE
-
+      For each entity write: ENTITY | TYPE
       Valid types: PERSON, ORGANIZATION, LOCATION, OTHER
-      If no entities found, write: NONE
-      Wrap your entire entity list (or NONE) in a single <answer></answer> tag.
+      If no entities found write: NONE
+
+      Your final answer must be wrapped in <answer></answer> tags like this:
+      <answer>
+      Entity Name | TYPE
+      Entity Name | TYPE
+      </answer>
 
       Sentence: {input_text}
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
 
   summarisation:
     template: |
-      Read the article below and complete this template exactly:
+      Read the article below.
 
       Main topic: [one or two words]
       Key event: [one sentence describing what happened]
-      Summary: <answer>[one concise sentence capturing the full main point]</answer>
+
+      Your final summary must be on the last line in this exact format:
+      <answer>[one concise sentence capturing the full main point]</answer>
 
       Article: {input_text}
     expected_labels: []
 
   qa:
     template: |
-      Read the question below and complete this template exactly:
+      Read the question below.
 
       Question type: [PERSON or PLACE or DATE or NUMBER or OTHER]
-      Answer: <answer>[as few words as possible]</answer>
+
+      Your final answer must be on the last line in this exact format:
+      <answer>[as few words as possible]</answer>
 
       Question: {input_text}
     expected_labels: []
 
   paraphrase:
     template: |
-      Read the two sentences below and complete this template exactly:
+      Read the two sentences below.
 
       Shared meaning: [yes or no]
       Key difference: [describe the difference or write NONE if same meaning]
-      Label: <answer>PARAPHRASE or NOT PARAPHRASE</answer>
+
+      Your final answer must be on the last line in this exact format:
+      <answer>Paraphrase</answer> or <answer>Not Paraphrase</answer>
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}

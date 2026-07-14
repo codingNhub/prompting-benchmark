@@ -8,19 +8,17 @@ metadata:
     and domain-appropriate reasoning patterns.
 
 tasks:
-  sentiment:
+sentiment:
     template: |
-      You are a senior data annotation specialist with 10 years of
-      experience labelling social media text for sentiment analysis.
-      Your labels are always precise and consistent.
+      You are a sentiment analysis expert with years of experience
+      classifying social media text.
 
       Classify the sentiment of the following sentence.
-      Choose exactly one label: Positive, Negative, or Neutral.
-      Wrap your final answer in <answer></answer> tags, e.g. <answer>Positive</answer>.
+      Write your answer inside answer tags and nothing else outside them.
 
       Sentence: {input_text}
+      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
     expected_labels: ["Positive", "Negative", "Neutral"]
-
   ner:
     template: |
       You are an expert computational linguist specialising in

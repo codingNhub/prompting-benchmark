@@ -18,22 +18,20 @@ tasks:
         label: "Neutral"
     template: |
       Classify the sentiment of each sentence.
-      Choose exactly one label: Positive, Negative, or Neutral.
-      Wrap your final answer in <answer></answer> tags, e.g. <answer>Positive</answer>.
+      Write your answer inside answer tags and nothing else outside them.
 
       Sentence: {example_1_text}
-      Sentiment: <answer>{example_1_label}</answer>
+      <answer>{example_1_label}</answer>
 
       Sentence: {example_2_text}
-      Sentiment: <answer>{example_2_label}</answer>
+      <answer>{example_2_label}</answer>
 
       Sentence: {example_3_text}
-      Sentiment: <answer>{example_3_label}</answer>
+      <answer>{example_3_label}</answer>
 
       Sentence: {input_text}
     expected_labels: ["Positive", "Negative", "Neutral"]
     shuffle_examples: true
-
   ner:
     examples:
       - text: "Imran Khan visited Lahore yesterday."

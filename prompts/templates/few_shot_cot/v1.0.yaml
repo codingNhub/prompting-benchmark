@@ -13,36 +13,34 @@ tasks:
   sentiment:
     examples:
       - text: "I absolutely loved this movie, best I have seen in years."
-        reasoning: "The words 'absolutely loved' and 'best' are strong positive expressions. The speaker is clearly happy and satisfied with their experience."
+        reasoning: "The words 'absolutely loved' and 'best' express strong positive emotion."
         label: "Positive"
-      - text: "The service was terrible and the food arrived cold."
-        reasoning: "The word 'terrible' expresses strong disapproval. Cold food is a negative experience. Both observations point to dissatisfaction."
+      - text: "The service was terrible and the food was cold."
+        reasoning: "The word 'terrible' and cold food both express dissatisfaction."
         label: "Negative"
       - text: "The package arrived on the expected delivery date."
-        reasoning: "This sentence states a fact about delivery timing. There is no emotional language, no approval or disapproval expressed. It is purely informational."
+        reasoning: "This is a factual statement with no emotional language."
         label: "Neutral"
     template: |
-      Classify the sentiment of each sentence. Think through your
-      reasoning before giving the final label. Wrap the final label
-      in <answer></answer> tags, e.g. <answer>Positive</answer>.
+      Classify the sentiment of each sentence.
+      Think through your reasoning then write your final answer inside answer tags.
 
       Sentence: {example_1_text}
       Reasoning: {example_1_reasoning}
-      Sentiment: <answer>{example_1_label}</answer>
+      <answer>{example_1_label}</answer>
 
       Sentence: {example_2_text}
       Reasoning: {example_2_reasoning}
-      Sentiment: <answer>{example_2_label}</answer>
+      <answer>{example_2_label}</answer>
 
       Sentence: {example_3_text}
       Reasoning: {example_3_reasoning}
-      Sentiment: <answer>{example_3_label}</answer>
+      <answer>{example_3_label}</answer>
 
       Sentence: {input_text}
       Reasoning:
     expected_labels: ["Positive", "Negative", "Neutral"]
     shuffle_examples: true
-
   ner:
     examples:
       - text: "Imran Khan visited Lahore to meet with Punjab government officials."

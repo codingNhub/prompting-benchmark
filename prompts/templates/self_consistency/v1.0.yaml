@@ -10,18 +10,18 @@ metadata:
     Grounded in Wang et al. 2022.
 
 tasks:
-  sentiment:
+ sentiment:
     template: |
       Classify the sentiment of the following sentence.
-      Choose exactly one label: Positive, Negative, or Neutral.
-      Wrap your final answer in <answer></answer> tags, e.g. <answer>Positive</answer>.
+      Choose exactly one: Positive, Negative, or Neutral.
+      Write your answer inside answer tags and nothing else outside them.
 
       Sentence: {input_text}
+      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
     expected_labels: ["Positive", "Negative", "Neutral"]
     n_samples: 3
     temperature: 0.7
     voting: majority
-
   ner:
     template: |
       Identify all named entities in the following sentence.
