@@ -47,6 +47,10 @@ def call_model(prompt, config):
             )
 
             raw_text = response.choices[0].message.content
+            if not raw_text:
+                raw_text = getattr(response.choices[0].message, "refusal", None)
+            if not raw_text and response.choices[0].finish_reason == "content_filter":
+                raw_text = "[CONTENT_FILTER]: response blocked by safety system"
             input_tokens = response.usage.prompt_tokens
             output_tokens = response.usage.completion_tokens
 

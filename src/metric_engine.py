@@ -10,7 +10,8 @@ def compute_sentiment(predictions: list, references: list) -> dict:
     """Macro F1 for 3-class sentiment classification."""
     from sklearn.metrics import f1_score, accuracy_score
 
-    f1 = f1_score(references, predictions, average="macro", zero_division=0)
+    labels = ["Positive", "Negative", "Neutral"]
+    f1 = f1_score(references, predictions, average="macro", labels=labels, zero_division=0)
     acc = accuracy_score(references, predictions)
 
     logger.info(f"Sentiment — macro_f1={f1:.4f}, accuracy={acc:.4f}")
@@ -21,7 +22,8 @@ def compute_paraphrase(predictions: list, references: list) -> dict:
     """Macro F1 for binary paraphrase classification."""
     from sklearn.metrics import f1_score, accuracy_score
 
-    f1 = f1_score(references, predictions, average="macro", zero_division=0)
+    labels = ["Paraphrase", "Not Paraphrase"]
+    f1 = f1_score(references, predictions, average="macro", labels=labels, zero_division=0)
     acc = accuracy_score(references, predictions)
 
     logger.info(f"Paraphrase — macro_f1={f1:.4f}, accuracy={acc:.4f}")

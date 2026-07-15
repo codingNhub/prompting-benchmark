@@ -29,6 +29,9 @@ def normalise(raw_text: str, valid_labels: list = None) -> dict:
     if not match:
         return {"label": None, "status": "failed",
                 "reason": "no_tag", "raw": raw_text}
+    if ANSWER_TAG_RE.search(raw_text, match.end()):
+        return {"label": None, "status": "ambiguous",
+                "reason": "multiple_tags", "raw": raw_text}
 
     content = match.group(1).strip()
     if not content:
