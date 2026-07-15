@@ -5,7 +5,7 @@ logger = get_logger("normaliser")
 
 # Bump this whenever normalise()'s extraction logic changes, so results_master.csv
 # can distinguish predictions parsed under different normaliser behavior.
-NORMALISER_VERSION = "2.0"
+NORMALISER_VERSION = "3.0"
 
 ANSWER_TAG_RE = re.compile(r"<answer>(.*?)</answer>", re.DOTALL | re.IGNORECASE)
 
@@ -25,15 +25,12 @@ def normalise(raw_text: str, valid_labels: list = None) -> dict:
             return {"label": None, "status": "failed",
                     "reason": "content_refusal", "raw": raw_text}
 
-    match = ANSWER_TAG_RE.search(raw_text)
-    if not match:
+    matches = list(ANSWER_TAG_RE.finditer(raw_text))
+    if not matches:
         return {"label": None, "status": "failed",
                 "reason": "no_tag", "raw": raw_text}
-    if ANSWER_TAG_RE.search(raw_text, match.end()):
-        return {"label": None, "status": "ambiguous",
-                "reason": "multiple_tags", "raw": raw_text}
 
-    content = match.group(1).strip()
+    content = matches[-1].group(1).strip()
     if not content:
         return {"label": None, "status": "failed",
                 "reason": "empty_tag", "raw": raw_text}
