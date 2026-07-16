@@ -16,7 +16,8 @@ tasks:
       Sentence: {input_text}
 
       Reasoning: [think step by step here]
-      Final answer: <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
+      Final answer must be in this exact format: <answer>LABEL</answer>
+      Replace LABEL with exactly one of: Positive, Negative, Neutral
     expected_labels: ["Positive", "Negative", "Neutral"]
   ner:
     template: |

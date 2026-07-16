@@ -20,7 +20,8 @@ tasks:
       - Write only your answer inside answer tags
 
       Sentence: {input_text}
-      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
+      Your answer must be in this exact format: <answer>LABEL</answer>
+      Replace LABEL with exactly one of: Positive, Negative, Neutral
     expected_labels: ["Positive", "Negative", "Neutral"]
   ner:
     template: |

@@ -14,7 +14,8 @@ tasks:
       Write your answer inside answer tags and nothing else outside them.
 
       Sentence: {input_text}
-      <answer>Positive</answer> or <answer>Negative</answer> or <answer>Neutral</answer>
+      Your answer must be in this exact format: <answer>LABEL</answer>
+      Replace LABEL with exactly one of: Positive, Negative, Neutral
     expected_labels: ["Positive", "Negative", "Neutral"]
   ner:
     template: |
@@ -22,8 +23,8 @@ tasks:
       For each entity found, write it on a new line in this format: ENTITY | TYPE
       Types are: PERSON, ORGANIZATION, LOCATION, OTHER
       If no entities are found, write: NONE
-      Wrap your entire entity list (or NONE) in a single <answer></answer> tag,
-      e.g. <answer>Paris | LOCATION</answer>.
+      Wrap your entire entity list (or NONE) in a single <answer></answer> tag.
+      For example, an entity would be formatted as: Paris | LOCATION
 
       Sentence: {input_text}
     expected_labels: ["PERSON", "ORGANIZATION", "LOCATION", "OTHER", "O"]
@@ -32,7 +33,7 @@ tasks:
     template: |
       Write a one-sentence summary of the following article.
       Your summary must be concise and capture the main point only.
-      Wrap your summary in <answer></answer> tags, e.g. <answer>Your summary here.</answer>.
+      Wrap your summary in <answer></answer> tags.
 
       Article: {input_text}
     expected_labels: []
@@ -41,7 +42,7 @@ tasks:
     template: |
       Answer the following question in as few words as possible.
       Give only the answer, no explanation.
-      Wrap your answer in <answer></answer> tags, e.g. <answer>Paris</answer>.
+      Wrap your answer in <answer></answer> tags.
 
       Question: {input_text}
     expected_labels: []
@@ -50,7 +51,7 @@ tasks:
     template: |
       Do the following two sentences express the same meaning?
       Choose exactly one label: Paraphrase or Not Paraphrase.
-      Wrap your final answer in <answer></answer> tags, e.g. <answer>Paraphrase</answer>.
+      Wrap your final answer in <answer></answer> tags.
 
       Sentence 1: {input_text}
       Sentence 2: {input_text_2}
