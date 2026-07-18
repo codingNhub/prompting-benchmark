@@ -1,0 +1,101 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"when you jacked into your house without keys. hell yeah, i'm david blaine jr.",Positive,Positive,ok,,<answer>Positive</answer>,172,104
+1,Cigarettes and Valentines,Neutral,Neutral,ok,,<answer>Neutral</answer>,158,76
+2,@user we'll miss you in Seattle! Especially when you win your NL Cy Young award!,Positive,Positive,ok,,<answer>Positive</answer>,171,75
+3,I'm not going to sack Tony romo but I will sack dak,Negative,Negative,ok,,<answer>Negative</answer>,167,82
+4,@user Article reminds us Obama's new policy towards #Cuba follows path #Canada has taken all along #,Neutral,Neutral,ok,,<answer>Neutral</answer>,178,74
+5,@user @user Link to review for #ThisIsUs isn't launching.,Neutral,Negative,ok,,<answer>Negative</answer>,168,91
+6,@user The same media that hides from the truth about the Clinton Foundation...,Negative,Negative,ok,,<answer>Negative</answer>,168,77
+7,Oh. my. God. Bernie is a white supremacist Nazi. The warning signs have been there for years and we ,Negative,Negative,ok,,<answer>Negative</answer>,181,51
+8,"@user such as telling us exactly what we have to do as my points already made with gun control, heal",Neutral,Negative,ok,,<answer>Negative</answer>,183,153
+9,The latest one hundred people you should know! Thanks to @user @user @user #chile #isis,Neutral,Positive,ok,,<answer>Positive</answer>,176,93
+10,@user @user twenty bags of rusted dicks.,Negative,Negative,ok,,<answer>Negative</answer>,165,82
+11,Finally watching Scream Queens episode 5 after what feels like forever!! #ScreamQueens,Positive,Positive,ok,,<answer>Positive</answer>,172,67
+12,@user she'd claimed Thomistic view of ensoulment showed church's oppositon to abortion is recent dev,Neutral,Negative,ok,,<answer>Negative</answer>,183,151
+13,Preparations Continue For #Tesla's #Model3 Launch #ElectricVehicles #GoGreen #GoElectric #GreenerDri,Neutral,Positive,ok,,<answer>Positive</answer>,178,97
+14,"Manasseh, Amon, Josiah. Pray Kim Jong Un follows Josiah's example-find the book of the Law discarded",Neutral,Positive,ok,,<answer>Positive</answer>,183,170
+15,"Donald, take it easy my friend, but I can't wait to see u start building that thick high wall on the",Neutral,Positive,ok,,<answer>Positive</answer>,183,164
+16,Sharon needles is doing Melania trump n the crowd is chanting CULEERAA,Negative,Neutral,ok,,<answer>Neutral</answer>,170,88
+17,My Grandmother would kill the #mannequinchallenge....she's dead #RIP,Negative,Negative,ok,,<answer>Negative</answer>,172,64
+18,@user ensure good voter registration in Nyanza region and its environ as a strategy of early victory,Neutral,Positive,ok,,<answer>Positive</answer>,178,96
+19,#Russian media: Is Mikheil Saakashvili planning new revolution in Ukraine?: Former Georgian Presiden,Neutral,Neutral,ok,,<answer>Neutral</answer>,175,114
+20,"In other news, Trump waves goodbye to Petro Poroshenko, President of Ukraine",Neutral,Neutral,ok,,<answer>Neutral</answer>,171,76
+21,"@user I'm not saying they will, but they can; also: will of the ppl? HRC is winning popular vote by ",Neutral,Neutral,ok,,<answer>Neutral</answer>,187,180
+22,Happy funeral to all Liam's girls.AMÈM LIAM PAYNE #MtvStarsNiallHoran #MPN #OneDirection,Neutral,Negative,ok,,<answer>Negative</answer>,183,204
+23,@user @user @user @user @user ummm vaccines have avoided over 700000 deaths since the nineties...,Positive,Positive,ok,,<answer>Positive</answer>,179,90
+24,@user @user @user actually I don't care about her pc anything I care about integrity when reporting.,Negative,Negative,ok,,<answer>Negative</answer>,177,123
+25,#Repost @user with repostapp・・・#nationalfastfoodday 🍟,Neutral,Neutral,ok,,<answer>Neutral</answer>,170,93
+26,Abysmally dumb leftists. Blind sheep aping #Hillary propaganda. Trump has no history of extremism in,Negative,Negative,ok,,<answer>Negative</answer>,181,79
+27,@user pope Francis ministering to wicked afflicted and effected,Negative,Neutral,ok,,<answer>Neutral</answer>,165,123
+28,"Thank u for what, for bailing out rogue banks? For negligence of his own, for racist killer cops, fo",Negative,Negative,ok,,<answer>Negative</answer>,182,121
+29,UK 'risks repeating Libya mistakes in Mosul' - The Week UK #libya,Neutral,Negative,ok,,<answer>Negative</answer>,172,89
+30,I think Michael Moore will be one of the pallbearers.,Neutral,Neutral,ok,,<answer>Neutral</answer>,166,70
+31,"""Chicago Cubs 2016 Topps Baseball World Series Champions Box Set"" #baseball #mlb #sports",Neutral,Neutral,ok,,<answer>Neutral</answer>,177,87
+32,@user Deport Michael Moore. He is a traitor and is inciting revolt and an overthrow of our governmen,Negative,Negative,ok,,<answer>Negative</answer>,176,72
+33,#insiders Phillip Ruddock Aust special envoy  on human rights opposes same sex marriage therefore th,Negative,Negative,ok,,<answer>Negative</answer>,182,116
+34,😇GOD WON 👸 ANGEL @user  THE POPE Says @user has an EGO...IS the POPE with the EGO PROBLEM..…,Negative,Negative,ok,,<answer>Negative</answer>,188,115
+35,See @user and @user on TV talking about #Homeopathy #ten23,Neutral,Neutral,ok,,<answer>Neutral</answer>,170,76
+36,"Of course I would out Christopher in my top 4 and it would be a controversial choice, so I'm just no",Positive,Negative,ok,,<answer>Negative</answer>,186,129
+37,Trump supporters always think they're so cute calling themselves deplorables. So annoying lol,Negative,Negative,ok,,<answer>Negative</answer>,170,65
+38,Microsoft joins Linux Foundation in another nod to open-source code - The Seattle Times #sourcecode ,Neutral,Neutral,ok,,<answer>Neutral</answer>,174,83
+39,"""Microsoft joins the Linux Foundation, welcomes Google to .NET community"" #windowsphone #feedly",Neutral,Positive,ok,,<answer>Positive</answer>,174,107
+40,"@user @user you can't fix stupid, he probably then went to Starbucks and had them write Trump on his",Negative,Negative,ok,,<answer>Negative</answer>,183,83
+41,@user I spent my 25k and got verlander,Positive,Neutral,ok,,<answer>Neutral</answer>,166,115
+42,#AuditTheVote #RecountColorado Elector Plans to Sue So He Can Unbind From Clinton to Protest #Electo,Neutral,Negative,ok,,<answer>Negative</answer>,180,133
+43,"Hope you all had a great day! OK, back to work up here in the Wasatch! @user vs @user Coverage tomor",Positive,Positive,ok,,<answer>Positive</answer>,186,96
+44,@user how is this relevant to #BlackLivesMatter? Was the white man a cop?,Neutral,Negative,ok,,<answer>Negative</answer>,172,98
+45,@user You were on the plane to Davos with Bill Clinton. #DavosClass,Neutral,Neutral,ok,,<answer>Neutral</answer>,172,77
+46,"All you hated about Clinton, but worse. Pay for play? Yep. Private server? Got forbidden internet co",Negative,Negative,ok,,<answer>Negative</answer>,185,107
+47,"My mom just asked me what my research paper was on and I said euthanasia and she literally asked ""Yo",Neutral,Positive,ok,,<answer>Positive</answer>,180,138
+48,"Congratulations on winning Michigan, even by a hand vote count and verification! Now #DrainTheSwamp…",Neutral,Positive,ok,,<answer>Positive</answer>,174,68
+49,And you thought you were having a bad day...https://t.co/HUs0vJcAbY,Neutral,Neutral,ok,,<answer>Neutral</answer>,176,348
+50,But I'm learning. And really trying. And taking a lot of deep breaths everyday. I love him so much &,Positive,Positive,ok,,<answer>Positive</answer>,186,85
+51,Messmoorize (from Michael Moore): to panic and lose critical thinking while gaining weight.  #Useful,Negative,Negative,ok,,<answer>Negative</answer>,178,128
+52,1. Sokie2. Michel3. Paris4. Emily#GilmoreGirlsTop4,Neutral,Neutral,ok,,<answer>Neutral</answer>,174,81
+53,Finally I'm gonna watch all eps that I missed #Lucifer #Supernatural #Arrow #Flash #Class #TheWalkin,Positive,Positive,ok,,<answer>Positive</answer>,187,103
+54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,Negative,ok,,<answer>Negative</answer>,185,80
+55,"Arlington, TX students protest Trump",Negative,Neutral,ok,,<answer>Neutral</answer>,160,59
+56,The Bad Hombres  #TrumpInauguralBands,Neutral,Neutral,ok,,<answer>Neutral</answer>,165,94
+57,Tipp: Musical + Hotel ab 100€ p.P. #schnäppchen #deal #dealz #sparen #tipp,Neutral,Positive,ok,,<answer>Positive</answer>,181,96
+58,Another reason to love @user Model X showing just some of it's wide range of ability! #EV #DragRace…,Positive,Positive,ok,,<answer>Positive</answer>,177,78
+59,Usher can STILL sing. Praise God. #ThankYouObama,Positive,Positive,ok,,<answer>Positive</answer>,167,69
+60,"#Dogging,#Milfs,#Stockings,#OutDoorSex,#Anal,#Moms: Ashley Graham Rubbing With Her Sightly Body",Neutral,Neutral,ok,,<answer>Neutral</answer>,182,128
+61,"#legalize, #marijuananews Group plans to protest Sen. Jeff Sessions, Trump's AG pick, over anti-mari",Negative,Neutral,ok,,<answer>Neutral</answer>,182,139
+62,@user @user @user Obviously means nothing since it hasn't stopped Soros from funding anti-Trump prot,Negative,Negative,ok,,<answer>Negative</answer>,178,78
+63,Why would I want a #Hatchimals if I couldn't keep a #tamagotchi alive? Kids have it easy these days,Neutral,Negative,ok,,<answer>Negative</answer>,181,76
+64,@user he spoke against Tpp and is now speaking out against Dapl. You are just trolling with fake new,Negative,Negative,ok,,<answer>Negative</answer>,178,97
+65,The latest The Croatia Travel Daily! Thanks to @user @user @user #travel #travelboldly,Neutral,Positive,ok,,<answer>Positive</answer>,175,69
+66,Here's our #BeautyAndTheBeast trailer breakdown:,Positive,Neutral,ok,,<answer>Neutral</answer>,164,65
+67,DD News: Cubans bid tearful adieu to Fidel Castro | #NewsInVids,Neutral,Negative,ok,,<answer>Negative</answer>,173,89
+68,Before I built a wall {on the Mexican border}I'd ask to knowWhat I was walling inor walling out   - ,Neutral,Negative,ok,,<answer>Negative</answer>,187,210
+69,"Jia Jun also retracted his statement, #OnThisDay in 1966, that ""When Leftists beat Rightists, Righti",Neutral,Neutral,ok,,<answer>Neutral</answer>,186,154
+70,It all adds up to why @user won the election .. Voter Suppression .. Money over Votes .. Criminal Be,Negative,Negative,ok,,<answer>Negative</answer>,178,85
+71,A Very Scientific Analysis Of Melania Trump's 'Plagiarised' Speech,Neutral,Negative,ok,,<answer>Negative</answer>,169,91
+72,Dance Teacher Realness with my 10th grade girls #mannequinchallenge,Neutral,Positive,ok,,<answer>Positive</answer>,170,84
+73,Oakland Police Under Fire for Breaking Up Violent Anti-Trump Riots via @user,Negative,Negative,ok,,<answer>Negative</answer>,171,124
+74,so my grandpa got medical marijuana and I think he's addicted:'),Positive,Negative,ok,,<answer>Negative</answer>,166,73
+75,@user @user not supremacists just survivalist !,Negative,Neutral,ok,,<answer>Neutral</answer>,165,78
+76,The memory of the terrible crime of the #Holodomor gives us the strength to defend their future.,Neutral,Positive,ok,,<answer>Positive</answer>,174,114
+77,Reading Marine Le Pen tweet you would think that Forza Italia was the big winner #italyreferendumIf ,Neutral,Negative,ok,,<answer>Negative</answer>,184,115
+78,@user Is part of The Open Society. Bought and paid for by George Soros.They're in deep and favors ar,Negative,Negative,ok,,<answer>Negative</answer>,180,88
+79,"Neo Nazi: White people are superior, fuck PoC!Me: Shut up you fascist piece of shit!Liberal: OMG, TH",Negative,Negative,ok,,<answer>Negative</answer>,190,100
+80,I LOVE CRISTIANO RONALDO BUT I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO,Positive,Negative,ok,,<answer>Negative</answer>,182,122
+81,A million dollars a day? How the hell are we okay with this.,Negative,Negative,ok,,<answer>Negative</answer>,168,70
+82,Really though was Justin Verlander up there?,Neutral,Neutral,ok,,<answer>Neutral</answer>,162,116
+83,@user they tend to be leftists or at least interventionists so they're a bit of a problem,Negative,Negative,ok,,<answer>Negative</answer>,174,76
+84,I SUCCESSFULLY CAPTURED THE HATCHIMAL! My journey has ended and I will go down in the history books.,Positive,Positive,ok,,<answer>Positive</answer>,184,79
+85,@user lmfao good shot RUAF,Positive,Positive,ok,,<answer>Positive</answer>,163,119
+86,"@user @user Not to mention he used a racial slur at a nationally televised debate. ""Bad hombres"" -Do",Negative,Negative,ok,,<answer>Negative</answer>,180,79
+87,30 Min into the Westworld-Finale and I’m already like Holy Shit!,Positive,Positive,ok,,<answer>Positive</answer>,171,76
+88,Deep Learning Research Review: Reinforcement Learning,Neutral,Neutral,ok,,<answer>Neutral</answer>,162,57
+89,Donald Trump and the Rise of White Supremacist Media @user #NotMyPresident #uniteblue #Resist #MAGA ,Negative,Negative,ok,,<answer>Negative</answer>,186,248
+90,"This BET special, ""Love and Happiness"" celebrating Obama is off the CHAIN #ThankYouObama",Positive,Positive,ok,,<answer>Positive</answer>,174,68
+91,"See also, from December 2015: <- deja vu, all over again.",Neutral,Neutral,ok,,<answer>Neutral</answer>,170,223
+92,The fourth African-Arab summit in #Equatorial_Guinea emphasizes on its support of the proposed Gover,Neutral,Neutral,ok,,<answer>Neutral</answer>,179,86
+93,My sister blew up my phone this morning asking if I could pick her up at the airport at 11.... I'm n,Negative,Negative,ok,,<answer>Negative</answer>,188,146
+94,@user just as long as you're making more than minimum wage. Gotta be superior to some people.,Neutral,Negative,ok,,<answer>Negative</answer>,174,75
+95,"Xi Jimping, Kim Jong Un, Nicolas Maduro, Robert Mugabe, Sisi, Bashar Al Assad all ""won"" their electi",Neutral,Negative,ok,,<answer>Negative</answer>,188,89
+96,"@user We dont hav Obamacare but this piece was 👌🏼. I wish DT cud keep ins 4 all, but ⬆️competition s",Negative,Positive,ok,,<answer>Positive</answer>,192,182
+97,@user But the #Australian #coal #LNP (Libs.) and #GOP #Oil already know this. They just want to earn,Neutral,Negative,ok,,<answer>Negative</answer>,190,94
+98,"@user @user Tool or not, most of what Saakashvili says is true, other politicians in Ukraine are dis",Negative,Positive,ok,,<answer>Positive</answer>,181,160
+99,Melania Trump opts for bow undone at third debate #Fashion,Neutral,Neutral,ok,,<answer>Neutral</answer>,166,65

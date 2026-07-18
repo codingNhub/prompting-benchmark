@@ -1,0 +1,212 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"when you jacked into your house without keys. hell yeah, i'm david blaine jr.",Positive,Positive,ok,,"Sentence: when you jacked into your house without keys. hell yeah, i'm david blaine jr.  
+Reasoning: The speaker expresses excitement and pride with the exclamation “hell yeah,” which conveys a positive emotional tone, even though the content describes an illegal act. The overall sentiment of the sentence is therefore **Positive**.  
+<answer>Positive</answer>",223,286
+1,Cigarettes and Valentines,Neutral,Neutral,ok,,"The sentence “Cigarettes and Valentines” contains only two nouns without any evaluative or emotional language. Since it neither praises nor criticizes, and no context is provided to infer a particular stance, the sentiment is best classified as neutral.  
+<answer>Neutral</answer>",209,259
+2,@user we'll miss you in Seattle! Especially when you win your NL Cy Young award!,Positive,Positive,ok,,"The message is friendly and enthusiastic. It expresses affection (“we’ll miss you”) and excitement about the future (“when you win your NL Cy Young award”). These cues indicate a positive emotional tone.
+
+<answer>Positive</answer>",222,251
+3,I'm not going to sack Tony romo but I will sack dak,Negative,Negative,ok,,"Sentence: I'm not going to sack Tony romo but I will sack dak  
+Reasoning: The sentence expresses a decision to dismiss (sack) someone, which is a negative action. It conveys dissatisfaction or a punitive stance toward the person being sacked, indicating a negative sentiment.  
+<answer>Negative</answer>",218,255
+4,@user Article reminds us Obama's new policy towards #Cuba follows path #Canada has taken all along #,Neutral,Neutral,ok,,"Reasoning: The sentence is a factual statement about a policy and does not contain any emotionally charged words or expressions of approval or disapproval. It simply reports that the policy follows a certain path. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",229,338
+5,@user @user Link to review for #ThisIsUs isn't launching.,Neutral,Negative,ok,,"Reasoning: The sentence reports a problem—“isn't launching”—which indicates frustration or dissatisfaction with the link’s functionality. Even though it lacks explicit emotive words, the context conveys a negative experience.  
+<answer>Negative</answer>",219,214
+6,@user The same media that hides from the truth about the Clinton Foundation...,Negative,Negative,ok,,"Reasoning: The sentence criticizes the media, implying that it is hiding the truth about the Clinton Foundation. This negative accusation reflects a critical stance toward the media, indicating a negative sentiment.  
+<answer>Negative</answer>",219,328
+7,Oh. my. God. Bernie is a white supremacist Nazi. The warning signs have been there for years and we ,Negative,Negative,ok,,"Reasoning: The sentence contains highly negative and hostile language, labeling someone as a ""white supremacist Nazi"" and expressing strong disapproval. This conveys a clear negative sentiment.  
+<answer>Negative</answer>",232,236
+8,"@user such as telling us exactly what we have to do as my points already made with gun control, heal",Neutral,Neutral,ok,,<answer>Neutral</answer>,234,270
+9,The latest one hundred people you should know! Thanks to @user @user @user #chile #isis,Neutral,Positive,ok,,<answer>Positive</answer>,227,408
+10,@user @user twenty bags of rusted dicks.,Negative,Negative,ok,,"Sentence: @user @user twenty bags of rusted dicks.  
+Reasoning: The phrase “rusted dicks” is a derogatory insult, expressing contempt or strong disapproval toward the subject. This conveys a clear negative sentiment.  
+<answer>Negative</answer>",216,219
+11,Finally watching Scream Queens episode 5 after what feels like forever!! #ScreamQueens,Positive,Positive,ok,,"The sentence expresses excitement and relief about finally watching the episode after a long wait, indicated by the enthusiastic wording and multiple exclamation marks.  
+<answer>Positive</answer>",223,176
+12,@user she'd claimed Thomistic view of ensoulment showed church's oppositon to abortion is recent dev,Neutral,Neutral,ok,,"The sentence is a factual statement about a claim made by a user. It contains no explicit positive or negative emotional language; it simply reports an assertion. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",234,522
+13,Preparations Continue For #Tesla's #Model3 Launch #ElectricVehicles #GoGreen #GoElectric #GreenerDri,Neutral,Neutral,ok,,"The sentence is a factual statement about ongoing preparations for a product launch, with no explicit positive or negative language. Therefore, its sentiment is neutral.  
+<answer>Neutral</answer>",229,211
+14,"Manasseh, Amon, Josiah. Pray Kim Jong Un follows Josiah's example-find the book of the Law discarded",Neutral,Neutral,ok,,"**Reasoning:**  
+The sentence is a call to pray for Kim Jong Un to follow Josiah’s example and to recover a discarded book of the Law. It does not express explicit praise or criticism, nor does it convey strong positive or negative emotion. The tone is more of a neutral request or exhortation rather than an evaluative statement.  
+
+<answer>Neutral</answer>",234,388
+15,"Donald, take it easy my friend, but I can't wait to see u start building that thick high wall on the",Neutral,Positive,ok,,"Sentence: Donald, take it easy my friend, but I can't wait to see u start building that thick high wall on the Mexican border to seal ur legacy  
+Reasoning: The speaker uses an enthusiastic phrase “I can’t wait” to express excitement about the upcoming action. The tone is friendly (“take it easy my friend”) and there are no negative or neutral indicators. Therefore the overall sentiment is positive.  
+<answer>Positive</answer>",234,401
+16,Sharon needles is doing Melania trump n the crowd is chanting CULEERAA,Negative,Neutral,ok,,"Sentence: Sharon needles is doing Melania trump n the crowd is chanting CULEERAA  
+Reasoning: The sentence is incoherent and contains no clear emotional or evaluative language. It does not express a positive or negative sentiment, so it is best classified as neutral.  
+<answer>Neutral</answer>",221,356
+17,My Grandmother would kill the #mannequinchallenge....she's dead #RIP,Negative,Negative,ok,,"Reasoning: The sentence conveys sadness and mourning over the grandmother’s death, using words like “dead” and the hashtag “#RIP.” This expresses a negative emotional tone.  
+<answer>Negative</answer>",223,345
+18,@user ensure good voter registration in Nyanza region and its environ as a strategy of early victory,Neutral,Neutral,ok,,<answer>Neutral</answer>,229,125
+19,#Russian media: Is Mikheil Saakashvili planning new revolution in Ukraine?: Former Georgian Presiden,Neutral,Neutral,ok,,<answer>Neutral</answer>,226,370
+20,"In other news, Trump waves goodbye to Petro Poroshenko, President of Ukraine",Neutral,Neutral,ok,,"The sentence is a straightforward news update: “In other news, Trump waves goodbye to Petro Poroshenko, President of Ukraine.” It contains no evaluative adjectives, emotional words, or subjective judgments. It simply reports an event. Therefore, the sentiment is neutral.
+
+<answer>Neutral</answer>",222,280
+21,"@user I'm not saying they will, but they can; also: will of the ppl? HRC is winning popular vote by ",Neutral,Neutral,ok,,<answer>Neutral</answer>,238,309
+22,Happy funeral to all Liam's girls.AMÈM LIAM PAYNE #MtvStarsNiallHoran #MPN #OneDirection,Neutral,[PARSE_FAILURE],failed,empty_response,,234,600
+23,@user @user @user @user @user ummm vaccines have avoided over 700000 deaths since the nineties...,Positive,Positive,ok,,"The sentence praises vaccines for preventing a large number of deaths, which conveys a positive viewpoint.  
+<answer>Positive</answer>",230,176
+24,@user @user @user actually I don't care about her pc anything I care about integrity when reporting.,Negative,Negative,ok,,"The sentence expresses a negative stance toward the PC, indicating indifference and a focus on integrity instead. This conveys a negative sentiment overall.  
+<answer>Negative</answer>",228,538
+25,#Repost @user with repostapp・・・#nationalfastfoodday 🍟,Neutral,Neutral,ok,,"Reasoning: The sentence is a simple repost announcement with no evaluative or emotional language. It merely states that a repost is being shared and includes a hashtag and an emoji, but the emoji (fries) is neutral in sentiment. Therefore, the overall sentiment is neutral.  
+<answer>Neutral</answer>",221,196
+26,Abysmally dumb leftists. Blind sheep aping #Hillary propaganda. Trump has no history of extremism in,Negative,Negative,ok,,"The sentence expresses strong criticism and disdain toward a group of people, labeling them as “abysmally dumb” and “blind sheep,” and it also includes a negative comparison involving political figures. This language conveys clear negative sentiment.
+
+<answer>Negative</answer>",232,252
+27,@user pope Francis ministering to wicked afflicted and effected,Negative,Neutral,ok,,"<analysis>  
+The sentence is a factual statement describing Pope Francis ministering to people who are described as “wicked,” “afflicted,” and “effected.” While the words “wicked” and “afflicted” carry negative connotations, the sentence itself does not express a clear opinion or emotional stance; it merely reports an action. Therefore, the overall sentiment is neutral.  
+<answer>Neutral</answer>",216,467
+28,"Thank u for what, for bailing out rogue banks? For negligence of his own, for racist killer cops, fo",Negative,Negative,ok,,"<answer>Positive</answer>
+<answer>Negative</answer>
+<answer>Neutral</answer>
+<answer>Negative</answer>",233,325
+29,UK 'risks repeating Libya mistakes in Mosul' - The Week UK #libya,Neutral,Negative,ok,,"Reasoning: The headline mentions “risks” and “mistakes,” which are negative terms indicating potential problems or failures. The overall tone is cautionary and pessimistic, suggesting a negative sentiment.  
+<answer>Negative</answer>",223,331
+30,I think Michael Moore will be one of the pallbearers.,Neutral,Neutral,ok,,"Reasoning: The sentence is a factual statement about a future event and contains no positive or negative emotional language. Therefore, its sentiment is neutral.  
+<answer>Neutral</answer>",217,187
+31,"""Chicago Cubs 2016 Topps Baseball World Series Champions Box Set"" #baseball #mlb #sports",Neutral,Neutral,ok,,"Reasoning: The sentence is a product title and includes hashtags related to baseball. It contains no positive or negative emotional words; it simply states a fact about a baseball box set. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",228,243
+32,@user Deport Michael Moore. He is a traitor and is inciting revolt and an overthrow of our governmen,Negative,Negative,ok,,"Reasoning: The sentence accuses Michael Moore of treasonous behavior, labeling him a traitor and claiming he is inciting revolt and overthrow of the government. This expresses strong disapproval and hostility toward the subject, which is characteristic of negative sentiment.  
+<answer>Negative</answer>",227,215
+33,#insiders Phillip Ruddock Aust special envoy  on human rights opposes same sex marriage therefore th,Negative,Negative,ok,,"The sentence expresses a negative viewpoint toward Phillip Ruddock’s stance on same‑sex marriage, implying that his opposition undermines basic human rights for gay people. This conveys disapproval and a negative sentiment.
+
+<answer>Negative</answer>",233,202
+34,😇GOD WON 👸 ANGEL @user  THE POPE Says @user has an EGO...IS the POPE with the EGO PROBLEM..…,Negative,Negative,ok,,"The sentence contains a sarcastic or critical tone toward the Pope, implying that the Pope himself may have an ego problem. While it includes some positive emojis, the overall message is negative in sentiment.  
+<answer>Negative</answer>",239,299
+35,See @user and @user on TV talking about #Homeopathy #ten23,Neutral,Neutral,ok,,"Reasoning: The sentence simply reports that two users were seen on TV discussing homeopathy, without any evaluative or emotive language. It is a factual statement, so the sentiment is neutral.  
+<answer>Neutral</answer>",221,199
+36,"Of course I would out Christopher in my top 4 and it would be a controversial choice, so I'm just no",Positive,Neutral,ok,,"The sentence mainly reports a decision to refrain from a controversial action. It contains no strong positive or negative language—just a factual statement about personal choice. Therefore, the overall sentiment is neutral.  
+<answer>Neutral</answer>",237,197
+37,Trump supporters always think they're so cute calling themselves deplorables. So annoying lol,Negative,Negative,ok,,"The sentence expresses clear disapproval and irritation toward Trump supporters, labeling them as “so cute calling themselves deplorables” and calling them “So annoying lol.” This conveys a negative attitude.  
+<answer>Negative</answer>",221,195
+38,Microsoft joins Linux Foundation in another nod to open-source code - The Seattle Times #sourcecode ,Neutral,Neutral,ok,,"The sentence is a factual statement about Microsoft’s involvement with the Linux Foundation and contains no emotional language.  
+<answer>Neutral</answer>",225,172
+39,"""Microsoft joins the Linux Foundation, welcomes Google to .NET community"" #windowsphone #feedly",Neutral,Neutral,ok,,<answer>Neutral</answer>,225,133
+40,"@user @user you can't fix stupid, he probably then went to Starbucks and had them write Trump on his",Negative,Negative,ok,,"The sentence expresses frustration and criticism toward the person being addressed, using phrases like “you can’t fix stupid” and describing a provocative action (“had them write Trump on his cup”) as a form of protest. This conveys a negative attitude toward the situation.  
+<answer>Negative</answer>",234,189
+41,@user I spent my 25k and got verlander,Positive,Positive,ok,,<answer>Positive</answer>,217,258
+42,#AuditTheVote #RecountColorado Elector Plans to Sue So He Can Unbind From Clinton to Protest #Electo,Neutral,Neutral,ok,,"Sentence: #AuditTheVote #RecountColorado Elector Plans to Sue So He Can Unbind From Clinton to Protest #ElectoralCollege  
+Reasoning: The sentence is a factual statement about a political action (planning to sue and protest). It contains no explicit positive or negative adjectives or emotive language. Therefore, the sentiment expressed is neutral.  
+<answer>Neutral</answer>",231,441
+43,"Hope you all had a great day! OK, back to work up here in the Wasatch! @user vs @user Coverage tomor",Positive,Positive,ok,,"The sentence begins with a warm wish: “Hope you all had a great day!” which conveys a positive sentiment. The following parts (“OK, back to work up here in the Wasatch!” and the user mentions) are neutral and do not alter the overall positive tone.  
+<answer>Positive</answer>",237,206
+44,@user how is this relevant to #BlackLivesMatter? Was the white man a cop?,Neutral,Neutral,ok,,"The sentence is a question that simply asks for clarification about relevance; it does not express a positive or negative emotion.  
+<answer>Neutral</answer>",223,214
+45,@user You were on the plane to Davos with Bill Clinton. #DavosClass,Neutral,Neutral,ok,,"Reasoning: The sentence simply states a fact about a person being on a plane to Davos with Bill Clinton. It contains no emotionally charged words or expressions of opinion, so it conveys no positive or negative sentiment. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",223,217
+46,"All you hated about Clinton, but worse. Pay for play? Yep. Private server? Got forbidden internet co",Negative,Negative,ok,,<answer>Negative</answer>,236,283
+47,"My mom just asked me what my research paper was on and I said euthanasia and she literally asked ""Yo",Neutral,Positive,ok,,"Reasoning: The sentence includes a laughing emoji (😂) and describes a humorous misunderstanding, indicating amusement rather than anger or sadness. This conveys a light‑hearted, positive tone.  
+<answer>Positive</answer>",231,401
+48,"Congratulations on winning Michigan, even by a hand vote count and verification! Now #DrainTheSwamp…",Neutral,Positive,ok,,<answer>Positive</answer>,225,278
+49,And you thought you were having a bad day...https://t.co/HUs0vJcAbY,Neutral,Negative,ok,,"The sentence describes a situation where the person believes they are experiencing a bad day, which conveys dissatisfaction or a negative emotional state.  
+<answer>Negative</answer>",227,285
+50,But I'm learning. And really trying. And taking a lot of deep breaths everyday. I love him so much &,Positive,Positive,ok,,"The sentence expresses affection (“I love him so much”), confidence (“I know I'm the best mama for him”), and a hopeful tone (“But I'm learning. And really trying. And taking a lot of deep breaths everyday.”). These elements convey a positive emotional stance.  
+<answer>Positive</answer>",237,207
+51,Messmoorize (from Michael Moore): to panic and lose critical thinking while gaining weight.  #Useful,Negative,Negative,ok,,"The sentence describes a negative behavior—panic, loss of critical thinking, and weight gain—without any positive or neutral language.  
+<answer>Negative</answer>",229,153
+52,1. Sokie2. Michel3. Paris4. Emily#GilmoreGirlsTop4,Neutral,Neutral,ok,,"Sentence: 1. Sokie2. Michel3. Paris4. Emily#GilmoreGirlsTop4  
+Reasoning: The text is simply a list of names followed by a hashtag, with no positive or negative emotional language. It conveys no sentiment.  
+<answer>Neutral</answer>",225,272
+53,Finally I'm gonna watch all eps that I missed #Lucifer #Supernatural #Arrow #Flash #Class #TheWalkin,Positive,Positive,ok,,"The sentence expresses excitement and enthusiasm about watching the missed episodes, reinforced by the laughing and heart emojis.  
+<answer>Positive</answer>",238,131
+54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,[PARSE_FAILURE],failed,empty_response,,236,600
+55,"Arlington, TX students protest Trump",Negative,Neutral,ok,,"Reasoning: The sentence “Arlington, TX students protest Trump” is a straightforward factual statement describing an event. It contains no emotionally charged words or evaluative language that would indicate a positive or negative stance. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",211,332
+56,The Bad Hombres  #TrumpInauguralBands,Neutral,Neutral,ok,,"The sentence “The Bad Hombres  #TrumpInauguralBands” is simply a name and a hashtag. It contains no evaluative adjectives or emotional language that would indicate a positive or negative stance. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",216,195
+57,Tipp: Musical + Hotel ab 100€ p.P. #schnäppchen #deal #dealz #sparen #tipp,Neutral,Positive,ok,,"The sentence is a promotional tip offering a bargain, which conveys a positive tone.
+
+<answer>Positive</answer>",232,280
+58,Another reason to love @user Model X showing just some of it's wide range of ability! #EV #DragRace…,Positive,Positive,ok,,<answer>Positive</answer>,228,300
+59,Usher can STILL sing. Praise God. #ThankYouObama,Positive,Positive,ok,,"Reasoning: The sentence expresses admiration for Usher’s singing ability (“can STILL sing”), includes a positive exclamation (“Praise God”), and uses a supportive hashtag (#ThankYouObama). All of these elements convey a positive sentiment.  
+<answer>Positive</answer>",218,276
+60,"#Dogging,#Milfs,#Stockings,#OutDoorSex,#Anal,#Moms: Ashley Graham Rubbing With Her Sightly Body",Neutral,Neutral,ok,,<answer>Neutral</answer>,233,250
+61,"#legalize, #marijuananews Group plans to protest Sen. Jeff Sessions, Trump's AG pick, over anti-mari",Negative,Neutral,ok,,"The headline simply reports that a group plans to protest a senator’s anti‑marijuana stance; it contains no overtly positive or negative language.  
+<answer>Neutral</answer>",233,180
+62,@user @user @user Obviously means nothing since it hasn't stopped Soros from funding anti-Trump prot,Negative,Negative,ok,,"The sentence expresses frustration and a negative view toward the referenced claim, indicating a negative sentiment.  
+<answer>Negative</answer>",229,130
+63,Why would I want a #Hatchimals if I couldn't keep a #tamagotchi alive? Kids have it easy these days,Neutral,Negative,ok,,"Reasoning: The speaker expresses frustration and criticism toward the difficulty of keeping a #tamagotchi alive, implying that kids have it easier. The tone is negative, with no positive or neutral language.  
+<answer>Negative</answer>",232,258
+64,@user he spoke against Tpp and is now speaking out against Dapl. You are just trolling with fake new,Negative,Negative,ok,,"The sentence contains clear negative language—accusations of trolling and fake news—indicating a negative sentiment.  
+<answer>Negative</answer>",229,180
+65,The latest The Croatia Travel Daily! Thanks to @user @user @user #travel #travelboldly,Neutral,Positive,ok,,"Reasoning: The sentence announces new content (“The latest The Croatia Travel Daily!”) and expresses gratitude (“Thanks to @user @user @user”), both of which convey a positive tone. There are no negative or neutral indicators.  
+<answer>Positive</answer>",226,304
+66,Here's our #BeautyAndTheBeast trailer breakdown:,Positive,Neutral,ok,,"Reasoning: The sentence “Here’s our #BeautyAndTheBeast trailer breakdown:” is simply an announcement or introduction of content. It contains no positive or negative emotional language, so it is best classified as neutral.  
+<answer>Neutral</answer>",215,272
+67,DD News: Cubans bid tearful adieu to Fidel Castro | #NewsInVids,Neutral,Negative,ok,,"Reasoning: The phrase “tearful adieu” signals sadness and mourning, which conveys a negative emotional tone.  
+<answer>Negative</answer>",224,290
+68,Before I built a wall {on the Mexican border}I'd ask to knowWhat I was walling inor walling out   - ,Neutral,Neutral,ok,,"The quote is a reflective question about the implications of building a wall. It does not express explicit positive or negative emotion; it simply asks what one is walling in or out. Therefore, the sentiment is best described as neutral.  
+
+<answer>Neutral</answer>",238,546
+69,"Jia Jun also retracted his statement, #OnThisDay in 1966, that ""When Leftists beat Rightists, Righti",Neutral,Neutral,ok,,"Reasoning: The sentence simply reports that Jia Jun retracted a previous statement. It contains no evaluative or emotive language that would indicate a positive or negative stance. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",237,377
+70,It all adds up to why @user won the election .. Voter Suppression .. Money over Votes .. Criminal Be,Negative,Negative,ok,,"The sentence expresses criticism and negative connotations—mentioning voter suppression, money over votes, and criminal behavior.  
+<answer>Negative</answer>",229,178
+71,A Very Scientific Analysis Of Melania Trump's 'Plagiarised' Speech,Neutral,Negative,ok,,"Sentence: A Very Scientific Analysis Of Melania Trump's 'Plagiarised' Speech  
+Reasoning: The title labels the speech as “Plagiarised,” which is a negative accusation. Even though the rest of the sentence is neutral, the key word conveys a negative judgment.  
+<answer>Negative</answer>",220,318
+72,Dance Teacher Realness with my 10th grade girls #mannequinchallenge,Neutral,Positive,ok,,"Reasoning: The sentence conveys enthusiasm and pride about a dance teacher’s authenticity with their 10th‑grade girls, and it includes a positive hashtag (#mannequinchallenge). There are no negative words or expressions of dissatisfaction. Therefore, the sentiment is positive.  
+<answer>Positive</answer>",221,307
+73,Oakland Police Under Fire for Breaking Up Violent Anti-Trump Riots via @user,Negative,Negative,ok,,<answer>Negative</answer>,222,336
+74,so my grandpa got medical marijuana and I think he's addicted:'),Positive,Negative,ok,,"The sentence expresses concern about the grandpa’s addiction, which is a negative situation. The smiley face does not change the overall negative sentiment of the statement.
+
+<answer>Negative</answer>",217,224
+75,@user @user not supremacists just survivalist !,Negative,Neutral,ok,,"The sentence ""@user @user not supremacists just survivalist !"" is a factual claim that the speaker is not a supremacist but a survivalist. It contains no overtly positive or negative emotional language, so it should be classified as neutral.  
+
+<answer>Neutral</answer>",216,231
+76,The memory of the terrible crime of the #Holodomor gives us the strength to defend their future.,Neutral,Positive,ok,,"The sentence acknowledges a horrific event (“the terrible crime of the #Holodomor”) but frames it as a catalyst for empowerment and future defense. The overall tone is one of resilience and determination, which is a positive sentiment.  
+<answer>Positive</answer>",225,223
+77,Reading Marine Le Pen tweet you would think that Forza Italia was the big winner #italyreferendumIf ,Neutral,Negative,ok,,"The sentence contains the word “annihilated,” which conveys a strong negative outcome for Forza Italia. While it also mentions “the big winner,” the overall tone leans toward a negative perspective because it highlights destruction rather than success. Therefore, the sentiment is negative.  
+
+<answer>Negative</answer>",235,531
+78,@user Is part of The Open Society. Bought and paid for by George Soros.They're in deep and favors ar,Negative,Negative,ok,,<answer>Negative</answer>,231,567
+79,"Neo Nazi: White people are superior, fuck PoC!Me: Shut up you fascist piece of shit!Liberal: OMG, TH",Negative,Negative,ok,,"The sentence contains hateful and insulting language, expressing strong hostility and negative emotions.  
+<answer>Negative</answer>",241,370
+80,I LOVE CRISTIANO RONALDO BUT I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO,Positive,[PARSE_FAILURE],ambiguous,ambiguous_content,"The sentence expresses both strong positive emotion (“I LOVE CRISTIANO RONALDO”) and frustration or disappointment (“I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO”). Because it contains both positive and negative sentiments, the overall sentiment is mixed rather than purely positive, negative, or neutral.  
+
+<answer>Mixed</answer>",233,431
+81,A million dollars a day? How the hell are we okay with this.,Negative,Negative,ok,,"Reasoning: The sentence “A million dollars a day? How the hell are we okay with this.” expresses surprise and frustration, indicating a negative reaction to the situation.  
+<answer>Negative</answer>",219,302
+82,Really though was Justin Verlander up there?,Neutral,Neutral,ok,,"Sentence: Really though was Justin Verlander up there?  
+Reasoning: The sentence is a question asking about a player's performance. It contains no explicit positive or negative language and simply seeks information, so the sentiment is neutral.  
+<answer>Neutral</answer>",213,511
+83,@user they tend to be leftists or at least interventionists so they're a bit of a problem,Negative,Negative,ok,,"Reasoning: The sentence conveys a negative viewpoint toward the group in question, describing them as “a bit of a problem.” The use of the word “problem” and the overall context express dissatisfaction or disapproval, indicating a negative sentiment.  
+<answer>Negative</answer>",225,293
+84,I SUCCESSFULLY CAPTURED THE HATCHIMAL! My journey has ended and I will go down in the history books.,Positive,Positive,ok,,"The sentence expresses excitement, pride, and a sense of accomplishment. Words like “SUCCESSFULLY,” “captured,” and the confident declaration of ending the journey and going down in history books convey a strong positive emotion.  
+<answer>Positive</answer>",235,140
+85,@user lmfao good shot RUAF,Positive,Positive,ok,,"The message contains “lmfao” (laughing loudly) and “good shot,” which are clear indicators of amusement and approval. The acronym “RUAF” is slang that can be mildly insulting, but it does not override the overall positive tone expressed by the laughter and praise. Therefore, the sentiment is best classified as positive.  
+
+<answer>Positive</answer>",214,275
+86,"@user @user Not to mention he used a racial slur at a nationally televised debate. ""Bad hombres"" -Do",Negative,Negative,ok,,"Reasoning: The sentence contains a negative statement about a racial slur used by a public figure, which conveys strong disapproval and negative sentiment.  
+<answer>Negative</answer>",231,348
+87,30 Min into the Westworld-Finale and I’m already like Holy Shit!,Positive,Positive,ok,,"Reasoning: The exclamation “Holy Shit!” conveys excitement and surprise, indicating a strong positive reaction to the show.  
+<answer>Positive</answer>",222,218
+88,Deep Learning Research Review: Reinforcement Learning,Neutral,Neutral,ok,,"The sentence “Deep Learning Research Review: Reinforcement Learning” is a neutral statement that simply names a topic; it contains no positive or negative emotional language.  
+<answer>Neutral</answer>",213,126
+89,Donald Trump and the Rise of White Supremacist Media @user #NotMyPresident #uniteblue #Resist #MAGA ,Negative,Negative,ok,,"The sentence expresses criticism toward Donald Trump and the rise of white supremacist media, which is a negative viewpoint. The hashtags include both anti‑Trump (#NotMyPresident, #uniteblue, #Resist) and pro‑Trump (#MAGA, #tcot) sentiments, but the overall content is a negative statement about Trump and extremist media.  
+<answer>Negative</answer>",237,314
+90,"This BET special, ""Love and Happiness"" celebrating Obama is off the CHAIN #ThankYouObama",Positive,Positive,ok,,"The sentence expresses excitement and appreciation: “off the CHAIN” is slang for something excellent, and the hashtag #ThankYouObama signals a positive sentiment.  
+<answer>Positive</answer>",225,202
+91,"See also, from December 2015: <- deja vu, all over again.",Neutral,Neutral,ok,,"The sentence “See also, from December 2015: <- deja vu, all over again.” is essentially a factual or descriptive remark. It does not contain any explicitly positive or negative emotional language; it merely notes a recurrence. Therefore, the sentiment is best classified as neutral.  
+
+<answer>Neutral</answer>",221,194
+92,The fourth African-Arab summit in #Equatorial_Guinea emphasizes on its support of the proposed Gover,Neutral,Neutral,ok,,<answer>Neutral</answer>,230,498
+93,My sister blew up my phone this morning asking if I could pick her up at the airport at 11.... I'm n,Negative,Negative,ok,,"The speaker expresses annoyance at being asked to pick up their sister and explains that they declined because they’re not a morning person. The tone is mildly frustrated and dismissive, indicating a negative sentiment.  
+<answer>Negative</answer>",239,261
+94,@user just as long as you're making more than minimum wage. Gotta be superior to some people.,Neutral,Negative,ok,,"The statement is condescending and implies a negative judgment about the user’s status, expressing superiority and disdain.  
+<answer>Negative</answer>",225,194
+95,"Xi Jimping, Kim Jong Un, Nicolas Maduro, Robert Mugabe, Sisi, Bashar Al Assad all ""won"" their electi",Neutral,Neutral,ok,,"Sentence: Xi Jimping, Kim Jong Un, Nicolas Maduro, Robert Mugabe, Sisi, Bashar Al Assad all ""won"" their elections by 99% votes  
+Reasoning: The sentence reports a factual claim about election results without using emotionally charged words or evaluative language. It simply states that these leaders received 99% of the vote, which is a neutral description of a political outcome.  
+<answer>Neutral</answer>",239,244
+96,"@user We dont hav Obamacare but this piece was 👌🏼. I wish DT cud keep ins 4 all, but ⬆️competition s",Negative,Positive,ok,,"The tweet expresses a clear sense of approval (“👌🏼”) toward the piece of legislation, while the second sentence reflects a mild frustration about competition. The overall tone leans toward a positive reaction to the policy, with the negative element being relatively minor.  
+<answer>Positive</answer>",243,438
+97,@user But the #Australian #coal #LNP (Libs.) and #GOP #Oil already know this. They just want to earn,Neutral,Negative,ok,,"Reasoning: The sentence criticizes political groups for seeking profit from fossil fuels, expressing disapproval and negative judgment toward their motives. This conveys a negative sentiment.  
+<answer>Negative</answer>",241,377
+98,"@user @user Tool or not, most of what Saakashvili says is true, other politicians in Ukraine are dis",Negative,Negative,ok,,<answer>Negative</answer>,232,257
+99,Melania Trump opts for bow undone at third debate #Fashion,Neutral,Neutral,ok,,"Sentence: Melania Trump opts for bow undone at third debate #Fashion  
+Reasoning: The sentence merely reports a fashion choice without expressing any positive or negative emotion. It contains no evaluative adjectives or adverbs that indicate sentiment. Therefore, the sentiment is neutral.  
+<answer>Neutral</answer>",217,199
