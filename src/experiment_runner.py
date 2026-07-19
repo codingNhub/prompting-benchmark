@@ -75,6 +75,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
                     output_tokens_total += response["output_tokens"]
                     if ner_task:
                         tag_result = normalise(response["raw_text"])
+                        result = tag_result
                         if tag_result["status"] == "ok":
                             entity_samples.append(set(parse_ner_entities(tag_result["label"])))
                     else:
@@ -87,7 +88,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
                 if ner_task:
                     entity_votes = Counter(e for sample in entity_samples for e in sample)
-                    majority = len(entity_samples) // 2 + 1
+                    majority = n_samples // 2 + 1
                     prediction = [e for e, c in entity_votes.items() if c >= majority]
                     status = "ok" if prediction else "failed"
                     if status == "failed":

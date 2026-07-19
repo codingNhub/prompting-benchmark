@@ -58,7 +58,7 @@ def parse_ner_entities(text: str) -> list:
         return []
 
     entities = []
-    for line in text.strip().split("\n"):
+    for line in text.strip().replace("\\n", "\n").split("\n"):
         line = line.strip()
         if not line or line.upper() == "NONE":
             continue
