@@ -5,6 +5,23 @@ import random
 import pandas as pd
 from datasets import load_dataset
 
+# DATASET VERSION RECORD
+# Downloaded: 2026-07-19
+# All datasets loaded with verification_mode="no_checks"
+# No revision= pins applied — datasets were downloaded from
+# HuggingFace main branch at the above date.
+# For reproduction: use the clean CSVs in datasets/processed/
+# rather than re-running this script.
+#
+# Dataset sources:
+# sentiment:      cardiffnlp/tweet_eval (sentiment, test split)
+# ner:            Babelscape/multinerd (test split, English only)
+# summarisation:  EdinburghNLP/xsum (test split)
+# qa:             trivia_qa rc.wikipedia (validation split)
+# paraphrase:     nyu-mll/glue mrpc (test split)
+# urdu_sentiment: community-datasets/roman_urdu (train split)
+# urdu_ner:       mirfan899/urdu-ner (train split)
+
 random.seed(42)
 
 def download_dataset(task_name, hf_name, hf_config, split, label_map, text_column, label_column, n_samples=100):

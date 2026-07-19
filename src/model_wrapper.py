@@ -8,13 +8,14 @@ from src.logger import get_logger
 logger = get_logger("model_wrapper")
 
 
-def call_model(prompt, config):
+def call_model(prompt, config, max_tokens: int = None):
     # Get settings from config
     provider = config.get("api", {}).get("provider", "groq")
     model_key = config.get("models", {}).get("active", "primary")
     model_name = config.get("models", {}).get(model_key, "llama3-8b-8192")
     temperature = config.get("inference", {}).get("temperature_default", 0.0)
-    max_tokens = config.get("inference", {}).get("max_tokens_classification", 256)
+    if max_tokens is None:
+        max_tokens = config.get("inference", {}).get("max_tokens_classification", 256)
     rate_limit_delay = config.get("api", {}).get("rate_limit_delay", 2.0)
     retry_attempts = config.get("api", {}).get("retry_attempts", 3)
     retry_wait = config.get("api", {}).get("retry_wait", 60)

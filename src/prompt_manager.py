@@ -14,6 +14,7 @@ def load_template(technique: str, version: str = "1.0") -> dict:
     Loads the YAML template file for a given technique.
     Returns the full template dict.
     """
+    technique = technique.lower()
     path = f"prompts/templates/{technique}/v{version}.yaml"
 
     if not os.path.exists(path):
@@ -31,7 +32,7 @@ def load_template(technique: str, version: str = "1.0") -> dict:
 
 def build_prompt(technique: str, task: str, example: dict,
                  few_shot_pool: list = None, version: str = "1.0",
-                 example_id: int = 0) -> str:
+                 example_id: int = 0, seed: int = 42) -> str:
     """
     Builds a complete prompt string from template + example data.
 
@@ -54,12 +55,12 @@ def build_prompt(technique: str, task: str, example: dict,
         prompt = prompt.replace("{input_text_2}", text_2)
 
 # Fill in few-shot examples
-    if few_shot_pool and "{example_1_text}" in prompt:
+    if few_shot_pool and "{example_1_" in prompt:
         # For few_shot_cot — use YAML examples only, never the random pool
         # This keeps sentence/reasoning/label coherent
         if "examples" in template["tasks"][task]:
             yaml_examples = template["tasks"][task]["examples"]
-            rng = random.Random(42 + example_id)
+            rng = random.Random(seed + example_id)
             demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
             for i, demo in enumerate(demos, start=1):
                 n = str(i)
@@ -67,7 +68,7 @@ def build_prompt(technique: str, task: str, example: dict,
                     prompt = prompt.replace(f"{{example_{n}_{key}}}", str(value))
         else:
             # For few_shot — use random pool
-            rng = random.Random(42 + example_id)
+            rng = random.Random(seed + example_id)
             demos = rng.sample(few_shot_pool, min(3, len(few_shot_pool)))
             for i, demo in enumerate(demos, start=1):
                 n = str(i)
@@ -77,9 +78,9 @@ def build_prompt(technique: str, task: str, example: dict,
                 prompt = prompt.replace(f"{{example_{n}_sentence2}}", demo.get("text_2", ""))
 
     # Fill YAML examples for techniques that use them (non-few-shot)
-    elif "examples" in template["tasks"][task] and "{example_1_text}" in prompt:
+    elif "examples" in template["tasks"][task] and "{example_1_" in prompt:
         yaml_examples = template["tasks"][task]["examples"]
-        rng = random.Random(42 + example_id)
+        rng = random.Random(seed + example_id)
         demos = rng.sample(yaml_examples, min(3, len(yaml_examples)))
         for i, demo in enumerate(demos, start=1):
             n = str(i)

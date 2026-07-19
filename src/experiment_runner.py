@@ -53,8 +53,9 @@ def run_experiment(technique: str, task: str, language: str = "english",
             prediction = None
             status = "failed"
 
+            safe_pool = [e for e in pool if e["id"] != example["id"]]
             prompt = build_prompt(technique, task, example,
-                                  few_shot_pool=pool, example_id=example["id"])
+                                  few_shot_pool=safe_pool, example_id=example["id"], seed=seed)
 
             if technique == "self_consistency":
                 n_samples = template["tasks"][task].get("n_samples", 3)
@@ -102,7 +103,11 @@ def run_experiment(technique: str, task: str, language: str = "english",
                     flagged_count += 1
 
             else:
-                response = call_model(prompt, config)
+                if task in ("summarisation", "qa"):
+                    gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
+                    response = call_model(prompt, config, max_tokens=gen_budget)
+                else:
+                    response = call_model(prompt, config)
                 input_tokens = response["input_tokens"]
                 output_tokens = response["output_tokens"]
 
@@ -146,6 +151,10 @@ def run_experiment(technique: str, task: str, language: str = "english",
             flagged_count += 1
             predictions.append([] if task in ("ner", "urdu_ner") else PARSE_FAILURE_LABEL)
             references.append(example["label"])
+            raw_results.append({"id": example["id"], "text": example["text"][:100],
+                "reference": example["label"], "prediction": str(predictions[-1]),
+                "status": "failed", "failure_reason": str(e), "raw_response": "",
+                "input_tokens": 0, "output_tokens": 0})
 
     if not predictions:
         logger.error("No predictions — cannot compute metrics")
