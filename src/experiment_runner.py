@@ -5,6 +5,7 @@ import csv
 import random
 from datetime import datetime
 from collections import Counter
+
 from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
@@ -31,14 +32,35 @@ def run_experiment(technique: str, task: str, language: str = "english",
     model_name = config["models"][model_key]
 
     examples = load_dataset(task, language)
-
     pool = examples
     test_examples = examples
 
+    pred_path = f"outputs/predictions/{technique}_{task}_{language}.csv"
+    completed_ids = set()
+    raw_results = []
+
+    if os.path.exists(pred_path):
+        with open(pred_path, "r", encoding="utf-8") as f:
+            done_rows = list(csv.DictReader(f))
+            completed_ids = set(int(r["id"]) for r in done_rows)
+            raw_results = done_rows
+            logger.info(f"Resuming — {len(completed_ids)}/100 examples already done")
+
+    test_examples = [e for e in test_examples if e["id"] not in completed_ids]
+
+    if not test_examples:
+        logger.info("All examples already completed — loading existing results")
+
     predictions = []
     references = []
-    raw_results = []
     flagged_count = 0
+
+    # Load previously completed predictions and references
+    for r in raw_results:
+        predictions.append(r["prediction"])
+        references.append(r["reference"])
+        if r["status"] != "ok":
+            flagged_count += 1
 
     from src.prompt_manager import load_template
     template = load_template(technique)
@@ -55,7 +77,8 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
             safe_pool = [e for e in pool if e["id"] != example["id"]]
             prompt = build_prompt(technique, task, example,
-                                  few_shot_pool=safe_pool, example_id=example["id"], seed=seed)
+                                  few_shot_pool=safe_pool,
+                                  example_id=example["id"], seed=seed)
 
             if technique == "self_consistency":
                 n_samples = template["tasks"][task].get("n_samples", 3)
@@ -108,6 +131,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
                     response = call_model(prompt, config, max_tokens=gen_budget)
                 else:
                     response = call_model(prompt, config)
+
                 input_tokens = response["input_tokens"]
                 output_tokens = response["output_tokens"]
 
@@ -134,7 +158,7 @@ def run_experiment(technique: str, task: str, language: str = "english",
             predictions.append(prediction)
             references.append(example["label"])
 
-            raw_results.append({
+            new_row = {
                 "id": example["id"],
                 "text": example["text"][:100],
                 "reference": example["label"],
@@ -144,17 +168,42 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 "raw_response": response["raw_text"] if response else "",
                 "input_tokens": input_tokens,
                 "output_tokens": output_tokens
-            })
+            }
+            raw_results.append(new_row)
 
+            
+            os.makedirs("outputs/predictions", exist_ok=True)
+            write_header = not os.path.exists(pred_path) or len(completed_ids) == 0 and len(raw_results) == 1
+            with open(pred_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=new_row.keys())
+                if write_header:
+                    writer.writeheader()
+                writer.writerow(new_row)
+        
         except Exception as e:
             logger.error(f"Error on example {example['id']}: {e}")
             flagged_count += 1
-            predictions.append([] if task in ("ner", "urdu_ner") else PARSE_FAILURE_LABEL)
+            pred_val = [] if task in ("ner", "urdu_ner") else PARSE_FAILURE_LABEL
+            predictions.append(pred_val)
             references.append(example["label"])
-            raw_results.append({"id": example["id"], "text": example["text"][:100],
-                "reference": example["label"], "prediction": str(predictions[-1]),
-                "status": "failed", "failure_reason": str(e), "raw_response": "",
-                "input_tokens": 0, "output_tokens": 0})
+
+            err_row = {
+                "id": example["id"],
+                "text": example.get("text", "")[:100],
+                "reference": example.get("label", ""),
+                "prediction": str(pred_val),
+                "status": "failed",
+                "failure_reason": str(e),
+                "raw_response": "",
+                "input_tokens": 0,
+                "output_tokens": 0
+            }
+            raw_results.append(err_row)
+
+            os.makedirs("outputs/predictions", exist_ok=True)
+            with open(pred_path, "a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=err_row.keys())
+                writer.writerow(err_row)
 
     if not predictions:
         logger.error("No predictions — cannot compute metrics")
@@ -162,8 +211,8 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
     metrics = compute_metrics(task, predictions, references)
 
-    token_inputs = [r["input_tokens"] for r in raw_results if r["input_tokens"] > 0]
-    token_outputs = [r["output_tokens"] for r in raw_results if r["output_tokens"] > 0]
+    token_inputs = [float(r["input_tokens"]) for r in raw_results if float(r.get("input_tokens", 0)) > 0]
+    token_outputs = [float(r["output_tokens"]) for r in raw_results if float(r.get("output_tokens", 0)) > 0]
     avg_input = sum(token_inputs) / len(token_inputs) if token_inputs else 0
     avg_output = sum(token_outputs) / len(token_outputs) if token_outputs else 0
 
@@ -185,16 +234,6 @@ def run_experiment(technique: str, task: str, language: str = "english",
     result_row.update(metrics)
 
     save_results(result_row)
-
-    pred_path = f"outputs/predictions/{technique}_{task}_{language}.csv"
-    os.makedirs("outputs/predictions", exist_ok=True)
-    with open(pred_path, "w", newline="", encoding="utf-8") as f:
-        if raw_results:
-            writer = csv.DictWriter(f, fieldnames=raw_results[0].keys())
-            writer.writeheader()
-            writer.writerows(raw_results)
-
-    logger.info(f"Predictions saved to {pred_path}")
     logger.info(f"Experiment complete — {technique}/{task} — metrics: {metrics}")
     return result_row
 
