@@ -1,21 +1,21 @@
 # Reruns a single failed example and updates the predictions CSV.
-# Usage: python scripts/rerun_example.py --technique zero_shot --task ner --language english --id 89
+# Usage: python -m scripts.rerun_example --technique zero_shot --task ner --language english --id 89
 
 import argparse
 import csv
 import os
+import ast
 import random
+from datetime import datetime
 
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
 from src.prompt_manager import build_prompt, load_template
 from src.model_wrapper import call_model
-from src.normaliser import normalise, parse_ner_entities
+from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
 from src.metric_engine import compute_metrics
-from src.experiment_runner import save_results, PARSE_FAILURE_LABEL
-from src.normaliser import NORMALISER_VERSION
+from src.experiment_runner import PARSE_FAILURE_LABEL
 from src.logger import get_logger
-from datetime import datetime
 
 logger = get_logger("rerun_example")
 
@@ -63,7 +63,7 @@ def rerun_example(technique, task, language, example_id):
     new_row = {
         "id": example["id"],
         "text": example["text"][:100],
-        "reference": example["label"],
+        "reference": str(example["label"]),
         "prediction": str(prediction),
         "status": status,
         "failure_reason": result.get("reason", ""),
@@ -74,46 +74,46 @@ def rerun_example(technique, task, language, example_id):
 
     print(f"Result: status={status} prediction={str(prediction)[:80]}")
 
-    # Update the predictions CSV — replace the old row for this ID
+    # ── Update predictions CSV ────────────────────────────────────
     pred_path = f"outputs/predictions/{technique}_{task}_{language}.csv"
-
     if not os.path.exists(pred_path):
         print(f"Predictions file not found: {pred_path}")
         return
 
     with open(pred_path, encoding="utf-8") as f:
-        rows = list(csv.DictReader(f))
+        reader = csv.DictReader(f)
+        pred_fieldnames = reader.fieldnames
+        rows = list(reader)
 
-    # Replace the row with matching ID
     updated = False
     for i, row in enumerate(rows):
         if int(row["id"]) == example_id:
-            rows[i] = new_row
+            # Preserve any extra columns from the original row
+            merged = dict(row)
+            merged.update(new_row)
+            rows[i] = merged
             updated = True
             break
 
     if not updated:
         rows.append(new_row)
-        print(f"ID {example_id} was not in file — appended as new row.")
+        print(f"ID {example_id} was not in file — appended.")
 
-    # Write back the full CSV
     with open(pred_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=new_row.keys())
+        writer = csv.DictWriter(f, fieldnames=pred_fieldnames)
         writer.writeheader()
         writer.writerows(rows)
 
     print(f"Updated {pred_path}")
 
-    # Recompute metrics from the full updated CSV
+    # ── Recompute metrics ─────────────────────────────────────────
     with open(pred_path, encoding="utf-8") as f:
         all_rows = list(csv.DictReader(f))
 
-    import ast
-    all_preds = []
-    all_refs = []
+    all_preds, all_refs = [], []
     for r in all_rows:
-        ref = r["reference"]
         pred = r["prediction"]
+        ref = r["reference"]
         if task in ("ner", "urdu_ner"):
             try:
                 pred = ast.literal_eval(pred)
@@ -124,49 +124,68 @@ def rerun_example(technique, task, language, example_id):
         all_refs.append(ref)
 
     metrics = compute_metrics(task, all_preds, all_refs)
-    flagged = sum(1 for r in all_rows if r["status"] != "ok")
+    flagged = sum(1 for r in all_rows if r.get("status") != "ok")
 
     print(f"\nRecomputed metrics after fix:")
     for k, v in metrics.items():
         print(f"  {k}: {v}")
     print(f"  flagged_count: {flagged}")
 
-    # Save updated result to results_master.csv
+    # ── Update results_master.csv safely ─────────────────────────
+    # SAFE APPROACH: read existing fieldnames first, never change them
+    results_path = "outputs/results/results_master.csv"
+
     model_key = config["models"]["active"]
     model_name = config["models"][model_key]
 
-    result_row = {
+    new_result = {
         "experiment_id": f"{technique}_{task}_{language}_{model_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
         "date": datetime.now().strftime("%Y-%m-%d"),
         "model": model_name,
         "technique": technique,
         "task": task,
         "language": language,
-        "token_input_avg": 0,
-        "token_output_avg": 0,
+        "token_input_avg": "",
+        "token_output_avg": "",
         "prompt_version": template["metadata"]["version"],
         "normaliser_version": NORMALISER_VERSION,
         "random_seed": seed,
         "flagged_count": flagged,
         "notes": f"rerun of example {example_id}"
     }
-   # Update results_master.csv — replace existing row
-    results_path = "outputs/results/results_master.csv"
+    new_result.update(metrics)
+
     if os.path.exists(results_path):
         with open(results_path, encoding="utf-8") as f:
-            all_results = list(csv.DictReader(f))
+            reader = csv.DictReader(f)
+            # Preserve the exact fieldnames from the existing file
+            existing_fieldnames = list(reader.fieldnames)
+            all_results = list(reader)
+
+        # Remove only the matching row — keep everything else untouched
         all_results = [r for r in all_results
-                      if not (r["technique"] == technique and
-                              r["task"] == task and
-                              r["language"] == language)]
-        all_results.append(result_row)
+                       if not (r.get("technique") == technique and
+                               r.get("task") == task and
+                               r.get("language") == language)]
+
+        # Build the new row using existing fieldnames — fill gaps with ""
+        safe_row = {col: new_result.get(col, "") for col in existing_fieldnames}
+        all_results.append(safe_row)
+
+        # Write back using the SAME fieldnames — never change the schema
         with open(results_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=list(result_row.keys()))
+            writer = csv.DictWriter(f, fieldnames=existing_fieldnames)
             writer.writeheader()
             writer.writerows(all_results)
-        print(f"Updated results_master.csv")
+
+        print(f"Updated results_master.csv — {len(all_results)} total rows")
     else:
-        save_results(result_row)
+        # File does not exist — create it fresh
+        from src.experiment_runner import save_results
+        save_results(new_result)
+
+    print("Done.")
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
