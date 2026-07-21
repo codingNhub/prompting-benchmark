@@ -150,10 +150,23 @@ def rerun_example(technique, task, language, example_id):
         "flagged_count": flagged,
         "notes": f"rerun of example {example_id}"
     }
-    result_row.update(metrics)
-    save_results(result_row)
-    print(f"\nSaved updated result to results_master.csv")
-
+   # Update results_master.csv — replace existing row
+    results_path = "outputs/results/results_master.csv"
+    if os.path.exists(results_path):
+        with open(results_path, encoding="utf-8") as f:
+            all_results = list(csv.DictReader(f))
+        all_results = [r for r in all_results
+                      if not (r["technique"] == technique and
+                              r["task"] == task and
+                              r["language"] == language)]
+        all_results.append(result_row)
+        with open(results_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=list(result_row.keys()))
+            writer.writeheader()
+            writer.writerows(all_results)
+        print(f"Updated results_master.csv")
+    else:
+        save_results(result_row)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
