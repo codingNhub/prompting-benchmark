@@ -74,7 +74,7 @@ def rerun_example(technique, task, language, example_id):
 
     print(f"Result: status={status} prediction={str(prediction)[:80]}")
 
-    # ── Update predictions CSV ────────────────────────────────────
+    # ── Update predictions CSV ────────────────────────────────
     pred_path = f"outputs/predictions/{technique}_{task}_{language}.csv"
     if not os.path.exists(pred_path):
         print(f"Predictions file not found: {pred_path}")
@@ -85,10 +85,19 @@ def rerun_example(technique, task, language, example_id):
         pred_fieldnames = reader.fieldnames
         rows = list(reader)
 
+    # ── FIX 2: Guard against re-running passing examples ─────
+    current = next((r for r in rows if int(r["id"]) == example_id), None)
+    if current and current.get("status") == "ok":
+        print(f"WARNING: Example {example_id} already has status=ok")
+        print(f"Current prediction: {current.get('prediction')}")
+        confirm = input("Re-run a passing example? Type YES to continue: ")
+        if confirm.strip() != "YES":
+            print("Aborted.")
+            return
+
     updated = False
     for i, row in enumerate(rows):
         if int(row["id"]) == example_id:
-            # Preserve any extra columns from the original row
             merged = dict(row)
             merged.update(new_row)
             rows[i] = merged
@@ -106,7 +115,7 @@ def rerun_example(technique, task, language, example_id):
 
     print(f"Updated {pred_path}")
 
-    # ── Recompute metrics ─────────────────────────────────────────
+    # ── Recompute metrics ─────────────────────────────────────
     with open(pred_path, encoding="utf-8") as f:
         all_rows = list(csv.DictReader(f))
 
@@ -131,12 +140,39 @@ def rerun_example(technique, task, language, example_id):
         print(f"  {k}: {v}")
     print(f"  flagged_count: {flagged}")
 
-    # ── Update results_master.csv safely ─────────────────────────
-    # SAFE APPROACH: read existing fieldnames first, never change them
-    results_path = "outputs/results/results_master.csv"
+    # ── FIX 3: Permanent rerun log ────────────────────────────
+    log_path = "outputs/rerun_log.csv"
+    log_exists = os.path.exists(log_path)
+    with open(log_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "timestamp", "technique", "task", "language", "example_id",
+            "before_status", "before_prediction", "after_status", "after_prediction"
+        ])
+        if not log_exists:
+            writer.writeheader()
+        writer.writerow({
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "technique": technique,
+            "task": task,
+            "language": language,
+            "example_id": example_id,
+            "before_status": current.get("status", "unknown") if current else "not_found",
+            "before_prediction": current.get("prediction", "") if current else "",
+            "after_status": status,
+            "after_prediction": str(prediction)
+        })
+    print(f"Rerun logged to {log_path}")
 
+    # ── Update results_master.csv safely ──────────────────────
+    results_path = "outputs/results/results_master.csv"
     model_key = config["models"]["active"]
     model_name = config["models"][model_key]
+
+    # Compute token averages from full predictions file
+    tokens_in = [float(r["input_tokens"]) for r in all_rows
+                 if r.get("input_tokens", "0") not in ("0", "")]
+    tokens_out = [float(r["output_tokens"]) for r in all_rows
+                  if r.get("output_tokens", "0") not in ("0", "")]
 
     new_result = {
         "experiment_id": f"{technique}_{task}_{language}_{model_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
@@ -145,8 +181,8 @@ def rerun_example(technique, task, language, example_id):
         "technique": technique,
         "task": task,
         "language": language,
-        "token_input_avg": "",
-        "token_output_avg": "",
+        "token_input_avg": round(sum(tokens_in)/len(tokens_in), 1) if tokens_in else "",
+        "token_output_avg": round(sum(tokens_out)/len(tokens_out), 1) if tokens_out else "",
         "prompt_version": template["metadata"]["version"],
         "normaliser_version": NORMALISER_VERSION,
         "random_seed": seed,
@@ -158,21 +194,17 @@ def rerun_example(technique, task, language, example_id):
     if os.path.exists(results_path):
         with open(results_path, encoding="utf-8") as f:
             reader = csv.DictReader(f)
-            # Preserve the exact fieldnames from the existing file
             existing_fieldnames = list(reader.fieldnames)
             all_results = list(reader)
 
-        # Remove only the matching row — keep everything else untouched
         all_results = [r for r in all_results
                        if not (r.get("technique") == technique and
                                r.get("task") == task and
                                r.get("language") == language)]
 
-        # Build the new row using existing fieldnames — fill gaps with ""
         safe_row = {col: new_result.get(col, "") for col in existing_fieldnames}
         all_results.append(safe_row)
 
-        # Write back using the SAME fieldnames — never change the schema
         with open(results_path, "w", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=existing_fieldnames)
             writer.writeheader()
@@ -180,7 +212,6 @@ def rerun_example(technique, task, language, example_id):
 
         print(f"Updated results_master.csv — {len(all_results)} total rows")
     else:
-        # File does not exist — create it fresh
         from src.experiment_runner import save_results
         save_results(new_result)
 

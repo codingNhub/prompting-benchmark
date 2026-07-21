@@ -5,7 +5,7 @@ import csv
 import random
 from datetime import datetime
 from collections import Counter
-
+import ast
 from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
@@ -57,10 +57,16 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
     # Load previously completed predictions and references
     for r in raw_results:
-        predictions.append(r["prediction"])
-        references.append(r["reference"])
-        if r["status"] != "ok":
-            flagged_count += 1
+     pred = r["prediction"]
+     ref = r["reference"]
+     if task in ("ner", "urdu_ner"):
+        try:
+            pred = ast.literal_eval(pred)
+            ref = ast.literal_eval(ref)
+        except:
+            pred = []
+    predictions.append(pred)
+    references.append(ref)
 
     from src.prompt_manager import load_template
     template = load_template(technique)
