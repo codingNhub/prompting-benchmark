@@ -1,0 +1,386 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"The animal is not only durable and rugged , but also is extremely well-suited for forest grazing , b","[('bracken', 'OTHER')]",[],ok,,<answer>NONE</answer>,177,138
+1,"Vice president Ahmed Adeeb was later arrested together with 17 supporters for "" public order offence","[('Ahmed Adeeb', 'PERSON')]","[('Ahmed Adeeb', 'PERSON')]",ok,,"Reasoning:  
+The sentence contains the following proper nouns and titles:  
+- “Ahmed Adeeb” – a personal name, thus a PERSON.  
+- “Vice president” is a title, not a specific entity.  
+- “17 supporters”, “public order offences”, “government”, and “political dissent” are generic terms or numbers, not named entities.  
+
+Therefore, the only named entity is “Ahmed Adeeb”.
+
+<answer>Ahmed Adeeb | PERSON</answer>",179,575
+2,It was sent again to Waipara for the 1997 festival then repeated again in 1999 .,"[('Waipara', 'LOCATION')]","[('Waipara', 'LOCATION'), ('1997 festival', 'OTHER'), ('1999', 'OTHER')]",ok,,"<answer>Waipara | LOCATION
+1997 festival | OTHER
+1999 | OTHER</answer>",171,344
+3,The preserve also harbors northern pike and other fish .,"[('northern pike', 'OTHER')]",[],ok,,<answer>NONE</answer>,161,122
+4,The route to the west is partially blocked by the mass of the Ochil Hills .,"[('Ochil Hills', 'LOCATION')]","[('Ochil Hills', 'LOCATION')]",ok,,"Reasoning:
+1. Scan the sentence for proper nouns and named entities.
+2. “Ochil Hills” is a proper noun referring to a specific geographic feature, so it is a LOCATION.
+3. No other words in the sentence (e.g., “route,” “west,” “mass”) are proper nouns or named entities.
+
+<answer>Ochil Hills | LOCATION</answer>",166,449
+5,"In 1990 , the Bulgarian Communist Party set up an inquiry commission into the camps .","[('Bulgarian Communist Party', 'ORGANIZATION')]","[('1990', 'OTHER'), ('Bulgarian Communist Party', 'ORGANIZATION')]",ok,,"We identify the following named entities in the sentence:
+
+1. **1990** – a year, which does not fall under PERSON, ORGANIZATION, or LOCATION, so it is classified as **OTHER**.  
+2. **Bulgarian Communist Party** – a political organization, so it is classified as **ORGANIZATION**.  
+3. The word **camps** is a common noun and not a named entity, so it is ignored.
+
+<answer>
+1990 | OTHER
+Bulgarian Communist Party | ORGANIZATION
+</answer>",167,525
+6,The title refers to the Pont Neuf bridge in Paris .,"[('Pont Neuf', 'LOCATION'), ('Paris', 'LOCATION')]","[('Pont Neuf', 'LOCATION'), ('Paris', 'LOCATION')]",ok,,"<answer>
+Pont Neuf | LOCATION
+Paris | LOCATION
+</answer>",161,330
+7,Antigua Guatemala was made the capital .,"[('Antigua Guatemala', 'LOCATION')]","[('Antigua Guatemala', 'LOCATION')]",ok,,"Reasoning:
+- The phrase “Antigua Guatemala” refers to a specific city, which is a location.
+- No other proper nouns or named entities appear in the sentence.
+
+<answer>Antigua Guatemala | LOCATION</answer>",156,431
+8,"According to live scanner communications , fire officials say a large gas main has exploded in a nei","[('California', 'LOCATION')]","[('California', 'LOCATION')]",ok,,<answer>California | LOCATION</answer>,172,403
+9,"In good weather , it furnishes an alternative route to nearby Hoosier Pass , offering splendid views","[('Hoosier Pass', 'LOCATION'), ('aspen', 'OTHER'), ('Mount Silverheels', 'LOCATION'), ('Tenmile Range', 'LOCATION')]","[('Hoosier Pass', 'LOCATION'), ('Mount Silverheels', 'LOCATION'), ('Tenmile Range', 'LOCATION')]",ok,,"<answer>Hoosier Pass | LOCATION
+Mount Silverheels | LOCATION
+Tenmile Range | LOCATION</answer>",184,365
+10,"That idea is included in "" Capitalism and Freedom "" , in which he declared that economic freedom is ","[('Capitalism and Freedom', 'OTHER')]","[('Capitalism and Freedom', 'OTHER')]",ok,,<answer>Capitalism and Freedom | OTHER</answer>,184,208
+11,They competed in the renamed Continental Basketball Association for five seasons until the economic ,"[('Continental Basketball Association', 'ORGANIZATION')]","[('Continental Basketball Association', 'ORGANIZATION'), ('1982', 'OTHER')]",ok,,"<answer>
+Continental Basketball Association | ORGANIZATION
+1982 | OTHER
+</answer>",172,301
+12,"In Vietnam , a commune-level town ( "" thị trấn "" ) is very similar to a township ; it is a subdivisi","[('Vietnam', 'LOCATION')]","[('Vietnam', 'LOCATION')]",ok,,<answer>Vietnam | LOCATION</answer>,193,189
+13,"According to the sociologist Bruno Étienne , an expert on religious issues , the SRCM publishes book","[('Bruno Étienne', 'PERSON')]","[('Bruno Étienne', 'PERSON'), ('SRCM', 'ORGANIZATION'), ('NMR', 'OTHER')]",ok,,"<answer>
+Bruno Étienne | PERSON
+SRCM | ORGANIZATION
+NMR | OTHER
+</answer>",241,608
+14,The provincial capital is Mount Hagen .,"[('Mount Hagen', 'LOCATION')]","[('Mount Hagen', 'LOCATION')]",ok,,"Reasoning:
+1. The sentence is: ""The provincial capital is Mount Hagen.""
+2. We look for proper nouns or specific names that refer to real-world entities.
+3. ""Mount Hagen"" is a proper noun that denotes a specific city in Papua New Guinea.
+4. It is a geographic location, so its type is LOCATION.
+5. No other proper nouns or named entities appear in the sentence.
+
+<answer>Mount Hagen | LOCATION</answer>",156,440
+15,"His works show particular influence from the musics of South and Southeast Asia , particularly the g","[('South', 'LOCATION'), ('Southeast Asia', 'LOCATION'), ('Java', 'LOCATION')]","[('South and Southeast Asia', 'LOCATION'), ('Java', 'LOCATION')]",ok,,"The sentence contains two proper nouns that refer to geographic locations:
+
+1. **South and Southeast Asia** – a region encompassing multiple countries in Asia.  
+2. **Java** – an island in Indonesia.
+
+Both are best classified as **LOCATION** entities. No other proper nouns or named entities appear in the sentence.
+
+<answer>
+South and Southeast Asia | LOCATION
+Java | LOCATION
+</answer>",172,613
+16,"Despite the pictures , in Texas , it is not a violation of any law , as seat belts are not required ","[('Texas', 'LOCATION')]","[('Texas', 'LOCATION')]",ok,,<answer>Texas | LOCATION</answer>,178,275
+17,On Rotten Tomatoes it has an approval rating of 0 % based on reviews from 5 critics .,"[('Rotten Tomatoes', 'OTHER')]","[('Rotten Tomatoes', 'ORGANIZATION')]",ok,,"Reasoning:  
+The sentence contains the phrase “Rotten Tomatoes,” which is the name of a well‑known film‑review aggregation website. This qualifies as an ORGANIZATION. No other proper nouns or named entities (such as people, other organizations, locations, or specific titles) appear in the sentence. Therefore, the only named entity to list is “Rotten Tomatoes.”
+
+<answer>Rotten Tomatoes | ORGANIZATION</answer>",169,460
+18,"By causing the of one specific , researchers have produced mice with two frequently encountered beha","[('autism', 'OTHER')]",[],ok,,<answer>NONE</answer>,172,179
+19,Today this activity turned into a local popular hobby and a museum of gold extraction was founded in,"[('Predosa', 'LOCATION')]","[('Predosa', 'LOCATION')]",ok,,<answer>Predosa | LOCATION</answer>,185,186
+20,In Ireland he is a pundit for RTÉ Sport .,"[('Ireland', 'LOCATION'), ('RTÉ Sport', 'ORGANIZATION')]","[('Ireland', 'LOCATION'), ('RTÉ Sport', 'ORGANIZATION')]",ok,,"**Reasoning**  
+1. The sentence is: *“In Ireland he is a pundit for RTÉ Sport .”*  
+2. Identify capitalized words or phrases that refer to real-world entities.  
+   - **Ireland** – a sovereign country, thus a *LOCATION*.  
+   - **RTÉ Sport** – a branded sports division of the Irish broadcaster RTÉ, thus an *ORGANIZATION*.  
+3. No other capitalized terms refer to persons, organizations, or locations.  
+4. Therefore, the named entities are “Ireland” and “RTÉ Sport” with the types *LOCATION* and *ORGANIZATION* respectively.
+
+<answer>
+Ireland | LOCATION
+RTÉ Sport | ORGANIZATION
+</answer>",161,463
+21,"A number of setbacks have occurred , especially after the loss of Carillion as the main contractor ,","[('Carillion', 'ORGANIZATION')]","[('Carillion', 'ORGANIZATION'), ('January 2018', 'OTHER')]",ok,,"<answer>
+Carillion | ORGANIZATION
+January 2018 | OTHER
+</answer>",178,396
+22,He sustained a ruptured hamstring after 70 minutes of his debut against Everton which took a full 10,"[('Everton', 'ORGANIZATION')]","[('Everton', 'ORGANIZATION')]",ok,,<answer>Everton | ORGANIZATION</answer>,175,231
+23,"1500 ) , and also music written for the harpsichord by Domenico Scarlatti ( b .","[('Domenico Scarlatti', 'PERSON')]","[('1500', 'OTHER'), ('Domenico Scarlatti', 'PERSON')]",ok,,"<answer>1500 | OTHER
+Domenico Scarlatti | PERSON</answer>",173,864
+24,"While in college she competed in the 100 m , 200 m , 4 × 100 m relay and 4 × 400 m relay for Clemson","[('Clemson University', 'ORGANIZATION')]","[('Clemson University', 'ORGANIZATION')]",ok,,<answer>Clemson University | ORGANIZATION</answer>,183,417
+25,"In 1938 , it was extended an additional to the Missouri state line .","[('Missouri', 'LOCATION')]","[('1938', 'OTHER'), ('Missouri', 'LOCATION'), ('Missouri state line', 'LOCATION')]",ok,,"<answer>1938 | OTHER
+Missouri | LOCATION
+Missouri state line | LOCATION</answer>",165,894
+26,The Taff Vale Railway and its 275 locomotives were acquired on 1 January 1922 .,"[('Taff Vale Railway', 'ORGANIZATION')]","[('Taff Vale Railway', 'ORGANIZATION'), ('1 January 1922', 'OTHER')]",ok,,"**Reasoning**  
+1. Scan the sentence for capitalized phrases and dates.  
+2. “Taff Vale Railway” is a railway company → ORGANIZATION.  
+3. “1 January 1922” is a specific date → OTHER (not a person, organization, or location).  
+4. No other capitalized or date-like entities appear.
+
+<answer>
+Taff Vale Railway | ORGANIZATION
+1 January 1922 | OTHER
+</answer>",171,623
+27,"Famous performers included Dinah Shore , Francis Craig , and the NBC Orchestra .","[('Dinah Shore', 'PERSON'), ('Francis Craig', 'PERSON'), ('NBC Orchestra', 'ORGANIZATION')]","[('Dinah Shore', 'PERSON'), ('Francis Craig', 'PERSON'), ('NBC Orchestra', 'ORGANIZATION')]",ok,,"**Reasoning**  
+The sentence contains three capitalized phrases that refer to distinct entities:
+
+1. **Dinah Shore** – a well‑known singer and actress → PERSON  
+2. **Francis Craig** – a songwriter and composer → PERSON  
+3. **NBC Orchestra** – a musical ensemble associated with the NBC network → ORGANIZATION  
+
+No other capitalized words denote a location or a generic “OTHER” category.
+
+<answer>
+Dinah Shore | PERSON
+Francis Craig | PERSON
+NBC Orchestra | ORGANIZATION
+</answer>",164,529
+28,"With five football fields , the venue is the largest in İzmir Province .","[('İzmir Province', 'LOCATION')]","[('İzmir Province', 'LOCATION')]",ok,,"Reasoning:
+1. Scan the sentence for proper nouns or specific place names.
+2. “İzmir Province” is a geographic entity (province in Turkey).
+3. No other proper nouns or organizations are present.
+
+<answer>İzmir Province | LOCATION</answer>",164,408
+29,"Its name originates from the fishing vocabulary ; in the Middle Ages it referred to the right to "" p","[('Middle Ages', 'OTHER')]","[('Middle Ages', 'OTHER')]",ok,,<answer>Middle Ages | OTHER</answer>,181,177
+30,It is located 18 miles west of Philadelphia .,"[('Philadelphia', 'LOCATION')]","[('Philadelphia', 'LOCATION')]",ok,,<answer>Philadelphia | LOCATION</answer>,159,134
+31,The pond was originally connected to the sea by a small inlet and got its name because sailors would,"[('Manasquan Inlet', 'LOCATION')]","[('Manasquan Inlet', 'LOCATION')]",ok,,<answer>Manasquan Inlet | LOCATION</answer>,188,193
+32,The trailer is narrated by voice actress Linda Hunt .,"[('Linda Hunt', 'PERSON')]","[('Linda Hunt', 'PERSON')]",ok,,"Reasoning:
+- The sentence is: “The trailer is narrated by voice actress Linda Hunt.”
+- The only capitalized proper noun that refers to a specific individual is “Linda Hunt.”
+- “Linda Hunt” is a person (a voice actress).
+- No other named entities (organizations, locations, or other types) appear in the sentence.
+
+<answer>Linda Hunt | PERSON</answer>",159,390
+33,"In Kerala , India , arrowroot , locally called bilathi koova , is cultivated to produce an easily di","[('Kerala', 'LOCATION'), ('India', 'LOCATION')]","[('Kerala', 'LOCATION'), ('India', 'LOCATION')]",ok,,"<answer>Kerala | LOCATION
+India | LOCATION</answer>",174,338
+34,The bay connects on its south end to the mouth of Tomales Bay .,"[('Tomales Bay', 'LOCATION')]","[('Tomales Bay', 'LOCATION')]",ok,,"Reasoning:
+- The sentence is: ""The bay connects on its south end to the mouth of Tomales Bay .""
+- We look for proper nouns or specific names that denote a person, organization, location, or other entity.
+- ""Tomales Bay"" is a specific geographic feature, thus a LOCATION.
+- No other proper nouns or named entities appear in the sentence.
+
+<answer>Tomales Bay | LOCATION</answer>",164,594
+35,"Mitochondrial DNA evidence indicates its closest relative is the masked crimson tanager ( "" R. nigro","[('masked crimson tanager', 'OTHER')]","[('masked crimson tanager', 'OTHER'), ('R. nigrogularis', 'OTHER'), ('800,000 years ago', 'OTHER')]",ok,,"<answer>
+masked crimson tanager | OTHER
+R. nigrogularis | OTHER
+800,000 years ago | OTHER
+</answer>",189,608
+36,Transport workers in France began a strike on Thursday to protest changes in the state 's pension sy,"[('France', 'LOCATION')]","[('Transport workers', 'OTHER'), ('France', 'LOCATION'), ('Thursday', 'OTHER')]",ok,,"<answer>
+Transport workers | OTHER
+France | LOCATION
+Thursday | OTHER
+</answer>",169,437
+37,The county has one city : Tehran .,"[('Tehran', 'LOCATION')]","[('Tehran', 'LOCATION')]",ok,,"Reasoning:  
+The sentence is “The county has one city : Tehran .”  
+- “Tehran” is a proper noun referring to a city, which is a geographic location.  
+- “The county” is a generic phrase and not a specific named entity.  
+Thus, the only named entity is “Tehran” and its type is LOCATION.  
+
+<answer>Tehran | LOCATION</answer>",157,372
+38,"A big defenceman , he played six games for the Montreal Canadiens , recording only 11 penalty minute","[('Montreal Canadiens', 'ORGANIZATION')]","[('Montreal Canadiens', 'ORGANIZATION')]",ok,,"Reasoning:
+- The sentence contains the proper noun “Montreal Canadiens,” which refers to a professional hockey team.
+- This is an organization, not a person, location, or other type of entity.
+- No other named entities are present.
+
+<answer>Montreal Canadiens | ORGANIZATION</answer>",171,549
+39,"His widow , Marie de ' Medici , served as regent for their nine-year-old son , Louis XIII , until 16","[(""Marie de ' Medici"", 'PERSON'), ('Louis XIII', 'PERSON')]","[(""Marie de ' Medici"", 'PERSON'), ('Louis XIII', 'PERSON'), ('1617', 'OTHER')]",ok,,"The sentence contains the following named entities:
+
+1. **Marie de ' Medici** – a historical figure, thus a PERSON.  
+2. **Louis XIII** – a monarch, also a PERSON.  
+3. **1617** – a year, which does not fit PERSON, ORGANIZATION, or LOCATION, so it is classified as OTHER.
+
+<answer>Marie de ' Medici | PERSON
+Louis XIII | PERSON
+1617 | OTHER</answer>",177,757
+40,"On 15 March 2001 he joined Torquay United on non-contract terms , but left just five days later with","[('Torquay United', 'ORGANIZATION')]","[('15 March 2001', 'OTHER'), ('Torquay United', 'ORGANIZATION')]",ok,,"<answer>
+15 March 2001 | OTHER
+Torquay United | ORGANIZATION
+</answer>",191,400
+41,"Another , less popular theory holds that the butte was named after Secretary of War John C. Spencer ","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON')]","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON'), ('July 1845', 'OTHER')]",ok,,"<answer>
+John C. Spencer | PERSON
+Elijah White | PERSON
+July 1845 | OTHER
+</answer>",178,601
+42,It was named for a large outcropping of salt which drew the wildlife to the site near the Roanoke Ri,"[('Roanoke River', 'LOCATION')]","[('Roanoke River', 'LOCATION')]",ok,,<answer>Roanoke River | LOCATION</answer>,174,240
+43,"In 2004 , student activism led to a campus-wide ban on sales of Coca-Cola products .","[('Coca-Cola', 'OTHER')]","[('2004', 'OTHER'), ('Coca-Cola', 'ORGANIZATION')]",ok,,"The sentence contains two distinct named entities:
+
+1. **2004** – a year, which does not fall under PERSON, ORGANIZATION, or LOCATION, so it is classified as OTHER.  
+2. **Coca‑Cola** – a well‑known brand name of a beverage company, which is an ORGANIZATION.
+
+<answer>2004 | OTHER
+Coca-Cola | ORGANIZATION</answer>",169,597
+44,"It also hosts the annual "" ZagrebDox "" documentary film festival .","[('ZagrebDox', 'OTHER')]","[('ZagrebDox', 'OTHER')]",ok,,<answer>ZagrebDox | OTHER</answer>,163,427
+45,"Kellogg 's Sugar Smacks , created in 1953 , had 56 % sugar by weight .","[(""Kellogg 's"", 'ORGANIZATION'), ('Sugar Smacks', 'OTHER')]","[(""Kellogg's Sugar Smacks"", 'OTHER'), ('1953', 'OTHER')]",ok,,"<answer>
+Kellogg's Sugar Smacks | OTHER
+1953 | OTHER
+</answer>",171,345
+46,"This means that birds being force molted become susceptible to disease , particularly "" Salmonella ""","[('Salmonella', 'OTHER')]","[('Salmonella', 'OTHER'), ('public health', 'OTHER')]",ok,,"<answer>
+Salmonella | OTHER
+public health | OTHER
+</answer>",179,288
+47,"Command passed to Major Dmitry Pavlutsky , who adopted very destructive tactics , burning , killing ","[('Dmitry Pavlutsky', 'PERSON')]","[('Major Dmitry Pavlutsky', 'PERSON')]",ok,,<answer>Major Dmitry Pavlutsky | PERSON</answer>,180,295
+48,"In early 1899 , the magazine was taken over by the socialist journalist Vladimir Posse , who changed","[('Vladimir Posse', 'PERSON')]","[('Vladimir Posse', 'PERSON'), ('1899', 'OTHER'), ('April 1899', 'OTHER')]",ok,,"<answer>
+Vladimir Posse | PERSON
+1899 | OTHER
+April 1899 | OTHER
+</answer>",181,289
+49,"In 1885 when he was 11 , his father died of tuberculosis , leaving the family with just eight dollar","[('tuberculosis', 'OTHER')]","[('1885', 'OTHER'), ('tuberculosis', 'OTHER'), ('eight dollars', 'OTHER')]",ok,,"<answer>
+1885 | OTHER
+tuberculosis | OTHER
+eight dollars | OTHER
+</answer>",173,1079
+50,The few miles between the sands and the coast is also a safe anchorage used as a refuge from foul we,"[('The Downs', 'LOCATION')]","[('The Downs', 'LOCATION')]",ok,,<answer>The Downs | LOCATION</answer>,176,252
+51,"As the common name indicates , the spider superficially resembles and is frequently confused for the","[('Latrodectus', 'OTHER')]","[('black widow', 'OTHER'), ('Latrodectus', 'OTHER')]",ok,,"<answer>
+black widow | OTHER
+Latrodectus | OTHER
+</answer>",188,339
+52,"The graded the cyclone as "" severe "" , and said it was due to hit land near the city of after moving","[('Bay of Bengal', 'LOCATION')]","[('Bay of Bengal', 'LOCATION')]",ok,,<answer>Bay of Bengal | LOCATION</answer>,193,188
+53,The album was produced by documentary filmmaker Jem Cohen .,"[('Jem Cohen', 'PERSON')]","[('Jem Cohen', 'PERSON')]",ok,,<answer>Jem Cohen | PERSON</answer>,159,130
+54,"Much of the town was later destroyed by fire , and what was left moved to a location south of the ca","[('Table Rock Lake', 'LOCATION')]","[('Table Rock Lake', 'LOCATION')]",ok,,<answer>Table Rock Lake | LOCATION</answer>,180,188
+55,The subsequent depletion of the brook trout population by the 1850 s led to an early conservation mo,"[('brook trout', 'OTHER'), ('brown trout', 'OTHER')]","[('brook trout', 'OTHER'), ('1850 s', 'OTHER'), ('conservation movement', 'OTHER'), ('brown trout', 'OTHER')]",ok,,"<answer>
+brook trout | OTHER
+1850 s | OTHER
+conservation movement | OTHER
+brown trout | OTHER
+</answer>",184,441
+56,The upper reaches of the river are a popular destination for fly fishing of trout .,"[('trout', 'OTHER')]",[],ok,,<answer>NONE</answer>,165,114
+57,"First-class passengers could visit a separate lounge , a reading room decorated by Bruno Paul , a tw","[('Bruno Paul', 'PERSON')]","[('Bruno Paul', 'PERSON')]",ok,,<answer>Bruno Paul | PERSON</answer>,186,220
+58,"The resulting change in carpet design was what Kurt Erdmann termed the "" “ carpet design revolution ","[('Kurt Erdmann', 'PERSON')]","[('Kurt Erdmann', 'PERSON'), ('carpet design revolution', 'OTHER')]",ok,,"<answer>Kurt Erdmann | PERSON
+carpet design revolution | OTHER</answer>",170,987
+59,It was built from adobe bricks in 1836 by order of Mariano Guadalupe Vallejo .,"[('Mariano Guadalupe Vallejo', 'PERSON')]","[('Mariano Guadalupe Vallejo', 'PERSON'), ('1836', 'OTHER')]",ok,,"**Reasoning:**
+
+1. Scan the sentence for capitalized words and proper nouns.  
+2. “Mariano Guadalupe Vallejo” is a full name → PERSON.  
+3. “1836” is a year (date) → classify as OTHER.  
+4. No other capitalized terms correspond to a location, organization, or other named entity.
+
+**Answer:**
+
+<answer>
+Mariano Guadalupe Vallejo | PERSON
+1836 | OTHER
+</answer>",167,923
+60,"In October 2016 , football stadium design expert , Paul Fletcher said that the stadium should be pul","[('Paul Fletcher', 'PERSON')]","[('October 2016', 'OTHER'), ('Paul Fletcher', 'PERSON')]",ok,,"<answer>October 2016 | OTHER
+Paul Fletcher | PERSON</answer>",193,336
+61,"Berry-bearing plants in the preserve include bog blueberry , crowberry , low-bush cranberry and clou","[('bog blueberry', 'OTHER'), ('crowberry', 'OTHER'), ('low-bush cranberry', 'OTHER'), ('cloudberry or salmonberry', 'OTHER')]","[('bog blueberry', 'OTHER'), ('crowberry', 'OTHER'), ('low-bush cranberry', 'OTHER'), ('cloudberry', 'OTHER'), ('salmonberry', 'OTHER')]",ok,,"<answer>
+bog blueberry | OTHER
+crowberry | OTHER
+low-bush cranberry | OTHER
+cloudberry | OTHER
+salmonberry | OTHER
+</answer>",173,485
+62,"Environmental stress factors may also be involved , as reports have indicated that herbicide applica","[('chlorosis', 'OTHER')]","[('D. dryina', 'OTHER')]",ok,,<answer>D. dryina | OTHER</answer>,183,234
+63,"The event , the largest Europe has ever seen , started at 6:00 p.m. local time and continued until 1","[('Europe', 'LOCATION')]","[('Europe', 'LOCATION')]",ok,,<answer>Europe | LOCATION</answer>,187,327
+64,On Rotten Tomatoes the film has an approval rating of 35 % based on reviews from 65 critics .,"[('Rotten Tomatoes', 'OTHER')]","[('Rotten Tomatoes', 'ORGANIZATION')]",ok,,<answer>Rotten Tomatoes | ORGANIZATION</answer>,170,164
+65,"He died 74 days later , of complications from lung cancer .","[('lung cancer', 'OTHER')]",[],ok,,"The sentence contains no proper nouns or named entities. “He” is a pronoun, “74 days later” is a time expression, and “lung cancer” is a disease. Therefore, there are no entities to list.
+
+<answer>NONE</answer>",162,364
+66,", is a cactus found in the Southwestern United States and northern Mexico , including some cooler re","[('Southwestern United States', 'LOCATION'), ('Mexico', 'LOCATION')]",[],failed,,,175,1200
+67,It served Lake County as a seat of government from 1871 until 1968 .,"[('Lake County', 'LOCATION')]","[('Lake County', 'LOCATION'), ('1871', 'OTHER'), ('1968', 'OTHER')]",ok,,"<answer>
+Lake County | LOCATION
+1871 | OTHER
+1968 | OTHER
+</answer>",167,374
+68,"Tourist organisations objected , asking that the boundary be moved further west to include Fortrose ","[('Fortrose', 'LOCATION')]","[('Tourist organisations', 'ORGANIZATION'), ('Fortrose', 'LOCATION')]",ok,,"<answer>
+Tourist organisations | ORGANIZATION
+Fortrose | LOCATION
+</answer>",167,351
+69,"Big-berry Manzanita ( "" Arctostaphylos glauca "" ) reach remarkable size within the park ( over 20 fe","[('Big-berry Manzanita', 'OTHER')]","[('Big-berry Manzanita', 'OTHER'), ('Arctostaphylos glauca', 'OTHER')]",ok,,"<answer>Big-berry Manzanita | OTHER
+Arctostaphylos glauca | OTHER</answer>",195,445
+70,"1961 ) , and Bernice King ( b .","[('Bernice King', 'PERSON')]","[('1961', 'OTHER'), ('Bernice King', 'PERSON')]",ok,,"<answer>
+1961 | OTHER
+Bernice King | PERSON
+</answer>",161,369
+71,Any kind of meat can be used when making pörkölt .,"[('meat', 'OTHER')]",[],ok,,<answer>NONE</answer>,163,120
+72,"In the North America , it occurs in the New England states of Maine , Vermont , New Hampshire Rhode ","[('North America', 'LOCATION'), ('New England', 'LOCATION'), ('Maine', 'LOCATION'), ('Vermont', 'LOCATION'), ('New Hampshire', 'LOCATION'), ('Rhode Island', 'LOCATION'), ('Massachusetts', 'LOCATION'), ('Canada', 'LOCATION'), ('New Brunswick', 'LOCATION'), ('Nova Scotia', 'LOCATION')]","[('North America', 'LOCATION'), ('New England', 'LOCATION'), ('Maine', 'LOCATION'), ('Vermont', 'LOCATION'), ('New Hampshire', 'LOCATION'), ('Rhode Island', 'LOCATION'), ('Massachusetts', 'LOCATION'), ('Canada', 'LOCATION'), ('New Brunswick', 'LOCATION'), ('Nova Scotia', 'LOCATION')]",ok,,"<answer>
+North America | LOCATION
+New England | LOCATION
+Maine | LOCATION
+Vermont | LOCATION
+New Hampshire | LOCATION
+Rhode Island | LOCATION
+Massachusetts | LOCATION
+Canada | LOCATION
+New Brunswick | LOCATION
+Nova Scotia | LOCATION
+</answer>",185,417
+73,He was also picked in the squad for the following tournament in South Africa two years later .,"[('South Africa', 'LOCATION')]","[('South Africa', 'LOCATION')]",ok,,<answer>South Africa | LOCATION</answer>,167,261
+74,In 1934 he was awarded an honorary Doctorate of Law from the University of St Andrews .,"[('University of St Andrews', 'ORGANIZATION')]","[('1934', 'OTHER'), ('University of St Andrews', 'ORGANIZATION'), ('St Andrews', 'LOCATION')]",ok,,"The sentence contains a year, an institution, and a place name.  
+- **1934** is a date, which falls under the generic category **OTHER**.  
+- **University of St Andrews** is a higher‑education institution, so it is an **ORGANIZATION**.  
+- **St Andrews** is the town in Scotland where the university is located, so it is a **LOCATION**.  
+No personal names or other types of entities appear.
+
+<answer>
+1934 | OTHER
+University of St Andrews | ORGANIZATION
+St Andrews | LOCATION
+</answer>",169,1068
+75,"The "" grey knifefish "" , "" Bathystethus cultratus "" , is a species of sea chub native to the Pacific","[('sea chub', 'OTHER'), ('Pacific Ocean', 'LOCATION'), ('Australia', 'LOCATION'), ('New Zealand', 'LOCATION'), ('Kermadec Islands', 'LOCATION')]","[('grey knifefish', 'OTHER'), ('Bathystethus cultratus', 'OTHER'), ('Pacific Ocean', 'LOCATION'), ('Australia', 'LOCATION'), ('New Zealand', 'LOCATION'), ('Kermadec Islands', 'LOCATION')]",ok,,"<answer>
+grey knifefish | OTHER
+Bathystethus cultratus | OTHER
+Pacific Ocean | LOCATION
+Australia | LOCATION
+New Zealand | LOCATION
+Kermadec Islands | LOCATION
+</answer>",192,492
+76,"The park covers the Cairngorms range of mountains , and surrounding hills .","[('Cairngorms', 'LOCATION')]","[('Cairngorms', 'LOCATION')]",ok,,<answer>Cairngorms | LOCATION</answer>,165,371
+77,"His biographer , Trevor Dann , notes that he had difficulty connecting with staff and fellow student","[('Trevor Dann', 'PERSON')]","[('Trevor Dann', 'PERSON')]",ok,,<answer>Trevor Dann | PERSON</answer>,183,205
+78,The film stars Odette Annable as a young woman who is tormented by a dybbuk and seeks help from a ra,"[('Odette Annable', 'PERSON'), ('Gary Oldman', 'PERSON')]","[('Odette Annable', 'PERSON'), ('Gary Oldman', 'PERSON'), ('dybbuk', 'OTHER')]",ok,,"<answer>
+Odette Annable | PERSON
+Gary Oldman | PERSON
+dybbuk | OTHER
+</answer>",182,434
+79,David Phelps was moved into the starting rotation .,"[('David Phelps', 'PERSON')]","[('David Phelps', 'PERSON')]",ok,,"Reasoning:
+- The sentence contains the proper name “David Phelps”.
+- “David Phelps” is a person’s name, so the entity type is PERSON.
+- No other proper nouns or named entities appear in the sentence.
+
+<answer>David Phelps | PERSON</answer>",159,559
+80,"Multiple bomb explosions hit a football match in northern Iraq earlier today , killing at least 25 p","[('Iraq', 'LOCATION')]","[('Iraq', 'LOCATION'), ('Northern Iraq', 'LOCATION')]",ok,,"<answer>Iraq | LOCATION
+Northern Iraq | LOCATION</answer>",177,553
+81,Chemical fertilizers were manufactured along the canal soon after the Civil War .,"[('Civil War', 'OTHER')]","[('Civil War', 'OTHER')]",ok,,<answer>Civil War | OTHER</answer>,162,209
+82,"In contrast , the northern , protected portion of the delta is dominated by tidal passes and mangrov","[('mangrove', 'OTHER')]",[],ok,,<answer>NONE</answer>,171,139
+83,Many of the fossils in the region date to the Pleistocene and include species such as Diprotodon opt,"[('Diprotodon optatum', 'OTHER'), ('marsupial', 'OTHER')]","[('Pleistocene', 'OTHER'), ('Diprotodon optatum', 'OTHER')]",ok,,"<answer>
+Pleistocene | OTHER
+Diprotodon optatum | OTHER
+</answer>",180,520
+84,"The main designated campgrounds along the way feature bear boxes for safe storage of food , an outho","[('Pacific Ocean', 'LOCATION'), ('Olympic Peninsula', 'LOCATION')]","[('Pacific Ocean', 'LOCATION'), ('Olympic Peninsula', 'LOCATION')]",ok,,"<answer>
+Pacific Ocean | LOCATION
+Olympic Peninsula | LOCATION
+</answer>",188,355
+85,Finally there is the aforementioned hunting residence which was designed by Hendrik Petrus Berlage .,"[('Hendrik Petrus Berlage', 'PERSON')]","[('Hendrik Petrus Berlage', 'PERSON')]",ok,,<answer>Hendrik Petrus Berlage | PERSON</answer>,167,215
+86,He is also a qualified physiotherapist having graduated from the University of Salford in 2016 .,"[('University of Salford', 'ORGANIZATION')]","[('University of Salford', 'ORGANIZATION'), ('2016', 'OTHER')]",ok,,"<answer>University of Salford | ORGANIZATION
+2016 | OTHER</answer>",169,330
+87,"Though none of the players consumed any alcohol , they were nonetheless all sent home by manager Lar","[('Lars Lagerbäck', 'PERSON')]","[('Lars Lagerbäck', 'PERSON')]",ok,,<answer>Lars Lagerbäck | PERSON</answer>,181,197
+88,"There is a deep water cargo port at Greenore , and a smaller fishing harbour at Carlingford .","[('Greenore', 'LOCATION'), ('Carlingford', 'LOCATION')]","[('Greenore', 'LOCATION'), ('Carlingford', 'LOCATION')]",ok,,"<answer>Greenore | LOCATION
+Carlingford | LOCATION</answer>",170,279
+89,The ranges extend from west of Point Conception eastward approximately 500 kilometers into the Mojav,"[('Point Conception', 'LOCATION'), ('Mojave', 'LOCATION'), ('Colorado Desert', 'LOCATION')]","[('Point Conception', 'LOCATION'), ('Mojave', 'LOCATION'), ('Colorado Desert', 'LOCATION')]",ok,,"<answer>Point Conception | LOCATION
+Mojave | LOCATION
+Colorado Desert | LOCATION</answer>",172,399
+90,"On the island of Caprera is located the "" Centro Velico Caprera "" , that is considered one of the la","[('Caprera', 'LOCATION'), ('Centro Velico Caprera', 'ORGANIZATION'), ('Mediterranean Sea', 'LOCATION')]","[('Caprera', 'LOCATION'), ('Centro Velico Caprera', 'ORGANIZATION'), ('Mediterranean Sea', 'LOCATION'), ('1967', 'OTHER')]",ok,,"Reasoning:
+1. The phrase “island of Caprera” contains the proper noun “Caprera,” which refers to a specific island – a location.  
+2. “Centro Velico Caprera” is the name of a sailing school, thus an organization.  
+3. “Mediterranean Sea” is a named body of water – a location.  
+4. “1967” is a year, which is not a person, organization, or location, so it falls under OTHER.
+
+<answer>
+Caprera | LOCATION
+Centro Velico Caprera | ORGANIZATION
+Mediterranean Sea | LOCATION
+1967 | OTHER
+</answer>",189,749
+91,Whoever receives this nomination will be guaranteed ballot access in California .,"[('California', 'LOCATION')]","[('California', 'LOCATION')]",ok,,<answer>California | LOCATION</answer>,161,146
+92,He struck out seven consecutive batters in an April 24 game against the Detroit Tigers in the latter,"[('Detroit Tigers', 'ORGANIZATION')]","[('April 24', 'OTHER'), ('Detroit Tigers', 'ORGANIZATION')]",ok,,"<answer>
+April 24 | OTHER
+Detroit Tigers | ORGANIZATION
+</answer>",181,515
+93,He drew the ire of manager Eric Gerets after his refusal to leave the bench to warm up .,"[('Eric Gerets', 'PERSON')]","[('Eric Gerets', 'PERSON')]",ok,,<answer>Eric Gerets | PERSON</answer>,169,168
+94,Successes have been few and far between for union organizing drives by UE and others in subsequent y,"[('UE', 'ORGANIZATION')]","[('UE', 'ORGANIZATION')]",ok,,<answer>UE | ORGANIZATION</answer>,169,193
+95,"Shortly after , a wife of a veteran suffering from posttraumatic stress disorder came forward accusi","[('posttraumatic stress disorder', 'OTHER')]","[('posttraumatic stress disorder', 'OTHER'), ('October 2016', 'OTHER')]",ok,,"<answer>
+posttraumatic stress disorder | OTHER
+October 2016 | OTHER
+</answer>",180,355
+96,This extent of beach runs from a coastal point about north of Jenner and continues for approximately,"[('Jenner', 'LOCATION'), ('Bodega Head', 'LOCATION')]","[('Jenner', 'LOCATION'), ('Bodega Head', 'LOCATION')]",ok,,"<answer>
+Jenner | LOCATION
+Bodega Head | LOCATION
+</answer>",176,271
+97,"In the Republic of Ireland , the film was banned on 9 August 1991 .","[('Republic of Ireland', 'LOCATION')]","[('Republic of Ireland', 'LOCATION'), ('9 August 1991', 'OTHER')]",ok,,"<answer>Republic of Ireland | LOCATION
+9 August 1991 | OTHER</answer>",167,354
+98,Her maternal grandfather was lawyer and philanthropist Lawrence Wien .,"[('Lawrence Wien', 'PERSON')]","[('Lawrence Wien', 'PERSON')]",ok,,<answer>Lawrence Wien | PERSON</answer>,160,227
+99,It is native to South America with distributions in Brazil and Venezuela .,"[('South America', 'LOCATION'), ('Brazil', 'LOCATION'), ('Venezuela', 'LOCATION')]","[('South America', 'LOCATION'), ('Brazil', 'LOCATION'), ('Venezuela', 'LOCATION')]",ok,,"<answer>
+South America | LOCATION
+Brazil | LOCATION
+Venezuela | LOCATION
+</answer>",162,228

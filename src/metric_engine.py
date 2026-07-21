@@ -73,6 +73,7 @@ def compute_summarisation(predictions: list, references: list) -> dict:
     # BERTScore
     P, R, F = bert_score.score(
         predictions, references,
+        lang="en",
         model_type="bert-base-uncased",
         rescale_with_baseline=True,
         verbose=False

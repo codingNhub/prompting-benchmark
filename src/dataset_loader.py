@@ -36,6 +36,43 @@ def _bio_to_entities(text: str, tag_str: str) -> list:
     return entities
 
 
+# Urdu NER's source dataset already uses flat, full-name tags (PERSON, LOCATION,
+# ORGANIZATION, TIME, DATE, NUMBER, DESIGNATION, O) with no BIO prefixes, and
+# consecutive identical tags form one span. _COARSE_TYPE does not apply here —
+# its keys are the 3-letter MultiNERD codes (PER/ORG/LOC), which never match
+# these full names.
+_URDU_ALLOWED_TYPES = {"PERSON", "ORGANIZATION", "LOCATION"}
+
+
+def _flat_to_entities(text: str, tag_str: str) -> list:
+    """Converts a stringified flat-tag list (no BIO prefixes) into
+    [(entity_span, coarse_type), ...]. Assumes tags align 1:1 with text.split()."""
+    tags = ast.literal_eval(tag_str)
+    tokens = text.split()
+
+    entities = []
+    current_tokens, current_type = [], None
+    for token, tag in zip(tokens, tags):
+        if tag == "O":
+            if current_tokens:
+                entities.append((" ".join(current_tokens), current_type))
+                current_tokens, current_type = [], None
+        else:
+            coarse = tag if tag in _URDU_ALLOWED_TYPES else "OTHER"
+            if coarse == current_type:
+                current_tokens.append(token)
+            else:
+                if current_tokens:
+                    entities.append((" ".join(current_tokens), current_type))
+                current_tokens = [token]
+                current_type = coarse
+
+    if current_tokens:
+        entities.append((" ".join(current_tokens), current_type))
+
+    return entities
+
+
 def load_dataset(task_name: str, language: str = "english") -> list:
     """
     Loads a clean CSV for the given task and language.
@@ -73,7 +110,12 @@ def load_dataset(task_name: str, language: str = "english") -> list:
             "label": str(row["label"])
         }
         if task_name in ("ner", "urdu_ner"):
-            example["label"] = _bio_to_entities(example["text"], str(row["label"]))
+            # run_experiment() calls load_dataset("ner", language="urdu") — task_name
+            # alone can't distinguish the two label schemes, so language decides too.
+            if task_name == "urdu_ner" or language == "urdu":
+                example["label"] = _flat_to_entities(example["text"], str(row["label"]))
+            else:
+                example["label"] = _bio_to_entities(example["text"], str(row["label"]))
         # Include second sentence if it exists (paraphrase task)
         if "text_2" in df.columns and pd.notna(row.get("text_2")):
             example["text_2"] = str(row["text_2"])

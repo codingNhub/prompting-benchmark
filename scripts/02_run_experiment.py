@@ -3,10 +3,10 @@
 
 from src.experiment_runner import run_experiment
 
-print("Running experiment: cot + sentiment + english")
+print("Running experiment: few_shot + ner + english")
 result = run_experiment(
-    technique="cot",
-    task="sentiment",
+    technique="few_shot",
+    task="ner",
     language="english"
 )
 
