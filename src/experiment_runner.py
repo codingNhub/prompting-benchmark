@@ -3,13 +3,14 @@
 import os
 import csv
 import random
+import ast
 from datetime import datetime
 from collections import Counter
-import ast
+
 from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
-from src.prompt_manager import build_prompt
+from src.prompt_manager import build_prompt, load_template
 from src.model_wrapper import call_model
 from src.metric_engine import compute_metrics
 from src.logger import get_logger
@@ -57,18 +58,22 @@ def run_experiment(technique: str, task: str, language: str = "english",
 
     # Load previously completed predictions and references
     for r in raw_results:
-     pred = r["prediction"]
-     ref = r["reference"]
-     if task in ("ner", "urdu_ner"):
-        try:
-            pred = ast.literal_eval(pred)
-            ref = ast.literal_eval(ref)
-        except:
-            pred = []
-    predictions.append(pred)
-    references.append(ref)
+        pred = r.get("prediction", "")
+        ref = r.get("reference", "")
+        if task in ("ner", "urdu_ner"):
+            try:
+                pred = ast.literal_eval(pred)
+            except Exception:
+                pred = []
+            try:
+                ref = ast.literal_eval(ref)
+            except Exception:
+                ref = []
+        predictions.append(pred)
+        references.append(ref)
+        if r.get("status") != "ok":
+            flagged_count += 1
 
-    from src.prompt_manager import load_template
     template = load_template(technique)
     valid_labels = template["tasks"][task].get("expected_labels", [])
 
@@ -177,15 +182,14 @@ def run_experiment(technique: str, task: str, language: str = "english",
             }
             raw_results.append(new_row)
 
-            
             os.makedirs("outputs/predictions", exist_ok=True)
-            write_header = not os.path.exists(pred_path) or len(completed_ids) == 0 and len(raw_results) == 1
+            write_header = not os.path.exists(pred_path) or (len(completed_ids) == 0 and len(raw_results) == 1)
             with open(pred_path, "a", newline="", encoding="utf-8") as f:
                 writer = csv.DictWriter(f, fieldnames=new_row.keys())
                 if write_header:
                     writer.writeheader()
                 writer.writerow(new_row)
-        
+
         except Exception as e:
             logger.error(f"Error on example {example['id']}: {e}")
             flagged_count += 1
