@@ -42,7 +42,10 @@ def rerun_example(technique, task, language, example_id):
 
     if task in ("summarisation", "qa"):
         gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
-        response = call_model(prompt, config, max_tokens=gen_budget)
+        gen_config = dict(config)
+        gen_config["inference"] = dict(config.get("inference", {}))
+        gen_config["inference"].setdefault("reasoning_effort", "low")
+        response = call_model(prompt, gen_config, max_tokens=gen_budget)
     else:
         response = call_model(prompt, config)
 

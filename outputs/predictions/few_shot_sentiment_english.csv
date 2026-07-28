@@ -68,7 +68,7 @@ id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,out
 <answer>Negative</answer>
 <answer>Neutral</answer>",173,226
 53,Finally I'm gonna watch all eps that I missed #Lucifer #Supernatural #Arrow #Flash #Class #TheWalkin,Positive,Positive,ok,,<answer>Positive</answer>,186,214
-54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,Negative,ok,,<answer>Negative</answer>,184,308
+54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,Negative,ok,,<answer>Negative</answer>,184,181
 55,"Arlington, TX students protest Trump",Negative,Neutral,ok,,<answer>Neutral</answer>,159,128
 56,The Bad Hombres  #TrumpInauguralBands,Neutral,Neutral,ok,,<answer>Neutral</answer>,164,77
 57,Tipp: Musical + Hotel ab 100€ p.P. #schnäppchen #deal #dealz #sparen #tipp,Neutral,Positive,ok,,<answer>Positive</answer>,180,160
@@ -119,7 +119,10 @@ id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,out
 93,My sister blew up my phone this morning asking if I could pick her up at the airport at 11.... I'm n,Negative,Negative,ok,,<answer>Negative</answer>,187,147
 94,@user just as long as you're making more than minimum wage. Gotta be superior to some people.,Neutral,Negative,ok,,<answer>Negative</answer>,173,122
 95,"Xi Jimping, Kim Jong Un, Nicolas Maduro, Robert Mugabe, Sisi, Bashar Al Assad all ""won"" their electi",Neutral,Neutral,ok,,<answer>Neutral</answer>,187,135
-96,"@user We dont hav Obamacare but this piece was 👌🏼. I wish DT cud keep ins 4 all, but ⬆️competition s",Negative,[PARSE_FAILURE],failed,empty_response,,191,600
+96,"@user We dont hav Obamacare but this piece was 👌🏼. I wish DT cud keep ins 4 all, but ⬆️competition s",Negative,Negative,ok,,"<answer>Positive</answer>
+<answer>Negative</answer>
+<answer>Neutral</answer>
+<answer>Negative</answer>",191,835
 97,@user But the #Australian #coal #LNP (Libs.) and #GOP #Oil already know this. They just want to earn,Neutral,Negative,ok,,<answer>Negative</answer>,189,95
 98,"@user @user Tool or not, most of what Saakashvili says is true, other politicians in Ukraine are dis",Negative,Negative,ok,,<answer>Negative</answer>,180,123
 99,Melania Trump opts for bow undone at third debate #Fashion,Neutral,Neutral,ok,,<answer>Neutral</answer>,165,67

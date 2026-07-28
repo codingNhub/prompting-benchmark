@@ -1,0 +1,101 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,In 2001 which movie was the first winner of the Best Animated Movie Oscar?,Shrek,Shrek,ok,,<answer>Shrek</answer>,167,47
+1,Who wrote the 1951 novel ‘From here to Eternity’?,James Jones,James Jones,ok,,<answer>James Jones</answer>,165,38
+2,In what film did Oprah Winfrey make her big screen acting debut?,The Color Purple,The Color Purple,ok,,<answer>The Color Purple</answer>,164,43
+3,What is the more common name for the order Coleoptera which contains more species than any other ord,Beetles,Beetles,ok,,<answer>Beetles</answer>,175,25
+4,"At which English racecourse did two horses collapse and die in the parade ring due to electrocution,",Newbury,Newmarket,ok,,<answer>Newmarket</answer>,177,106
+5,Which Disney character is brought to life by the Blue Fairy ?,PINOCCHIO,Pinocchio,ok,,<answer>Pinocchio</answer>,162,26
+6,What items would be collected by a horologist?,CLOCKS,"Watches, clocks, gears, springs, escapements, pendulums, chronometers, timepieces",ok,,"<answer>Watches, clocks, gears, springs, escapements, pendulums, chronometers, timepieces</answer>",160,75
+7,"In the Shakespeare play ‘The Tempest’, Prospero is the overthrown Duke of ‘where’?",Milan,Milan,ok,,<answer>Milan</answer>,172,27
+8,The 1938 work The Black Jacobins by C. L. R. James is an account of what upheaval that took place be,Haitian revolution,Haitian Revolution,ok,,<answer>Haitian Revolution</answer>,186,26
+9,"Psychoanalyst A A Brill described what as ‘Torches of Freedom’ in the 1920’s, as symbols of equality",Cigarettes,Cigarettes,ok,,<answer>Cigarettes</answer>,180,89
+10,The A57 road runs from Liverpool to which English town or city?,Lincoln,Chester,ok,,<answer>Chester</answer>,164,133
+11,Scientist Ernest Rutherford once said all science is just what subject while comparing the rest to s,Physics,Physics,ok,,<answer>Physics</answer>,169,42
+12,A Varsovian is a native of which capital city,Warsaw,Warsaw,ok,,<answer>Warsaw</answer>,162,23
+13,What is the US equivalent of the British Army's SAS?,Delta Force,Delta Force,ok,,<answer>Delta Force</answer>,162,42
+14,Which actor succeeded Marlon Brando as head of the Corleone family in the Godfather films?,Al Pacino,Al Pacino,ok,,<answer>Al Pacino</answer>,171,26
+15,"""Whose memoirs, published in 2010, were called """"A Journey""""?""",Tony Blair,Unknown,ok,,<answer>Unknown</answer>,169,558
+16,"Which artist has a daughter and two sons with Jane Asher, whom he married in 1981?",Gerald Scarfe,Paul McCartney,ok,,<answer>Paul McCartney</answer>,171,26
+17,"What is the most common blood type in humans? A, B or O?",O,O,ok,,<answer>O</answer>,166,22
+18,"Who wrote the novels About A Boy, How To Be Good and High Fidelity?",Nick Hornby,Nick Hornby,ok,,<answer>Nick Hornby</answer>,166,28
+19,Madame de Pompadour and Madame du Barry were mistresses of which French King?,Louis XV,Louis XV,ok,,<answer>Louis XV</answer>,167,25
+20,Who was Wolfe’s opposing French general who died with him on the Plains of Abraham?,Montcalm,Louis‑Joseph de Montcalm,ok,,<answer>Louis‑Joseph de Montcalm</answer>,167,36
+21,Appointed on June 22nd 2011 who is the current manager of Birmingham City FC?,CHRIS HUGHTON,Steve Bruce,ok,,<answer>Steve Bruce</answer>,170,86
+22,What is the name of the German magazine which claimed in 1983 to have found Hitler's diaries?,Stern,Der Spiegel,ok,,<answer>Der Spiegel</answer>,171,25
+23,"Common, Arctic and Sooty are all varieties of which bird?",TERN,Swan,ok,,<answer>Swan</answer>,164,71
+24,What is the acronym for the agency which provides co-operation between police forces worldwide?,Interpol,INTERPOL,ok,,<answer>INTERPOL</answer>,166,37
+25,The city of Leeds stands on which river?,AIRE,River Ouse,ok,,<answer>River Ouse</answer>,159,29
+26,What is the official summer sport of Canada?,LACROSSE,Hockey,ok,,<answer>Hockey</answer>,159,114
+27,H'Angus the Monkey is the mascot of which English football club?,Hartlepool United,West Ham United,ok,,<answer>West Ham United</answer>,165,35
+28,Tahini paste is made by grinding which seeds?,Sesame,Sesame seeds,ok,,<answer>Sesame seeds</answer>,160,25
+29,Which US folk singer had the words “This machine kills fascists” written on his guitar?,Woody Guthrie,Bob Dylan,ok,,<answer>Bob Dylan</answer>,169,24
+30,By what name was the shipping area Fitzroy known until 2002?,Finisterre,Fitzroy,ok,,<answer>Fitzroy</answer>,165,236
+31,"""""""Alba"""" is the Gaelic name for what?""",Scotland,Scotland,ok,,<answer>Scotland</answer>,161,27
+32,"Which journalist and author won the fifth series of I'm A Celebrity, Get Me Out Of Here in 2005, bea",CAROL THATCHER,John,ok,,<answer>John</answer>,188,266
+33,A dress worn at President John F Kennedy's birthday party at Madison Square Garden on 19 May 1962 wa,Marilyn Munroe,Marilyn Monroe,ok,,<answer>Marilyn Monroe</answer>,194,156
+34,A footpad was a criminal from the 16th to 19th century but what term is used to describe them today?,MUGGER,thief,ok,,<answer>thief</answer>,176,73
+35,Which author created the character Moll Flanders?,Daniel Defoe,Daniel Defoe,ok,,<answer>Daniel Defoe</answer>,159,34
+36,Which single by 'Leapy Lee' reached number two in the UK charts in 1968?,'LITTLE ARROWS',The Night Owls,ok,,<answer>The Night Owls</answer>,170,118
+37,What is the name of Mo Farah's coach who has recently been at the centre of doping allegations?,Alberto Salazar,Gabriele Reinsch,ok,,<answer>Gabriele Reinsch</answer>,171,98
+38,Which journalist first told the world about the My Lai massacre?,Seymour Hersh,Tim Page,ok,,<answer>Tim Page</answer>,162,118
+39,Which writer created the detective Charlie Chan?,EARL DERR BIGGERS,Earl Derr Biggers,ok,,<answer>Earl Derr Biggers</answer>,158,30
+40,"""In the book of Genesis who asked the question,""""Am I my brotherskeeper""""?""",CAIN,Cain,ok,,<answer>Cain</answer>,169,43
+41,"In December 1965, who became President of the Philippines?",Ferdinand Marcos,Ferdinand Marcos,ok,,<answer>Ferdinand Marcos</answer>,163,26
+42,Which Mexican dish is a steamed corn husk filled with meat or vegetables coated in masa dough?,Tamale,tamale,ok,,<answer>tamale</answer>,169,25
+43,"In June 2010, 8 highly endangered monkeys (4 cottontop tamarins and 4 pygmy marmosets) were stolen f",Australia,Brazil,ok,,<answer>Brazil</answer>,191,24
+44,"""In New Zealand, the word """"moko"""" refers to a type of what?""",Tattoo,tattoo,ok,,<answer>tattoo</answer>,168,35
+45,"In humans, alopecia is the loss of what?",Hair,hair,ok,,<answer>hair</answer>,161,22
+46,"What was the first name of Italian crafter of violins Stradivari, who died in 1737?",Antonio,Antonio,ok,,<answer>Antonio</answer>,173,22
+47,Films. Which Dominic starred as Merry (Meriadoc) in ‘The Lord of the Rings’?,MONAGHAN,Dominic Monaghan,ok,,<answer>Dominic Monaghan</answer>,172,27
+48,"Anchored by the star Polaris, the constellation ursa minor represents what animal?",bear,Little Bear,ok,,<answer>Little Bear</answer>,166,29
+49,Arrecife is the largest city on which of the Canary Islands whose name is derived from that of a Gen,LANZAROTE,Lanzarote,ok,,<answer>Lanzarote</answer>,175,617
+50,A gymnophobia sufferer fears what?,Nudity,nakedness,ok,,<answer>nakedness</answer>,159,31
+51,Shashlik is what type of food dish?,Kebab,Skewered grilled meat,ok,,<answer>Skewered grilled meat</answer>,160,50
+52,How many players are on the field in a baseball team?,Nine,9,ok,,<answer>9</answer>,162,33
+53,"Quantrill's Raiders, a loosely organised force of Partisan rangers under the leadership of William C",American Civil War,American Civil War,ok,,<answer>American Civil War</answer>,180,26
+54,Creme Anglaise is the French version of which English dessert item?,Custard,custard,ok,,<answer>custard</answer>,164,47
+55,Which international treaties of 1899 and 1907 cover the use of weapons in war?,Hague Conventions,The Hague Conventions (1899 & 1907),ok,,<answer>The Hague Conventions (1899 & 1907)</answer>,169,40
+56,"Royton North, Shaw and Werneth are wards in which Metropolitan Borough Council?",OLDHAM,Oldham Metropolitan Borough Council,ok,,<answer>Oldham Metropolitan Borough Council</answer>,167,42
+57,"""How many different colours are used for the circles on a """"Twister"""" mat?""",4,4,ok,,<answer>4</answer>,168,44
+58,"In the novel by Dumas, where was the Count of Monte Cristo imprisoned for 14 years?",Chateau d'If,Château d'If,ok,,<answer>Château d'If</answer>,170,32
+59,"Said to refer erroneously to the temperature at which book paper catches fire, the title of Ray Brad",451,451,ok,,<answer>451</answer>,208,23
+60,"In South Africa, who replaced Nelson Mandela as President of South Africa in 1999?",THABO MBEKI,Thabo Mbeki,ok,,<answer>Thabo Mbeki</answer>,168,30
+61,"Which serial killer hanged himself in Wakefield Prison in January 2004, four years after being found",Dr Harold Shipman,John George Haigh,ok,,<answer>John George Haigh</answer>,177,151
+62,The 1810 betrothal of Princess Theresa to Crown Prince Ludwig not only resulted in the meadow where ,Octoberfest,Oktoberfest,ok,,<answer>Oktoberfest</answer>,188,35
+63,What dance craze was named after a city in South Carolina?,The Charleston,Charleston,ok,,<answer>Charleston</answer>,162,37
+64,"What is the name of the semi-fluid, clarified butter used in Indian cookery?",Ghee,Ghee,ok,,<answer>Ghee</answer>,167,27
+65,Which ‘S’ is a group of geese in flight?,Skein,Skein,ok,,<answer>Skein</answer>,163,71
+66,"The excellent cut of beef known as ""hanger steak"" is taken from what part of the animal?",Diaphragm,diaphragm,ok,,<answer>diaphragm</answer>,170,49
+67,Ascorbic acid is usually known as what?,Vitamin C,Vitamin C,ok,,<answer>Vitamin C</answer>,160,24
+68,"""Who wrote numerous short stories and plays and the novels """"Of Human Bondage"""", """"The Moon And Sixp",Somerset Maugham,W. Somerset Maugham,ok,,<answer>W. Somerset Maugham</answer>,183,34
+69,Amr Shabana from Egypt is famous for playing which sport?,Squash,Squash,ok,,<answer>Squash</answer>,164,29
+70,What was the codename for the German invasion of Russia in 1941?,BARBAROSSA,Operation Barbarossa,ok,,<answer>Operation Barbarossa</answer>,166,26
+71,"Swede Carl Linnaeus, 1707-78, considered the father of taxonomy of living things, is the lectotype (",Homo Sapiens,Homo sapiens,ok,,<answer>Homo sapiens</answer>,184,83
+72,Which company made the 'Tigra' model of car?,VAUXHALL,Volkswagen,ok,,<answer>Volkswagen</answer>,163,27
+73,"For what does the G stand in the navigational aid, usually known as a `GPS'?",Global,Global,ok,,<answer>Global</answer>,170,29
+74,Which former cabinet minister was debarred from Parliament because of irregularities in his 2010 ele,PHIL WOOLAS,Michael Gove,ok,,<answer>Michael Gove</answer>,181,253
+75,What is the official animal of Canada,Beaver,Beaver,ok,,<answer>Beaver</answer>,158,29
+76,Alphabetically which is the first of the five halogens in the periodic table,Astatine,Fluorine,ok,,<answer>Fluorine</answer>,166,33
+77,Who was President of France for over 10 years from 1958?,Charles de Gaulle,Charles de Gaulle,ok,,<answer>Charles de Gaulle</answer>,165,26
+78,In the computing acronym WYSIWYG (wiziwig) what word is represented by both letter Ws?,WHAT,What,ok,,<answer>What</answer>,172,53
+79,Curacao was a colony of which country?,The Netherlands,Netherlands,ok,,<answer>Netherlands</answer>,159,29
+80,In an electrical circuit what is measured by a Wheatstone Bridge?,Resistance,Resistance,ok,,<answer>Resistance</answer>,163,22
+81,Peter O’Sullevan was a BBC commentator for which sport?,Horse racing,Horse racing,ok,,<answer>Horse racing</answer>,164,33
+82,"The American legal drama Shark ran from Sept 06 to May 08. Who starred in the title role, playing Se",James Woods,Matthew Fox,ok,,<answer>Matthew Fox</answer>,176,26
+83,Charlotte of Mecklenburg-Strelitz was the wife of which King of Great Britain?,GEORGE III,George III,ok,,<answer>George III</answer>,166,26
+84,In relation to phobias what word describes the fear of strangers or foreigners?,XENOPHOBIA,xenophobia,ok,,<answer>xenophobia</answer>,166,24
+85,Which motor manufacturer produces the 'Sharan' model?,VOLKSWAGEN,Volkswagen,ok,,<answer>Volkswagen</answer>,161,27
+86,What Caribbean nation is considered the first black-led republic in the world?,Haiti,Haiti,ok,,<answer>Haiti</answer>,164,23
+87,‘The Night of the Long Knives’ refers to which leader eliminating many of his political enemies?,Adolph Hitler,Adolf Hitler,ok,,<answer>Adolf Hitler</answer>,170,24
+88,"""What 1998 film diected by Peter Weir , was advertised with the tag line """"On The Air, Unaware""""?""",'THE TRUMAN SHOW',The Truman Show,ok,,<answer>The Truman Show</answer>,179,34
+89,"Having a height of 3,478 metres, Mount Mulhacen is the highest mainland point of which country?",SPAIN,Spain,ok,,<answer>Spain</answer>,173,22
+90,Which scientist discovered the Neutron in 1934?,James Chadwick,James Chadwick,ok,,<answer>James Chadwick</answer>,161,65
+91,Poopdeck Pappy is which fictional character’s father?,Popeye,Captain Hook,ok,,<answer>Captain Hook</answer>,162,53
+92,"What was the original surname of T E Shaw, an RAF aircraftsman who was killed in a motorbike acciden",Lawrence,Shaw,ok,,<answer>Shaw</answer>,178,68
+93,The most northerly point of mainland Europe is in which country?,Norway,Norway,ok,,<answer>Norway</answer>,164,23
+94,"British artist Sir James Thornhill (1675-1734), history painter and sergeant painter to George I and",William Hogarth,Sir Christopher Wren,ok,,<answer>Sir Christopher Wren</answer>,185,138
+95,Which illness is commonly treated with the drugs lisinopril and ramipril?,High blood pressure,Hypertension,ok,,<answer>Hypertension</answer>,167,23
+96,Which company produces the video game console 'Xbox 360'?,MICROSOFT,Microsoft,ok,,<answer>Microsoft</answer>,163,22
+97,"In 1960, who co-founded Motor Racing Developments Ltd., a British racing car manufacturer and Formul",Jack Brabham,John Surtees,ok,,<answer>John Surtees</answer>,181,29
+98,"What is the title of The Beatles first feature film, released in 1964?",A Hard Day’s Night,A Hard Day's Night,ok,,<answer>A Hard Day's Night</answer>,167,30
+99,"""In the song """"The Twelve Days of Christmas"""", what were there five of?""",Gold rings,five gold rings,ok,,<answer>five gold rings</answer>,167,44

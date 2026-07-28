@@ -47,7 +47,8 @@ tasks:
 
   qa:
     template: |
-      Answer the following question.
+      Answer the following question. Your final answer must be as
+      few words as possible.
 
       Question: {input_text}
 

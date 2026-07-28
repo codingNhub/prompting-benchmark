@@ -26,8 +26,8 @@ api:
 inference:
   temperature_default: 0.0
   temperature_self_consistency: 0.7
-  max_tokens_classification: 256
-  max_tokens_generation: 512
+  max_tokens_classification: 1500
+  max_tokens_generation: 1000
 
 tasks:
   - sentiment

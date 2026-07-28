@@ -47,7 +47,7 @@ Reasoning: The sentence is incoherent and contains no clear emotional or evaluat
 
 <answer>Neutral</answer>",222,280
 21,"@user I'm not saying they will, but they can; also: will of the ppl? HRC is winning popular vote by ",Neutral,Neutral,ok,,<answer>Neutral</answer>,238,309
-22,Happy funeral to all Liam's girls.AMÈM LIAM PAYNE #MtvStarsNiallHoran #MPN #OneDirection,Neutral,[PARSE_FAILURE],failed,empty_response,,234,600
+22,Happy funeral to all Liam's girls.AMÈM LIAM PAYNE #MtvStarsNiallHoran #MPN #OneDirection,Neutral,Negative,ok,,<answer>Negative</answer>,234,688
 23,@user @user @user @user @user ummm vaccines have avoided over 700000 deaths since the nineties...,Positive,Positive,ok,,"The sentence praises vaccines for preventing a large number of deaths, which conveys a positive viewpoint.  
 <answer>Positive</answer>",230,176
 24,@user @user @user actually I don't care about her pc anything I care about integrity when reporting.,Negative,Negative,ok,,"The sentence expresses a negative stance toward the PC, indicating indifference and a focus on integrity instead. This conveys a negative sentiment overall.  
@@ -113,7 +113,9 @@ Reasoning: The text is simply a list of names followed by a hashtag, with no pos
 <answer>Neutral</answer>",225,272
 53,Finally I'm gonna watch all eps that I missed #Lucifer #Supernatural #Arrow #Flash #Class #TheWalkin,Positive,Positive,ok,,"The sentence expresses excitement and enthusiasm about watching the missed episodes, reinforced by the laughing and heart emojis.  
 <answer>Positive</answer>",238,131
-54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,[PARSE_FAILURE],failed,empty_response,,236,600
+54,"Yep. A wall on the Mexican border, that is. Obama, Schumer, you name it. They all voted for it. Cons",Negative,Negative,ok,,"The speaker expresses disagreement with the wall, highlighting that even politicians who supposedly voted for it are consistently against it. This conveys a negative stance toward the wall.
+
+<answer>Negative</answer>",236,667
 55,"Arlington, TX students protest Trump",Negative,Neutral,ok,,"Reasoning: The sentence “Arlington, TX students protest Trump” is a straightforward factual statement describing an event. It contains no emotionally charged words or evaluative language that would indicate a positive or negative stance. Therefore, the sentiment is neutral.  
 <answer>Neutral</answer>",211,332
 56,The Bad Hombres  #TrumpInauguralBands,Neutral,Neutral,ok,,"The sentence “The Bad Hombres  #TrumpInauguralBands” is simply a name and a hashtag. It contains no evaluative adjectives or emotional language that would indicate a positive or negative stance. Therefore, the sentiment is neutral.  
@@ -166,9 +168,9 @@ Reasoning: The title labels the speech as “Plagiarised,” which is a negative
 78,@user Is part of The Open Society. Bought and paid for by George Soros.They're in deep and favors ar,Negative,Negative,ok,,<answer>Negative</answer>,231,567
 79,"Neo Nazi: White people are superior, fuck PoC!Me: Shut up you fascist piece of shit!Liberal: OMG, TH",Negative,Negative,ok,,"The sentence contains hateful and insulting language, expressing strong hostility and negative emotions.  
 <answer>Negative</answer>",241,370
-80,I LOVE CRISTIANO RONALDO BUT I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO,Positive,[PARSE_FAILURE],ambiguous,ambiguous_content,"The sentence expresses both strong positive emotion (“I LOVE CRISTIANO RONALDO”) and frustration or disappointment (“I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO”). Because it contains both positive and negative sentiments, the overall sentiment is mixed rather than purely positive, negative, or neutral.  
+80,I LOVE CRISTIANO RONALDO BUT I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO,Positive,Neutral,ok,,"The sentence expresses both strong affection for Cristiano Ronaldo (“I LOVE CRISTIANO RONALDO”) and frustration about not having money to attend a match (“I HAVEN'T MONNEY FOR GO TO SEE ONE MATCH OF CRISTIANO”). The positive and negative emotions balance each other out, resulting in an overall neutral sentiment.
 
-<answer>Mixed</answer>",233,431
+<answer>Neutral</answer>",233,307
 81,A million dollars a day? How the hell are we okay with this.,Negative,Negative,ok,,"Reasoning: The sentence “A million dollars a day? How the hell are we okay with this.” expresses surprise and frustration, indicating a negative reaction to the situation.  
 <answer>Negative</answer>",219,302
 82,Really though was Justin Verlander up there?,Neutral,Neutral,ok,,"Sentence: Really though was Justin Verlander up there?  

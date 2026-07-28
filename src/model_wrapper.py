@@ -16,6 +16,7 @@ def call_model(prompt, config, max_tokens: int = None):
     temperature = config.get("inference", {}).get("temperature_default", 0.0)
     if max_tokens is None:
         max_tokens = config.get("inference", {}).get("max_tokens_classification", 256)
+    reasoning_effort = config.get("inference", {}).get("reasoning_effort")
     rate_limit_delay = config.get("api", {}).get("rate_limit_delay", 2.0)
     retry_attempts = config.get("api", {}).get("retry_attempts", 3)
     retry_wait = config.get("api", {}).get("retry_wait", 60)
@@ -39,12 +40,14 @@ def call_model(prompt, config, max_tokens: int = None):
             # guarantees bit-identical output across calls (backend routing/
             # sharding can still vary) — this reduces non-determinism, it does
             # not eliminate it.
+            extra_args = {"reasoning_effort": reasoning_effort} if reasoning_effort else {}
             response = client.chat.completions.create(
                 model=model_name,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
                 max_tokens=max_tokens,
-                seed=seed
+                seed=seed,
+                **extra_args
             )
 
             raw_text = response.choices[0].message.content

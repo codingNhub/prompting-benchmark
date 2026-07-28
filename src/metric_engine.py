@@ -95,6 +95,11 @@ def compute_qa(predictions: list, references: list) -> dict:
 
     def normalize(text):
         text = text.lower()
+        # Curly quotes appear in the source dataset (mojibake fix left some
+        # RIGHT SINGLE QUOTATION MARKs in place, e.g. id=98 "Day’s"); fold
+        # them to the ASCII apostrophe so string.punctuation strips them the
+        # same way it strips a straight quote, keeping "day's"/"day’s" comparable.
+        text = text.replace("’", "'").replace("‘", "'")
         text = re.sub(r"\b(a|an|the)\b", " ", text)
         text = "".join(ch for ch in text if ch not in string.punctuation)
         return " ".join(text.split())

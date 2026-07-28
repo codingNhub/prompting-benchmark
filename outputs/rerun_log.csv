@@ -1,0 +1,43 @@
+timestamp,technique,task,language,example_id,before_status,before_prediction,after_status,after_prediction
+2026-07-21 22:32:43,zero_shot,ner,english,9,failed,[],ok,"[('Hoosier Pass', 'LOCATION'), ('Mount Silverheels', 'LOCATION'), ('Tenmile Range', 'LOCATION')]"
+2026-07-21 22:34:11,zero_shot,ner,english,12,failed,[],ok,"[('Vietnam', 'LOCATION')]"
+2026-07-21 22:35:55,zero_shot,ner,english,15,failed,[],failed,[]
+2026-07-22 09:17:41,zero_shot,ner,english,15,failed,[],ok,"[('South and Southeast Asia', 'LOCATION'), ('Java', 'LOCATION')]"
+2026-07-22 09:19:37,zero_shot,ner,english,25,failed,[],failed,[]
+2026-07-22 09:21:15,zero_shot,ner,english,46,failed,[],ok,"[('Salmonella', 'OTHER')]"
+2026-07-22 09:22:39,zero_shot,ner,english,47,failed,[],ok,"[('Major Dmitry Pavlutsky', 'PERSON')]"
+2026-07-22 09:26:21,zero_shot,ner,english,49,failed,[],ok,"[('1885', 'OTHER'), ('tuberculosis', 'OTHER')]"
+2026-07-22 09:27:54,zero_shot,ner,english,66,failed,[],failed,[]
+2026-07-22 09:30:26,zero_shot,ner,english,85,failed,[],ok,"[('Hendrik Petrus Berlage', 'PERSON')]"
+2026-07-22 10:03:58,cot,sentiment,english,48,ok,Negative,ok,Neutral
+2026-07-23 21:21:16,self_consistency,ner,english,3,failed,[],ok,[]
+2026-07-23 21:22:04,self_consistency,ner,english,5,failed,[],ok,"[('1990', 'OTHER'), ('Bulgarian Communist Party', 'ORGANIZATION')]"
+2026-07-23 21:23:30,self_consistency,ner,english,18,failed,[],ok,[]
+2026-07-23 21:24:56,self_consistency,ner,english,56,failed,[],ok,[]
+2026-07-23 21:27:10,self_consistency,ner,english,82,failed,[],ok,[]
+2026-07-23 21:28:11,self_consistency,ner,english,65,failed,[],ok,[]
+2026-07-23 21:28:53,self_consistency,ner,english,0,failed,[],ok,[]
+2026-07-25 19:58:33,zero_shot,qa,english,97,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:03:35,zero_shot,qa,english,5,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:04:06,zero_shot,qa,english,15,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:04:38,zero_shot,qa,english,16,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:05:10,zero_shot,qa,english,21,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:05:41,zero_shot,qa,english,23,failed,[PARSE_FAILURE],ok,Owl
+2026-07-25 20:06:13,zero_shot,qa,english,30,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:06:45,zero_shot,qa,english,32,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:07:16,zero_shot,qa,english,37,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:07:49,zero_shot,qa,english,38,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 20:08:20,zero_shot,qa,english,49,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 21:15:01,zero_shot,qa,english,5,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 21:16:13,zero_shot,qa,english,15,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-25 22:30:34,zero_shot,qa,english,54,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-26 10:47:33,role,qa,english,8,failed,[PARSE_FAILURE],ok,Haitian Revolution
+2026-07-26 12:42:34,few_shot_cot,qa,english,41,ok,Ferdinand Marcos,ok,Ferdinand Marcos
+2026-07-26 12:43:11,few_shot_cot,qa,english,39,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-26 17:44:47,structured_output,summarisation,english,48,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-07-27 12:17:28,zero_shot,summarisation,english,60,failed,[PARSE_FAILURE],ok,"Karam and Kartari Chand, a 106‑ and 99‑year‑old Sikh couple from Punjab, claim to be the UK’s longest‑married pair after 86 years together, attributing their longevity to a moderate lifestyle, family support, and active engagement in daily life."
+2026-07-27 12:19:27,zero_shot,summarisation,english,68,failed,[PARSE_FAILURE],ok,"The article reports that a false poll claiming President Uhuru Kenyatta will win the August election has circulated on social media, prompting the BBC to urge Kenyans to verify news and highlighting widespread misinformation despite traditional media remaining the most trusted source."
+2026-07-27 12:20:24,zero_shot,summarisation,english,69,failed,[PARSE_FAILURE],ok,"Africa’s rapid digital growth has spurred governments to enact sweeping cyber‑crime and internet‑control laws that, while aimed at curbing threats, risk stifling free expression and enabling authoritarian suppression of dissent."
+2026-07-27 12:22:31,zero_shot,summarisation,english,71,failed,[PARSE_FAILURE],ok,"A Chinese-made Y-8 transport crashed into the Andaman Sea on 7 June after the pilot lost control in a storm, killing all 14 aboard and marking one of Myanmar’s worst aviation disasters."
+2026-07-27 12:23:34,zero_shot,summarisation,english,72,failed,[PARSE_FAILURE],ok,"Celtic’s latest transfer window saw a mix of high‑profile loans and sales, with the club acquiring players like Colin Kazim‑Richards and Erik Sviatchenko while offloading others such as Osman Sow, all aimed at bolstering the squad amid a fierce title challenge."
+2026-07-27 21:48:45,cot,summarisation,english,56,failed,[PARSE_FAILURE],ok,"The article reports that a FTSE 250 company saw a 16% profit rise to £73.5 m despite lower customer switching due to low rates, while Go‑Ahead’s shares fell 14% after warning of lower profits from rail strikes, and the FTSE 100 edged up with Babcock rising, as the pound slipped slightly against the dollar and euro."

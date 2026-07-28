@@ -120,8 +120,8 @@ tasks:
         answer: "William Shakespeare"
     template: |
       Answer each question. Think through your reasoning before
-      giving the final answer. Wrap the final answer in
-      <answer></answer> tags.
+      giving the final answer. Your final answer must be as few
+      words as possible. Wrap the final answer in <answer></answer> tags.
 
       Question: {example_1_question}
       Reasoning: {example_1_reasoning}

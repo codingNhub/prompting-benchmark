@@ -75,6 +75,13 @@ def run_experiment(technique: str, task: str, language: str = "english",
             flagged_count += 1
 
     template = load_template(technique)
+    if technique == "self_consistency" and task in ("summarisation", "qa"):
+        raise ValueError(
+            f"self_consistency is not applicable to task='{task}' — majority "
+            f"voting is undefined for free-text generation (see the 'NOT "
+            f"APPLICABLE' note in prompts/templates/self_consistency/v1.0.yaml). "
+            f"Skip this combination rather than running it."
+        )
     valid_labels = template["tasks"][task].get("expected_labels", [])
 
     for example in test_examples:
@@ -139,7 +146,10 @@ def run_experiment(technique: str, task: str, language: str = "english",
             else:
                 if task in ("summarisation", "qa"):
                     gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
-                    response = call_model(prompt, config, max_tokens=gen_budget)
+                    gen_config = dict(config)
+                    gen_config["inference"] = dict(config.get("inference", {}))
+                    gen_config["inference"].setdefault("reasoning_effort", "low")
+                    response = call_model(prompt, gen_config, max_tokens=gen_budget)
                 else:
                     response = call_model(prompt, config)
 

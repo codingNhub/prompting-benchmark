@@ -266,7 +266,7 @@ salmonberry | OTHER
 65,"He died 74 days later , of complications from lung cancer .","[('lung cancer', 'OTHER')]",[],ok,,"The sentence contains no proper nouns or named entities. “He” is a pronoun, “74 days later” is a time expression, and “lung cancer” is a disease. Therefore, there are no entities to list.
 
 <answer>NONE</answer>",162,364
-66,", is a cactus found in the Southwestern United States and northern Mexico , including some cooler re","[('Southwestern United States', 'LOCATION'), ('Mexico', 'LOCATION')]",[],failed,,,175,1200
+66,", is a cactus found in the Southwestern United States and northern Mexico , including some cooler re","[('Southwestern United States', 'LOCATION'), ('Mexico', 'LOCATION')]",[],failed,empty_response,,175,1500
 67,It served Lake County as a seat of government from 1871 until 1968 .,"[('Lake County', 'LOCATION')]","[('Lake County', 'LOCATION'), ('1871', 'OTHER'), ('1968', 'OTHER')]",ok,,"<answer>
 Lake County | LOCATION
 1871 | OTHER

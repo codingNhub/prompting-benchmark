@@ -1,0 +1,362 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,But Ms Atwell has promised to donate the money from the Global Teacher Prize to the school that she ,"Nancie Atwell, an English teacher from Maine in the United States, has been named as the winner of a competition to find the world's best teacher, with a prize of $1m (£680,000).",Nancie Atwell won the first Global Teacher Prize and will donate the award money to her school.,ok,,"Main topic: Global Teacher Prize  
+Key event: Nancie Atwell won the inaugural Global Teacher Prize and pledged to donate the award money to her own school.  
+<answer>Nancie Atwell won the first Global Teacher Prize and will donate the award money to her school.</answer>",934,106
+1,The Hamburg Commissioner for Data Protection and Freedom of Information said that the social network,Facebook has been ordered by a German privacy regulator to stop collecting and storing the data of German users of its messaging app WhatsApp.,"WhatsApp’s policy shift to share user data with Facebook triggered a legal challenge from Hamburg’s data watchdog, leading the company to appeal the order.",ok,,"Main topic: Data privacy  
+Key event: WhatsApp’s new privacy policy change, allowing data sharing with Facebook, was challenged by the Hamburg Data Protection Authority, prompting an appeal.  
+
+<answer>WhatsApp’s policy shift to share user data with Facebook triggered a legal challenge from Hamburg’s data watchdog, leading the company to appeal the order.</answer>",395,92
+2,"Donald Trump, Jeb Bush and Scott Walker will take the stage in Cleveland on Thursday night with seve","Rick Perry, the former governor of Texas, is not among the 10 Republicans running for president who will take part in the first primetime TV debate.","Fox News chose the top 10 Republican candidates for a Cleveland debate, prompting backlash over the omission of several notable contenders.",ok,,"Main topic: Republican debate lineup  
+Key event: Fox News selected the 10 most popular Republican candidates for a Cleveland debate, sparking criticism over the exclusion of several prominent figures.  
+<answer>Fox News chose the top 10 Republican candidates for a Cleveland debate, prompting backlash over the omission of several notable contenders.</answer>",469,111
+3,"Fit-again midfielder Jimmy Ryan had instant impact, setting up Ash Hunter to lob in the opener early",Fleetwood boosted their survival hopes by beating Scunthorpe for just their second League One win of the year.,"Fleetwood won 3-0, with Jimmy Ryan’s early assist and a late penalty sealing the victory.",ok,,"Main topic: Match outcome  
+Key event: Fleetwood secured a 3-0 victory over Scunthorpe, with Jimmy Ryan’s early assist and a late penalty.  
+<answer>Fleetwood won 3-0, with Jimmy Ryan’s early assist and a late penalty sealing the victory.</answer>",339,84
+4,Liam Henderson opened the scoring with a terrific free-kick before John McGinn increased the lead ag,Hibernian moved to within two points of Rangers at the top of the Championship with a comfortable victory over St Mirren.,Liam Henderson’s free‑kick gave Hibernian an early lead in their win over St Mirren.,ok,,"Main topic: Hibernian vs St Mirren match  
+Key event: Liam Henderson opened the scoring with a free‑kick for Hibernian.  
+<answer>Liam Henderson’s free‑kick gave Hibernian an early lead in their win over St Mirren.</answer>",582,103
+5,"Lance Naik (Corporal) Hanamanthappa Koppad was tapped under 8m of snow at a height of nearly 6,000m ",An Indian soldier who was buried in an avalanche that struck the Siachen glacier in Indian-administered Kashmir six days ago has been found alive.,"An avalanche on the Siachen glacier killed ten soldiers, with bodies recovered and one critically ill soldier airlifted to Delhi for treatment.",ok,,"Main topic: Siachen Avalanche  
+Key event: An avalanche on the Siachen glacier killed ten soldiers, including Lance Naik Hanamanthappa Koppad, and the bodies were recovered while one critically ill soldier was airlifted to Delhi.  
+<answer>An avalanche on the Siachen glacier killed ten soldiers, with bodies recovered and one critically ill soldier airlifted to Delhi for treatment.</answer>",538,107
+6,The concrete and steel arch will eventually cover the remains of the reactor which lost its roof in ,Work has begun at Chernobyl in Ukraine to move a giant shield over the site of the world's worst nuclear accident.,"The New Safe Confinement arch has been positioned over the Chernobyl reactor, marking a critical step toward sealing the site and preventing further radioactive release.",ok,,"Main topic: Chernobyl containment  
+Key event: The New Safe Confinement arch was moved into place to cover the damaged reactor, beginning the final phase of containment and dismantlement.  
+<answer>The New Safe Confinement arch has been positioned over the Chernobyl reactor, marking a critical step toward sealing the site and preventing further radioactive release.</answer>",607,117
+7,The Scottish Seabird Centre wants to expand its education and conservation programmes to include all,Plans for a £5.5m National Marine Centre for Scotland have been unveiled in East Lothian.,"The Scottish Seabird Centre is expanding into a National Marine Centre to broaden marine education and conservation efforts, requiring further funding to open in 2020.",ok,,"Main topic: Marine education  
+Key event: The Scottish Seabird Centre plans to expand into a National Marine Centre, seeking additional funding to open in 2020 and broaden its conservation and educational outreach.  
+
+<answer>The Scottish Seabird Centre is expanding into a National Marine Centre to broaden marine education and conservation efforts, requiring further funding to open in 2020.</answer>",575,103
+8,"The 4.4-metre-long (14-ft) cloth is on show until 24 June.
+Viewings are free but must be booked. One","The Turin Shroud has gone back on public display in the Italian city's cathedral, after a break of five years.","The Turin Shroud, a 4.4‑metre cloth whose authenticity is debated, is on display until 24 June and will be seen by Pope Francis on 21 June.",ok,,"Main topic: Turin Shroud  
+Key event: Pope Francis will view the shroud on 21 June.  
+
+<answer>The Turin Shroud, a 4.4‑metre cloth whose authenticity is debated, is on display until 24 June and will be seen by Pope Francis on 21 June.</answer>",502,108
+9,"Second-year scholars Callum Pritchard-Ellis, James Ballie, Callum Saunders, James Jones, Fraser Murd",Crewe Alexandra manager Steve Davis says the future of the club looks very healthy as six academy graduates are offered professional contracts.,"Crewe Alexandra secured senior deals for six scholars, underscoring the club’s focus on promoting homegrown talent.",ok,,"Main topic: Youth Development  
+Key event: Six second‑year scholars were offered senior contracts.  
+<answer>Crewe Alexandra secured senior deals for six scholars, underscoring the club’s focus on promoting homegrown talent.</answer>",373,89
+10,Foster's time of 11.62 seconds earned automatic qualification as she finished second in her first-ro,Northern Ireland's Amy Foster safely progressed to the women's 100m semi-finals at the Commonwealth Games but Jason Smyth and Leon Reid bowed out of the men's sprint event.,"Several Northern Irish sprinters, including Smyth, Reid, and Foster, struggled to progress in the Commonwealth Games sprints, with Smyth finishing fifth, Reid false‑starting, and Foster just qualifying for the next round.",ok,,"Main topic: Northern Ireland athletes at the Commonwealth Games  
+Key event: Several athletes—Smyth, Reid, and Foster—failed to advance in sprint events, with Smyth finishing fifth, Reid false‑starting, and Foster narrowly qualifying for the next round.  
+<answer>Several Northern Irish sprinters, including Smyth, Reid, and Foster, struggled to progress in the Commonwealth Games sprints, with Smyth finishing fifth, Reid false‑starting, and Foster just qualifying for the next round.</answer>",650,154
+11,"The finds were made by a team from Durham University, which is surveying the site on Midland Road be",About 70 human skeletons have been uncovered by archaeologists during a dig at a former factory in Peterborough.,"A Durham University dig uncovered medieval or late‑Roman burial remains at Midland Road, delaying the planned housing development until the remains are examined.",ok,,"Main topic: Archaeological discovery  
+Key event: A Durham University team uncovered medieval or late‑Roman burial remains at Midland Road, prompting a halt to the planned housing development until the remains are examined.  
+<answer>A Durham University dig uncovered medieval or late‑Roman burial remains at Midland Road, delaying the planned housing development until the remains are examined.</answer>",365,119
+12,"ZTE Corp obtained and illegally shipped US-made equipment to Iran in violation of US sanctions, the ",Chinese telecom giant ZTE has been fined $1.1bn and will plead guilty to charges that it violated US rules by shipping US-made equipment to Iran and North Korea.,"ZTE Corp faces a $892 million penalty for illegally exporting U.S. technology to Iran and North Korea, violating U.S. sanctions.",ok,,"Main topic: Export violations  
+Key event: ZTE Corp was fined $892 million for illegally shipping U.S. equipment to Iran and North Korea, violating U.S. sanctions.  
+
+<answer>ZTE Corp faces a $892 million penalty for illegally exporting U.S. technology to Iran and North Korea, violating U.S. sanctions.</answer>",562,93
+13,"The UN has said media restrictions and violence meant the environment was not conducive to free, cre",The ruling party in Burundi has won the parliamentary election boycotted by the main opposition parties.,The UN condemned Burundi’s election climate as unsafe for free voting due to media bans and violence amid protests over a contested third term.,ok,,"Main topic: Burundi elections  
+Key event: The UN warned that media restrictions and violence made the environment unsuitable for free, credible elections amid protests over President Nkurunziza’s bid for a third term.  
+<answer>The UN condemned Burundi’s election climate as unsafe for free voting due to media bans and violence amid protests over a contested third term.</answer>",422,121
+14,Lance Corporal Joseph Scott Pemberton was convicted of killing Jennifer Laude in a hotel room in Olo,A court in the Philippines has found a US marine guilty of killing a transgender woman.,"A U.S. Marine was convicted of homicide for killing a transgender woman in a Philippine hotel, straining U.S.-Philippines relations and prompting debate over military jurisdiction.",ok,,"Main topic: US‑Philippines military justice  
+Key event: A U.S. Marine was convicted of homicide for the death of a transgender woman in a Philippine hotel, sparking diplomatic tensions.  
+
+<answer>A U.S. Marine was convicted of homicide for killing a transgender woman in a Philippine hotel, straining U.S.-Philippines relations and prompting debate over military jurisdiction.</answer>",475,100
+15,The Belmond British Pullman arrived at Ashford International at 07:00 GMT as passengers waited for a,Commuters were given a surprise upgrade when a luxury train arrived for their daily journey to work.,"Belmond’s historic Pullman train transformed a routine commute into a luxurious 90‑minute journey, offering passengers gourmet meals, entertainment, and a touch of opulence on their way to London Victoria.",ok,,"Main topic: Luxury commuter train  
+Key event: Belmond’s 1920s Pullman train offered a 90‑minute luxury journey from Ashford to London Victoria, treating commuters to a high‑end experience.  
+
+<answer>Belmond’s historic Pullman train transformed a routine commute into a luxurious 90‑minute journey, offering passengers gourmet meals, entertainment, and a touch of opulence on their way to London Victoria.</answer>",474,112
+16,Scarborough Athletic FC played in its home town for the first time since the club was founded in 200,A football team has played its first home game in more than 10 years after moving into a new stadium.,[PARSE_FAILURE],failed,no_tag,"Main topic: Club homecoming  
+Key event: Scarborough Athletic FC returned to play its first home match in Scarborough since its founding in 2007.  
+<answer>Scarborough Athletic FC celebrated its first home match in town since 2007, marking a historic return after nearly 20 years of playing away.",470,91
+17,The preliminary figures show that operating profit will be 6.1tn won ($5.1bn; £3.5bn) for the Octobe,"Samsung Electronics says its operating profit is likely to rise 15% in the fourth quarter from a year ago, missing market expectations.","Samsung’s Q4 operating profit fell 7.5%, missing forecasts and signaling a tougher year ahead for the tech giant.",ok,,"Main topic: Samsung earnings  
+Key event: Samsung reported a 7.5% drop in operating profit for Q4, falling short of analyst expectations.  
+
+<answer>Samsung’s Q4 operating profit fell 7.5%, missing forecasts and signaling a tougher year ahead for the tech giant.</answer>",369,84
+18,Authorities believe 19 Gourma elephants have been killed for their tusks in the past month. There ar,"A rare population of elephants in northern Mali is being targeted by poachers, threatening its survival, a wildlife official has said.","Elephant poaching in Mali has surged, with 19 Gourma elephants killed in a month amid insufficient ranger protection and ongoing insecurity.",ok,,"Main topic: Elephant poaching  
+Key event: Authorities report that 19 Gourma elephants were killed for their tusks in the past month.  
+
+<answer>Elephant poaching in Mali has surged, with 19 Gourma elephants killed in a month amid insufficient ranger protection and ongoing insecurity.</answer>",586,105
+19,"From 21 June, EDF customers will see electricity prices increase by 9% and gas prices go up by 5.5%.",Energy firm EDF is raising the price of electricity for the second time this year for customers on standard tariffs.,"EDF’s latest price hike will raise customers’ annual bills by about £78, prompting regulatory backlash and calls for consumers to switch tariffs.",ok,,"Main topic: EDF price hikes  
+Key event: EDF announced a 9% electricity and 5.5% gas price increase effective 21 June, sparking criticism from Ofgem.  
+
+<answer>EDF’s latest price hike will raise customers’ annual bills by about £78, prompting regulatory backlash and calls for consumers to switch tariffs.</answer>",559,98
+20,"Polling booths opened at 07:00 BST in the area's 15 constituencies, with results expected to be decl",People are voting across Merseyside in the general and local council elections.,"The Merseyside election count began with polling booths opening at 07:00 BST, and votes will be tallied after the polls close at 22:00 BST.",ok,,"Main topic: Election results  
+Key event: Polling booths opened at 07:00 BST in Merseyside’s 15 constituencies, with votes counted after 22:00 BST.  
+<answer>The Merseyside election count began with polling booths opening at 07:00 BST, and votes will be tallied after the polls close at 22:00 BST.</answer>",196,140
+21,"Football
+Rugby Union
+Rugby League
+Cricket
+Tennis
+Basketball
+Athletics
+Speedway
+Ice Hockey
+Radio 5 li",A rundown of all the latest BBC radio commentaries online.,It provides a concise overview of major sports and associated broadcasting options.,ok,,"Main topic: Sports  
+Key event: The article lists various popular sports and related media outlets.  
+<answer>It provides a concise overview of major sports and associated broadcasting options.</answer>",166,77
+22,The Reds looked in control when Roberto Firmino converted James Milner's pass and Daniel Sturridge b,Liverpool easily beat Premier League champions Leicester in their first home game of the season.,Liverpool secured a 4-1 victory over Leicester at Anfield.,ok,,"Main topic: Liverpool win  
+Key event: Liverpool defeated Leicester 4-1 at Anfield.  
+<answer>Liverpool secured a 4-1 victory over Leicester at Anfield.</answer>",2011,72
+23,"A £100,000 reward is on offer for information leading to the conviction of the killers of 14-year-ol",Blackpool football fans are being asked to help solve the murder of a teenager who disappeared over a decade ago.,"A £100,000 reward is offered for information on the murder of 14‑year‑old Charlene Downes, with police urging tips during a local football match.",ok,,"Main topic: Missing child case  
+Key event: A £100,000 reward is offered for information on the murder of 14‑year‑old Charlene Downes, with police urging tips during a local football match.  
+<answer>A £100,000 reward is offered for information on the murder of 14‑year‑old Charlene Downes, with police urging tips during a local football match.</answer>",461,106
+24,"The first minister said images of Aylan Kurdi being carried from the sea had ""touched our hearts"".
+M",Nicola Sturgeon has told how she was reduced to tears by photos of a dead Syrian boy washed up on a Turkish beach.,First Minister Nicola Sturgeon convenes a summit to coordinate Scotland’s response to the refugee crisis.,ok,,"Main topic: Refugee crisis  
+Key event: First Minister Nicola Sturgeon convenes a summit to coordinate Scotland’s response to the refugee crisis.  
+
+<answer>First Minister Nicola Sturgeon convenes a summit to coordinate Scotland’s response to the refugee crisis.</answer>",562,90
+25,"They say 40% of coral has died at the Dongsha Atoll in the South China Sea.
+Nothing as severe has ha","Scientists are warning of another ""devastating"" loss of coral due to a spike in sea temperatures.",[PARSE_FAILURE],failed,no_tag,"Main topic: Coral bleaching  
+Key event: 40% of coral at Dongsha Atoll died after a 6‑degree temperature spike during a high‑pressure system.  
+<answer> The Dongsha Atoll suffered a 40% coral die‑off after a sudden 6‑degree temperature surge, highlighting that a 2‑degree global warming cap may be insufficient to protect shallow reef ecosystems.",638,108
+26,He accused Suliman Gani in Parliament of backing the militant group as he questioned Sadiq Khan's ju,"David Cameron has apologised for ""any misunderstanding"" after describing a former imam as a supporter of the Islamic State group.","A minister’s apology followed the false claim that a Muslim preacher supported ISIS, sparking demands for further apologies and a review of Islamophobia in the Conservative Party.",ok,,"Main topic: Political defamation  
+Key event: A UK minister apologized for falsely accusing a Muslim preacher of supporting ISIS, prompting calls for further apologies and a review of Islamophobia within the Conservative Party.  
+
+<answer>A minister’s apology followed the false claim that a Muslim preacher supported ISIS, sparking demands for further apologies and a review of Islamophobia in the Conservative Party.</answer>",634,98
+27,"The 10 men and three women, aged from 22 to 54, are from Lincolnshire and West Yorkshire and are due",Thirteen people have been charged after a police operation against modern slavery.,"Police and the National Crime Agency raided traveller sites, charging 13 people with slavery, fraud and related offences, who will appear in court on 28 October.",ok,,"Main topic: Human trafficking  
+Key event: A joint police and NCA operation raided traveller sites, leading to 13 people being charged with slavery, fraud, and related offences and scheduled to appear in court on 28 October.  
+<answer>Police and the National Crime Agency raided traveller sites, charging 13 people with slavery, fraud and related offences, who will appear in court on 28 October.</answer>",285,134
+28,"The court refused permission to Salvatore Girone to travel to Italy for Christmas.
+It also rejected ",India's Supreme Court has rejected travel appeals of the two Italian marines accused of killing two Indian fishermen in 2012.,"The Indian court denied the marines’ requests to travel to Italy, amid ongoing legal disputes over a 2013 shooting that killed two fishermen off Kerala.",ok,,"Main topic: Indian marines shooting incident  
+Key event: The court denied Salvatore Girone permission to travel to Italy for Christmas and rejected Massimiliano Latorre’s request to extend his stay.  
+<answer>The Indian court denied the marines’ requests to travel to Italy, amid ongoing legal disputes over a 2013 shooting that killed two fishermen off Kerala.</answer>",346,115
+29,"The news comes as a major boost to Britain's technology sector.
+Sundar Pichai, the chief executive o","Google is to open a new headquarters building in London which could see 3,000 new jobs created by 2020.","Google’s chief executive announced a £1 billion investment in a new London headquarters, expanding staff and reaffirming the UK as a key tech hub post‑Brexit.",ok,,"Main topic: Google investment in the UK  
+Key event: Sundar Pichai announced a £1 billion investment in a new Google headquarters in London’s King’s Cross, expanding staff from 4,000 to 7,000.  
+<answer>Google’s chief executive announced a £1 billion investment in a new London headquarters, expanding staff and reaffirming the UK as a key tech hub post‑Brexit.</answer>",2122,135
+30,"Pawel Sroka, 33, of Meadvale Road, Croydon, was charged on Saturday with the murder of his 29-year-o",A man from Croydon has been charged with murder after the death of his partner last month.,"Pawel Sroka was charged with murdering his partner Joanna Trojniak, who died from a stab wound to the chest.",ok,,"Main topic: Murder charge  
+Key event: Pawel Sroka was charged with the murder of his partner Joanna Trojniak after a post‑mortem revealed a stab wound to her chest.  
+<answer>Pawel Sroka was charged with murdering his partner Joanna Trojniak, who died from a stab wound to the chest.</answer>",224,94
+31,"The discovery was made after another child was threatened in the school's playground on 4 March.
+A b","Police were called to a primary school in Dumfries after a nine-year-old pupil was found with a knife, it has emerged.","A child was threatened with a knife on the playground, prompting an exclusion and police investigation.",ok,,"Main topic: School safety  
+Key event: A child was threatened with a knife on the playground, leading to an exclusion and police involvement.  
+
+<answer>A child was threatened with a knife on the playground, prompting an exclusion and police investigation.</answer>",305,72
+32,"Richards-Ross, 32, revealed in her new book that she had a termination a day before leaving for Beij",Former Olympic 400m champion Sanya Richards-Ross says she has helped other women by speaking publicly about having an abortion.,"Emma Richards‑Ross revealed a pre‑Olympic termination and shared that many female athletes have had abortions, sparking a broader conversation about women's health in sports.",ok,,"Main topic: Emma Richards‑Ross’s candid revelations about abortion and empowerment  
+Key event: She disclosed a termination a day before the 2008 Beijing Olympics and opened up about the prevalence of abortion among female athletes.  
+<answer>Emma Richards‑Ross revealed a pre‑Olympic termination and shared that many female athletes have had abortions, sparking a broader conversation about women's health in sports.</answer>",752,131
+33,"The northbound carriageway was closed at 02:00 on Thursday at junctions five, Castle Bromwich and si",Part of the M6 in Birmingham was closed for almost 24 hours after a fatal collision involving a lorry and a car.,"A fatal crash and fuel spill caused a 200‑metre section of the M6 to close, disrupting traffic for hours.",ok,,"Main topic: M6 motorway closure  
+Key event: A 26‑year‑old driver died after a fuel spill forced a 200 m section of the M6 to be closed and resurfaced.  
+<answer>A fatal crash and fuel spill caused a 200‑metre section of the M6 to close, disrupting traffic for hours.</answer>",574,119
+34,"President Barack Obama has declared the state a disaster area, meaning federal aid can be sent to th","At least five people have died and thousands have been rescued after ""historic"" flooding swamped the US state of Louisiana.",President Obama declared Louisiana a disaster area after catastrophic flooding forced the evacuation of thousands.,ok,,"Main topic: Floods  
+Key event: President Obama declared Louisiana a disaster area after catastrophic flooding forced the evacuation of thousands.  
+
+<answer>President Obama declared Louisiana a disaster area after catastrophic flooding forced the evacuation of thousands.</answer>",620,76
+35,"The 75-year-old was recovered unconscious from the water at Tywyn, by a crew from Aberdovey RNLI Lif",A man has died after attempting to rescue two teenage girls who got into difficulty in the sea in Gwynedd.,"A 75‑year‑old was rescued from Tywyn’s waters but later died, and three minors were saved from Harlech’s sea, prompting a cautionary warning from North Wales Police.",ok,,"Main topic: Sea rescue incidents  
+Key event: A 75‑year‑old was recovered unconscious from the water at Tywyn, later died, while three minors were rescued from the sea in Harlech.  
+
+<answer>A 75‑year‑old was rescued from Tywyn’s waters but later died, and three minors were saved from Harlech’s sea, prompting a cautionary warning from North Wales Police.</answer>",272,135
+36,"Speaking to BBC Radio 4's Today programme, he said: ""The only response can be: 'yes, Mr President'.""","General David Petraeus, one of the United States' most prominent military officers, has indicated he would be willing to serve in President-elect Donald Trump's administration if asked.",General Petraeus stated he would serve under President Trump and offered his perspective on Trump’s suitability and foreign policy approach.,ok,,"Main topic: Petraeus on Trump  
+Key event: Petraeus says he would serve under Trump and comments on Trump’s temperament and foreign policy.  
+<answer>General Petraeus stated he would serve under President Trump and offered his perspective on Trump’s suitability and foreign policy approach.</answer>",653,105
+37,"Many Sephardic Jews were killed, forced to convert to Christianity or leave at the end of the 15th C",The Portuguese Cabinet has approved rules under which descendants of Jews expelled from Portugal more than 500 years ago can claim citizenship.,"Portugal’s new citizenship law lets Sephardic descendants prove their heritage to claim passports, correcting a historic injustice.",ok,,"Main topic: Sephardic citizenship  
+Key event: Portugal approved a law allowing descendants of Sephardic Jews to obtain passports by proving ancestral ties.  
+
+<answer>Portugal’s new citizenship law lets Sephardic descendants prove their heritage to claim passports, correcting a historic injustice.</answer>",381,80
+38,"The weather phenomenon is set to exacerbate droughts in some areas, while increasing flooding in oth","The strongest El Nino weather cycle on record is likely to increase the threat of hunger and disease for millions of people in 2016, aid agencies say.",The record‑breaking El Niño of 2015‑2016 is sparking widespread droughts and floods that threaten food security for millions worldwide.,ok,,"Main topic: El Niño impacts  
+Key event: The strongest El Niño since 1998 is driving severe droughts in Africa and floods in the Americas, threatening millions with food insecurity.  
+<answer>The record‑breaking El Niño of 2015‑2016 is sparking widespread droughts and floods that threaten food security for millions worldwide.</answer>",1246,122
+39,"The man, in his 20s, was the only person in the BMW convertible when the accident happened on the A3",A driver died when his sports car hit a tree on a main road in Surrey.,A single‑vehicle crash involving a BMW convertible on the A323 near Holly Lane prompted road closure and a witness appeal.,ok,,"Main topic: Road accident  
+Key event: A man in a BMW convertible caused a single‑vehicle crash on the A323 near Holly Lane, prompting road closure and a witness appeal.  
+<answer>A single‑vehicle crash involving a BMW convertible on the A323 near Holly Lane prompted road closure and a witness appeal.</answer>",207,112
+40,23-year-old Mawson arrived at the Liberty Stadium from Championship side Barnsley in August of 2016 ,Swansea City head coach Paul Clement says centre back Alfie Mawson has a bright future ahead of him at the club.,Mawson’s arrival and partnership with Fernandez help Swansea’s defense improve as they battle relegation.,ok,,"Main topic: Mawson’s rise at Swansea  
+Key event: Mawson joins Swansea in 2016, forms a solid centre‑back partnership with Federico Fernandez after Ashley Williams leaves for Everton.  
+<answer>Mawson’s arrival and partnership with Fernandez help Swansea’s defense improve as they battle relegation.</answer>",479,109
+41,"In the Yemeni capital, Sanaa, where the threat of attack is considered greatest, the UK, France and ","Whatever plot the US eavesdroppers overheard the top two al-Qaeda leaders discussing clearly rattled the US intelligence community so badly that Washington shut 19 of its diplomatic missions around the Middle East, Asia and Africa.","Western nations have closed their embassies in Yemen’s capital due to the heightened threat posed by al‑Qaeda’s Yemen branch, AQAP.",ok,,"Main topic: AQAP threat  
+Key event: The UK, France and Germany shut their embassies in Sanaa, with British staff evacuating the country.  
+
+<answer>Western nations have closed their embassies in Yemen’s capital due to the heightened threat posed by al‑Qaeda’s Yemen branch, AQAP.</answer>",946,104
+42,Two cars were damaged in the incident in the Nursery Drive and Parkhead area of Newry on Friday nigh,Police have been attacked in County Down by up to 30 young people throwing stones.,Police in Newry faced a violent attack that damaged two cars and left officers appalled by the mindless aggression.,ok,,"Main topic: Police attacks  
+Key event: Two cars were damaged during an assault on PSNI officers in Newry.  
+<answer>Police in Newry faced a violent attack that damaged two cars and left officers appalled by the mindless aggression.</answer>",222,84
+43,"Both sides remain in qualifying places with Essex top on run-rate and Glamorgan in third.
+Essex make",Essex and Glamorgan will be looking to recover from defeats as they meet at Chelmsford in the One-Day Cup.,[PARSE_FAILURE],failed,no_tag,"Main topic: Essex vs Glamorgan  
+Key event: Essex and Glamorgan remain in qualifying positions as Essex tops the run‑rate table and Glamorgan sits third.  
+<answer>Both Essex and Glamorgan stay in the top four of the One‑Day Cup, with Essex leading on run‑rate and Glamorgan in third place.",446,99
+44,"In the Hautes Alpes, they are currently feeding beneath ski lifts on slopes that will soon be covere",In the summer months high on the French Alps the sheep graze on rich pastures.,The French government has authorized a targeted hunt of one wolf to curb rising livestock losses amid the species’ comeback.,ok,,"Main topic: Wolf resurgence  
+Key event: The prefect authorises a hunt of a single wolf blamed for escalating sheep attacks.  
+
+<answer>The French government has authorized a targeted hunt of one wolf to curb rising livestock losses amid the species’ comeback.</answer>",1228,95
+45,"The  
+          Lancet Oncology
+ review, which looked at incidence rates for 27 cancers in 184 count","One in six cancers - two million a year globally - are caused by largely treatable or preventable infections, new estimates suggest.","A Lancet Oncology review found that HPV, H. pylori, hepatitis B and C cause 1.9 million cancers globally, highlighting the need for stronger prevention and vaccination programs.",ok,,"Main topic: Infection‑related cancers  
+Key event: A Lancet Oncology review identified four infections—HPV, H. pylori, hepatitis B and C—as responsible for 1.9 million cancer cases worldwide, urging increased vaccination and prevention efforts.  
+<answer>A Lancet Oncology review found that HPV, H. pylori, hepatitis B and C cause 1.9 million cancers globally, highlighting the need for stronger prevention and vaccination programs.</answer>",665,145
+46,"Media playback is not supported on this device
+The Foxes beat Hull 3-1 on Saturday and have won both","Leicester City caretaker boss Craig Shakespeare is ""out of order"" for wanting to replace Claudio Ranieri, says ex-Arsenal defender Martin Keown.",Leicester City is weighing appointing assistant Craig Shakespeare as head coach following recent wins and the sacking of Ranieri.,ok,,"Main topic: Managerial succession at Leicester City  
+Key event: Craig Shakespeare, Leicester’s assistant manager, is being considered for the head coach role after the club’s recent victories and the departure of former manager Ranieri.  
+
+<answer>Leicester City is weighing appointing assistant Craig Shakespeare as head coach following recent wins and the sacking of Ranieri.</answer>",624,95
+47,"The 22-year-old former Wales Under-20 international made his Dragons debut at 17, making him the you",Bath have agreed a deal for Newport Gwent Dragons scrum-half Jonathan Evans for next season.,"A 22‑year‑old former Wales U20 international has signed with Bath Rugby, stepping into the void left by departing players.",ok,,"Main topic: Player transfer  
+Key event: A 22‑year‑old former Wales U20 international joins Bath Rugby, filling the spot left by departing players.  
+
+<answer>A 22‑year‑old former Wales U20 international has signed with Bath Rugby, stepping into the void left by departing players.</answer>",289,108
+48,The apparent breakthrough came amid fresh US air strikes on Islamic State (IS) positions. Fifteen IS,"Iraqi forces have reached the besieged town of Amerli in northern Iraq, where thousands have been trapped by jihadists, military officials say.",[PARSE_FAILURE],failed,no_tag,"Main topic: IS Siege  
+Key event: Iraqi and allied forces broke the two‑month siege of Amerli, freeing the town from IS control.  
+
+<answer> The coalition’s assault on Amerli ended a two‑month IS siege, liberating the town and rescuing its residents.",893,90
+49,The 19-year-old man was arrested after the incident at Killylea Road during the early hours of Tuesd,"A Samurai sword and an axe have been seized by police and a teenager has been questioned after officers were called to a ""disturbance"" in Armagh.",A 19‑year‑old was arrested on Killylea Road for suspected weapon possession and criminal damage.,ok,,"Main topic: Teenager arrest  
+Key event: A 19‑year‑old was arrested on Killylea Road for suspected weapon possession and criminal damage.  
+<answer>A 19‑year‑old was arrested on Killylea Road for suspected weapon possession and criminal damage.</answer>",174,102
+50,"The theft happened outside St John's Kirk in St John's Place in the city before 23:30 on Monday.
+It ",A life-sized baby Jesus which was stolen from a nativity display at a church in Perth has been found.,A life‑sized doll was stolen from St John’s Kirk’s nativity display before 23:30 on Monday.,ok,,"Main topic: Nativity theft  
+Key event: A life‑sized doll was stolen from St John’s Kirk’s nativity display before 23:30 on Monday.  
+<answer>A life‑sized doll was stolen from St John’s Kirk’s nativity display before 23:30 on Monday.</answer>",279,87
+51,"The Slovenian club has knocked Hibernian, Rangers and Celtic out of Europe in recent seasons.
+Yet Mc",Derek McInnes believes Aberdeen have the confidence and experience to overcome being underdogs against Maribor in the Europa League.,Jim McInnes is confident Aberdeen will use their experience and balanced play to secure a home win against Maribor in the first leg of the third qualifying round.,ok,,"Main topic: Aberdeen’s European ambitions  
+Key event: Manager Jim McInnes outlines his strategy and confidence for the upcoming first‑leg tie against Maribor.  
+<answer>Jim McInnes is confident Aberdeen will use their experience and balanced play to secure a home win against Maribor in the first leg of the third qualifying round.</answer>",689,113
+52,The 27-year-old still had two years left on his existing deal but he has now committed himself to Ne,Worcestershire left-armer Jack Shantry has signed a contract extension with the relegated county until 2018.,"A 27‑year‑old player has signed a new one‑season contract with Worcestershire, joining a wave of recent extensions that signal rising morale at the club.",ok,,"Main topic: Contract extensions at Worcestershire  
+Key event: A 27‑year‑old player signs a new one‑season deal with the club.  
+
+<answer>A 27‑year‑old player has signed a new one‑season contract with Worcestershire, joining a wave of recent extensions that signal rising morale at the club.</answer>",292,114
+53,They were among four people who were on Irish Coastguard Rescue 116 helicopter when it crashed on Tu,A ship with specialist equipment has arrived at Blacksod Bay off the County Mayo coast to assist in the search for three missing Irish coastguard members.,"The Irish Coastguard Rescue 116 helicopter crashed, leading to a large-scale search and recovery effort to locate the wreckage and crew.",ok,,"Main topic: Helicopter crash  
+Key event: The Irish Coastguard Rescue 116 helicopter crashed, prompting a multi‑agency search and recovery operation.  
+
+<answer>The Irish Coastguard Rescue 116 helicopter crashed, leading to a large-scale search and recovery effort to locate the wreckage and crew.</answer>",492,96
+54,"He told a rally in Columbus, Ohio, that he had heard ""more and more"" that the contest would be unfai","Republican presidential nominee Donald Trump has suggested that the November election could be ""rigged"".","Trump’s incendiary remarks about the election’s fairness, Hillary Clinton, and a fallen soldier’s family drew widespread criticism across the political spectrum.",ok,,"Main topic: Trump’s controversial rhetoric  
+Key event: Trump repeatedly claimed the election is rigged and insulted Hillary Clinton and a soldier’s parents, sparking bipartisan condemnation.  
+<answer>Trump’s incendiary remarks about the election’s fairness, Hillary Clinton, and a fallen soldier’s family drew widespread criticism across the political spectrum.</answer>",618,90
+55,The Harry Potter star has been praised for his latest role in Rosencrantz and Guildenstern are Dead ,Daniel Radcliffe says he is really keen to be in a Shakespeare play - although he admits he's no expert on the Bard.,"Daniel Radcliffe takes on the role of Rosencrantz in a fresh Old Vic staging of *Rosencrantz and Guildenstern are Dead*, showcasing his move beyond Harry Potter.",ok,,"Main topic: Daniel Radcliffe’s stage career  
+Key event: Radcliffe stars as Rosencrantz in a new Old Vic production of *Rosencrantz and Guildenstern are Dead*.
+
+<answer>Daniel Radcliffe takes on the role of Rosencrantz in a fresh Old Vic staging of *Rosencrantz and Guildenstern are Dead*, showcasing his move beyond Harry Potter.</answer>",807,134
+56,The FTSE 250 company said this was due to customers switching less between savings and current accou,Shares in Moneysupermarket fell more than 6% after the comparison website warned that revenues so far this year were running below last year's levels.,"A FTSE 250 company posted a 16% profit jump to £73.5 m, but another’s shares fell sharply after forecasting weaker full‑year earnings.",ok,,"Main topic: FTSE 250 performance  
+Key event: A FTSE 250 company reported a 16% rise in annual profits to £73.5 m while another saw shares plunge after warning of lower-than‑expected full‑year earnings.  
+
+<answer>A FTSE 250 company posted a 16% profit jump to £73.5 m, but another’s shares fell sharply after forecasting weaker full‑year earnings.</answer>",426,161
+57,"Ronald Dickens, 47, followed a woman in her 20s into Newbold Road in Rugby in November 1985 before d","A man has been jailed for eight years for the brutal rape of a woman in 1985, thanks to advances in DNA and forensic investigations, police say.",Ronald Dickens was finally convicted for a 1985 rape after a 30‑year investigation using new DNA techniques.,ok,,"Main topic: Cold case rape conviction  
+Key event: Ronald Dickens was identified and convicted for raping a woman in 1985 after a 30‑year investigation using new DNA techniques.  
+<answer>Ronald Dickens was finally convicted for a 1985 rape after a 30‑year investigation using new DNA techniques.</answer>",333,90
+58,Adventures in the Anthropocene is her record of the people and places she encountered on a huge glob,The UK's premier prize for science books has been won by Gaia Vince - the first female writer to claim the award outright in its near 30-year history.,[PARSE_FAILURE],failed,no_tag,"Main topic: Anthropocene travel  
+Key event: Gaia Vince wins the Royal Society Winton Prize for her book *Adventures in the Anthropocene*.  
+<answer>Gaia Vince’s award‑winning book chronicles her global journey through the Anthropocene, highlighting human impacts and hopeful local solutions.",740,93
+59,"Hands shot up in agreement with what, in my humble opinion, was a pretty good case for Yorkshire dec",There were around 100 at the event in Wakefield listening to my passionate speech.,"Yorkshire leaders and politicians are advocating for greater devolution and even independence, spurred by Scotland’s independence debate and promises of increased local autonomy and funding.",ok,,"Main topic: Yorkshire independence debate  
+Key event: Politicians and local leaders push for increased devolution and potential independence for Yorkshire.  
+<answer>Yorkshire leaders and politicians are advocating for greater devolution and even independence, spurred by Scotland’s independence debate and promises of increased local autonomy and funding.</answer>",757,105
+60,"Karam Chand was born in a small rural village in the Punjab in northern India in 1905.
+His family wo",A couple from Bradford who tied the knot in 1925 could be the UK's longest married husband and wife.,"Karam and Kartari Chand, celebrating 86 years of marriage, claim the UK’s longest‑married couple title.",ok,,"Main topic: Long‑lived couple  
+Key event: Karam and Kartari Chand celebrated their 86th wedding anniversary, claiming the title of the UK’s longest‑married couple.  
+<answer>Karam and Kartari Chand, celebrating 86 years of marriage, claim the UK’s longest‑married couple title.</answer>",842,111
+61,West Yorkshire Police said the arrests were made between 30 May and 8 June by targeting known offend,More than 400 people have been arrested for domestic abuse offences ahead of the Euro 2016 tournament.,West Yorkshire Police intensified arrests and public outreach to curb domestic abuse linked to football match days.,ok,,"Main topic: Domestic abuse prevention  
+Key event: West Yorkshire Police conducted arrests from 30 May to 8 June targeting known offenders and urged public reporting of abuse during football matches.  
+<answer>West Yorkshire Police intensified arrests and public outreach to curb domestic abuse linked to football match days.</answer>",338,84
+62,"Andrew Sleat, 43, of Blackfold Road, Crawley, was also fined £300 at Crawley Magistrates' Court afte",A man has been disqualified from driving for 22 months after he crashed his car into a house in West Sussex and caused a gas leak.,Andrew Sleat was fined for a drunk driving crash that evacuated 20 people and damaged three cars.,ok,,"Main topic: Drunk driving crash  
+Key event: Andrew Sleat was fined £300 after a drunk driving crash that evacuated 20 people and damaged three cars.  
+<answer>Andrew Sleat was fined for a drunk driving crash that evacuated 20 people and damaged three cars.</answer>",198,104
+63,Healthwatch England put in a Freedom of Information request and found psychiatric patients now spend,"Pressure to free up mental health beds may be leaving vulnerable people at risk, says a watchdog.","Healthwatch England’s data shows a 10% drop in psychiatric bed days, sparking alarm over premature discharges and a rise in home suicides amid underfunded community services.",ok,,"Main topic: Mental health care  
+Key event: Healthwatch England found that psychiatric patients now spend six fewer days in hospital than in 2012‑13, raising concerns about early discharges and rising home suicides.  
+
+<answer>Healthwatch England’s data shows a 10% drop in psychiatric bed days, sparking alarm over premature discharges and a rise in home suicides amid underfunded community services.</answer>",832,110
+64,"Lt Col Lucy Giles, 46, will be at the helm at New College to help prepare young British Army officer",The Royal Military Academy Sandhurst has appointed the first female college commander in its history.,"Lt Col Lucy Giles has been appointed head of New College at Sandhurst, marking a significant step for female leadership in the British Army.",ok,,"Main topic: Female leadership in the British Army  
+Key event: Lt Col Lucy Giles was appointed head of New College at Sandhurst to oversee training for future officers.  
+<answer>Lt Col Lucy Giles has been appointed head of New College at Sandhurst, marking a significant step for female leadership in the British Army.</answer>",434,109
+65,"More than 15,600 bank account numbers and sort codes were stolen, the company said.
+Customers should","TalkTalk has given more details of the cyber-attack on its website, saying nearly 157,000 of its customers' personal details were accessed.","TalkTalk revealed a major cyber‑breach that exposed thousands of bank account details, leading to arrests and a sharp decline in its stock price.",ok,,"Main topic: Cyber‑breach  
+Key event: TalkTalk confirmed that over 15,600 bank account numbers and sort codes were stolen in a cyber‑attack, prompting arrests and a significant drop in share value.  
+
+<answer>TalkTalk revealed a major cyber‑breach that exposed thousands of bank account details, leading to arrests and a sharp decline in its stock price.</answer>",427,101
+66,The duo are the first Robins players to agree to join Guernsey FC since the clubs agreed a partnersh,Guernsey FC have signed Bristol City forward Jake Andrews and defender Kodi Lyons-Foster on month-long youth loans.,"The first Robins players, Jake and Kodi, joined Guernsey FC for a month, marking the start of a new partnership between the clubs.",ok,,"Main topic: partnership between Bristol City and Guernsey FC  
+Key event: The first Robins players, Jake and Kodi, agreed to join Guernsey FC for a month, becoming the first non-Guernsey players to feature for the Green Lions.  
+<answer>The first Robins players, Jake and Kodi, joined Guernsey FC for a month, marking the start of a new partnership between the clubs.</answer>",301,137
+67,A lawyer for the former Cleveland Browns quarterback told the Associated Press news agency that pros,Troubled NFL quarterback Johnny Manziel is expected to be charged over an alleged assault on his ex-girlfriend.,Former Cleveland Browns quarterback Robert Manziel is facing a Class A misdemeanor assault charge for family violence.,ok,,"Main topic: Legal trouble  
+Key event: Former Cleveland Browns quarterback Robert ""Johnny Football"" Manziel faces a Class A misdemeanor assault charge for family violence.  
+
+<answer>Former Cleveland Browns quarterback Robert Manziel is facing a Class A misdemeanor assault charge for family violence.</answer>",277,80
+68,The report contains a bogus poll indicating that President Uhuru Kenyatta will win August's election,A fake video report about Kenya's election that is made to appear as if it is from the BBC's Focus on Africa programme has been circulating on social media.,"A fake poll claiming President Kenyatta will win the August election was spread on social media, leading the BBC to advise Kenyans to verify the story on its website.",ok,,"Main topic: Fake news  
+Key event: A bogus poll claiming President Uhuru Kenyatta will win the August election was circulated on social media, prompting the BBC to urge Kenyans to verify stories on its website.  
+<answer>A fake poll claiming President Kenyatta will win the August election was spread on social media, leading the BBC to advise Kenyans to verify the story on its website.</answer>",299,105
+69,Security experts warn that African governments and commercial online services are vulnerable to crim,"As the mobile revolution continues to drive change across Africa, governments are rushing to introduce legislation to curb cyber crime and to regulate the use of social media platforms.",[PARSE_FAILURE],failed,no_tag,"Main topic: Internet Censorship  
+Key event: African governments enact or propose sweeping cyber‑crime laws that risk silencing dissent and restricting online freedom.  
+
+<answer> African governments are tightening cyber‑crime legislation, raising fears that the measures will curb free expression and empower authoritarian control over the internet.",1233,95
+70,"Oxford University awarded seven honorary degrees, including to Lib Dem peer Shirley Williams, at its",Here are five stories in Oxfordshire that held your interest this week.,"Oxford University honored seven individuals, including Shirley Williams, at its historic Encaenia ceremony.",ok,,"Main topic: Oxford University events  
+Key event: Oxford University awarded seven honorary degrees, including to Lib Dem peer Shirley Williams, at its annual Encaenia ceremony.  
+<answer>Oxford University honored seven individuals, including Shirley Williams, at its historic Encaenia ceremony.</answer>",522,95
+71,"The Chinese-made aircraft went down in the Andaman Sea on 7 June with no survivors.
+Investigators fo","Bad weather caused a military plane to crash in Myanmar last month with 122 people on board, state media say.","A Chinese-made Y‑8 aircraft crashed in the Andaman Sea on 7 June, killing all 14 aboard.",ok,,"Main topic: Aircraft crash  
+Key event: A Chinese-made Y‑8 transporter crashed in the Andaman Sea on 7 June, killing all 14 aboard.  
+<answer>A Chinese-made Y‑8 aircraft crashed in the Andaman Sea on 7 June, killing all 14 aboard.</answer>",378,115
+72,"As Nadir Ciftci sloped off to Eskisehirspor on loan, fellow forward Colin Kazim-Richards, formerly o","Celtic were once again the biggest movers and shakers in the Scottish Premiership during January, finishing with a flamboyant flourish by trading in a moody Turk who has been a flop in Glasgow for a moody Englishman who made his name playing for Turkey.",Celtic bolstered its squad with high‑profile signings Colin Kazim‑Richards and Patrick Roberts as part of a hectic transfer window aimed at strengthening the team for the upcoming season.,ok,,"Main topic: Scottish football transfers  
+Key event: Celtic secured the loan of Colin Kazim‑Richards from Feyenoord and the permanent signing of Patrick Roberts from Manchester City, amid a busy transfer window.  
+<answer>Celtic bolstered its squad with high‑profile signings Colin Kazim‑Richards and Patrick Roberts as part of a hectic transfer window aimed at strengthening the team for the upcoming season.</answer>",1666,137
+73,"Mohammed Haji Sadiq denies committing 15 child sex offences over a 10-year period.
+Mr Sadiq, from th","An 81-year-old man who taught at a Cardiff mosque created a culture where physical punishment ""was the norm"", a court has heard.",Mohammed Haji Sadiq faces 15 child sex offence charges for alleged abuse at a Cardiff mosque from 1996 to 2006.,ok,,"Main topic: Child sexual abuse allegations  
+Key event: Mohammed Haji Sadiq is accused of 15 child sex offences at a Cardiff mosque between 1996 and 2006.  
+<answer>Mohammed Haji Sadiq faces 15 child sex offence charges for alleged abuse at a Cardiff mosque from 1996 to 2006.</answer>",372,96
+74,"Brian Farrell admitted conspiring to distribute heroin, cocaine and methamphetamine, in March this y",An American who helped run a successor to the Silk Road drug marketplace has been sentenced to eight years in jail.,Brian Farrell confessed to drug conspiracy via the Silk Road 2.0 dark‑web marketplace.,ok,,"Main topic: Silk Road 2.0  
+Key event: Brian Farrell admitted to conspiring to distribute drugs through the Silk Road 2.0 marketplace.  
+<answer>Brian Farrell confessed to drug conspiracy via the Silk Road 2.0 dark‑web marketplace.</answer>",339,79
+75,The Gaia satellite will be sent far from Earth to map the positions of more than a billion stars in ,It should be one of the great space ventures of the decade.,The Gaia satellite’s main structure was transferred to a French facility for propulsion system testing as part of its 2012 launch preparations.,ok,,"Main topic: Gaia satellite launch preparations  
+Key event: The Gaia spacecraft’s main structure was moved from the UK factory to a French facility for propulsion system testing.  
+<answer>The Gaia satellite’s main structure was transferred to a French facility for propulsion system testing as part of its 2012 launch preparations.</answer>",895,103
+76,Up until 1994 it was ruled by a white minority which enforced a separation of races with its policy ,South Africa has one of the continent's biggest and most developed economies.,"South Africa transitioned from apartheid to democracy in 1994, ending racial segregation and establishing a new, inclusive government.",ok,,"Main topic: South Africa  
+Key event: The negotiated end of apartheid in 1994, leading to the first non‑racial elections and the establishment of a democratic government.  
+<answer>South Africa transitioned from apartheid to democracy in 1994, ending racial segregation and establishing a new, inclusive government.</answer>",675,102
+77,"Gary Neville, from Cupar Way, Belfast, raised £930 at a charity fundraising music night he organised",A disc jockey has been jailed for eight months for stealing money from a children's cancer charity linked to the Oscar Knox appeal.,Gary Neville was jailed for eight months after failing to donate money raised for a child’s cancer charity.,ok,,"Main topic: Charity fraud  
+Key event: Gary Neville was sentenced to eight months in prison for failing to donate £930 raised for a child’s cancer charity.  
+<answer>Gary Neville was jailed for eight months after failing to donate money raised for a child’s cancer charity.</answer>",359,80
+78,"Tevez, who missed a penalty against Wigan last Saturday, was back on the bench for the midweek Champ",Manchester City manager Roberto Mancini says Carlos Tevez must wait for his chance to get back into the team.,"Tevez, after missing a penalty against Wigan, remains on the bench for the Champions League game against Napoli as manager Mancini weighs his future at the club.",ok,,"Main topic: Tevez’s bench status  
+Key event: Tevez missed a penalty against Wigan and is now on the bench for the Champions League match against Napoli.  
+<answer>Tevez, after missing a penalty against Wigan, remains on the bench for the Champions League game against Napoli as manager Mancini weighs his future at the club.</answer>",476,125
+79,"The conference, organised by Mankind Initiative and held at the Keepmoat Stadium, was chaired by for","One in five domestic violence victims in Yorkshire are men, according to a charity holding a conference in Doncaster.",A conference by Mankind Initiative spotlighted the high rates of male domestic abuse and the stigma that prevents men from seeking help.,ok,,"Main topic: Male domestic abuse  
+Key event: A conference organized by Mankind Initiative highlighted the prevalence of male abuse and the barriers men face in reporting it.  
+<answer>A conference by Mankind Initiative spotlighted the high rates of male domestic abuse and the stigma that prevents men from seeking help.</answer>",462,104
+80,"Ed Snowden, a 29-year-old former technical worker for the CIA, has since revealed himself to be the ","Both international governments and the world's biggest tech companies are in crisis following the leaking of documents that suggest the US government was able to access detailed records of individual smartphone and internet activity, via a scheme called Prism.","Edward Snowden’s leaks exposed the NSA’s Prism program, revealing extensive global surveillance of personal data.",ok,,"Main topic: US surveillance  
+Key event: Edward Snowden revealed classified NSA documents exposing the Prism program.  
+<answer>Edward Snowden’s leaks exposed the NSA’s Prism program, revealing extensive global surveillance of personal data.</answer>",1407,78
+81,The social network has been using artificial intelligence software to scan satellite imagery and ide,Facebook has announced it will make highly detailed maps of places where it believes people are living available to the public later this year.,"Facebook’s AI‑driven satellite mapping project will guide the placement of internet‑beaming drones, while also offering valuable data for humanitarian and research purposes.",ok,,"Main topic: AI Mapping  
+Key event: Facebook announced it has processed 14.6 billion satellite images to create highly detailed maps of human structures for use in deploying internet‑beaming drones.  
+
+<answer>Facebook’s AI‑driven satellite mapping project will guide the placement of internet‑beaming drones, while also offering valuable data for humanitarian and research purposes.</answer>",886,112
+82,"Lesbos used to get more than 5,000 a day. On Monday there were just four.
+But with Europe's borders ",There has been a dramatic reduction in the number of migrants arriving in Greece since an agreement between Turkey and the EU came into force.,"Lesbos’ migrant camps have become a stark divide: the EU‑Turkey deal has turned the once‑transit Moria into a detention centre for new arrivals, while earlier migrants wait in open‑air camps, highlighting Greece’s overwhelmed crisis response.",ok,,"Main topic: Migrant camps  
+Key event: The EU‑Turkey agreement on March 20 locked many new arrivals in Lesbos’ Moria camp, turning it into a detention centre while older arrivals remain in open‑air waiting rooms.  
+
+<answer>Lesbos’ migrant camps have become a stark divide: the EU‑Turkey deal has turned the once‑transit Moria into a detention centre for new arrivals, while earlier migrants wait in open‑air camps, highlighting Greece’s overwhelmed crisis response.</answer>",933,146
+83,"Hatfield Colliery closed in June with the loss of 430 jobs after almost a century of production.
+The",The last lump of coal mined in South Yorkshire has been presented to Doncaster's mayor at a ceremony marking the end of mining in the region.,Hatfield Colliery’s June closure ended 430 jobs and marked the end of coal mining in South Yorkshire.,ok,,"Main topic: Coal mining closure  
+Key event: Hatfield Colliery shut down in June, ending 430 jobs and marking the end of coal mining in South Yorkshire.  
+<answer>Hatfield Colliery’s June closure ended 430 jobs and marked the end of coal mining in South Yorkshire.</answer>",351,86
+84,"The man, who is in his 50s, also sustained a suspected broken leg in the first attack on Castle Stre","A man's eye socket has been broken and two other people have received minor injuries during two assaults in Ballycastle, County Antrim.","Police are investigating two assaults on Castle Street, one of which left a man with a suspected broken leg, and are urging witnesses to come forward.",ok,,"Main topic: Assaults on Castle Street  
+Key event: Two separate attacks occurred on Castle Street, one involving a man with a suspected broken leg and another involving a man and a woman, prompting police to seek witnesses.  
+<answer>Police are investigating two assaults on Castle Street, one of which left a man with a suspected broken leg, and are urging witnesses to come forward.</answer>",208,100
+85,"The Nobel committee praised him for a peace deal signed with Farc rebels, but rejected by Colombians",Colombian President Juan Manuel Santos has been awarded the Nobel Peace Prize for his efforts to end the 52-year conflict with left-wing rebels.,"The Nobel Peace Prize was awarded to President Juan Manuel Santos for his role in the Farc peace deal, despite the agreement being rejected by Colombian voters.",ok,,"Main topic: Nobel Peace Prize  
+Key event: The Nobel committee awarded President Juan Manuel Santos the Peace Prize for his role in the peace deal with the Farc, even though the agreement was rejected by Colombian voters.  
+
+<answer>The Nobel Peace Prize was awarded to President Juan Manuel Santos for his role in the Farc peace deal, despite the agreement being rejected by Colombian voters.</answer>",1008,120
+86,"The French manager has yet to say whether he will sign a new contract to stay beyond this season, bu",Arsene Wenger has challenged Arsenal's British players to take responsibility for the club's future.,"Arsène Wenger faces the decision of whether to stay beyond the current season as Arsenal prepare for a pivotal FA Cup semi‑final against Manchester City, a match that could mark his final appearance at Wembley.",ok,,"Main topic: Wenger’s future at Arsenal  
+Key event: Arsenal’s FA Cup semi‑final against Manchester City, potentially Wenger’s last match at Wembley.  
+<answer>Arsène Wenger faces the decision of whether to stay beyond the current season as Arsenal prepare for a pivotal FA Cup semi‑final against Manchester City, a match that could mark his final appearance at Wembley.</answer>",576,122
+87,"Discovered on land at North Elmham, near Dereham, the circa 600 AD coin was created by French rulers","An early-medieval gold pendant created from an imitation of a Byzantine coin that was found in a Norfolk field is a ""rare find"", a museum expert has said.","A Merovingian gold coin pendant, copied from a Byzantine solidus, was discovered in Norfolk and declared treasure.",ok,,"Main topic: Byzantine‑Merovingian coin  
+Key event: A 600 AD Merovingian gold coin pendant was found in Norfolk and declared treasure.  
+<answer>A Merovingian gold coin pendant, copied from a Byzantine solidus, was discovered in Norfolk and declared treasure.</answer>",450,82
+88,"House Speaker Paul Ryan said he and Mr Trump agreed to pull the vote, after it became apparent it wo",US President Donald Trump has withdrawn his healthcare bill after it failed to gain enough support to pass in Congress.,"Trump and Speaker Ryan pulled the American Health Care Act vote after it failed to gather the required Republican backing, marking a significant setback for the administration’s healthcare agenda.",ok,,"Main topic: Healthcare bill failure  
+Key event: Trump and Speaker Ryan withdrew the American Health Care Act vote after it failed to secure enough Republican support.  
+<answer>Trump and Speaker Ryan pulled the American Health Care Act vote after it failed to gather the required Republican backing, marking a significant setback for the administration’s healthcare agenda.</answer>",688,106
+89,The 34-year-old - nicknamed 'The Beast' and recognised for his immense physical strength on the Fifa,Adebayo Akinfenwa was sent off on his Wycombe Wanderers debut in a pre-season friendly against Le Havre on Tuesday.,Akinfenwa joined Wycombe but was sent off during a pre‑season game after a scuffle with an opponent.,ok,,"Main topic: Player transfer  
+Key event: Akinfenwa was sent off in a pre‑season match after a scuffle.  
+<answer>Akinfenwa joined Wycombe but was sent off during a pre‑season game after a scuffle with an opponent.</answer>",262,79
+90,"One Met Police officer received an overtime payment of £45,000 last year, a Freedom of Information r","Some UK police forces are using overtime to cover gaps caused by staff shortages, BBC Radio 5 live has found.","A single Met Police officer was paid £45,000 in overtime last year, highlighting the high costs of police overtime across England and Wales.",ok,,"Main topic: Police overtime  
+Key event: A Met Police officer received £45,000 in overtime pay last year.  
+
+<answer>A single Met Police officer was paid £45,000 in overtime last year, highlighting the high costs of police overtime across England and Wales.</answer>",1158,96
+91,"Shillington, who made 90 appearances in the 50-over format, will continue to play Twenty20 internati",Clare Shillington announced her retirement from one-day internationals after Ireland lost to South Africa in their final World Cup Qualifier game.,"Shillington, after a long ODI career, has decided to retire from the longer format to concentrate on T20 internationals.",ok,,"Main topic: Shillington’s shift to T20  
+Key event: She announces stepping back from ODIs to focus on T20 internationals.  
+<answer>Shillington, after a long ODI career, has decided to retire from the longer format to concentrate on T20 internationals.</answer>",526,107
+92,"It effectively completes the four-year-old software's transformation from a ""lightweight"" chat app, ","Facebook has confirmed that it is opening up its Messenger service to third-party developers, allowing them to add functions of their own.","Facebook’s Messenger is being transformed into a full‑blown platform with new apps and business services, as announced by Zuckerberg at F8.",ok,,"Main topic: Messenger platform expansion  
+Key event: Zuckerberg announces Messenger as a full platform with new add‑on apps and business services at F8.  
+<answer>Facebook’s Messenger is being transformed into a full‑blown platform with new apps and business services, as announced by Zuckerberg at F8.</answer>",738,111
+93,"Forster, who rejoined the club in July after 22 games on dual registration at Haven earlier in his c","Whitehaven have appointed former St Helens prop Carl Forster as player-coach at the age of 24, the youngest in the professional game.",Forster takes over as Haven’s new manager following the dismissal of James Coyle.,ok,,"Main topic: Managerial Change  
+Key event: Forster is appointed head coach of Haven after James Coyle is sacked.  
+<answer>Forster takes over as Haven’s new manager following the dismissal of James Coyle.</answer>",247,80
+94,Andrew Salina was found seriously injured at his home in Roystonhill at about 03:30 after emergency ,Police have launched a murder inquiry after a 51-year-old man was killed in his home in Glasgow.,"Andrew Salina was found dead at his Roystonhill home after a violent incident involving a weapon, prompting a murder investigation by Police Scotland.",ok,,"Main topic: Murder investigation  
+Key event: Andrew Salina was found dead at his home after a violent incident involving a weapon.  
+<answer>Andrew Salina was found dead at his Roystonhill home after a violent incident involving a weapon, prompting a murder investigation by Police Scotland.</answer>",382,83
+95,"Ibrahim Halawa, the son of the most senior Muslim cleric in the Republic of Ireland, was arrested du",The trial of a Dublin teenager held in an Egyptian prison for almost two years has been adjourned for a third time.,"Ibrahim Halawa, a 19‑year‑old Irish citizen, was arrested during a 2013 Cairo mosque siege and now faces a death‑penalty trial after a protracted legal battle.",ok,,"Main topic: Legal persecution  
+Key event: Ibrahim Halawa, son of Ireland’s senior Muslim cleric, was arrested in Cairo in 2013 and faces a death‑penalty trial after a prolonged siege of the Al‑Fath mosque.  
+
+<answer>Ibrahim Halawa, a 19‑year‑old Irish citizen, was arrested during a 2013 Cairo mosque siege and now faces a death‑penalty trial after a protracted legal battle.</answer>",483,118
+96,The government investigation said the bodies were burned at a rubbish dump hours after the students ,An independent investigation into the disappearance of 43 Mexican students nearly a year ago has rejected the government's account of events.,"The Mexican government’s claim that the 43 missing students’ bodies were incinerated at a landfill has been refuted by the IACHR, prompting renewed calls for a thorough investigation.>",ok,,"Main topic: Student disappearance  
+Key event: The government investigation claimed the students’ bodies were burned at a landfill, a claim the IACHR disputes.  
+<answer>The Mexican government’s claim that the 43 missing students’ bodies were incinerated at a landfill has been refuted by the IACHR, prompting renewed calls for a thorough investigation.></answer>",722,101
+97,The pair stood accused of committing manslaughter and sexual violence against the exchange student. ,Raffaele Sollecito was 23 and about to finish his degree when he was arrested along with then-girlfriend Amanda Knox for the 2007 murder of British student Meredith Kercher in Italy.,"Italy’s supreme court overturned the convictions of Amanda Knox and Raffaele Sollecito, ending a long legal saga over the 2007 murder case.",ok,,"Main topic: Amanda Knox case  
+Key event: Italy’s highest court finally overturned the convictions of Amanda Knox and Raffaele Sollecito in 2015.  
+<answer>Italy’s supreme court overturned the convictions of Amanda Knox and Raffaele Sollecito, ending a long legal saga over the 2007 murder case.</answer>",1226,113
+98,"SNP leader Nicola Sturgeon said voters had ""48 hours to get the Tories out"".
+Former Labour leader Go","With just two days until the polling stations open, all the Scottish party leaders are warning of the risks of backing their opponents.",Nicola Sturgeon urges voters to oust the Tories within 48 hours during the Scottish election campaign.,ok,,"Main topic: Scottish election campaign  
+Key event: Nicola Sturgeon urges voters to get the Tories out within 48 hours.  
+<answer>Nicola Sturgeon urges voters to oust the Tories within 48 hours during the Scottish election campaign.</answer>",825,100
+99,"Amy Simpson, 18, died when her car left the road near the village of Dalavich, on the banks of Loch ","The mother of a teenager who died when the car she was driving plunged into a river in Argyll has described her as the ""perfect daughter"".",A 18‑year‑old girl died when her car left the road and fell into the River Avich near Dalavich.,ok,,"Main topic: Teenager’s fatal car crash  
+Key event: Amy Simpson’s car left the road and plunged into the River Avich, killing her.  
+<answer>A 18‑year‑old girl died when her car left the road and fell into the River Avich near Dalavich.</answer>",293,85
