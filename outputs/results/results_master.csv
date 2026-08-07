@@ -1,5 +1,5 @@
 experiment_id,date,model,technique,task,language,token_input_avg,token_output_avg,prompt_version,normaliser_version,random_seed,flagged_count,notes,macro_f1,accuracy,entity_f1,precision,recall,rouge_l,bert_f1,exact_match,token_f1
-Reformulation_sentiment_english,7/21/2026,openai/gpt-oss-20b,Reformulation,sentiment,english,176.1,104.9,1,3,42,0,rebuilt from predictions,0.6047,0.61,,,,,,,
+reformulation_sentiment_english,7/21/2026,openai/gpt-oss-20b,reformulation,sentiment,english,176.1,104.9,1,3,42,0,rebuilt from predictions,0.6047,0.61,,,,,,,
 cot_ner_english,7/21/2026,openai/gpt-oss-20b,cot,ner,english,174.1,401.4,1,3,42,1,rebuilt from predictions,,,0.7524,0.678,0.8451,,,,
 few_shot_cot_sentiment_english,7/21/2026,openai/gpt-oss-20b,few_shot_cot,sentiment,english,227.1,289.2,1,3,42,0,rebuilt from predictions,0.7159,0.72,,,,,,,
 few_shot_ner_english,7/21/2026,openai/gpt-oss-20b,few_shot,ner,english,227.1,303.7,1,3,42,0,rebuilt from predictions,,,0.7573,0.7006,0.8239,,,,
@@ -11,21 +11,29 @@ zero_shot_ner_english,7/21/2026,openai/gpt-oss-20b,zero_shot,ner,english,181.1,3
 zero_shot_sentiment_english,7/21/2026,openai/gpt-oss-20b,zero_shot,sentiment,english,157.1,99,1,3,42,0,rebuilt from predictions,0.6663,0.67,,,,,,,
 cot_sentiment_english_openai/gpt-oss-20b_20260722_100358,7/22/2026,openai/gpt-oss-20b,cot,sentiment,english,158.1,212.7,1,3,42,0,rerun of example 48,0.6664,0.66,,,,,,,
 role_ner_english_openai/gpt-oss-20b_20260722_113004,7/22/2026,openai/gpt-oss-20b,role,ner,english,178.1,328.9,1,3,42,3,,,,0.7483,0.7063,0.7958,,,,
-,,,,,,,,,,,,,,,,,,,,,
 self_consistency_ner_english_openai/gpt-oss-20b_20260723_212853,7/23/2026,openai/gpt-oss-20b,self_consistency,ner,english,157.1,307,1,3,42,0,rerun of example 0,,,0.75,0.6742,0.8451,,,,
 structured_output_ner_english_openai/gpt-oss-20b_20260724_095302,7/24/2026,openai/gpt-oss-20b,structured_output,ner,english,169.1,260.7,1,3,42,2,,,,0.7516,0.7012,0.8099,,,,
 reformulation_ner_english_openai/gpt-oss-20b_20260724_123233,7/24/2026,openai/gpt-oss-20b,reformulation,ner,english,230.1,337.6,1,3,42,4,,,,0.7692,0.7639,0.7746,,,,
-few_shot_cot_ner_english_openai/gpt-oss-20b_20260725_183315,7/25/2026,openai/gpt-oss-20b,few_shot_cot,ner,english,341.2,363.1,1,3,42,7,,,,0.6806,0.6712,0.6901,,,,
-,,,,,,,,,,,,,,,,,,,,,
-zero_shot_qa_english_openai/gpt-oss-20b_20260725_223034,2026-07-25,openai/gpt-oss-20b,zero_shot,qa,english,122.1,92.0,1.0,3.0,42,2,rerun of example 54,,,,,,,,0.51,0.5777
-few_shot_qa_english_openai/gpt-oss-20b_20260725_232011,2026-07-25,openai/gpt-oss-20b,few_shot,qa,english,169.1,61.3,1.0,3.0,42,0,,,,,,,,,0.55,0.6296
-cot_qa_english_openai/gpt-oss-20b_20260726_001235,2026-07-26,openai/gpt-oss-20b,cot,qa,english,142.1,107.8,1.0,3.0,42,0,,,,,,,,,0.53,0.5931
-role_qa_english_openai/gpt-oss-20b_20260726_104733,2026-07-26,openai/gpt-oss-20b,role,qa,english,157.1,70.7,1.0,3.0,42,0,rerun of example 8,,,,,,,,0.55,0.6131
-few_shot_cot_qa_english_openai/gpt-oss-20b_20260726_124311,2026-07-26,openai/gpt-oss-20b,few_shot_cot,qa,english,268.1,91.7,1.0,3.0,42,2,rerun of example 39,,,,,,,,0.51,0.5863
-structured_output_qa_english_openai/gpt-oss-20b_20260726_161332,2026-07-26,openai/gpt-oss-20b,structured_output,qa,english,136.1,122.0,1.0,3.0,42,2,,,,,,,,,0.55,0.5999
-structured_output_qa_english_openai/gpt-oss-20b_20260726_162935,2026-07-26,openai/gpt-oss-20b,structured_output,qa,english,136.1,122.0,1.0,3.0,42,2,,,,,,,,,0.55,0.5999
-structured_output_summarisation_english_openai/gpt-oss-20b_20260726_174447,2026-07-26,openai/gpt-oss-20b,structured_output,summarisation,english,589.9,104.3,1.0,3.0,42,6,rerun of example 48,,,,,,0.18,0.2997,,
-zero_shot_summarisation_english_openai/gpt-oss-20b_20260727_122334,2026-07-27,openai/gpt-oss-20b,zero_shot,summarisation,english,571.9,62.0,1.0,3.0,42,0,rerun of example 72,,,,,,0.1774,0.3105,,
-few_shot_summarisation_english_openai/gpt-oss-20b_20260727_131203,2026-07-27,openai/gpt-oss-20b,few_shot,summarisation,english,688.9,92.2,1.0,3.0,42,0,,,,,,,0.1761,0.302,,
-cot_summarisation_english_openai/gpt-oss-20b_20260727_214845,2026-07-27,openai/gpt-oss-20b,cot,summarisation,english,590.1,72.0,1.0,3.0,42,4,rerun of example 56,,,,,,0.165,0.2908,,
-role_summarisation_english_openai/gpt-oss-20b_20260728_091914,2026-07-28,openai/gpt-oss-20b,role,summarisation,english,597.9,64.4,1.0,3.0,42,0,,,,,,,0.1739,0.3032,,
+zero_shot_qa_english_openai/gpt-oss-20b_20260725_223034,7/25/2026,openai/gpt-oss-20b,zero_shot,qa,english,122.1,92,1,3,42,2,rerun of example 54,,,,,,,,0.51,0.5777
+few_shot_qa_english_openai/gpt-oss-20b_20260725_232011,7/25/2026,openai/gpt-oss-20b,few_shot,qa,english,169.1,61.3,1,3,42,0,,,,,,,,,0.55,0.6296
+role_qa_english_openai/gpt-oss-20b_20260726_104733,7/26/2026,openai/gpt-oss-20b,role,qa,english,157.1,70.7,1,3,42,0,rerun of example 8,,,,,,,,0.55,0.6131
+structured_output_qa_english_openai/gpt-oss-20b_20260726_162935,7/26/2026,openai/gpt-oss-20b,structured_output,qa,english,136.1,122,1,3,42,2,,,,,,,,,0.55,0.5999
+structured_output_summarisation_english_openai/gpt-oss-20b_20260726_174447,7/26/2026,openai/gpt-oss-20b,structured_output,summarisation,english,589.9,104.3,1,3,42,6,rerun of example 48,,,,,,0.18,0.2997,,
+zero_shot_summarisation_english_openai/gpt-oss-20b_20260727_122334,7/27/2026,openai/gpt-oss-20b,zero_shot,summarisation,english,571.9,62,1,3,42,0,rerun of example 72,,,,,,0.1774,0.3105,,
+few_shot_summarisation_english_openai/gpt-oss-20b_20260727_131203,7/27/2026,openai/gpt-oss-20b,few_shot,summarisation,english,688.9,92.2,1,3,42,0,,,,,,,0.1761,0.302,,
+role_summarisation_english_openai/gpt-oss-20b_20260728_091914,7/28/2026,openai/gpt-oss-20b,role,summarisation,english,597.9,64.4,1,3,42,0,,,,,,,0.1739,0.3032,,
+few_shot_cot_qa_english_openai/gpt-oss-20b_20260729_104132,7/29/2026,openai/gpt-oss-20b,few_shot_cot,qa,english,268.1,102.2,1,3,42,1,,,,,,,,,0.52,0.5963
+cot_qa_english_openai/gpt-oss-20b_20260729_163451,7/29/2026,openai/gpt-oss-20b,cot,qa,english,142.1,119.3,1,3,42,1,,,,,,,,,0.53,0.5894
+few_shot_cot_summarisation_english_openai/gpt-oss-20b_20260729_173236,7/29/2026,openai/gpt-oss-20b,few_shot_cot,summarisation,english,863.9,83.7,1,3,42,0,,,,,,,0.1801,0.3044,,
+few_shot_paraphrase_english_openai/gpt-oss-20b_20260730_133754,7/30/2026,openai/gpt-oss-20b,few_shot,paraphrase,english,286.9,272.5,1,3,42,2,,0.697,0.72,,,,,,,
+cot_paraphrase_english_openai/gpt-oss-20b_20260731_103609,7/31/2026,openai/gpt-oss-20b,cot,paraphrase,english,188,244.8,1,3,42,1,,0.6464,0.66,,,,,,,
+reformulation_paraphrase_english_openai/gpt-oss-20b_20260731_200333,7/31/2026,openai/gpt-oss-20b,reformulation,paraphrase,english,231,190.2,1,3,42,0,,0.7472,0.78,,,,,,,
+role_paraphrase_english_openai/gpt-oss-20b_20260731_195643,7/31/2026,openai/gpt-oss-20b,role,paraphrase,english,207,282.9,1,3,42,1,,0.7335,0.76,,,,,,,
+structured_output_paraphrase_english_openai/gpt-oss-20b_20260731_230745,7/31/2026,openai/gpt-oss-20b,structured_output,paraphrase,english,190,270.8,1,3,42,1,,0.6495,0.66,,,,,,,
+self_consistency_paraphrase_english_openai/gpt-oss-20b_20260805_223452,8/5/2026,openai/gpt-oss-20b,self_consistency,paraphrase,english,177,240.6,1,3,42,0,rerun of example 80,0.7052,0.73,,,,,,,
+reformulation_qa_english_openai/gpt-oss-20b_20260807_204855,8/7/2026,openai/gpt-oss-20b,reformulation,qa,english,182.1,71.2,1,3,42,0,rerun of example 65,,,,,,,,0.59,0.6453
+zero_shot_paraphrase_english_openai/gpt-oss-20b_20260807_210316,8/7/2026,openai/gpt-oss-20b,zero_shot,paraphrase,english,164,239.5,1,3,42,1,rerun of example 78,0.704,0.72,,,,,,,
+reformulation_summarisation_english_openai/gpt-oss-20b_20260807_211256,8/7/2026,openai/gpt-oss-20b,reformulation,summarisation,english,613.9,89.9,1,3,42,0,rerun of example 99,,,,,,0.1709,0.2977,,
+few_shot_cot_paraphrase_english_openai/gpt-oss-20b_20260807_211917,8/7/2026,openai/gpt-oss-20b,few_shot_cot,paraphrase,english,432,480.8,1,3,42,0,rerun of example 53,0.6923,0.72,,,,,,,
+few_shot_cot_ner_english_openai/gpt-oss-20b_20260807_213218,8/7/2026,openai/gpt-oss-20b,few_shot_cot,ner,english,341.1,350,1,3,42,0,rerun of example 80,,,0.6957,0.6624,0.7324,,,,
+cot_summarisation_english_openai/gpt-oss-20b_20260807_222901,2026-08-07,openai/gpt-oss-20b,cot,summarisation,english,591.9,72.2,1.0,3.0,42,0,rerun of example 25,,,,,,0.1715,0.3056,,

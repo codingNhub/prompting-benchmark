@@ -23,6 +23,7 @@ PARSE_FAILURE_LABEL = "[PARSE_FAILURE]"
 def run_experiment(technique: str, task: str, language: str = "english",
                    config_path: str = "configs/config.yaml") -> dict:
 
+    technique = technique.lower()
     logger.info(f"Starting experiment — technique={technique}, task={task}, language={language}")
 
     config = load_config(config_path)

@@ -21,6 +21,7 @@ logger = get_logger("rerun_example")
 
 
 def rerun_example(technique, task, language, example_id):
+    technique = technique.lower()
     config = load_config()
     seed = config["experiment"]["random_seed"]
     random.seed(seed)
