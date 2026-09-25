@@ -46,6 +46,9 @@ techniques:
   - structured_output
   - few_shot_cot
 
+# Reserved for future work — src/bootstrap.py is currently a stub and does not
+# read these values. compute_summarisation() in metric_engine.py hardcodes its
+# own BERTScore model/rescale settings rather than reading the block below.
 bootstrap:
   n_iterations: 1000
   confidence_level: 0.95
