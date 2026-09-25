@@ -1,0 +1,266 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"According to Microsoft 's latest proxy report , Ballmer held nearly 471 million shares as of Sept . ",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,441,420
+1,"This is America , my friends , and it should not happen here , "" he said to loud applause .",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,420,321
+2,""" Just sitting around in a big base camp , knocking back cans of beer , I don 't particularly regard",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences describe the same situation: a person is sitting in base camp, drinking beer, and does not consider that activity to be mountaineering. The differences are only in wording (“big” vs no adjective, “just” vs none, punctuation), but the core meaning is identical. Therefore, they are paraphrases.  
+
+Label: <answer>Paraphrase</answer>",439,600
+3,Murdoch 's family owns about 30 percent of News Corp. shares .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,412,187
+4,"Early Wednesday , the benchmark 10-year US10YT = RR had lost 16 / 32 in price , driving its yield up",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,466,486
+5,"Advances in AIDS treatments in recent years , some experts are saying , could be undermining efforts",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,429,314
+6,"Griffith , a Mount Airy native , now lives on the North Carolina coast in Manteo .",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey that Griffith grew up in Mount Airy and currently resides in Manteo. Sentence 1 describes him as a “Mount Airy native” and notes he lives “on the North Carolina coast in Manteo,” while Sentence 2 explicitly states he “grew up in Mount Airy” and “now lives in Manteo.” The mention of his age in the second sentence is additional information that does not alter the core meaning. Therefore, the two sentences express the same essential information.
+
+Label: <answer>Paraphrase</answer>",422,761
+7,""" The layoff is an excuse , "" countered Anaheim coach Mike Babcock .",Not Paraphrase,Not Paraphrase,ok,,"Reasoning: Sentence 1 states that the layoff is an excuse, implying that the layoff is being used as a justification or cover. Sentence 2 expresses that the coach felt the team did not engage at all, indicating a lack of effort or participation. The two statements address different aspects—one is about the nature of the layoff, the other about team performance—and they do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",423,517
+8,"Last year , he made his first foray into public politics , running a successful proposition campaign",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,428,394
+9,"Saddam 's other son , Odai , surrendered Friday , but the Americans are keeping it quiet because he ",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,439,438
+10,United States State Department spokesman Richard Boucher said : ' It is our judgment that the possib,Paraphrase,Paraphrase,ok,,"The two sentences convey the same information: a U.S. State Department spokesman named Richard Boucher is stating that the possible avenues to a peaceful resolution were not fully explored at the Tokyo conference. The only differences are in punctuation, quotation marks, and word order, not in meaning. Therefore, they are paraphrases.
+
+<answer>Paraphrase</answer>",448,347
+11,"The company posted a profit of $ 54.3 million , or 22 cents per share , in the year-ago period .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,438,744
+12,The CGT warned of prolonged industrial action unless Raffarin agreed .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,408,312
+13,SCO says the pricing terms for a license will not be announced for weeks .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,413,321
+14,"Loan losses , investment writedowns and legal costs led to the largest-ever loss for a European bank",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences attribute the same causes—loan losses, investment writedowns, and legal costs—to a loss that occurred last year. They both state that this loss was the largest ever for a European bank. The only difference is the placement of the phrase “largest ever” and punctuation, which does not change the overall meaning. Therefore, the two sentences are paraphrases.  
+
+<answer>Paraphrase</answer>",431,490
+15,"After 10 years of debate , the government is requiring food labels to reveal exact levels of the art",Paraphrase,Not Paraphrase,ok,,"The first sentence reports that, after a decade of debate, the government has decided to require food labels to disclose the exact levels of the artery‑clogger. It is a straightforward statement of a new regulation.  
+The second sentence says that “that’s about to change” because the government is now imposing that same labeling requirement. It implies a future shift in circumstances or policy, but it does not directly state the new regulation itself; rather, it comments on the impending effect of the regulation.  
+
+Thus, while both sentences mention the same government action, the first is a factual declaration of the action, whereas the second is a comment on the change that will result from it. They do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",431,692
+16,""" Our prognosis for a continued and steady recovery is being realized , and the outlook remains brig",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,440,584
+17,"Other members of the organization are believed to be in Pakistani cities , and many of the arrests o",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,443,314
+18,"The tech-laced Nasdaq Composite Index .IXIC eased 5.16 points , or 0.32 percent , at 1,590.75 , brea",Not Paraphrase,Not Paraphrase,ok,,"The two sentences describe different market movements.  
+Sentence 1 reports the Nasdaq Composite falling 5.16 points (0.32 %) to 1,590.75, ending a six‑day streak of gains.  
+Sentence 2 reports it falling 1.78 points (0.11 %) to 1,594.13.  
+The amounts, percentages, and resulting index levels differ, so the statements are not conveying the same meaning.
+
+<answer>Not Paraphrase</answer>",455,565
+19,The number of extremely obese adults -- those who are at least 100 pounds overweight -- has quadrupl,Paraphrase,Paraphrase,ok,,"The two sentences convey the same core information: the count of people who are extremely obese (defined as at least 100 pounds overweight) has increased fourfold since the 1980s, reaching roughly 4 million. The second sentence adds a few modifiers—“Americans,” “startling,” and “the research shows”—but these do not change the fundamental meaning. Therefore, the sentences are paraphrases.
+
+<answer>Paraphrase</answer>",451,285
+20,The new research will be published soon in the Proceedings of the National Academy of Sciences .,Paraphrase,Paraphrase,ok,,"The two sentences are essentially describing the same event.  
+Sentence 1 says the research will be published in the journal *Proceedings of the National Academy of Sciences*.  
+Sentence 2 says the research will appear on the journal’s website in the next few weeks.  
+Since the website is the online platform of the same journal, both sentences convey that the research will become available through the journal, just phrased slightly differently. Therefore they express the same meaning.
+
+<answer>Paraphrase</answer>",422,817
+21,""" Until this site was reported , the earliest site in Bering land-bridge area was dated at about 11,",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,445,289
+22,"Djerejian said that in the last month Syria has taken steps in response to the pressure , such as re",Paraphrase,Paraphrase,ok,,"The two sentences convey the same information. Both refer to Djerejian’s statement about Syria’s actions over the previous month, describing the same type of action (“relocating” vs. “moving”) and the same target (“militant group offices out of Damascus”). The differences are only in wording (“last month” vs. “past month”, “has taken steps” vs. “had taken some steps”, “relocating” vs. “moving”), which do not change the overall meaning.
+
+<answer>Paraphrase</answer>",445,576
+23,The British Foreign Office said Monday that coalition authorities in Iraq were pleased that the men ,Not Paraphrase,Not Paraphrase,ok,,"The first sentence reports that the British Foreign Office said that coalition authorities in Iraq were pleased that the men were freed. It does not state that the Foreign Office itself was involved in freeing the men. The second sentence claims that the Foreign Office said it had mediated the release of the two men, implying direct involvement. Since the roles and claims differ, the two sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",417,552
+24,"Dogs , he said , are second only to humans in the thoroughness of medical understanding and research",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,422,333
+25,Tony winners will be announced June 8 at the Radio City Music Hall in New York .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,420,284
+26,Such a step could put the issue before the UN Security Council .,Paraphrase,Paraphrase,ok,,"The two sentences convey the same idea: a particular action would bring a specific issue or matter to the attention of the UN Security Council. “Put the issue before” and “send the matter to” are essentially synonymous in this context, both indicating that the issue will be presented to the Council for consideration. Therefore, they are paraphrases.
+
+<answer>Paraphrase</answer>",410,401
+27,"He has been at UCSD since 1991 and was appointed chancellor in 1996 , after spending 22 years with A",Paraphrase,Not Paraphrase,ok,,"The two sentences are not equivalent.  
+Sentence 1 adds that the person was appointed chancellor in 1996, a fact that Sentence 2 omits.  
+Both mention the same tenure at UC San Diego and the 22‑year stint at AT &T Bell Labs, but the additional detail about the chancellorship means the meanings differ.
+
+<answer>Not Paraphrase</answer>",459,427
+28,"Also Wednesday , a minibus detonated a roadside bomb in a Baghdad traffic tunnel , killing two peopl",Paraphrase,Not Paraphrase,ok,,"Reasoning:  
+Sentence 1 states that on Wednesday a minibus detonated a roadside bomb in a Baghdad traffic tunnel, killing two people and wounding two others, according to hospital officials.  
+Sentence 2 says that today a bomb exploded in a Baghdad traffic tunnel, killing one civilian and wounding two others, according to Iraqi police.  
+
+The two sentences differ in several key aspects:  
+1. **Time** – “Wednesday” vs. “today” (unless today is Wednesday, the days are not guaranteed to match).  
+2. **Cause** – the first attributes the detonation to a minibus, while the second merely mentions a bomb explosion with no vehicle specified.  
+3. **Casualties** – the first reports two deaths, the second reports one death.  
+4. **Source** – hospital officials vs. Iraqi police.  
+
+Because of these differences, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",436,754
+29,The findings appear in Wednesday 's Journal of the American Medical Association ( news - web sites ),Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,423,663
+30,"The company will be able to start recording profits from HPS immediately , Perot Systems spokeswoman",Paraphrase,Not Paraphrase,ok,,"Reasoning: Sentence 1 says that the company will start recording profits from HPS immediately, implying that it will begin to recognize or report earnings that come from HPS. Sentence 2 says that the company will begin adding to Perot Systems’ profits immediately, implying that it will contribute additional earnings to Perot Systems’ overall profit total. The two sentences refer to different actions—one is about recording profits from a specific source (HPS), the other is about increasing the company’s own profit figure. Therefore, they do not express the same meaning.
+
+Label: <answer>Not Paraphrase</answer>",423,655
+31,"When the bomb exploded at the Casa de España , customers were eating dinner and playing bingo .",Paraphrase,Paraphrase,ok,,"The two sentences describe the same event: a bomb detonating at the Casa de España while customers were simultaneously eating dinner and playing bingo. Sentence 1 states the bomb exploded first and then notes the customers’ activities; sentence 2 places the customers’ activities first and then mentions the bomb going off. The verbs “exploded” and “went off” are synonymous, and the location names differ only by a typographical omission of the “ñ.” The order of clauses is swapped, but the overall meaning is identical.
+
+<answer>Paraphrase</answer>",421,745
+32,Peace Rules defeated Funny Cide in the Louisiana Derby .,Not Paraphrase,Not Paraphrase,ok,,"The two sentences do not convey the same meaning.  
+Sentence 1 says that Peace Rules won the race against Funny Cide.  
+Sentence 2 says that neither the trainer (“he”) nor Peace Rules could prevent Funny Cide from drawing away, implying that Peace Rules did not win. Therefore they are not paraphrases.
+
+<answer>Not Paraphrase</answer>",409,517
+33,"Senate Minority Leader Tom Daschle , D-S.D. , is leading the opposition .",Not Paraphrase,Not Paraphrase,ok,,"The two sentences do not convey the same meaning.  
+- Sentence 1 states that Tom Daschle is “leading the opposition,” which describes his role or position.  
+- Sentence 2 reports a statement he made: “I think it will pass,” which is a specific opinion about a bill.  
+
+The first sentence is about his leadership status; the second is about his comment on a particular issue. They refer to different aspects of his activity and therefore are not paraphrases of each other.  
+
+<answer>Not Paraphrase</answer>",426,389
+34,"SUVs parked on residential streets in Monrovia were tagged with "" ELF "" and other slogans , and anot",Not Paraphrase,Not Paraphrase,ok,,"The first sentence reports two events: SUVs were tagged with “ELF” and other slogans, and an additional SUV was set on fire in front of a house.  
+The second sentence only mentions that several SUVs were tagged with “ELF” and other slogans; it does not mention any burning.  
+Because the second sentence omits the key detail about the SUV being set ablaze, the two sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",448,526
+35,"Hong Kong was flat , Australia , Singapore and South Korea lost 0.2-0.4 percent .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,429,449
+36,""" I 've stopped looters , run political parties out of abandoned buildings , caught people with larg",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,453,405
+37,"The council includes 13 Shiites , five Kurds , five Sunnis , one Christian and one Turkoman .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,424,244
+38,It is for that reason that legal scholars said the Denver ruling is at least plausible .,Paraphrase,Not Paraphrase,ok,,"Reasoning: The first sentence refers to a “Denver ruling,” which could be any legal decision made in Denver, while the second sentence specifically mentions “Judge Nottingham’s decision.” Without additional context linking Judge Nottingham to the Denver ruling, the two sentences refer to potentially different legal actions. Therefore, they do not express the same meaning.
+
+<answer>Not Paraphrase</answer>",419,612
+39,"For legal purposes , J.P. Morgan and Citigroup neither admit nor deny the SEC charges under the sett",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,419,441
+40,"The Standard & Poor 's 500 Index slipped 4.77 , or 0.5 percent , to 929.62 .",Paraphrase,Not Paraphrase,ok,,"The two sentences describe different movements of the S&P 500 index.  
+- Sentence 1 reports a drop of 4.77 points (0.5 %) to a closing level of 929.62.  
+- Sentence 2 reports a much smaller drop of 0.17 point (0.02 %) to a closing level of 934.  
+
+Because the magnitude of the change, the percentage change, and the resulting index level all differ, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",445,483
+41,"Researchers found the fossils in a semidesert area of Venezuela , about 250 miles west of Caracas .",Paraphrase,Paraphrase,ok,,"The first sentence says that researchers found fossils in a semidesert area of Venezuela, roughly 250 miles west of Caracas. The second sentence specifies that the skeleton of *Phoberomys* was unearthed 250 miles west of Caracas, Venezuela. Both sentences describe the same discovery event: a fossil (specifically the *Phoberomys* skeleton) was found at the same location. The first is more general (“fossils” and “semidesert area”), while the second is more specific (“*Phoberomys* skeleton” and no mention of the semidesert). However, the core information—location, discovery, and subject—matches. Therefore, the two sentences convey the same meaning.
+
+<answer>Paraphrase</answer>",423,827
+42,But she said it will be difficult for investigators to directly tie any decline in shuttle funding t,Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey the same idea: she warned that investigators would find it difficult to directly link a decline in shuttle funding to the February event. The differences are only in word choice (“said” vs “cautioned”, “disaster” vs “tragedy”, and the placement of “directly”). These variations do not change the meaning.  
+Label: <answer>Paraphrase</answer>",428,598
+43,"Dean told reporters traveling on his 10-city "" Sleepless Summer "" tour that he considered campaignin",Not Paraphrase,Not Paraphrase,ok,,"The two sentences convey different information.  
+- Sentence 1 reports Dean’s opinion that campaigning in Texas is a challenge.  
+- Sentence 2 announces that Dean’s 10‑city tour is concluding in Chicago and New York.  
+
+Since the content, focus, and context differ, they do not express the same meaning.
+
+<answer>Not Paraphrase</answer>",430,319
+44,Wyoming and New Mexico both reported two deaths within the past week .,Paraphrase,Not Paraphrase,ok,,"Reasoning: Sentence 1 states that Wyoming and New Mexico each reported two deaths in the past week. Sentence 2 says that each state reported its first deaths from the virus during that same week. The number of deaths (two vs. first) and the implication that the deaths are new or first are different. Therefore the two sentences do not convey the same meaning.  
+Label: <answer>Not Paraphrase</answer>",411,467
+45,The program only spreads further when a computer user clicks on the attached program that then secre,Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences describe a malicious program that only propagates when a user interacts with the attached file—either by clicking or selecting it—and then the program secretly emails itself to addresses stored on the user's computer. The differences are only in word choice (“clicks on” vs “selects”, “on the user’s computer” vs “stored in the user’s computer”) and the placement of “only”, which do not change the overall meaning. Therefore, the two sentences are paraphrases of each other.
+
+<answer>Paraphrase</answer>",443,603
+46,The Bush administration 's hope is that by increasing the efficiency of older power plants -- especi,Paraphrase,Paraphrase,ok,,"The two sentences are essentially saying the same thing. Both refer to the Bush administration’s goal of boosting the efficiency of older coal‑fired power plants, and both conclude that this will allow more power to be produced at lower cost. The differences are only in wording (“older power plants – especially coal” vs. “older coal‑fired plants – the most affected segment”) and the omission of “Bush” in the second sentence, but the core meaning is identical.
+
+<answer>Paraphrase</answer>",441,641
+47,"The technology-laced Nasdaq Composite Index added 11.98 points , or 0.72 percent , to 1,680.42 .",Not Paraphrase,Not Paraphrase,ok,,"The two sentences describe different financial indices and their movements.  
+- Sentence 1 talks about the Nasdaq Composite Index gaining 11.98 points (0.72 %).  
+- Sentence 2 talks about the S&P 500 Index losing 1.07 points (0.11 %).  
+
+They refer to distinct markets, opposite directions of change, and different numerical values. Therefore, they do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",448,304
+48,"Taiwan has attempted to gain observer status to the United Nations-affiliated WHO for seven years , ",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,441,556
+49,"Counties with population declines will be Vermillion , Posey and Madison .",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey that the counties named Vermillion, Posey, and Madison are experiencing a decline in population. Sentence 1 states this by saying those counties are the ones with population declines, while Sentence 2 states that the populations of those counties will decline. The core meaning—those specific counties will see a drop in population—is identical, so the sentences are paraphrases.  
+
+<answer>Paraphrase</answer>",409,448
+50,"Each hull will cost about $ 1.4 billion , with each fully outfitted submarine costing about $ 2.2 bi",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey the same financial information about submarine construction. Sentence 1 states that each hull will cost about $1.4 billion and each fully outfitted submarine will cost about $2.2 billion. Sentence 2 conveys the same figures, specifying that the hulls are produced by the yards and the completed submarines cost $2.2 billion each. The only differences are in wording and the addition of “produced by the yards,” which does not change the core meaning. Therefore, the two sentences are paraphrases.
+
+Label: <answer>Paraphrase</answer>",448,538
+51,"Agrawal said her research neither suggests nor indicates PCOS causes lesbianism , only that PCOS is ",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey the same core message: the research does not support a causal link between PCOS and lesbianism, but it does find that PCOS is more common among lesbian women. The differences are mainly stylistic—Sentence 1 attributes the statement to Agrawal and uses “her research,” while Sentence 2 uses “our research” and includes a brief “She continued” introduction. The content, structure, and meaning remain identical. Therefore, the two sentences are paraphrases of each other.
+
+<answer>Paraphrase</answer>",444,663
+52,"Shares of McDonald 's rose $ 1.83 , or 8.3 percent , to close at the day 's high of $ 23.89 .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,445,221
+53,"Yee is a 1990 graduate of the U.S. Military Academy at West Point , New York .",Not Paraphrase,Not Paraphrase,ok,,"The first sentence tells us that Yee graduated from West Point in 1990.  
+The second sentence only says that Yee graduated from West Point and adds that Yee grew up in the United States; it does not mention the year of graduation. Because the second sentence omits the specific year and adds extra information (where Yee grew up), the two sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",424,438
+54,Russ Britt is the Los Angeles Bureau Chief for CBS.MarketWatch.com.,Not Paraphrase,Not Paraphrase,ok,,"The two sentences describe different individuals holding similar positions at the same organization but in different locations.  
+- Sentence 1 names Russ Britt as the Los Angeles Bureau Chief.  
+- Sentence 2 names Emily Church as the London bureau chief.  
+
+Because the subjects (Russ Britt vs. Emily Church) and the locations (Los Angeles vs. London) differ, the sentences do not convey the same meaning. They are not paraphrases of each other.  
+
+<answer>Not Paraphrase</answer>",411,328
+55,"A jury convicted rapper C-Murder , also known as Corey Miller , of second-degree murder Tuesday nigh",Paraphrase,Paraphrase,ok,,"The two sentences both report that rapper C‑Murder was found guilty of second‑degree murder for the shooting death of a 16‑year‑old in a Jefferson Parish nightclub.  
+- Sentence 1 specifies the jury, the date (Tuesday night), and his alias Corey Miller.  
+- Sentence 2 notes the automatic life sentence that comes with second‑degree murder and uses “inside” instead of “in.”  
+
+These differences are only in additional details or wording; the core event and facts remain identical. Therefore the sentences convey the same meaning.
+
+<answer>Paraphrase</answer>",457,477
+56,"Lawyers and others familiar with the federal investigation say it remains focused on Campbell , thou",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,428,1279
+57,"But for a meaningful dialogue to begin , cross-border terrorism should end and terror infrastructure",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,427,300
+58,Papandreou said EU leaders would discuss the appointment of Trichet as ECB president on Thursday eve,Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences refer to the same individual—Jean‑Claude Trichet, the governor of the Bank of France—being discussed for the role of president of the European Central Bank. They both state that EU leaders will discuss this appointment on Thursday or Friday. The only difference is that the first sentence specifies “Thursday evening” while the second simply says “Thursday,” but this does not change the overall meaning. Therefore, the two sentences convey the same information.
+
+Label: <answer>Paraphrase</answer>",438,744
+59,"All of a sudden , its like a bullet went through them its like a state of shock .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,427,329
+60,""" I don 't know whether that means two years or four years .",Paraphrase,Paraphrase,ok,,"The two sentences convey the same idea: the speaker is uncertain about whether the duration is two years or four years. The only difference is the placement of the clause “whether that means two years or four years” – in the first sentence it follows the verb, in the second it precedes it. This is a typical syntactic variation that does not change the meaning.
+
+<answer>Paraphrase</answer>",415,266
+61,"ABC broadcast a special "" World News Tonight "" report out of Washington anchored by Ted Koppel .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,425,405
+62,"In winter , it is transformed into a treacherous embankment , a mountain of ice and snow that blanke",Paraphrase,Paraphrase,ok,,"The two sentences describe the same winter phenomenon: a location becomes a treacherous embankment covered in ice and snow. Sentence 1 uses the pronoun “it” in a generic way, while Sentence 2 specifies that the location is Terrapin Point and adds details about what is covered. Despite the difference in specificity, the core meaning—winter turning the place into a dangerous, snow‑blanketed embankment—is identical. Therefore, they are paraphrases.
+
+<answer>Paraphrase</answer>",446,553
+63,Mr McDonnell is leading Grant Thornton International 's inquiry into the Italian business .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,417,232
+64,"U.S. forces struck dozens of targets on Monday , killing six guerrillas and arresting 21 others , th",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,447,261
+65,"The traditional Mediterranean diet puts the emphasis on vegetables , legumes , fruits , nuts , cerea",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,429,638
+66,"NBC also is introducing three new dramas , including one starring West Wing fugitive Rob Lowe as a W",Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences convey that NBC is adding three new dramas to its lineup, and that one of those dramas stars Rob Lowe. The first sentence adds the detail that Lowe plays a Washington lawyer, while the second omits that role description but otherwise states the same fact that the dramas will be on the schedule. The core meaning—NBC introducing three new dramas, one starring Rob Lowe—is identical in both sentences. Therefore, they are paraphrases.
+
+<answer>Paraphrase</answer>",430,667
+67,"Knight agreed to a two-year , $ 2.38 million contract that included a $ 300,000 signing bonus .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,436,276
+68,"The victims were not identified , although authorities said at least one of the bodies had been ther",Paraphrase,Not Paraphrase,ok,,"Reasoning: Sentence 1 states that the victims were not identified, and authorities noted that at least one body had been present for about a year. It does not specify how many victims or where they were buried. Sentence 2 specifies that there were exactly two victims buried in the yard who were not identified, and that authorities said at least one of them had been there for about a year. The second sentence adds details (number of victims and burial location) that are not present in the first sentence, so the two sentences do not convey the same meaning.
+
+Label: <answer>Not Paraphrase</answer>",429,520
+69,"Swartz , indicted in February , had argued that New Hampshire was the wrong place to charge him .",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,424,466
+70,"Monday 's attacks Monday were among the deadliest against Americans since Sept . 11 , 2001 .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,419,399
+71,"She first went to a specialist for initial tests last Monday , feeling tired and unwell .",Not Paraphrase,Not Paraphrase,ok,,"The two sentences differ in several key aspects:
+
+1. **Subject** – Sentence 1 uses a generic “She,” while Sentence 2 identifies a specific person (“The star, who plays schoolgirl Nina Tucker in Neighbours”). The two subjects may or may not be the same individual, but the sentences do not explicitly state that they are.
+
+2. **Date** – Sentence 1 says “last Monday,” a relative time reference, whereas Sentence 2 gives a specific date, “June 30.” Unless June 30 happened to be the Monday referred to, the dates are not guaranteed to match.
+
+3. **Purpose of the visit** – Sentence 1 mentions “initial tests,” indicating a specific reason for the specialist visit. Sentence 2 omits any mention of tests, leaving the purpose ambiguous.
+
+Because of these differences in subject identity, date, and stated purpose, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",428,687
+72,"Spinnaker employs roughly 83 people ; NetApp employs 2,400 .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,414,227
+73,"Heavy weekend rain and runoff from heavy snowmelt sent a mountain creek on a rampage , washing out a",Paraphrase,Paraphrase,ok,,"The two sentences describe the same core event: heavy precipitation and runoff caused a mountain creek to surge, wash out a culvert, and open a sinkhole on I‑70 east of Vail.  
+The differences are only in detail: the first mentions “heavy weekend rain” and “heavy snowmelt,” while the second says simply “rain” and “heavy snow”; the second also specifies the sinkhole’s width (22‑foot‑wide). These added details do not alter the fundamental meaning of the situation. Therefore, the sentences are paraphrases of each other.
+
+<answer>Paraphrase</answer>",459,1256
+74,New chief executive Mark McInnes has already said that capping costs would be the number one priorit,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,445,491
+75,Stocks dipped lower Tuesday as investors opted to cash in profits from Monday 's big rally despite a,Not Paraphrase,Not Paraphrase,ok,,"The two sentences describe the same underlying situation—investors taking profits from Monday’s rally while considering reports of modest economic improvement. However, they report opposite market outcomes: the first says the stocks dipped lower, the second says Wall Street moved tentatively higher. Because the overall effect on the market is different, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",444,565
+76,"Shares in BA were down 1.5 percent at 168 pence by 1420 GMT , off a low of 164p , in a slightly stro",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,457,279
+77,"Gartner 's report said global WLAN equipment shipments reached 19.5 million last year , a 120 percen",Paraphrase,Paraphrase,ok,,"The two sentences convey the same factual information: that global WLAN equipment shipments were 19.5 million last year and were 8.9 million in 2001. The first sentence explicitly mentions the 120 % increase, which is implied by the two figures, while the second simply states the figures. Both sentences describe the same event and outcome, so they are paraphrases.
+
+<answer>Paraphrase</answer>",444,276
+78,"In two weeks , he 'll probably send out Peace Rules in the Preakness .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,419,433
+79,"After posting $ 3 million bail , Jackson flew to Las Vegas , where he had been working on a video .",Paraphrase,Not Paraphrase,ok,,"The two sentences share some surface details—both mention a $3 million amount, a location in Las Vegas, and a video-related activity—but the core actions differ. Sentence 1 says Jackson “flew to Las Vegas,” implying a travel event, whereas Sentence 2 says he “has been keeping a low profile in Las Vegas,” which does not mention any travel. Additionally, “working on a video” is a broad activity, while “filming a music video” is a specific task. Because the main events and focus are not the same, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",435,644
+80,That kept the records sealed as Limbaugh 's attorneys prepared to file an appeal .,Paraphrase,Paraphrase,ok,,"The two sentences convey the same core idea: the records were sealed in order to give Limbaugh’s attorneys time to file an appeal. The differences—such as the mention of “a day later,” “again,” and the slightly different phrasing—are additional details that do not change the overall meaning. Therefore, they are paraphrases.
+
+<answer>Paraphrase</answer>",422,566
+81,""" If we could do that throughout the world , we could end terrorism , "" he said .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,428,339
+82,"In an appearance before a parliamentary committee on Tuesday , Mr. Blair suggested that only "" evide",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,436,199
+83,The Bush administration should make public the fact about Saudi Arabia 's complicity with terrorists,Paraphrase,Not Paraphrase,ok,,"Reasoning: The first sentence states that the Bush administration should make public “the fact” that Saudi Arabia is complicit with terrorists, implying that this complicity is established. The second sentence says the administration should make public “facts” about “purported” Saudi Arabian complicity, indicating that the complicity is alleged or unverified. The addition of “purported” changes the certainty of the claim, and the plural “facts” versus singular “fact” also suggests a broader or different set of information. Therefore, the two sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",440,918
+84,It predicted that a 7.0 percent rise to $ 204.9 billion in 2006 would push the industry 's yearly sa,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,462,499
+85,Closed sessions are routinely held at the United Nations tribunal that deals with Balkan war crimes ,Paraphrase,Paraphrase,ok,,"The two sentences both describe closed sessions at the UN tribunal for Balkan war crimes and state that these sessions are held to protect witnesses’ safety. The second sentence adds the detail that the witnesses “fear for their safety,” but this does not change the core meaning. Therefore, they are paraphrases of each other.
+
+<answer>Paraphrase</answer>",441,654
+86,The poll shows Bill White supported by 53 percent of surveyed voters -- Orlando Sanchez by 35 percen,Paraphrase,Paraphrase,ok,,"Reasoning: Both sentences report the same poll results: Bill White received 53 % support from surveyed voters, while Orlando Sanchez received 35 %. The second sentence simply adds the phrase “far ahead of” to emphasize the margin, but it does not change the core information conveyed. Therefore, the two sentences express the same meaning.
+
+Label: <answer>Paraphrase</answer>",435,336
+87,State government sources said Travis ' move was a direct result of the controversy over the Boudin p,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,422,678
+88,"Buchan responded by first noting that , in crafting the tax relief packages , "" the president has al",Paraphrase,Paraphrase,ok,,"The two sentences convey the same information: Buchan is attributing a statement to the president about considering both short‑term and long‑term effects when creating tax relief packages. The difference is only in wording and structure, not in meaning.
+
+<answer>Paraphrase</answer>",445,263
+89,"Dennehy , who transferred to Baylor last year after getting kicked off the University of New Mexico ",Paraphrase,Not Paraphrase,ok,,"The two sentences both describe Dennehy’s transfer to Baylor after being kicked off the University of New Mexico Lobos for temper tantrums. However, the second part of each sentence diverges: the first says he “had begun to read the Bible daily,” while the second says he “became a born‑again Christian in June 2002.” Reading the Bible daily could be a step toward becoming born‑again, but it does not necessarily mean he became a born‑again Christian, nor does it specify the date. Therefore, the sentences do not convey the same meaning.
+
+<answer>Not Paraphrase</answer>",455,575
+90,"It was third time lucky for Hempleman-Adams , 46 , after two previous abandoned attempts to make bal",Paraphrase,Paraphrase,ok,,"The two sentences convey the same information: both describe Hempleman‑Adams as a 46‑year‑old explorer who had failed twice before, and this was his third attempt that finally succeeded. The wording differs, but the meaning is identical.  
+<answer>Paraphrase</answer>",433,370
+91,"Actor Arnold Schwarzenegger is leaving backers in suspense , and former Los Angeles Mayor Richard Ri",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,435,284
+92,"His lawyer , Pamela MacKey , said Bryant expects to be completely exonerated .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,423,322
+93,British Airways ' New York-to-London runs will end in October .,Paraphrase,Not Paraphrase,ok,,"The two sentences do not convey the same meaning.  
+Sentence 1 refers to the discontinuation of the New York‑to‑London flight service in October, while Sentence 2 refers to the retirement of the seven Concorde aircraft at the end of October. They discuss different aspects of British Airways’ operations (routes vs. aircraft) and therefore are not paraphrases.
+
+<answer>Not Paraphrase</answer>",412,259
+94,Squyres is principal investigator for the Athena payload - a collection of science instruments carte,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,425,517
+95,"From Florida to Alaska , thousands of revelers vowed to push for more legal rights , including same-",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,427,412
+96,"Added Mr. Prodi : "" Maybe , but the old age helps us to understand our strengths and our weakness . ",Not Paraphrase,Not Paraphrase,ok,,"The two sentences are not exact paraphrases.  
+Sentence 1 says that old age helps us understand our *strengths* and our *weakness*.  
+Sentence 2 says that old age helps us understand our *strength* (singular) and our *weakness*, and adds that it also helps us understand *the reality of the world*. The added clause changes the scope of the statement, and the singular/plural difference is a minor grammatical variation but does not alter the core meaning. Because Sentence 2 contains additional information not present in Sentence 1, the two sentences do not express the same meaning.
+
+<answer>Not Paraphrase</answer>",430,491
+97,The banks neither admit nor deny the SEC charges under the settlements .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,410,277
+98,A bill that would have fully legalized marijuana for medical purposes in Connecticut was narrowly de,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,431,366
+99,The union had not yet revealed which chain would be targeted .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,408,476

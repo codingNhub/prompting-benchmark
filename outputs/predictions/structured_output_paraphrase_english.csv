@@ -1,0 +1,170 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"According to Microsoft 's latest proxy report , Ballmer held nearly 471 million shares as of Sept . ",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,199,244
+1,"This is America , my friends , and it should not happen here , "" he said to loud applause .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,178,270
+2,""" Just sitting around in a big base camp , knocking back cans of beer , I don 't particularly regard",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: NONE  
+<answer>Paraphrase</answer>",197,251
+3,Murdoch 's family owns about 30 percent of News Corp. shares .,Not Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 reports that Murdoch’s family owns about 30 % of News Corp shares, while Sentence 2 reports that those shares have risen about 16 % in value over the past year.  
+<answer>Not Paraphrase</answer>",170,297
+4,"Early Wednesday , the benchmark 10-year US10YT = RR had lost 16 / 32 in price , driving its yield up",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,224,268
+5,"Advances in AIDS treatments in recent years , some experts are saying , could be undermining efforts",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,187,133
+6,"Griffith , a Mount Airy native , now lives on the North Carolina coast in Manteo .",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 2 includes Griffith’s age (77) which is not mentioned in Sentence 1.  
+<answer>Paraphrase</answer>",180,245
+7,""" The layoff is an excuse , "" countered Anaheim coach Mike Babcock .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,181,122
+8,"Last year , he made his first foray into public politics , running a successful proposition campaign",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 adds that it was his first foray into public politics, providing additional context that sentence 2 lacks.  
+<answer>Not Paraphrase</answer>",186,207
+9,"Saddam 's other son , Odai , surrendered Friday , but the Americans are keeping it quiet because he ",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: the day of surrender (Friday vs yesterday) and slight variations in spelling (Saddam vs Hussein, Odai vs Uday)  
+<answer>Paraphrase</answer>",197,345
+10,United States State Department spokesman Richard Boucher said : ' It is our judgment that the possib,Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: NONE  
+<answer>Paraphrase</answer>",206,181
+11,"The company posted a profit of $ 54.3 million , or 22 cents per share , in the year-ago period .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,196,489
+12,The CGT warned of prolonged industrial action unless Raffarin agreed .,Not Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 specifies that the CGT warned of prolonged industrial action unless Raffarin agreed, while Sentence 2 merely states that the large CGT union warned France of lengthy industrial action, omitting the conditional aspect and the reference to Raffarin.  
+<answer>Not Paraphrase</answer>",166,269
+13,SCO says the pricing terms for a license will not be announced for weeks .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,171,269
+14,"Loan losses , investment writedowns and legal costs led to the largest-ever loss for a European bank",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,189,179
+15,"After 10 years of debate , the government is requiring food labels to reveal exact levels of the art",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: sentence 2 indicates a change is about to happen, whereas sentence 1 states the requirement is already in effect.  
+<answer>Paraphrase</answer>",189,798
+16,""" Our prognosis for a continued and steady recovery is being realized , and the outlook remains brig",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: The first sentence identifies Greg Stuart as “bureau CEO,” while the second identifies him as “president and CEO of the IAB.”  
+<answer>Paraphrase</answer>",198,267
+17,"Other members of the organization are believed to be in Pakistani cities , and many of the arrests o",Paraphrase,Paraphrase,ok,,"Shared meaning: yes
+Key difference: NONE
+<answer>Paraphrase</answer>",201,354
+18,"The tech-laced Nasdaq Composite Index .IXIC eased 5.16 points , or 0.32 percent , at 1,590.75 , brea",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,213,247
+19,The number of extremely obese adults -- those who are at least 100 pounds overweight -- has quadrupl,Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 2 adds the words “Americans” and “the research shows” and the adjective “startling,” but the core information is the same.  
+
+<answer>Paraphrase</answer>",209,184
+20,The new research will be published soon in the Proceedings of the National Academy of Sciences .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,180,210
+21,""" Until this site was reported , the earliest site in Bering land-bridge area was dated at about 11,",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,203,261
+22,"Djerejian said that in the last month Syria has taken steps in response to the pressure , such as re",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,203,208
+23,The British Foreign Office said Monday that coalition authorities in Iraq were pleased that the men ,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,175,158
+24,"Dogs , he said , are second only to humans in the thoroughness of medical understanding and research",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,180,230
+25,Tony winners will be announced June 8 at the Radio City Music Hall in New York .,Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 specifies “Tony winners” and simply states the announcement will occur at Radio City Music Hall, while Sentence 2 refers to “Winners” in a general sense, mentions a ceremony broadcast on CBS, and emphasizes the broadcast aspect.  
+<answer>Not Paraphrase</answer>",178,448
+26,Such a step could put the issue before the UN Security Council .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,168,171
+27,"He has been at UCSD since 1991 and was appointed chancellor in 1996 , after spending 22 years with A",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,217,228
+28,"Also Wednesday , a minibus detonated a roadside bomb in a Baghdad traffic tunnel , killing two peopl",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,194,170
+29,The findings appear in Wednesday 's Journal of the American Medical Association ( news - web sites ),Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,181,235
+30,"The company will be able to start recording profits from HPS immediately , Perot Systems spokeswoman",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,181,324
+31,"When the bomb exploded at the Casa de España , customers were eating dinner and playing bingo .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,179,202
+32,Peace Rules defeated Funny Cide in the Louisiana Derby .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,167,190
+33,"Senate Minority Leader Tom Daschle , D-S.D. , is leading the opposition .",Not Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 states that Tom Daschle is leading the opposition, while Sentence 2 reports a quote from him saying “I think it will pass.”  
+<answer>Not Paraphrase</answer>",184,200
+34,"SUVs parked on residential streets in Monrovia were tagged with "" ELF "" and other slogans , and anot",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,206,206
+35,"Hong Kong was flat , Australia , Singapore and South Korea lost 0.2-0.4 percent .",Not Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 states Hong Kong was flat and that Australia, Singapore and South Korea all lost between 0.2 % and 0.4 %, whereas Sentence 2 says Australia was flat, Singapore was down 0.3 % by midday, and South Korea added 0.2 %. The two sentences differ in the performance of Australia and South Korea (flat vs. loss vs. gain) and in the omission of Hong Kong in the second sentence.  
+
+<answer>Not Paraphrase</answer>",187,390
+36,""" I 've stopped looters , run political parties out of abandoned buildings , caught people with larg",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,211,279
+37,"The council includes 13 Shiites , five Kurds , five Sunnis , one Christian and one Turkoman .",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 lists 13 Shiites and the total council composition, while Sentence 2 omits the Shiites entirely and does not provide the total number of council members.  
+<answer>Not Paraphrase</answer>",182,239
+38,It is for that reason that legal scholars said the Denver ruling is at least plausible .,Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 refers to the “Denver ruling,” while Sentence 2 refers to “Judge Nottingham’s decision.”  
+<answer>Not Paraphrase</answer>",177,191
+39,"For legal purposes , J.P. Morgan and Citigroup neither admit nor deny the SEC charges under the sett",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,177,216
+40,"The Standard & Poor 's 500 Index slipped 4.77 , or 0.5 percent , to 929.62 .",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: The first sentence reports a slip of 4.77 points (0.5%) to 929.62, while the second reports a shed of 0.17 point (0.02%) to 934—different magnitudes, percentages, and final index levels.  
+<answer>Not Paraphrase</answer>",203,476
+41,"Researchers found the fossils in a semidesert area of Venezuela , about 250 miles west of Caracas .",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: The first sentence refers to fossils found by researchers in a semidesert area of Venezuela, while the second refers specifically to the skeleton of Phoberomys unearthed 250 miles west of Caracas, Venezuela.  
+<answer>Not Paraphrase</answer>",181,407
+42,But she said it will be difficult for investigators to directly tie any decline in shuttle funding t,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,186,207
+43,"Dean told reporters traveling on his 10-city "" Sleepless Summer "" tour that he considered campaignin",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,188,149
+44,Wyoming and New Mexico both reported two deaths within the past week .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,169,152
+45,The program only spreads further when a computer user clicks on the attached program that then secre,Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: NONE  
+<answer>Paraphrase</answer>",201,186
+46,The Bush administration 's hope is that by increasing the efficiency of older power plants -- especi,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,199,282
+47,"The technology-laced Nasdaq Composite Index added 11.98 points , or 0.72 percent , to 1,680.42 .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,206,179
+48,"Taiwan has attempted to gain observer status to the United Nations-affiliated WHO for seven years , ",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: The first sentence explicitly names Taiwan and gives the date March 19, while the second uses a pronoun (“It”) and gives the date May 19.  
+<answer>Not Paraphrase</answer>",199,308
+49,"Counties with population declines will be Vermillion , Posey and Madison .",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: NONE  
+<answer>Paraphrase</answer>",167,170
+50,"Each hull will cost about $ 1.4 billion , with each fully outfitted submarine costing about $ 2.2 bi",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,206,116
+51,"Agrawal said her research neither suggests nor indicates PCOS causes lesbianism , only that PCOS is ",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,202,255
+52,"Shares of McDonald 's rose $ 1.83 , or 8.3 percent , to close at the day 's high of $ 23.89 .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,203,226
+53,"Yee is a 1990 graduate of the U.S. Military Academy at West Point , New York .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,182,199
+54,Russ Britt is the Los Angeles Bureau Chief for CBS.MarketWatch.com.,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,169,120
+55,"A jury convicted rapper C-Murder , also known as Corey Miller , of second-degree murder Tuesday nigh",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 2 adds that second‑degree murder carries an automatic life sentence, while sentence 1 specifies the jury, the date (Tuesday night), and C‑Murder’s alias (Corey Miller).  
+<answer>Paraphrase</answer>",215,588
+56,"Lawyers and others familiar with the federal investigation say it remains focused on Campbell , thou",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 1 uses the past tense “declined to discuss” and the word “probe,” whereas Sentence 2 uses the present tense “refuse to discuss” and the word “investigation.”  
+<answer>Paraphrase</answer>",186,434
+57,"But for a meaningful dialogue to begin , cross-border terrorism should end and terror infrastructure",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,185,160
+58,Papandreou said EU leaders would discuss the appointment of Trichet as ECB president on Thursday eve,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,196,272
+59,"All of a sudden , its like a bullet went through them its like a state of shock .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,185,151
+60,""" I don 't know whether that means two years or four years .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,173,100
+61,"ABC broadcast a special "" World News Tonight "" report out of Washington anchored by Ted Koppel .",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 2 adds the phrase “Partly as a result,” which is not present in Sentence 1.  
+
+<answer>Paraphrase</answer>",183,193
+62,"In winter , it is transformed into a treacherous embankment , a mountain of ice and snow that blanke",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 uses a vague pronoun “it” and does not specify a location, while Sentence 2 explicitly names Terrapin Point and lists specific items (the park, railings, lampposts) that are affected.  
+<answer>Not Paraphrase</answer>",204,257
+63,Mr McDonnell is leading Grant Thornton International 's inquiry into the Italian business .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,175,189
+64,"U.S. forces struck dozens of targets on Monday , killing six guerrillas and arresting 21 others , th",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,205,184
+65,"The traditional Mediterranean diet puts the emphasis on vegetables , legumes , fruits , nuts , cerea",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,187,140
+66,"NBC also is introducing three new dramas , including one starring West Wing fugitive Rob Lowe as a W",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,188,197
+67,"Knight agreed to a two-year , $ 2.38 million contract that included a $ 300,000 signing bonus .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,194,165
+68,"The victims were not identified , although authorities said at least one of the bodies had been ther",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,187,230
+69,"Swartz , indicted in February , had argued that New Hampshire was the wrong place to charge him .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,182,460
+70,"Monday 's attacks Monday were among the deadliest against Americans since Sept . 11 , 2001 .",Paraphrase,[PARSE_FAILURE],failed,empty_response,,177,1500
+71,"She first went to a specialist for initial tests last Monday , feeling tired and unwell .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,186,270
+72,"Spinnaker employs roughly 83 people ; NetApp employs 2,400 .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,172,206
+73,"Heavy weekend rain and runoff from heavy snowmelt sent a mountain creek on a rampage , washing out a",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,217,259
+74,New chief executive Mark McInnes has already said that capping costs would be the number one priorit,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,203,201
+75,Stocks dipped lower Tuesday as investors opted to cash in profits from Monday 's big rally despite a,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,202,234
+76,"Shares in BA were down 1.5 percent at 168 pence by 1420 GMT , off a low of 164p , in a slightly stro",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,215,138
+77,"Gartner 's report said global WLAN equipment shipments reached 19.5 million last year , a 120 percen",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,202,278
+78,"In two weeks , he 'll probably send out Peace Rules in the Preakness .",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 1 expresses uncertainty (“probably”) and uses a relative time frame (“in two weeks”), whereas Sentence 2 states a definite fact with a specific date (“May 17”).  
+<answer>Paraphrase</answer>",177,525
+79,"After posting $ 3 million bail , Jackson flew to Las Vegas , where he had been working on a video .",Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 says Jackson *flew* to Las Vegas after posting a $3 million *bail* and was *working on a video*; Sentence 2 says he has been *keeping a low profile* in Las Vegas since posting a $3 million *bond* and was *filming a music video*. The actions, activities, and verb tenses differ.  
+<answer>Not Paraphrase</answer>",193,518
+80,That kept the records sealed as Limbaugh 's attorneys prepared to file an appeal .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,180,283
+81,""" If we could do that throughout the world , we could end terrorism , "" he said .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,186,358
+82,"In an appearance before a parliamentary committee on Tuesday , Mr. Blair suggested that only "" evide",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,194,183
+83,The Bush administration should make public the fact about Saudi Arabia 's complicity with terrorists,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,198,276
+84,It predicted that a 7.0 percent rise to $ 204.9 billion in 2006 would push the industry 's yearly sa,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,220,295
+85,Closed sessions are routinely held at the United Nations tribunal that deals with Balkan war crimes ,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,199,208
+86,The poll shows Bill White supported by 53 percent of surveyed voters -- Orlando Sanchez by 35 percen,Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 2 specifies the poll source (“11 News / Houston Chronicle”) and adds the phrase “far ahead,” which emphasizes the margin, whereas Sentence 1 simply states the poll results without source or emphasis.  
+<answer>Paraphrase</answer>",193,250
+87,State government sources said Travis ' move was a direct result of the controversy over the Boudin p,Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 attributes Travis’s move to the controversy surrounding Boudin’s parole decision, while Sentence 2 attributes the same move to the decision to release Boudin itself.  
+<answer>Not Paraphrase</answer>",180,308
+88,"Buchan responded by first noting that , in crafting the tax relief packages , "" the president has al",Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 1 says Buchan “responded by first noting that,” while Sentence 2 says Buchan “said.”  
+<answer>Paraphrase</answer>",203,285
+89,"Dennehy , who transferred to Baylor last year after getting kicked off the University of New Mexico ",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,213,228
+90,"It was third time lucky for Hempleman-Adams , 46 , after two previous abandoned attempts to make bal",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,191,222
+91,"Actor Arnold Schwarzenegger is leaving backers in suspense , and former Los Angeles Mayor Richard Ri",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,193,167
+92,"His lawyer , Pamela MacKey , said Bryant expects to be completely exonerated .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,181,306
+93,British Airways ' New York-to-London runs will end in October .,Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 states that British Airways’ New York‑to‑London flights will cease in October, while Sentence 2 says the airline will retire its seven Concorde aircraft at the end of October.  
+<answer>Not Paraphrase</answer>",170,224
+94,Squyres is principal investigator for the Athena payload - a collection of science instruments carte,Paraphrase,Paraphrase,ok,,"Shared meaning: yes  
+Key difference: Sentence 1 specifies that Squyres is the principal investigator for the Athena payload—a collection of science instruments carried by each rover—while Sentence 2 identifies him as Steve Squyres, a Cornell University scientist, and refers more generally to the missions’ science instruments without naming the Athena payload.  
+<answer>Paraphrase</answer>",183,592
+95,"From Florida to Alaska , thousands of revelers vowed to push for more legal rights , including same-",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,185,157
+96,"Added Mr. Prodi : "" Maybe , but the old age helps us to understand our strengths and our weakness . ",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,188,293
+97,The banks neither admit nor deny the SEC charges under the settlements .,Paraphrase,Not Paraphrase,ok,,"Shared meaning: no  
+Key difference: Sentence 1 refers to “SEC charges under the settlements,” while Sentence 2 refers to “charges as part of the agreement.”  
+<answer>Not Paraphrase</answer>",168,305
+98,A bill that would have fully legalized marijuana for medical purposes in Connecticut was narrowly de,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,189,245
+99,The union had not yet revealed which chain would be targeted .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,166,234

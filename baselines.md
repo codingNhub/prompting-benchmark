@@ -41,6 +41,7 @@
 - Our paper includes this as one of the 8 techniques
 
 ## Dataset Notes for Paper Writing
+- Class imbalance: sentiment is Positive/Neutral/Negative = 18/48/34 and paraphrase is Paraphrase/Not Paraphrase = 76/24 — both imbalanced relative to a uniform split; note as a limitation when interpreting macro-F1 and accuracy.
 - MultiNERD: filter English only (lang == "en") — stated in methodology
 - TriviaQA: always specify "closed-book validation split" in methodology
 - Roman Urdu sentiment: label noise acknowledged in limitations section

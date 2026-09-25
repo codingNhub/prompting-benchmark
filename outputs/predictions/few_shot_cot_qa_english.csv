@@ -1,25 +1,25 @@
 id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
-0,In 2001 which movie was the first winner of the Best Animated Movie Oscar?,Shrek,Shrek,ok,,<answer>Shrek</answer>,266,64
+0,In 2001 which movie was the first winner of the Best Animated Movie Oscar?,Shrek,Shrek,ok,,<answer>Shrek</answer>,266,63
 1,Who wrote the 1951 novel ‘From here to Eternity’?,James Jones,James Jones,ok,,"The 1951 novel *From Here to Eternity* was written by James Jones.  
 <answer>James Jones</answer>",264,65
-2,In what film did Oprah Winfrey make her big screen acting debut?,The Color Purple,The Color Purple,ok,,<answer>The Color Purple</answer>,263,63
+2,In what film did Oprah Winfrey make her big screen acting debut?,The Color Purple,The Color Purple,ok,,"The first film in which Oprah Winfrey appeared on screen was *The Color Purple* (1985).  
+<answer>The Color Purple</answer>",263,65
 3,What is the more common name for the order Coleoptera which contains more species than any other ord,Beetles,Beetles,ok,,<answer>Beetles</answer>,274,25
 4,"At which English racecourse did two horses collapse and die in the parade ring due to electrocution,",Newbury,Newmarket,ok,,<answer>Newmarket</answer>,276,121
-5,Which Disney character is brought to life by the Blue Fairy ?,PINOCCHIO,Pinocchio,ok,,"The Blue Fairy brings Pinocchio to life.  
-<answer>Pinocchio</answer>",261,52
+5,Which Disney character is brought to life by the Blue Fairy ?,PINOCCHIO,Pinocchio,ok,,<answer>Pinocchio</answer>,261,45
 6,What items would be collected by a horologist?,CLOCKS,"Watches, clocks, timepieces, gears, springs, escapements, pendulums, chronometers, and related components",ok,,"<answer>Watches, clocks, timepieces, gears, springs, escapements, pendulums, chronometers, and related components</answer>",259,78
 7,"In the Shakespeare play ‘The Tempest’, Prospero is the overthrown Duke of ‘where’?",Milan,Milan,ok,,<answer>Milan</answer>,271,27
 8,The 1938 work The Black Jacobins by C. L. R. James is an account of what upheaval that took place be,Haitian revolution,Haitian Revolution,ok,,<answer>Haitian Revolution</answer>,285,26
 9,"Psychoanalyst A A Brill described what as ‘Torches of Freedom’ in the 1920’s, as symbols of equality",Cigarettes,Women’s suffrage,ok,,<answer>Women’s suffrage</answer>,279,87
 10,The A57 road runs from Liverpool to which English town or city?,Lincoln,Chester,ok,,<answer>Chester</answer>,263,202
 11,Scientist Ernest Rutherford once said all science is just what subject while comparing the rest to s,Physics,Physics,ok,,<answer>Physics</answer>,268,60
-12,A Varsovian is a native of which capital city,Warsaw,Warsaw,ok,,"A Varsovian is a native of Warsaw.  
-<answer>Warsaw</answer>",261,46
+12,A Varsovian is a native of which capital city,Warsaw,Warsaw,ok,,"Reasoning: The term “Varsovian” derives from Warsaw, the capital of Poland.  
+<answer>Warsaw</answer>",261,55
 13,What is the US equivalent of the British Army's SAS?,Delta Force,Delta Force,ok,,"The U.S. military unit that serves a role similar to the British SAS is **Delta Force**.  
 <answer>Delta Force</answer>",261,69
 14,Which actor succeeded Marlon Brando as head of the Corleone family in the Godfather films?,Al Pacino,Al Pacino,ok,,<answer>Al Pacino</answer>,270,51
-15,"""Whose memoirs, published in 2010, were called """"A Journey""""?""",Tony Blair,Unknown,ok,,<answer>Unknown</answer>,268,801
-16,"Which artist has a daughter and two sons with Jane Asher, whom he married in 1981?",Gerald Scarfe,Paul McCartney,ok,,<answer>Paul McCartney</answer>,270,83
+15,"""Whose memoirs, published in 2010, were called """"A Journey""""?""",Tony Blair,Unknown,ok,,<answer>Unknown</answer>,268,805
+16,"Which artist has a daughter and two sons with Jane Asher, whom he married in 1981?",Gerald Scarfe,Actor,ok,,<answer>Actor</answer>,270,932
 17,"What is the most common blood type in humans? A, B or O?",O,O,ok,,<answer>O</answer>,265,26
 18,"Who wrote the novels About A Boy, How To Be Good and High Fidelity?",Nick Hornby,Nick Hornby,ok,,<answer>Nick Hornby</answer>,265,28
 19,Madame de Pompadour and Madame du Barry were mistresses of which French King?,Louis XV,Louis XV,ok,,<answer>Louis XV</answer>,266,25
@@ -37,35 +37,33 @@ id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,out
 28,Tahini paste is made by grinding which seeds?,Sesame,Sesame seeds,ok,,"Tahini paste is made by grinding sesame seeds.  
 <answer>Sesame seeds</answer>",259,47
 29,Which US folk singer had the words “This machine kills fascists” written on his guitar?,Woody Guthrie,Bob Dylan,ok,,<answer>Bob Dylan</answer>,268,24
-30,By what name was the shipping area Fitzroy known until 2002?,Finisterre,Fitzroy,ok,,<answer>Fitzroy</answer>,264,367
+30,By what name was the shipping area Fitzroy known until 2002?,Finisterre,Fitzroy,ok,,<answer>Fitzroy</answer>,264,480
 31,"""""""Alba"""" is the Gaelic name for what?""",Scotland,Scotland,ok,,"The Gaelic name “Alba” refers to Scotland.  
 <answer>Scotland</answer>",260,44
-32,"Which journalist and author won the fifth series of I'm A Celebrity, Get Me Out Of Here in 2005, bea",CAROL THATCHER,John McEnroe,ok,,<answer>John McEnroe</answer>,287,297
-33,A dress worn at President John F Kennedy's birthday party at Madison Square Garden on 19 May 1962 wa,Marilyn Munroe,Jacqueline Kennedy,ok,,<answer>Jacqueline Kennedy</answer>,293,67
+32,"Which journalist and author won the fifth series of I'm A Celebrity, Get Me Out Of Here in 2005, bea",CAROL THATCHER,John Craven,ok,,<answer>John Craven</answer>,287,302
+33,A dress worn at President John F Kennedy's birthday party at Madison Square Garden on 19 May 1962 wa,Marilyn Munroe,Jacqueline Kennedy,ok,,<answer>Jacqueline Kennedy</answer>,293,75
 34,A footpad was a criminal from the 16th to 19th century but what term is used to describe them today?,MUGGER,thief,ok,,<answer>thief</answer>,275,72
-35,Which author created the character Moll Flanders?,Daniel Defoe,Daniel Defoe,ok,,"The author who created the character Moll Flanders is Daniel Defoe.  
+35,Which author created the character Moll Flanders?,Daniel Defoe,Daniel Defoe,ok,,"The author of *Moll Flanders* is Daniel Defoe.  
 <answer>Daniel Defoe</answer>",258,58
 36,Which single by 'Leapy Lee' reached number two in the UK charts in 1968?,'LITTLE ARROWS',The Night Has a Thousand Eyes,ok,,<answer>The Night Has a Thousand Eyes</answer>,269,73
-37,What is the name of Mo Farah's coach who has recently been at the centre of doping allegations?,Alberto Salazar,Gareth Thomas,ok,,<answer>Gareth Thomas</answer>,270,118
+37,What is the name of Mo Farah's coach who has recently been at the centre of doping allegations?,Alberto Salazar,Gareth Thomas,ok,,<answer>Gareth Thomas</answer>,270,184
 38,Which journalist first told the world about the My Lai massacre?,Seymour Hersh,Tim Page,ok,,<answer>Tim Page</answer>,261,202
-39,Which writer created the detective Charlie Chan?,EARL DERR BIGGERS,[PARSE_FAILURE],failed,no_tag,The detective Charlie Chan was created by American author **Earl Derr Biggers**.,257,52
+39,Which writer created the detective Charlie Chan?,EARL DERR BIGGERS,Earl Derr Biggers,ok,,<answer>Earl Derr Biggers</answer>,257,33
 40,"""In the book of Genesis who asked the question,""""Am I my brotherskeeper""""?""",CAIN,Cain,ok,,<answer>Cain</answer>,268,36
-41,"In December 1965, who became President of the Philippines?",Ferdinand Marcos,Ferdinand Marcos,ok,,<answer>Ferdinand Marcos</answer>,262,149
+41,"In December 1965, who became President of the Philippines?",Ferdinand Marcos,Ferdinand Marcos,ok,,<answer>Ferdinand Marcos</answer>,262,120
 42,Which Mexican dish is a steamed corn husk filled with meat or vegetables coated in masa dough?,Tamale,tamale,ok,,<answer>tamale</answer>,268,24
 43,"In June 2010, 8 highly endangered monkeys (4 cottontop tamarins and 4 pygmy marmosets) were stolen f",Australia,Brazil,ok,,"The monkeys were stolen from the Symbio Wildlife Park in **Brazil**.  
 <answer>Brazil</answer>",290,46
-44,"""In New Zealand, the word """"moko"""" refers to a type of what?""",Tattoo,tattoo,ok,,"In New Zealand, the word “moko” refers to a type of tattoo.  
-<answer>tattoo</answer>",267,51
+44,"""In New Zealand, the word """"moko"""" refers to a type of what?""",Tattoo,tattoo,ok,,<answer>tattoo</answer>,267,31
 45,"In humans, alopecia is the loss of what?",Hair,Hair,ok,,"In humans, alopecia is the loss of what?  
 Reasoning: Alopecia is a medical term that refers to hair loss.  
 Answer: <answer>Hair</answer>",260,62
 46,"What was the first name of Italian crafter of violins Stradivari, who died in 1737?",Antonio,Antonio,ok,,<answer>Antonio</answer>,272,22
 47,Films. Which Dominic starred as Merry (Meriadoc) in ‘The Lord of the Rings’?,MONAGHAN,Dominic Monaghan,ok,,<answer>Dominic Monaghan</answer>,271,27
 48,"Anchored by the star Polaris, the constellation ursa minor represents what animal?",bear,Little Bear,ok,,<answer>Little Bear</answer>,265,33
-49,Arrecife is the largest city on which of the Canary Islands whose name is derived from that of a Gen,LANZAROTE,Lanzarote,ok,,<answer>Lanzarote</answer>,274,684
-50,A gymnophobia sufferer fears what?,Nudity,Being naked,ok,,"Reasoning: Gymnophobia is the fear of being naked or exposed.  
-Answer: <answer>Being naked</answer>",258,53
-51,Shashlik is what type of food dish?,Kebab,Skewered grilled meat (kebab),ok,,<answer>Skewered grilled meat (kebab)</answer>,259,66
+49,Arrecife is the largest city on which of the Canary Islands whose name is derived from that of a Gen,LANZAROTE,Lanzarote,ok,,<answer>Lanzarote</answer>,274,752
+50,A gymnophobia sufferer fears what?,Nudity,nakedness,ok,,<answer>nakedness</answer>,258,33
+51,Shashlik is what type of food dish?,Kebab,Kebab (grilled skewered meat),ok,,<answer>Kebab (grilled skewered meat)</answer>,259,65
 52,How many players are on the field in a baseball team?,Nine,9,ok,,"The reasoning is that a standard baseball team fields nine players at a time.  
 <answer>9</answer>",261,52
 53,"Quantrill's Raiders, a loosely organised force of Partisan rangers under the leadership of William C",American Civil War,Civil War,ok,,<answer>Civil War</answer>,279,24
@@ -76,7 +74,7 @@ Answer: <answer>Being naked</answer>",258,53
 58,"In the novel by Dumas, where was the Count of Monte Cristo imprisoned for 14 years?",Chateau d'If,Château d'If,ok,,<answer>Château d'If</answer>,269,32
 59,"Said to refer erroneously to the temperature at which book paper catches fire, the title of Ray Brad",451,451,ok,,<answer>451</answer>,307,24
 60,"In South Africa, who replaced Nelson Mandela as President of South Africa in 1999?",THABO MBEKI,Thabo Mbeki,ok,,<answer>Thabo Mbeki</answer>,267,30
-61,"Which serial killer hanged himself in Wakefield Prison in January 2004, four years after being found",Dr Harold Shipman,John George Haigh,ok,,<answer>John George Haigh</answer>,276,557
+61,"Which serial killer hanged himself in Wakefield Prison in January 2004, four years after being found",Dr Harold Shipman,John George Haigh,ok,,<answer>John George Haigh</answer>,276,573
 62,The 1810 betrothal of Princess Theresa to Crown Prince Ludwig not only resulted in the meadow where ,Octoberfest,Oktoberfest,ok,,<answer>Oktoberfest</answer>,287,31
 63,What dance craze was named after a city in South Carolina?,The Charleston,Charleston,ok,,<answer>Charleston</answer>,261,47
 64,"What is the name of the semi-fluid, clarified butter used in Indian cookery?",Ghee,Ghee,ok,,<answer>Ghee</answer>,266,27
@@ -84,10 +82,10 @@ Answer: <answer>Being naked</answer>",258,53
 66,"The excellent cut of beef known as ""hanger steak"" is taken from what part of the animal?",Diaphragm,Diaphragm,ok,,<answer>Diaphragm</answer>,269,51
 67,Ascorbic acid is usually known as what?,Vitamin C,Vitamin C,ok,,<answer>Vitamin C</answer>,259,31
 68,"""Who wrote numerous short stories and plays and the novels """"Of Human Bondage"""", """"The Moon And Sixp",Somerset Maugham,W. Somerset Maugham,ok,,<answer>W. Somerset Maugham</answer>,282,34
-69,Amr Shabana from Egypt is famous for playing which sport?,Squash,Squash,ok,,"Amr Shabana is famous for playing squash.  
-<answer>Squash</answer>",263,51
+69,Amr Shabana from Egypt is famous for playing which sport?,Squash,Squash,ok,,"Amr Shabana is a professional squash player.  
+<answer>Squash</answer>",263,50
 70,What was the codename for the German invasion of Russia in 1941?,BARBAROSSA,Operation Barbarossa,ok,,<answer>Operation Barbarossa</answer>,265,26
-71,"Swede Carl Linnaeus, 1707-78, considered the father of taxonomy of living things, is the lectotype (",Homo Sapiens,Homo sapiens,ok,,<answer>Homo sapiens</answer>,283,162
+71,"Swede Carl Linnaeus, 1707-78, considered the father of taxonomy of living things, is the lectotype (",Homo Sapiens,Homo sapiens,ok,,<answer>Homo sapiens</answer>,283,147
 72,Which company made the 'Tigra' model of car?,VAUXHALL,Volkswagen,ok,,<answer>Volkswagen</answer>,262,28
 73,"For what does the G stand in the navigational aid, usually known as a `GPS'?",Global,Global,ok,,"The G in GPS stands for “Global.”  
 <answer>Global</answer>",269,40
@@ -96,7 +94,7 @@ Answer: <answer>Being naked</answer>",258,53
 <answer>Beaver</answer>",257,46
 76,Alphabetically which is the first of the five halogens in the periodic table,Astatine,Astatine,ok,,<answer>Astatine</answer>,265,44
 77,Who was President of France for over 10 years from 1958?,Charles de Gaulle,Charles de Gaulle,ok,,"The president who served more than a decade starting in 1958 was Charles de Gaulle.  
-<answer>Charles de Gaulle</answer>",264,73
+<answer>Charles de Gaulle</answer>",264,72
 78,In the computing acronym WYSIWYG (wiziwig) what word is represented by both letter Ws?,WHAT,What,ok,,<answer>What</answer>,271,46
 79,Curacao was a colony of which country?,The Netherlands,The Netherlands,ok,,"Curacao was a colony of the Netherlands.  
 <answer>The Netherlands</answer>",258,44
@@ -120,6 +118,6 @@ Answer: <answer>Being naked</answer>",258,53
 94,"British artist Sir James Thornhill (1675-1734), history painter and sergeant painter to George I and",William Hogarth,Sir Christopher Wren,ok,,<answer>Sir Christopher Wren</answer>,284,154
 95,Which illness is commonly treated with the drugs lisinopril and ramipril?,High blood pressure,Hypertension,ok,,<answer>Hypertension</answer>,266,23
 96,Which company produces the video game console 'Xbox 360'?,MICROSOFT,Microsoft,ok,,<answer>Microsoft</answer>,262,22
-97,"In 1960, who co-founded Motor Racing Developments Ltd., a British racing car manufacturer and Formul",Jack Brabham,John Surtees,ok,,<answer>John Surtees</answer>,280,29
+97,"In 1960, who co-founded Motor Racing Developments Ltd., a British racing car manufacturer and Formul",Jack Brabham,John Surtees,ok,,<answer>John Surtees</answer>,280,64
 98,"What is the title of The Beatles first feature film, released in 1964?",A Hard Day’s Night,A Hard Day's Night,ok,,<answer>A Hard Day's Night</answer>,266,41
-99,"""In the song """"The Twelve Days of Christmas"""", what were there five of?""",Gold rings,gold rings,ok,,<answer>gold rings</answer>,266,43
+99,"""In the song """"The Twelve Days of Christmas"""", what were there five of?""",Gold rings,Gold rings,ok,,<answer>Gold rings</answer>,266,36

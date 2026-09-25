@@ -89,13 +89,17 @@ Thursday | DATE</answer>",336,217
 39,"His widow , Marie de ' Medici , served as regent for their nine-year-old son , Louis XIII , until 16","[(""Marie de ' Medici"", 'PERSON'), ('Louis XIII', 'PERSON')]","[(""Marie de' Medici"", 'PERSON'), ('Louis XIII', 'PERSON'), ('1617', 'DATE')]",ok,,"<answer>Marie de' Medici | PERSON
 Louis XIII | PERSON
 1617 | DATE</answer>",344,450
-40,"On 15 March 2001 he joined Torquay United on non-contract terms , but left just five days later with","[('Torquay United', 'ORGANIZATION')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
-41,"Another , less popular theory holds that the butte was named after Secretary of War John C. Spencer ","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
-42,It was named for a large outcropping of salt which drew the wildlife to the site near the Roanoke Ri,"[('Roanoke River', 'LOCATION')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
+40,"On 15 March 2001 he joined Torquay United on non-contract terms , but left just five days later with","[('Torquay United', 'ORGANIZATION')]","[('15 March 2001', 'DATE'), ('Torquay United', 'ORGANIZATION')]",ok,,"<answer>15 March 2001 | DATE
+Torquay United | ORGANIZATION</answer>",358,337
+41,"Another , less popular theory holds that the butte was named after Secretary of War John C. Spencer ","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON')]","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON'), ('July 1845', 'DATE')]",ok,,"<answer>John C. Spencer | PERSON
+Elijah White | PERSON
+July 1845 | DATE</answer>",345,265
+42,It was named for a large outcropping of salt which drew the wildlife to the site near the Roanoke Ri,"[('Roanoke River', 'LOCATION')]","[('Roanoke River', 'LOCATION')]",ok,,<answer>Roanoke River | LOCATION</answer>,341,252
 43,"In 2004 , student activism led to a campus-wide ban on sales of Coca-Cola products .","[('Coca-Cola', 'OTHER')]","[('2004', 'DATE'), ('Coca-Cola', 'ORGANIZATION')]",ok,,"<answer>2004 | DATE
 Coca-Cola | ORGANIZATION</answer>",336,190
-44,"It also hosts the annual "" ZagrebDox "" documentary film festival .","[('ZagrebDox', 'OTHER')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
-45,"Kellogg 's Sugar Smacks , created in 1953 , had 56 % sugar by weight .","[(""Kellogg 's"", 'ORGANIZATION'), ('Sugar Smacks', 'OTHER')]",[],failed,,,338,1500
+44,"It also hosts the annual "" ZagrebDox "" documentary film festival .","[('ZagrebDox', 'OTHER')]","[('ZagrebDox', 'EVENT')]",ok,,<answer>ZagrebDox | EVENT</answer>,330,318
+45,"Kellogg 's Sugar Smacks , created in 1953 , had 56 % sugar by weight .","[(""Kellogg 's"", 'ORGANIZATION'), ('Sugar Smacks', 'OTHER')]","[(""Kellogg's Sugar Smacks"", 'ORGANIZATION'), ('1953', 'DATE')]",ok,,"<answer>Kellogg's Sugar Smacks | ORGANIZATION
+1953 | DATE</answer>",338,568
 46,"This means that birds being force molted become susceptible to disease , particularly "" Salmonella ""","[('Salmonella', 'OTHER')]","[('Salmonella', 'DISEASE')]",ok,,<answer>Salmonella | DISEASE</answer>,346,205
 47,"Command passed to Major Dmitry Pavlutsky , who adopted very destructive tactics , burning , killing ","[('Dmitry Pavlutsky', 'PERSON')]","[('Major\u202fDmitry\u202fPavlutsky', 'PERSON')]",ok,,"Reasoning: The sentence mentions a military rank and a name, “Major Dmitry Pavlutsky.” The rank “Major” is part of the person’s title, so the named entity is the individual. No other proper nouns or organizations, locations, or dates appear in the sentence.  
 Entities: <answer>Major Dmitry Pavlutsky | PERSON</answer>",347,543
@@ -180,8 +184,10 @@ Entities: <answer>Cairngorms | LOCATION</answer>",332,459
 Entities:  
 <answer>Odette Annable | PERSON  
 Gary Oldman | PERSON</answer>",349,477
-79,David Phelps was moved into the starting rotation .,"[('David Phelps', 'PERSON')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
-80,"Multiple bomb explosions hit a football match in northern Iraq earlier today , killing at least 25 p","[('Iraq', 'LOCATION')]",[],failed,All retry attempts failed. Check your API key and internet connection.,,0,0
+79,David Phelps was moved into the starting rotation .,"[('David Phelps', 'PERSON')]","[('David Phelps', 'PERSON')]",ok,,<answer>David Phelps | PERSON</answer>,326,135
+80,"Multiple bomb explosions hit a football match in northern Iraq earlier today , killing at least 25 p","[('Iraq', 'LOCATION')]","[('Iraq', 'LOCATION')]",ok,,"Reasoning: The sentence mentions a location—“northern Iraq.” No other proper nouns or named entities (such as person names, organizations, or specific events) are present. Therefore, the only named entity is the country “Iraq,” classified as a LOCATION.
+
+Entities: <answer>Iraq | LOCATION</answer>",344,487
 81,Chemical fertilizers were manufactured along the canal soon after the Civil War .,"[('Civil War', 'OTHER')]","[('Civil War', 'EVENT')]",ok,,"The sentence mentions a historical event but no specific person, organization, or location.  
 - “Chemical fertilizers” and “the canal” are generic terms, not named entities.  
 - “Civil War” refers to the well‑known conflict in U.S. history, which is a named event.

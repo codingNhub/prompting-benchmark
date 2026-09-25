@@ -1,0 +1,101 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"According to Microsoft 's latest proxy report , Ballmer held nearly 471 million shares as of Sept . ",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,186.0,429.0
+1,"This is America , my friends , and it should not happen here , "" he said to loud applause .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,165.0,293.6666666666667
+2,""" Just sitting around in a big base camp , knocking back cans of beer , I don 't particularly regard",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,184.0,202.0
+3,Murdoch 's family owns about 30 percent of News Corp. shares .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,157.0,86.0
+4,"Early Wednesday , the benchmark 10-year US10YT = RR had lost 16 / 32 in price , driving its yield up",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,211.0,319.6666666666667
+5,"Advances in AIDS treatments in recent years , some experts are saying , could be undermining efforts",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,174.0,158.0
+6,"Griffith , a Mount Airy native , now lives on the North Carolina coast in Manteo .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,167.0,304.0
+7,""" The layoff is an excuse , "" countered Anaheim coach Mike Babcock .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,168.0,115.0
+8,"Last year , he made his first foray into public politics , running a successful proposition campaign",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,173.0,213.0
+9,"Saddam 's other son , Odai , surrendered Friday , but the Americans are keeping it quiet because he ",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,184.0,318.3333333333333
+10,United States State Department spokesman Richard Boucher said : ' It is our judgment that the possib,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,193.0,87.0
+11,"The company posted a profit of $ 54.3 million , or 22 cents per share , in the year-ago period .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,183.0,200.33333333333334
+12,The CGT warned of prolonged industrial action unless Raffarin agreed .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,153.0,181.66666666666666
+13,SCO says the pricing terms for a license will not be announced for weeks .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,158.0,185.33333333333334
+14,"Loan losses , investment writedowns and legal costs led to the largest-ever loss for a European bank",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,176.0,145.0
+15,"After 10 years of debate , the government is requiring food labels to reveal exact levels of the art",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,176.0,302.6666666666667
+16,""" Our prognosis for a continued and steady recovery is being realized , and the outlook remains brig",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,185.0,183.0
+17,"Other members of the organization are believed to be in Pakistani cities , and many of the arrests o",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,188.0,158.0
+18,"The tech-laced Nasdaq Composite Index .IXIC eased 5.16 points , or 0.32 percent , at 1,590.75 , brea",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,200.0,182.0
+19,The number of extremely obese adults -- those who are at least 100 pounds overweight -- has quadrupl,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,196.0,205.0
+20,The new research will be published soon in the Proceedings of the National Academy of Sciences .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,167.0,198.0
+21,""" Until this site was reported , the earliest site in Bering land-bridge area was dated at about 11,",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,190.0,299.6666666666667
+22,"Djerejian said that in the last month Syria has taken steps in response to the pressure , such as re",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,190.0,221.66666666666666
+23,The British Foreign Office said Monday that coalition authorities in Iraq were pleased that the men ,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,162.0,151.33333333333334
+24,"Dogs , he said , are second only to humans in the thoroughness of medical understanding and research",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,167.0,480.6666666666667
+25,Tony winners will be announced June 8 at the Radio City Music Hall in New York .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,165.0,268.0
+26,Such a step could put the issue before the UN Security Council .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,155.0,117.66666666666667
+27,"He has been at UCSD since 1991 and was appointed chancellor in 1996 , after spending 22 years with A",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,204.0,279.0
+28,"Also Wednesday , a minibus detonated a roadside bomb in a Baghdad traffic tunnel , killing two peopl",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,181.0,281.6666666666667
+29,The findings appear in Wednesday 's Journal of the American Medical Association ( news - web sites ),Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,168.0,163.0
+30,"The company will be able to start recording profits from HPS immediately , Perot Systems spokeswoman",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,168.0,613.0
+31,"When the bomb exploded at the Casa de España , customers were eating dinner and playing bingo .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,166.0,148.0
+32,Peace Rules defeated Funny Cide in the Louisiana Derby .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,154.0,181.33333333333334
+33,"Senate Minority Leader Tom Daschle , D-S.D. , is leading the opposition .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,171.0,154.0
+34,"SUVs parked on residential streets in Monrovia were tagged with "" ELF "" and other slogans , and anot",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,193.0,207.0
+35,"Hong Kong was flat , Australia , Singapore and South Korea lost 0.2-0.4 percent .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,174.0,207.33333333333334
+36,""" I 've stopped looters , run political parties out of abandoned buildings , caught people with larg",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,198.0,90.66666666666667
+37,"The council includes 13 Shiites , five Kurds , five Sunnis , one Christian and one Turkoman .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,169.0,258.3333333333333
+38,It is for that reason that legal scholars said the Denver ruling is at least plausible .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,164.0,126.0
+39,"For legal purposes , J.P. Morgan and Citigroup neither admit nor deny the SEC charges under the sett",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,164.0,213.66666666666666
+40,"The Standard & Poor 's 500 Index slipped 4.77 , or 0.5 percent , to 929.62 .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,190.0,126.0
+41,"Researchers found the fossils in a semidesert area of Venezuela , about 250 miles west of Caracas .",Paraphrase,Paraphrase,ok,,<answer>Not Paraphrase</answer>,168.0,335.6666666666667
+42,But she said it will be difficult for investigators to directly tie any decline in shuttle funding t,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,173.0,181.66666666666666
+43,"Dean told reporters traveling on his 10-city "" Sleepless Summer "" tour that he considered campaignin",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,175.0,130.0
+44,Wyoming and New Mexico both reported two deaths within the past week .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,156.0,148.66666666666666
+45,The program only spreads further when a computer user clicks on the attached program that then secre,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,188.0,210.33333333333334
+46,The Bush administration 's hope is that by increasing the efficiency of older power plants -- especi,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,186.0,234.0
+47,"The technology-laced Nasdaq Composite Index added 11.98 points , or 0.72 percent , to 1,680.42 .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,193.0,191.0
+48,"Taiwan has attempted to gain observer status to the United Nations-affiliated WHO for seven years , ",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,186.0,348.0
+49,"Counties with population declines will be Vermillion , Posey and Madison .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,154.0,269.0
+50,"Each hull will cost about $ 1.4 billion , with each fully outfitted submarine costing about $ 2.2 bi",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,193.0,156.0
+51,"Agrawal said her research neither suggests nor indicates PCOS causes lesbianism , only that PCOS is ",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,189.0,272.0
+52,"Shares of McDonald 's rose $ 1.83 , or 8.3 percent , to close at the day 's high of $ 23.89 .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,190.0,241.66666666666666
+53,"Yee is a 1990 graduate of the U.S. Military Academy at West Point , New York .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,169.0,231.33333333333334
+54,Russ Britt is the Los Angeles Bureau Chief for CBS.MarketWatch.com.,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,156.0,95.66666666666667
+55,"A jury convicted rapper C-Murder , also known as Corey Miller , of second-degree murder Tuesday nigh",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,202.0,382.0
+56,"Lawyers and others familiar with the federal investigation say it remains focused on Campbell , thou",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,173.0,170.66666666666666
+57,"But for a meaningful dialogue to begin , cross-border terrorism should end and terror infrastructure",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,172.0,172.33333333333334
+58,Papandreou said EU leaders would discuss the appointment of Trichet as ECB president on Thursday eve,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,183.0,341.0
+59,"All of a sudden , its like a bullet went through them its like a state of shock .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,172,132
+60,""" I don 't know whether that means two years or four years .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,160.0,113.0
+61,"ABC broadcast a special "" World News Tonight "" report out of Washington anchored by Ted Koppel .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,170.0,336.0
+62,"In winter , it is transformed into a treacherous embankment , a mountain of ice and snow that blanke",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,191.0,251.0
+63,Mr McDonnell is leading Grant Thornton International 's inquiry into the Italian business .,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,162.0,191.0
+64,"U.S. forces struck dozens of targets on Monday , killing six guerrillas and arresting 21 others , th",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,192.0,161.66666666666666
+65,"The traditional Mediterranean diet puts the emphasis on vegetables , legumes , fruits , nuts , cerea",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,174.0,157.0
+66,"NBC also is introducing three new dramas , including one starring West Wing fugitive Rob Lowe as a W",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,175.0,371.0
+67,"Knight agreed to a two-year , $ 2.38 million contract that included a $ 300,000 signing bonus .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,181.0,163.0
+68,"The victims were not identified , although authorities said at least one of the bodies had been ther",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,174.0,306.6666666666667
+69,"Swartz , indicted in February , had argued that New Hampshire was the wrong place to charge him .",Not Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,169.0,260.3333333333333
+70,"Monday 's attacks Monday were among the deadliest against Americans since Sept . 11 , 2001 .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,164.0,221.0
+71,"She first went to a specialist for initial tests last Monday , feeling tired and unwell .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,173.0,432.0
+72,"Spinnaker employs roughly 83 people ; NetApp employs 2,400 .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,159.0,217.33333333333334
+73,"Heavy weekend rain and runoff from heavy snowmelt sent a mountain creek on a rampage , washing out a",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,204.0,592.6666666666666
+74,New chief executive Mark McInnes has already said that capping costs would be the number one priorit,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,190.0,205.66666666666666
+75,Stocks dipped lower Tuesday as investors opted to cash in profits from Monday 's big rally despite a,Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,189.0,207.0
+76,"Shares in BA were down 1.5 percent at 168 pence by 1420 GMT , off a low of 164p , in a slightly stro",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,202.0,219.66666666666666
+77,"Gartner 's report said global WLAN equipment shipments reached 19.5 million last year , a 120 percen",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,189.0,259.0
+78,"In two weeks , he 'll probably send out Peace Rules in the Preakness .",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,164.0,465.3333333333333
+79,"After posting $ 3 million bail , Jackson flew to Las Vegas , where he had been working on a video .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,180.0,414.0
+80,That kept the records sealed as Limbaugh 's attorneys prepared to file an appeal .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,167,897
+81,""" If we could do that throughout the world , we could end terrorism , "" he said .",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,173.0,196.0
+82,"In an appearance before a parliamentary committee on Tuesday , Mr. Blair suggested that only "" evide",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,181.0,161.66666666666666
+83,The Bush administration should make public the fact about Saudi Arabia 's complicity with terrorists,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,185.0,203.0
+84,It predicted that a 7.0 percent rise to $ 204.9 billion in 2006 would push the industry 's yearly sa,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,207.0,284.3333333333333
+85,Closed sessions are routinely held at the United Nations tribunal that deals with Balkan war crimes ,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,186.0,180.33333333333334
+86,The poll shows Bill White supported by 53 percent of surveyed voters -- Orlando Sanchez by 35 percen,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,180.0,187.0
+87,State government sources said Travis ' move was a direct result of the controversy over the Boudin p,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,167.0,315.0
+88,"Buchan responded by first noting that , in crafting the tax relief packages , "" the president has al",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,190.0,139.0
+89,"Dennehy , who transferred to Baylor last year after getting kicked off the University of New Mexico ",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,200.0,113.0
+90,"It was third time lucky for Hempleman-Adams , 46 , after two previous abandoned attempts to make bal",Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,178.0,126.0
+91,"Actor Arnold Schwarzenegger is leaving backers in suspense , and former Los Angeles Mayor Richard Ri",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,180.0,147.0
+92,"His lawyer , Pamela MacKey , said Bryant expects to be completely exonerated .",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,168.0,235.33333333333334
+93,British Airways ' New York-to-London runs will end in October .,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,157.0,127.0
+94,Squyres is principal investigator for the Athena payload - a collection of science instruments carte,Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,170.0,570.3333333333334
+95,"From Florida to Alaska , thousands of revelers vowed to push for more legal rights , including same-",Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,172.0,275.6666666666667
+96,"Added Mr. Prodi : "" Maybe , but the old age helps us to understand our strengths and our weakness . ",Not Paraphrase,Not Paraphrase,ok,,<answer>Not Paraphrase</answer>,175.0,163.0
+97,The banks neither admit nor deny the SEC charges under the settlements .,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,155.0,404.6666666666667
+98,A bill that would have fully legalized marijuana for medical purposes in Connecticut was narrowly de,Paraphrase,Paraphrase,ok,,<answer>Paraphrase</answer>,176.0,238.33333333333334
+99,The union had not yet revealed which chain would be targeted .,Paraphrase,Paraphrase,ok,,<answer>Not Paraphrase</answer>,153.0,254.33333333333334

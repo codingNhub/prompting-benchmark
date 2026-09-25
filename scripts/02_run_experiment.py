@@ -3,9 +3,9 @@
 
 from src.experiment_runner import run_experiment
 
-print("Running experiment: reformulation + summarisation + english")
+print("Running experiment: cot+ summarisation + english")
 result = run_experiment(
-    technique="reformulation",
+    technique="cot",
     task="summarisation",
     language="english"
 )

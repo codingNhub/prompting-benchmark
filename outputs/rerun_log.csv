@@ -41,3 +41,31 @@ timestamp,technique,task,language,example_id,before_status,before_prediction,aft
 2026-07-27 12:22:31,zero_shot,summarisation,english,71,failed,[PARSE_FAILURE],ok,"A Chinese-made Y-8 transport crashed into the Andaman Sea on 7 June after the pilot lost control in a storm, killing all 14 aboard and marking one of Myanmar’s worst aviation disasters."
 2026-07-27 12:23:34,zero_shot,summarisation,english,72,failed,[PARSE_FAILURE],ok,"Celtic’s latest transfer window saw a mix of high‑profile loans and sales, with the club acquiring players like Colin Kazim‑Richards and Erik Sviatchenko while offloading others such as Osman Sow, all aimed at bolstering the squad amid a fierce title challenge."
 2026-07-27 21:48:45,cot,summarisation,english,56,failed,[PARSE_FAILURE],ok,"The article reports that a FTSE 250 company saw a 16% profit rise to £73.5 m despite lower customer switching due to low rates, while Go‑Ahead’s shares fell 14% after warning of lower profits from rail strikes, and the FTSE 100 edged up with Babcock rising, as the pound slipped slightly against the dollar and euro."
+2026-07-31 09:11:13,zero_shot,paraphrase,english,22,failed,[PARSE_FAILURE],ok,Paraphrase
+2026-07-31 09:12:14,zero_shot,paraphrase,english,34,ok,Not Paraphrase,ok,Not Paraphrase
+2026-07-31 09:12:59,zero_shot,paraphrase,english,37,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-05 22:33:41,self_consistency,paraphrase,english,59,failed,[PARSE_FAILURE],ok,Paraphrase
+2026-08-05 22:34:52,self_consistency,paraphrase,english,80,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 20:47:27,reformulation,qa,english,65,failed,[PARSE_FAILURE],ok,Skein
+2026-08-07 20:48:55,reformulation,qa,english,65,ok,Skein,ok,Skein
+2026-08-07 20:55:50,zero_shot,paraphrase,english,35,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 20:57:26,zero_shot,paraphrase,english,39,failed,[PARSE_FAILURE],ok,Paraphrase
+2026-08-07 20:58:16,zero_shot,paraphrase,english,40,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 20:59:21,zero_shot,paraphrase,english,41,failed,[PARSE_FAILURE],ok,Paraphrase
+2026-08-07 21:01:09,zero_shot,paraphrase,english,43,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 21:03:16,zero_shot,paraphrase,english,78,failed,[PARSE_FAILURE],failed,[PARSE_FAILURE]
+2026-08-07 21:09:37,reformulation,summarisation,english,72,failed,[PARSE_FAILURE],ok,Celtic’s latest loan and transfer activity focuses on extracting maximum value from new signings like Colin Kazim‑Richards and Patrick Roberts while managing risk amid a tight budget.
+2026-08-07 21:12:56,reformulation,summarisation,english,99,failed,[PARSE_FAILURE],ok,"Seventeen‑year‑old Amy Simpson died when her car left the road near Dalavich, Loch Awe, while four other passengers escaped uninjured."
+2026-08-07 21:18:04,few_shot_cot,paraphrase,english,23,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 21:19:17,few_shot_cot,paraphrase,english,53,failed,[PARSE_FAILURE],ok,Not Paraphrase
+2026-08-07 21:23:32,few_shot_cot,ner,english,40,failed,[],ok,"[('15 March 2001', 'DATE'), ('Torquay United', 'ORGANIZATION')]"
+2026-08-07 21:24:34,few_shot_cot,ner,english,41,failed,[],ok,"[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON'), ('July 1845', 'DATE')]"
+2026-08-07 21:26:21,few_shot_cot,ner,english,42,failed,[],ok,"[('Roanoke River', 'LOCATION')]"
+2026-08-07 21:27:28,few_shot_cot,ner,english,44,failed,[],ok,"[('ZagrebDox', 'EVENT')]"
+2026-08-07 21:29:25,few_shot_cot,ner,english,45,failed,[],ok,"[(""Kellogg's Sugar Smacks"", 'ORGANIZATION'), ('1953', 'DATE')]"
+2026-08-07 21:31:29,few_shot_cot,ner,english,79,failed,[],ok,"[('David Phelps', 'PERSON')]"
+2026-08-07 21:32:18,few_shot_cot,ner,english,80,failed,[],ok,"[('Iraq', 'LOCATION')]"
+2026-08-07 21:58:17,cot,summarisation,english,23,failed,[PARSE_FAILURE],ok,"A £100,000 reward has been announced to encourage information that could lead to the conviction of Charlene Downes' killers or the recovery of her body, with police urging anyone with knowledge to come forward amid past investigative failures and a planned appeal during a local football match."
+2026-08-07 22:22:49,cot,summarisation,english,26,failed,[PARSE_FAILURE],ok,"The article reports that UK politicians, including Prime Minister Boris Cameron and Defence Secretary Michael Fallon, have apologized for falsely accusing London Mayor Sadiq Khan’s associate Suliman Gani of supporting the Islamic State, a claim that Gani has denied and said is defamatory, prompting calls for further apologies and a review of Islamophobia within the Conservative Party."
+2026-08-07 22:25:34,cot,summarisation,english,55,failed,[PARSE_FAILURE],ok,"Daniel Radcliffe, famed for Harry Potter, has earned praise for his role as Rosencrantz in a new Old Vic production of Tom Stoppard’s comedy, with critics noting his energetic performance while the play itself receives mixed reviews."
+2026-08-07 22:29:01,cot,summarisation,english,25,failed,[PARSE_FAILURE],ok,"Scientists report that a 2015/16 heatwave caused a 40% coral die‑off at Dongsha Atoll, showing that even a 2°C global temperature rise can trigger catastrophic bleaching in shallow reefs, underscoring the need for drastic climate action."
