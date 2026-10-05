@@ -1,0 +1,1361 @@
+id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,output_tokens
+0,"The animal is not only durable and rugged , but also is extremely well-suited for forest grazing , b","[('bracken', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>NONE</answer>
+
+<<<sample 3, seed 44>>>
+<answer>NONE</answer>",160.0,125.0
+1,"Vice president Ahmed Adeeb was later arrested together with 17 supporters for "" public order offence","[('Ahmed Adeeb', 'PERSON')]","[('Ahmed Adeeb', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Ahmed Adeeb | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Ahmed Adeeb | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Ahmed Adeeb | PERSON</answer>",162.0,231.0
+2,It was sent again to Waipara for the 1997 festival then repeated again in 1999 .,"[('Waipara', 'LOCATION')]","[('1997 festival', 'OTHER'), ('Waipara', 'LOCATION'), ('1999', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Waipara | LOCATION
+1997 festival | OTHER
+1999 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Waipara | LOCATION
+1997 | OTHER
+1999 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Waipara | LOCATION
+1997 festival | OTHER
+1999 | OTHER</answer>",154.0,415.6666666666667
+3,The preserve also harbors northern pike and other fish .,"[('northern pike', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Northern pike | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>NONE</answer>",144.0,184.66666666666666
+4,The route to the west is partially blocked by the mass of the Ochil Hills .,"[('Ochil Hills', 'LOCATION')]","[('Ochil Hills', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Ochil Hills | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Ochil Hills | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Ochil Hills | LOCATION
+</answer>",149.0,173.0
+5,"In 1990 , the Bulgarian Communist Party set up an inquiry commission into the camps .","[('Bulgarian Communist Party', 'ORGANIZATION')]","[('Bulgarian Communist Party', 'ORGANIZATION'), ('1990', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Bulgarian Communist Party | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1990 | OTHER
+Bulgarian Communist Party | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+1990 | OTHER
+Bulgarian Communist Party | ORGANIZATION
+</answer>",150.0,227.33333333333334
+6,The title refers to the Pont Neuf bridge in Paris .,"[('Pont Neuf', 'LOCATION'), ('Paris', 'LOCATION')]","[('Paris', 'LOCATION'), ('Pont Neuf bridge', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Pont Neuf bridge | LOCATION
+Paris | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Pont Neuf | LOCATION
+Paris | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Pont Neuf bridge | LOCATION
+Paris | LOCATION</answer>",144.0,242.0
+7,Antigua Guatemala was made the capital .,"[('Antigua Guatemala', 'LOCATION')]","[('Antigua Guatemala', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Antigua Guatemala | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Antigua Guatemala | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Antigua Guatemala | LOCATION
+</answer>",139.0,223.33333333333334
+8,"According to live scanner communications , fire officials say a large gas main has exploded in a nei","[('California', 'LOCATION')]","[('California', 'LOCATION'), ('live scanner communications', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+live scanner communications | ORGANIZATION
+California | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+live scanner communications | ORGANIZATION
+California | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+live scanner communications | ORGANIZATION
+California | LOCATION
+</answer>",155.0,341.0
+9,"In good weather , it furnishes an alternative route to nearby Hoosier Pass , offering splendid views","[('Hoosier Pass', 'LOCATION'), ('aspen', 'OTHER'), ('Mount Silverheels', 'LOCATION'), ('Tenmile Range', 'LOCATION')]","[('Mount Silverheels', 'LOCATION'), ('Tenmile Range', 'LOCATION'), ('Hoosier Pass', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Hoosier Pass | LOCATION
+Mount Silverheels | LOCATION
+Tenmile Range | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Hoosier Pass | LOCATION
+Mount Silverheels | LOCATION
+Tenmile Range | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Hoosier Pass | LOCATION
+Mount Silverheels | LOCATION
+Tenmile Range | LOCATION
+</answer>",167.0,249.66666666666666
+10,"That idea is included in "" Capitalism and Freedom "" , in which he declared that economic freedom is ","[('Capitalism and Freedom', 'OTHER')]","[('Capitalism and Freedom', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Capitalism and Freedom | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Capitalism and Freedom | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Capitalism and Freedom | OTHER</answer>",167.0,238.0
+11,They competed in the renamed Continental Basketball Association for five seasons until the economic ,"[('Continental Basketball Association', 'ORGANIZATION')]","[('Continental Basketball Association', 'ORGANIZATION'), ('1982', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Continental Basketball Association | ORGANIZATION
+1982 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Continental Basketball Association | ORGANIZATION
+1982 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Continental Basketball Association | ORGANIZATION
+1982 | OTHER
+</answer>",155.0,248.0
+12,"In Vietnam , a commune-level town ( "" thị trấn "" ) is very similar to a township ; it is a subdivisi","[('Vietnam', 'LOCATION')]","[('Vietnam', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Vietnam | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Vietnam | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Vietnam | LOCATION</answer>",176.0,269.3333333333333
+13,"According to the sociologist Bruno Étienne , an expert on religious issues , the SRCM publishes book","[('Bruno Étienne', 'PERSON')]","[('NMR', 'OTHER'), ('Bruno Étienne', 'PERSON'), ('SRCM', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Bruno Étienne | PERSON
+SRCM | ORGANIZATION
+NMR | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Bruno Étienne | PERSON
+SRCM | ORGANIZATION
+NMR | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Bruno Étienne | PERSON
+SRCM | ORGANIZATION
+NMR | OTHER
+</answer>",224.0,665.0
+14,The provincial capital is Mount Hagen .,"[('Mount Hagen', 'LOCATION')]","[('Mount Hagen', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Mount Hagen | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Mount Hagen | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Mount Hagen | LOCATION</answer>",139.0,161.33333333333334
+15,"His works show particular influence from the musics of South and Southeast Asia , particularly the g","[('South', 'LOCATION'), ('Southeast Asia', 'LOCATION'), ('Java', 'LOCATION')]","[('Java', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+South and Southeast Asia | LOCATION
+Java | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+South Asia | LOCATION
+Southeast Asia | LOCATION
+Java | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>South and Southeast Asia | LOCATION<br>Java | LOCATION<br>gamelan music | OTHER</answer>",155.0,418.0
+16,"Despite the pictures , in Texas , it is not a violation of any law , as seat belts are not required ","[('Texas', 'LOCATION')]","[('Texas', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Texas | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Texas | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Texas | LOCATION</answer>",161.0,156.0
+17,On Rotten Tomatoes it has an approval rating of 0 % based on reviews from 5 critics .,"[('Rotten Tomatoes', 'OTHER')]","[('Rotten Tomatoes', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>",152.0,190.0
+18,"By causing the of one specific , researchers have produced mice with two frequently encountered beha","[('autism', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>NONE</answer>
+
+<<<sample 3, seed 44>>>
+<answer>autism | OTHER</answer>",155.0,289.0
+19,Today this activity turned into a local popular hobby and a museum of gold extraction was founded in,"[('Predosa', 'LOCATION')]","[('Predosa', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Predosa | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Predosa | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Predosa | LOCATION</answer>",168.0,301.6666666666667
+20,In Ireland he is a pundit for RTÉ Sport .,"[('Ireland', 'LOCATION'), ('RTÉ Sport', 'ORGANIZATION')]","[('Ireland', 'LOCATION'), ('RTÉ Sport', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Ireland | LOCATION
+RTÉ Sport | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Ireland | LOCATION
+RTÉ Sport | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Ireland | LOCATION
+RTÉ Sport | ORGANIZATION
+</answer>",144.0,193.33333333333334
+21,"A number of setbacks have occurred , especially after the loss of Carillion as the main contractor ,","[('Carillion', 'ORGANIZATION')]","[('January 2018', 'OTHER'), ('Carillion', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Carillion | ORGANIZATION
+January 2018 | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Carillion | ORGANIZATION
+January 2018 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Carillion | ORGANIZATION
+January 2018 | OTHER
+</answer>",161.0,289.6666666666667
+22,He sustained a ruptured hamstring after 70 minutes of his debut against Everton which took a full 10,"[('Everton', 'ORGANIZATION')]","[('Everton', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Everton | ORGANIZATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Everton | ORGANIZATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Everton | ORGANIZATION
+</answer>",158.0,205.0
+23,"1500 ) , and also music written for the harpsichord by Domenico Scarlatti ( b .","[('Domenico Scarlatti', 'PERSON')]","[('1500', 'OTHER'), ('Domenico Scarlatti', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+1500 | OTHER
+Domenico Scarlatti | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1500 | OTHER
+Domenico Scarlatti | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Domenico Scarlatti | PERSON</answer>",156.0,403.6666666666667
+24,"While in college she competed in the 100 m , 200 m , 4 × 100 m relay and 4 × 400 m relay for Clemson","[('Clemson University', 'ORGANIZATION')]","[('Clemson University', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Clemson University | ORGANIZATION
+100 m | OTHER
+200 m | OTHER
+4 × 100 m relay | OTHER
+4 × 400 m relay | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Clemson University | ORGANIZATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Clemson University | ORGANIZATION</answer>",166.0,279.6666666666667
+25,"In 1938 , it was extended an additional to the Missouri state line .","[('Missouri', 'LOCATION')]","[('1938', 'OTHER'), ('Missouri state line', 'LOCATION'), ('Missouri', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+1938 | OTHER
+Missouri | LOCATION
+Missouri state line | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1938 | OTHER
+Missouri state line | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+1938 | OTHER
+Missouri | LOCATION
+</answer>",148.0,691.0
+26,The Taff Vale Railway and its 275 locomotives were acquired on 1 January 1922 .,"[('Taff Vale Railway', 'ORGANIZATION')]","[('1 January 1922', 'OTHER'), ('The Taff Vale Railway', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Taff Vale Railway | ORGANIZATION
+1 January 1922 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+The Taff Vale Railway | ORGANIZATION
+1 January 1922 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+The Taff Vale Railway | ORGANIZATION
+1 January 1922 | OTHER
+</answer>",154.0,296.3333333333333
+27,"Famous performers included Dinah Shore , Francis Craig , and the NBC Orchestra .","[('Dinah Shore', 'PERSON'), ('Francis Craig', 'PERSON'), ('NBC Orchestra', 'ORGANIZATION')]","[('NBC Orchestra', 'ORGANIZATION'), ('Dinah Shore', 'PERSON'), ('Francis Craig', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Dinah Shore | PERSON
+Francis Craig | PERSON
+NBC Orchestra | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Dinah Shore | PERSON
+Francis Craig | PERSON
+NBC Orchestra | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Dinah Shore | PERSON
+Francis Craig | PERSON
+NBC Orchestra | ORGANIZATION
+</answer>",147.0,294.0
+28,"With five football fields , the venue is the largest in İzmir Province .","[('İzmir Province', 'LOCATION')]","[('İzmir Province', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+İzmir Province | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>İzmir Province | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>İzmir Province | LOCATION</answer>",147.0,229.0
+29,"Its name originates from the fishing vocabulary ; in the Middle Ages it referred to the right to "" p","[('Middle Ages', 'OTHER')]","[('Middle Ages', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Middle Ages | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Middle Ages | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Middle Ages | OTHER</answer>",164.0,250.66666666666666
+30,It is located 18 miles west of Philadelphia .,"[('Philadelphia', 'LOCATION')]","[('Philadelphia', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Philadelphia | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Philadelphia | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Philadelphia | LOCATION</answer>",142.0,95.33333333333333
+31,The pond was originally connected to the sea by a small inlet and got its name because sailors would,"[('Manasquan Inlet', 'LOCATION')]","[('Manasquan Inlet', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Manasquan Inlet | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Manasquan Inlet | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Manasquan Inlet | LOCATION</answer>",171.0,236.0
+32,The trailer is narrated by voice actress Linda Hunt .,"[('Linda Hunt', 'PERSON')]","[('Linda Hunt', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Linda Hunt | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Linda Hunt | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Linda Hunt | PERSON</answer>",142.0,88.66666666666667
+33,"In Kerala , India , arrowroot , locally called bilathi koova , is cultivated to produce an easily di","[('Kerala', 'LOCATION'), ('India', 'LOCATION')]","[('bilathi koova', 'OTHER'), ('India', 'LOCATION'), ('Kerala', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Kerala | LOCATION
+India | LOCATION
+bilathi koova | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Kerala | LOCATION
+India | LOCATION
+bilathi koova | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Kerala | LOCATION
+India | LOCATION
+bilathi koova | OTHER
+</answer>",157.0,462.3333333333333
+34,The bay connects on its south end to the mouth of Tomales Bay .,"[('Tomales Bay', 'LOCATION')]","[('Tomales Bay', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Tomales Bay | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Tomales Bay | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Tomales Bay | LOCATION
+</answer>",147.0,160.0
+35,"Mitochondrial DNA evidence indicates its closest relative is the masked crimson tanager ( "" R. nigro","[('masked crimson tanager', 'OTHER')]","[('masked crimson tanager', 'OTHER'), ('Mitochondrial DNA', 'OTHER'), ('R. nigrogularis', 'OTHER'), ('800,000 years ago', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Mitochondrial DNA | OTHER
+masked crimson tanager | OTHER
+R. nigrogularis | OTHER
+800,000 years ago | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+masked crimson tanager | OTHER
+R. nigrogularis | OTHER
+800,000 years ago | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Mitochondrial DNA | OTHER
+masked crimson tanager | OTHER
+R. nigrogularis | OTHER</answer>",172.0,419.0
+36,Transport workers in France began a strike on Thursday to protest changes in the state 's pension sy,"[('France', 'LOCATION')]","[('Thursday', 'OTHER'), ('France', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>France | LOCATION
+Thursday | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+France | LOCATION
+Thursday | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>France | LOCATION
+Transport workers | ORGANIZATION
+Thursday | OTHER</answer>",152.0,396.3333333333333
+37,The county has one city : Tehran .,"[('Tehran', 'LOCATION')]","[('Tehran', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Tehran | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Tehran | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Tehran | LOCATION
+</answer>",140.0,175.33333333333334
+38,"A big defenceman , he played six games for the Montreal Canadiens , recording only 11 penalty minute","[('Montreal Canadiens', 'ORGANIZATION')]","[('Montreal Canadiens', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Montreal Canadiens | ORGANIZATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Montreal Canadiens | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Montreal Canadiens | ORGANIZATION</answer>",154.0,245.66666666666666
+39,"His widow , Marie de ' Medici , served as regent for their nine-year-old son , Louis XIII , until 16","[(""Marie de ' Medici"", 'PERSON'), ('Louis XIII', 'PERSON')]","[(""Marie de ' Medici"", 'PERSON'), ('Louis XIII', 'PERSON'), ('1617', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Marie de ' Medici | PERSON
+Louis XIII | PERSON
+1617 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Marie de' Medici | PERSON
+Louis XIII | PERSON
+1617 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Marie de ' Medici | PERSON
+Louis XIII | PERSON
+</answer>",160.0,372.6666666666667
+40,"On 15 March 2001 he joined Torquay United on non-contract terms , but left just five days later with","[('Torquay United', 'ORGANIZATION')]","[('15 March 2001', 'OTHER'), ('Torquay United', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+15 March 2001 | OTHER
+Torquay United | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+15 March 2001 | OTHER<br>
+Torquay United | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+15 March 2001 | OTHER
+Torquay United | ORGANIZATION
+</answer>",174.0,396.6666666666667
+41,"Another , less popular theory holds that the butte was named after Secretary of War John C. Spencer ","[('John C. Spencer', 'PERSON'), ('Elijah White', 'PERSON')]","[('Elijah White', 'PERSON'), ('July 1845', 'OTHER'), ('John C. Spencer', 'PERSON'), ('Secretary of War', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+John C. Spencer | PERSON
+Elijah White | PERSON
+July 1845 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+John C. Spencer | PERSON
+Elijah White | PERSON
+Secretary of War | OTHER
+July 1845 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Secretary of War | OTHER
+John C. Spencer | PERSON
+July 1845 | OTHER
+Elijah White | PERSON
+</answer>",161.0,457.6666666666667
+42,It was named for a large outcropping of salt which drew the wildlife to the site near the Roanoke Ri,"[('Roanoke River', 'LOCATION')]","[('Roanoke River', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Roanoke River | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Roanoke River | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Roanoke River | LOCATION</answer>",157.0,195.66666666666666
+43,"In 2004 , student activism led to a campus-wide ban on sales of Coca-Cola products .","[('Coca-Cola', 'OTHER')]","[('Coca-Cola', 'ORGANIZATION'), ('2004', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+2004 | OTHER
+Coca-Cola | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+2004 | OTHER
+Coca-Cola | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+2004 | OTHER
+Coca-Cola | ORGANIZATION
+</answer>",152.0,286.6666666666667
+44,"It also hosts the annual "" ZagrebDox "" documentary film festival .","[('ZagrebDox', 'OTHER')]","[('ZagrebDox', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>ZagrebDox | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>ZagrebDox | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>ZagrebDox | OTHER</answer>",146.0,322.0
+45,"Kellogg 's Sugar Smacks , created in 1953 , had 56 % sugar by weight .","[(""Kellogg 's"", 'ORGANIZATION'), ('Sugar Smacks', 'OTHER')]","[(""Kellogg's Sugar Smacks"", 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Kellogg's Sugar Smacks | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Kellogg's Sugar Smacks | OTHER
+1953 | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Kellogg's Sugar Smacks | OTHER</answer>",154.0,421.3333333333333
+46,"This means that birds being force molted become susceptible to disease , particularly "" Salmonella ""","[('Salmonella', 'OTHER')]","[('Salmonella', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Salmonella | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Salmonella | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Salmonella | OTHER</answer>",162.0,213.33333333333334
+47,"Command passed to Major Dmitry Pavlutsky , who adopted very destructive tactics , burning , killing ","[('Dmitry Pavlutsky', 'PERSON')]","[('Major Dmitry Pavlutsky', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Major Dmitry Pavlutsky | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Major Dmitry Pavlutsky | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Major Dmitry Pavlutsky | PERSON</answer>",163.0,220.66666666666666
+48,"In early 1899 , the magazine was taken over by the socialist journalist Vladimir Posse , who changed","[('Vladimir Posse', 'PERSON')]","[('Vladimir Posse', 'PERSON'), ('April 1899', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+early 1899 | OTHER
+Vladimir Posse | PERSON
+April 1899 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Vladimir Posse | PERSON
+1899 | OTHER
+April 1899 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Vladimir Posse | PERSON</answer>",164.0,559.0
+49,"In 1885 when he was 11 , his father died of tuberculosis , leaving the family with just eight dollar","[('tuberculosis', 'OTHER')]","[('tuberculosis', 'OTHER'), ('1885', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+1885 | OTHER
+tuberculosis | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1885 | OTHER
+11 | OTHER
+tuberculosis | OTHER
+dollars | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+1885 | OTHER
+tuberculosis | OTHER
+</answer>",156.0,282.0
+50,The few miles between the sands and the coast is also a safe anchorage used as a refuge from foul we,"[('The Downs', 'LOCATION')]","[('The Downs', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>The Downs | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>The Downs | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+The Downs | LOCATION
+</answer>",159.0,205.0
+51,"As the common name indicates , the spider superficially resembles and is frequently confused for the","[('Latrodectus', 'OTHER')]","[('Latrodectus', 'OTHER'), ('black widow', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Latrodectus | OTHER
+black widow | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+black widow | OTHER
+Latrodectus | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+black widow | OTHER
+Latrodectus | OTHER
+</answer>",171.0,311.0
+52,"The graded the cyclone as "" severe "" , and said it was due to hit land near the city of after moving","[('Bay of Bengal', 'LOCATION')]","[('Bay of Bengal', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Bay of Bengal | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Bay of Bengal | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Bay of Bengal | LOCATION</answer>",176.0,374.0
+53,The album was produced by documentary filmmaker Jem Cohen .,"[('Jem Cohen', 'PERSON')]","[('Jem Cohen', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Jem Cohen | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Jem Cohen | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Jem Cohen | PERSON
+</answer>",142.0,181.33333333333334
+54,"Much of the town was later destroyed by fire , and what was left moved to a location south of the ca","[('Table Rock Lake', 'LOCATION')]","[('Table Rock Lake', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Table Rock Lake | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Table Rock Lake | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Table Rock Lake | LOCATION</answer>",163.0,216.0
+55,The subsequent depletion of the brook trout population by the 1850 s led to an early conservation mo,"[('brook trout', 'OTHER'), ('brown trout', 'OTHER')]","[('1850 s', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+brook trout | OTHER
+1850 s | OTHER
+brown trout | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1850 s | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>1850s | OTHER</answer>",167.0,424.6666666666667
+56,The upper reaches of the river are a popular destination for fly fishing of trout .,"[('trout', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>NONE</answer>
+
+<<<sample 3, seed 44>>>
+<answer>NONE</answer>",148.0,161.33333333333334
+57,"First-class passengers could visit a separate lounge , a reading room decorated by Bruno Paul , a tw","[('Bruno Paul', 'PERSON')]","[('Bruno Paul', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Bruno Paul | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Bruno Paul | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Bruno Paul | PERSON</answer>",169.0,183.33333333333334
+58,"The resulting change in carpet design was what Kurt Erdmann termed the "" “ carpet design revolution ","[('Kurt Erdmann', 'PERSON')]","[('Kurt Erdmann', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Kurt Erdmann | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Kurt Erdmann | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Kurt Erdmann | PERSON
+carpet design revolution | OTHER
+</answer>",153.0,296.3333333333333
+59,It was built from adobe bricks in 1836 by order of Mariano Guadalupe Vallejo .,"[('Mariano Guadalupe Vallejo', 'PERSON')]","[('Mariano Guadalupe Vallejo', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Mariano Guadalupe Vallejo | PERSON
+1836 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Mariano Guadalupe Vallejo | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Mariano Guadalupe Vallejo | PERSON</answer>",150.0,228.0
+60,"In October 2016 , football stadium design expert , Paul Fletcher said that the stadium should be pul","[('Paul Fletcher', 'PERSON')]","[('Paul Fletcher', 'PERSON'), ('October 2016', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+October 2016 | OTHER
+Paul Fletcher | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Paul Fletcher | PERSON
+October 2016 | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+October 2016 | OTHER
+Paul Fletcher | PERSON
+</answer>",176.0,258.0
+61,"Berry-bearing plants in the preserve include bog blueberry , crowberry , low-bush cranberry and clou","[('bog blueberry', 'OTHER'), ('crowberry', 'OTHER'), ('low-bush cranberry', 'OTHER'), ('cloudberry or salmonberry', 'OTHER')]","[('bog blueberry', 'OTHER'), ('low-bush cranberry', 'OTHER'), ('salmonberry', 'OTHER'), ('crowberry', 'OTHER'), ('cloudberry', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+bog blueberry | OTHER
+crowberry | OTHER
+low-bush cranberry | OTHER
+cloudberry | OTHER
+salmonberry | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+bog blueberry | OTHER
+crowberry | OTHER
+low-bush cranberry | OTHER
+cloudberry | OTHER
+salmonberry | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+bog blueberry | OTHER
+crowberry | OTHER
+low-bush cranberry | OTHER
+cloudberry | OTHER
+salmonberry | OTHER
+</answer>",156.0,312.0
+62,"Environmental stress factors may also be involved , as reports have indicated that herbicide applica","[('chlorosis', 'OTHER')]","[('D. dryina', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>D. dryina | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>D. dryina | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>D. dryina | OTHER</answer>",166.0,332.6666666666667
+63,"The event , the largest Europe has ever seen , started at 6:00 p.m. local time and continued until 1","[('Europe', 'LOCATION')]","[('Europe', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Europe | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Europe | LOCATION
+6:00 p.m. | OTHER
+11:55 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Europe | LOCATION</answer>",170.0,305.3333333333333
+64,On Rotten Tomatoes the film has an approval rating of 35 % based on reviews from 65 critics .,"[('Rotten Tomatoes', 'OTHER')]","[('Rotten Tomatoes', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Rotten Tomatoes | ORGANIZATION</answer>",153.0,162.66666666666666
+65,"He died 74 days later , of complications from lung cancer .","[('lung cancer', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>NONE</answer>
+
+<<<sample 3, seed 44>>>
+<answer>lung cancer | OTHER</answer>",145.0,264.0
+66,", is a cactus found in the Southwestern United States and northern Mexico , including some cooler re","[('Southwestern United States', 'LOCATION'), ('Mexico', 'LOCATION')]","[('Mexico', 'LOCATION'), ('Southwestern United States', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Southwestern United States | LOCATION
+Mexico | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Southwestern United States | LOCATION
+Mexico | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Southwestern United States | LOCATION
+Mexico | LOCATION
+</answer>",158.0,527.0
+67,It served Lake County as a seat of government from 1871 until 1968 .,"[('Lake County', 'LOCATION')]","[('1871', 'OTHER'), ('Lake County', 'LOCATION'), ('1968', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Lake County | LOCATION
+1871 | OTHER
+1968 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Lake County | LOCATION
+1871 | OTHER
+1968 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Lake County | LOCATION
+1871 | OTHER
+1968 | OTHER
+</answer>",150.0,403.3333333333333
+68,"Tourist organisations objected , asking that the boundary be moved further west to include Fortrose ","[('Fortrose', 'LOCATION')]","[('Fortrose', 'LOCATION'), ('Tourist organisations', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Fortrose | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Tourist organisations | ORGANIZATION  
+Fortrose | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Tourist organisations | ORGANIZATION
+Fortrose | LOCATION
+</answer>",150.0,430.6666666666667
+69,"Big-berry Manzanita ( "" Arctostaphylos glauca "" ) reach remarkable size within the park ( over 20 fe","[('Big-berry Manzanita', 'OTHER')]","[('Big-berry Manzanita', 'OTHER'), ('Arctostaphylos glauca', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Big-berry Manzanita | OTHER
+Arctostaphylos glauca | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Big-berry Manzanita | OTHER
+Arctostaphylos glauca | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Big-berry Manzanita | OTHER
+Arctostaphylos glauca | OTHER
+</answer>",178.0,304.3333333333333
+70,"1961 ) , and Bernice King ( b .","[('Bernice King', 'PERSON')]","[('1961', 'OTHER'), ('Bernice King', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+1961 | OTHER
+Bernice King | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1961 | OTHER
+Bernice King | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Bernice King | PERSON
+1961 | OTHER
+</answer>",144.0,453.0
+71,Any kind of meat can be used when making pörkölt .,"[('meat', 'OTHER')]","[('pörkölt', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+pörkölt | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>pörkölt | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+pörkölt | OTHER
+</answer>",146.0,190.66666666666666
+72,"In the North America , it occurs in the New England states of Maine , Vermont , New Hampshire Rhode ","[('North America', 'LOCATION'), ('New England', 'LOCATION'), ('Maine', 'LOCATION'), ('Vermont', 'LOCATION'), ('New Hampshire', 'LOCATION'), ('Rhode Island', 'LOCATION'), ('Massachusetts', 'LOCATION'), ('Canada', 'LOCATION'), ('New Brunswick', 'LOCATION'), ('Nova Scotia', 'LOCATION')]","[('Maine', 'LOCATION'), ('North America', 'LOCATION'), ('Nova Scotia', 'LOCATION'), ('New England', 'LOCATION'), ('Massachusetts', 'LOCATION'), ('Rhode Island', 'LOCATION'), ('Canada', 'LOCATION'), ('New Hampshire', 'LOCATION'), ('New Brunswick', 'LOCATION'), ('Vermont', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+North America | LOCATION
+New England | LOCATION
+Maine | LOCATION
+Vermont | LOCATION
+New Hampshire | LOCATION
+Rhode Island | LOCATION
+Massachusetts | LOCATION
+Canada | LOCATION
+New Brunswick | LOCATION
+Nova Scotia | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+North America | LOCATION
+New England | LOCATION
+Maine | LOCATION
+Vermont | LOCATION
+New Hampshire | LOCATION
+Rhode Island | LOCATION
+Massachusetts | LOCATION
+Canada | LOCATION
+New Brunswick | LOCATION
+Nova Scotia | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+North America | LOCATION
+New England | LOCATION
+Maine | LOCATION
+Vermont | LOCATION
+New Hampshire | LOCATION
+Rhode Island | LOCATION
+Massachusetts | LOCATION
+Canada | LOCATION
+New Brunswick | LOCATION
+Nova Scotia | LOCATION
+</answer>",168.0,372.6666666666667
+73,He was also picked in the squad for the following tournament in South Africa two years later .,"[('South Africa', 'LOCATION')]","[('South Africa', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>South Africa | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>South Africa | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>South Africa | LOCATION</answer>",150.0,136.0
+74,In 1934 he was awarded an honorary Doctorate of Law from the University of St Andrews .,"[('University of St Andrews', 'ORGANIZATION')]","[('1934', 'OTHER'), ('University of St Andrews', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+1934 | OTHER
+University of St Andrews | ORGANIZATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+1934 | OTHER
+University of St Andrews | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+1934 | OTHER
+University of St Andrews | ORGANIZATION
+</answer>",152.0,297.0
+75,"The "" grey knifefish "" , "" Bathystethus cultratus "" , is a species of sea chub native to the Pacific","[('sea chub', 'OTHER'), ('Pacific Ocean', 'LOCATION'), ('Australia', 'LOCATION'), ('New Zealand', 'LOCATION'), ('Kermadec Islands', 'LOCATION')]","[('New Zealand', 'LOCATION'), ('Australia', 'LOCATION'), ('Kermadec Islands', 'LOCATION'), ('grey knifefish', 'OTHER'), ('Bathystethus cultratus', 'OTHER'), ('Pacific Ocean', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Bathystethus cultratus | OTHER
+grey knifefish | OTHER
+Pacific Ocean | LOCATION
+Australia | LOCATION
+New Zealand | LOCATION
+Kermadec Islands | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+grey knifefish | OTHER
+Bathystethus cultratus | OTHER
+Pacific Ocean | LOCATION
+Australia | LOCATION
+New Zealand | LOCATION
+Kermadec Islands | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Bathystethus cultratus | OTHER
+Grey knifefish | OTHER
+Pacific Ocean | LOCATION
+Australia | LOCATION
+New Zealand | LOCATION
+Kermadec Islands | LOCATION
+</answer>",175.0,491.3333333333333
+76,"The park covers the Cairngorms range of mountains , and surrounding hills .","[('Cairngorms', 'LOCATION')]","[('Cairngorms', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Cairngorms | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Cairngorms | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Cairngorms | LOCATION
+</answer>",148.0,249.0
+77,"His biographer , Trevor Dann , notes that he had difficulty connecting with staff and fellow student","[('Trevor Dann', 'PERSON')]","[('Trevor Dann', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Trevor Dann | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Trevor Dann | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Trevor Dann | PERSON
+</answer>",166.0,160.0
+78,The film stars Odette Annable as a young woman who is tormented by a dybbuk and seeks help from a ra,"[('Odette Annable', 'PERSON'), ('Gary Oldman', 'PERSON')]","[('Gary Oldman', 'PERSON'), ('dybbuk', 'OTHER'), ('Odette Annable', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Odette Annable | PERSON
+Gary Oldman | PERSON
+dybbuk | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Odette Annable | PERSON
+Gary Oldman | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Odette Annable | PERSON
+Gary Oldman | PERSON
+dybbuk | OTHER</answer>",165.0,254.33333333333334
+79,David Phelps was moved into the starting rotation .,"[('David Phelps', 'PERSON')]","[('David Phelps', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+David Phelps | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>David Phelps | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+David Phelps | PERSON
+</answer>",142.0,144.66666666666666
+80,"Multiple bomb explosions hit a football match in northern Iraq earlier today , killing at least 25 p","[('Iraq', 'LOCATION')]","[('Iraq', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Iraq | LOCATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Iraq | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Iraq | LOCATION
+</answer>",160.0,308.0
+81,Chemical fertilizers were manufactured along the canal soon after the Civil War .,"[('Civil War', 'OTHER')]","[('Civil War', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Civil War | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Civil War | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Civil War | OTHER</answer>",145.0,165.0
+82,"In contrast , the northern , protected portion of the delta is dominated by tidal passes and mangrov","[('mangrove', 'OTHER')]",[],ok,,"<<<sample 1, seed 42>>>
+<answer>NONE</answer>
+
+<<<sample 2, seed 43>>>
+<answer>NONE</answer>
+
+<<<sample 3, seed 44>>>
+<answer>NONE</answer>",154.0,142.66666666666666
+83,Many of the fossils in the region date to the Pleistocene and include species such as Diprotodon opt,"[('Diprotodon optatum', 'OTHER'), ('marsupial', 'OTHER')]","[('Diprotodon optatum', 'OTHER'), ('Pleistocene', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Pleistocene | OTHER
+Diprotodon optatum | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Diprotodon optatum | OTHER
+Pleistocene | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Pleistocene | OTHER
+Diprotodon optatum | OTHER
+</answer>",163.0,245.33333333333334
+84,"The main designated campgrounds along the way feature bear boxes for safe storage of food , an outho","[('Pacific Ocean', 'LOCATION'), ('Olympic Peninsula', 'LOCATION')]","[('Olympic Peninsula', 'LOCATION'), ('Pacific Ocean', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Pacific Ocean | LOCATION
+Olympic Peninsula | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Pacific Ocean | LOCATION
+Olympic Peninsula | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Pacific Ocean | LOCATION
+Olympic Peninsula | LOCATION
+</answer>",171.0,245.33333333333334
+85,Finally there is the aforementioned hunting residence which was designed by Hendrik Petrus Berlage .,"[('Hendrik Petrus Berlage', 'PERSON')]","[('Hendrik Petrus Berlage', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Hendrik Petrus Berlage | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Hendrik Petrus Berlage | PERSON
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Hendrik Petrus Berlage | PERSON</answer>",150.0,118.66666666666667
+86,He is also a qualified physiotherapist having graduated from the University of Salford in 2016 .,"[('University of Salford', 'ORGANIZATION')]","[('University of Salford', 'ORGANIZATION'), ('2016', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+University of Salford | ORGANIZATION
+2016 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+University of Salford | ORGANIZATION
+Salford | LOCATION
+2016 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+University of Salford | ORGANIZATION
+</answer>",152.0,316.3333333333333
+87,"Though none of the players consumed any alcohol , they were nonetheless all sent home by manager Lar","[('Lars Lagerbäck', 'PERSON')]","[('Lars Lagerbäck', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Lars Lagerbäck | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Lars Lagerbäck | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Lars Lagerbäck | PERSON</answer>",164.0,191.33333333333334
+88,"There is a deep water cargo port at Greenore , and a smaller fishing harbour at Carlingford .","[('Greenore', 'LOCATION'), ('Carlingford', 'LOCATION')]","[('Greenore', 'LOCATION'), ('Carlingford', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Greenore | LOCATION
+Carlingford | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Greenore | LOCATION
+Carlingford | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Greenore | LOCATION
+Carlingford | LOCATION
+</answer>",153.0,178.66666666666666
+89,The ranges extend from west of Point Conception eastward approximately 500 kilometers into the Mojav,"[('Point Conception', 'LOCATION'), ('Mojave', 'LOCATION'), ('Colorado Desert', 'LOCATION')]","[('Mojave', 'LOCATION'), ('Point Conception', 'LOCATION'), ('Colorado Desert', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Point Conception | LOCATION
+Mojave | LOCATION
+Colorado Desert | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Point Conception | LOCATION
+Mojave | LOCATION
+Colorado Desert | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Point Conception | LOCATION
+Mojave | LOCATION
+Colorado Desert | LOCATION
+</answer>",155.0,287.3333333333333
+90,"On the island of Caprera is located the "" Centro Velico Caprera "" , that is considered one of the la","[('Caprera', 'LOCATION'), ('Centro Velico Caprera', 'ORGANIZATION'), ('Mediterranean Sea', 'LOCATION')]","[('Caprera', 'LOCATION'), ('Centro Velico Caprera', 'ORGANIZATION'), ('1967', 'OTHER'), ('Mediterranean Sea', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Caprera | LOCATION
+Centro Velico Caprera | ORGANIZATION
+Mediterranean Sea | LOCATION
+1967 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Caprera | LOCATION
+Centro Velico Caprera | ORGANIZATION
+Mediterranean Sea | LOCATION
+1967 | OTHER
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Caprera | LOCATION
+Centro Velico Caprera | ORGANIZATION
+Mediterranean Sea | LOCATION
+1967 | OTHER
+</answer>",172.0,355.0
+91,Whoever receives this nomination will be guaranteed ballot access in California .,"[('California', 'LOCATION')]","[('California', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+California | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>California | LOCATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>California | LOCATION</answer>",144.0,138.66666666666666
+92,He struck out seven consecutive batters in an April 24 game against the Detroit Tigers in the latter,"[('Detroit Tigers', 'ORGANIZATION')]","[('April 24', 'OTHER'), ('Detroit Tigers', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+April 24 | OTHER
+Detroit Tigers | ORGANIZATION
+4 – 0 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+April 24 | OTHER
+Detroit Tigers | ORGANIZATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+April 24 | OTHER
+Detroit Tigers | ORGANIZATION
+</answer>",164.0,488.3333333333333
+93,He drew the ire of manager Eric Gerets after his refusal to leave the bench to warm up .,"[('Eric Gerets', 'PERSON')]","[('Eric Gerets', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Eric Gerets | PERSON
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Eric Gerets | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Eric Gerets | PERSON</answer>",152.0,168.33333333333334
+94,Successes have been few and far between for union organizing drives by UE and others in subsequent y,"[('UE', 'ORGANIZATION')]","[('UE', 'ORGANIZATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>UE | ORGANIZATION</answer>
+
+<<<sample 2, seed 43>>>
+<answer>UE | ORGANIZATION</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+UE | ORGANIZATION
+</answer>",152.0,238.66666666666666
+95,"Shortly after , a wife of a veteran suffering from posttraumatic stress disorder came forward accusi","[('posttraumatic stress disorder', 'OTHER')]","[('October 2016', 'OTHER')]",ok,,"<<<sample 1, seed 42>>>
+<answer>October 2016 | OTHER</answer>
+
+<<<sample 2, seed 43>>>
+<answer>October 2016 | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+October 2016 | OTHER
+posttraumatic stress disorder | OTHER
+</answer>",163.0,324.3333333333333
+96,This extent of beach runs from a coastal point about north of Jenner and continues for approximately,"[('Jenner', 'LOCATION'), ('Bodega Head', 'LOCATION')]","[('Jenner', 'LOCATION'), ('Bodega Head', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Jenner | LOCATION
+Bodega Head | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+Jenner | LOCATION
+Bodega Head | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Jenner | LOCATION
+Bodega Head | LOCATION
+</answer>",159.0,267.0
+97,"In the Republic of Ireland , the film was banned on 9 August 1991 .","[('Republic of Ireland', 'LOCATION')]","[('9 August 1991', 'OTHER'), ('Republic of Ireland', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+Republic of Ireland | LOCATION
+9 August 1991 | OTHER
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Republic of Ireland | LOCATION
+9 August 1991 | OTHER</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+Republic of Ireland | LOCATION
+9 August 1991 | OTHER
+</answer>",150.0,215.0
+98,Her maternal grandfather was lawyer and philanthropist Lawrence Wien .,"[('Lawrence Wien', 'PERSON')]","[('Lawrence Wien', 'PERSON')]",ok,,"<<<sample 1, seed 42>>>
+<answer>Lawrence Wien | PERSON</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Lawrence Wien | PERSON</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Lawrence Wien | PERSON</answer>",143.0,136.0
+99,It is native to South America with distributions in Brazil and Venezuela .,"[('South America', 'LOCATION'), ('Brazil', 'LOCATION'), ('Venezuela', 'LOCATION')]","[('South America', 'LOCATION'), ('Venezuela', 'LOCATION'), ('Brazil', 'LOCATION')]",ok,,"<<<sample 1, seed 42>>>
+<answer>
+South America | LOCATION
+Brazil | LOCATION
+Venezuela | LOCATION
+</answer>
+
+<<<sample 2, seed 43>>>
+<answer>
+South America | LOCATION
+Brazil | LOCATION
+Venezuela | LOCATION
+</answer>
+
+<<<sample 3, seed 44>>>
+<answer>
+South America | LOCATION
+Brazil | LOCATION
+Venezuela | LOCATION
+</answer>",145.0,194.66666666666666

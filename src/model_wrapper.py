@@ -71,6 +71,10 @@ def call_model(prompt, config, max_tokens: int = None):
 
         except Exception as e:
             error_msg = str(e)
+            if "per day" in error_msg.lower():
+                # Daily quota: waiting 60s cannot help, so let the caller stop.
+                logger.error(f"Daily token limit reached: {error_msg[:300]}")
+                raise
             if "rate_limit" in error_msg.lower() or "429" in error_msg:
                 logger.error(f"Rate limit hit on attempt {attempt + 1}. Waiting {retry_wait}s.")
                 time.sleep(retry_wait)

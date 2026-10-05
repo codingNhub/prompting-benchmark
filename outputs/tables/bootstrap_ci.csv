@@ -5,11 +5,11 @@ sentiment,role,macro_f1,100,0.6673,0.5734,0.75,few_shot_cot,0.0486,-0.0218,0.119
 sentiment,zero_shot,macro_f1,100,0.6663,0.5678,0.7583,few_shot_cot,0.0496,-0.0189,0.1143,False
 sentiment,structured_output,macro_f1,100,0.6583,0.5674,0.7454,few_shot_cot,0.0576,-0.0094,0.1212,False
 sentiment,cot,macro_f1,100,0.6577,0.563,0.7459,few_shot_cot,0.0582,-0.0166,0.1212,False
+sentiment,self_consistency,macro_f1,100,0.6309,0.5352,0.7207,few_shot_cot,0.085,0.0216,0.1513,True
 sentiment,reformulation,macro_f1,100,0.6047,0.5044,0.6986,few_shot_cot,0.1113,0.052,0.183,True
-sentiment,self_consistency,macro_f1,100,0.6015,0.4985,0.6932,few_shot_cot,0.1145,0.0462,0.1905,True
 paraphrase,reformulation,macro_f1,100,0.7472,0.6467,0.84,reformulation,0.0,0.0,0.0,False
 paraphrase,role,macro_f1,100,0.7335,0.6314,0.8264,reformulation,0.0137,-0.0275,0.0575,False
-paraphrase,self_consistency,macro_f1,100,0.7143,0.6156,0.8023,reformulation,0.033,-0.0352,0.095,False
+paraphrase,self_consistency,macro_f1,100,0.727,0.6353,0.8164,reformulation,0.0202,-0.0523,0.0888,False
 paraphrase,zero_shot,macro_f1,100,0.704,0.6028,0.7899,reformulation,0.0433,-0.023,0.1045,False
 paraphrase,few_shot,macro_f1,100,0.697,0.5964,0.785,reformulation,0.0503,-0.0155,0.1164,False
 paraphrase,few_shot_cot,macro_f1,100,0.6923,0.5967,0.7868,reformulation,0.0549,-0.0069,0.1179,False
@@ -17,9 +17,9 @@ paraphrase,structured_output,macro_f1,100,0.6495,0.5494,0.7398,reformulation,0.0
 paraphrase,cot,macro_f1,100,0.6464,0.5434,0.7405,reformulation,0.1009,0.0317,0.1763,True
 ner,reformulation,entity_f1,100,0.7692,0.6939,0.8344,reformulation,0.0,0.0,0.0,False
 ner,few_shot,entity_f1,100,0.7573,0.6892,0.8138,reformulation,0.0119,-0.0259,0.05,False
-ner,self_consistency,entity_f1,100,0.7539,0.6931,0.8102,reformulation,0.0153,-0.0292,0.0519,False
 ner,cot,entity_f1,100,0.7524,0.6908,0.8079,reformulation,0.0169,-0.0242,0.0514,False
 ner,structured_output,entity_f1,100,0.7516,0.6801,0.8146,reformulation,0.0176,-0.0222,0.0557,False
+ner,self_consistency,entity_f1,100,0.75,0.6821,0.8079,reformulation,0.0192,-0.02,0.0552,False
 ner,zero_shot,entity_f1,100,0.75,0.6804,0.8139,reformulation,0.0192,-0.0099,0.0484,False
 ner,role,entity_f1,100,0.7483,0.6778,0.8131,reformulation,0.0209,-0.0139,0.0503,False
 ner,few_shot_cot,entity_f1,100,0.6957,0.6121,0.7762,reformulation,0.0736,0.0235,0.1207,True

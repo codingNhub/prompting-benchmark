@@ -1,6 +1,12 @@
 # One-off script to assemble the scholarship-application paper as a .docx
 # from methodology.md, results_summary.md, and baselines.md. Not part of the
 # experiment pipeline — run manually, not imported elsewhere.
+# Result tables are read from outputs/results/results_master.csv and
+# outputs/tables/bootstrap_ci.csv; the prose is written by hand and must be
+# checked against those files whenever they change.
+
+import csv
+from decimal import Decimal, ROUND_HALF_UP
 
 from docx import Document
 from docx.shared import Pt, Inches
@@ -39,6 +45,142 @@ def add_table(doc, headers, rows, col_widths=None):
             cells[i].text = str(val)
     doc.add_paragraph()
     return table
+
+
+RESULTS_PATH = "outputs/results/results_master.csv"
+CI_PATH = "outputs/tables/bootstrap_ci.csv"
+
+TECHNIQUE_NAMES = {
+    "zero_shot": "Zero-shot", "few_shot": "Few-shot", "cot": "CoT", "role": "Role",
+    "reformulation": "Reformulation", "self_consistency": "Self-consistency",
+    "structured_output": "Structured output", "few_shot_cot": "Few-shot CoT",
+}
+
+# task: (primary metric, its decimals, [(secondary column header, metric)], CI decimals)
+TABLE_SPECS = {
+    "sentiment": ("macro_f1", 4, [], 3),
+    "ner": ("entity_f1", 4, [], 3),
+    "summarisation": ("rouge_l", 4, [("BERTScore F1", "bert_f1")], 3),
+    "qa": ("exact_match", 2, [("Token F1", "token_f1")], 2),
+    "paraphrase": ("macro_f1", 4, [], 3),
+}
+PRIMARY_HEADERS = {"macro_f1": "Macro F1", "entity_f1": "Entity F1",
+                   "rouge_l": "ROUGE-L", "exact_match": "Exact Match"}
+
+
+def fmt(value, decimals):
+    """Rounds half up from the CSV's decimal text, as a reader rounding by hand would."""
+    return str(Decimal(value).quantize(Decimal(1).scaleb(-decimals), rounding=ROUND_HALF_UP))
+
+
+def load_csv(path):
+    with open(path, encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def result_table_rows(task):
+    """Headers and rows for one task, ranked by the primary metric (ties by technique key)."""
+    metric, decimals, secondary, ci_decimals = TABLE_SPECS[task]
+    results = [r for r in load_csv(RESULTS_PATH)
+               if r["task"] == task and r["language"] == "english"]
+    ci = {r["technique"]: r for r in load_csv(CI_PATH) if r["task"] == task}
+    results.sort(key=lambda r: (-float(r[metric]), r["technique"]))
+    headers = ["Technique", PRIMARY_HEADERS[metric], "95% CI"] + [h for h, _ in secondary] + ["Flagged"]
+    rows = []
+    for r in results:
+        b = ci[r["technique"]]
+        assert b["metric"] == metric and abs(float(b["point"]) - float(r[metric])) < 1e-4, \
+            f"bootstrap_ci.csv is out of date for {task}/{r['technique']}"
+        rows.append([TECHNIQUE_NAMES[r["technique"]],
+                     fmt(r[metric], decimals),
+                     f"{fmt(b['ci_low'], ci_decimals)}–{fmt(b['ci_high'], ci_decimals)}"]
+                    + [fmt(r[m], 4) for _, m in secondary]
+                    + [str(int(r["flagged_count"]))])
+    return headers, rows
+
+
+# Limitations paragraphs, shared word for word with the Known Limitations list in
+# baselines.md. Every number here was counted from the final prediction files,
+# outputs/rerun_log.csv and logs/experiment.log.
+LIMITATIONS = {
+    "model": (
+        "Model and inference caveats. openai/gpt-oss-20b is a reasoning model: before its "
+        "visible answer it produces hidden internal reasoning, and these hidden reasoning "
+        "tokens count against the output-token limit. Every technique, including zero-shot, "
+        "therefore involves some internal reasoning, which likely narrows the measurable "
+        "benefit of explicit chain-of-thought prompting. It is also the main source of parse "
+        "failures: 21 of the 30 failures in the reported results reached the "
+        "output-token limit (1,500 tokens for sentiment, named entity recognition and "
+        "paraphrase detection; 1,000 for question answering and summarisation), 20 of "
+        "them with no visible answer at all. Of the other failures, six are "
+        "structured-output summaries that did not close the required answer tag and three "
+        "were caused by network errors rather than by the model. All failures are scored as "
+        "incorrect."
+    ),
+    "inference": (
+        "To limit truncation, question answering and summarisation were run with the "
+        "provider's reasoning-effort setting set to low, while the other three tasks used the "
+        "provider's default. This setting was introduced on 2026-07-28, after seven of the "
+        "thirteen question-answering and summarisation results had been generated (zero-shot, "
+        "few-shot, role and structured output on question answering; structured output, "
+        "zero-shot and few-shot on summarisation), so comparisons within those two tasks span "
+        "two inference configurations. One of these seven results was independently "
+        "re-verified from raw model output; the other six were not individually re-checked."
+    ),
+    "corrections": (
+        "Corrections during data collection. Examples that failed to parse were individually "
+        "re-queried, and this was not done evenly across techniques. The reported results "
+        "include 46 re-queries of 44 examples: zero-shot 24 examples, few-shot CoT 9, CoT 6, "
+        "reformulation 3, role prompting 1, structured output 1, and few-shot and "
+        "self-consistency none. Of the 42 re-queried examples that had failed, 37 now have a "
+        "valid answer and 5 remain failed. Flagged counts should therefore not be compared "
+        "directly between techniques. Three re-queries were applied to examples that already "
+        "had a valid answer: two returned the same answer, and one (example 48, CoT on "
+        "sentiment) returned a different answer and has been restored to its original "
+        "prediction. A further 34 logged re-queries (19 for self-consistency, 13 for "
+        "zero-shot and 2 for few-shot CoT on question answering) belong to runs that were "
+        "later discarded and regenerated in full, and do not affect any reported result. "
+        "Finally, on 2026-07-28 the question-answering templates for CoT and few-shot CoT were "
+        "edited to add a brevity instruction without a change to the template version number. "
+        "Both of these results were regenerated in full on 2026-07-29, so every reported "
+        "result uses the edited wording, but the version label alone does not distinguish "
+        "the two wordings."
+    ),
+    "self_consistency": (
+        "Self-consistency was regenerated in full. An audit found that its three samples per "
+        "example had been sent with the same random seed; in the original sentiment run the "
+        "three samples gave the same answer on 97 of the 99 examples for which all three were "
+        "logged. All three self-consistency results reported here were regenerated with "
+        "seeds 42, 43 and 44 for the three samples, and API or network errors during the "
+        "regeneration were retried rather than scored as failures. After regeneration the "
+        "three samples agreed on 82 of 100 sentiment examples, 70 of 100 named entity "
+        "recognition examples and 86 of 100 paraphrase examples. On paraphrase detection, "
+        "agreement was about as high before the change (87 of 98 logged examples), so the "
+        "high agreement reflects the model's own consistency at temperature 0.7 and not only "
+        "the shared seed."
+    ),
+    "metrics": (
+        "Metric conventions. Sentiment and paraphrase scores are macro F1. TweetEval's "
+        "official sentiment metric is macro-averaged recall, and GLUE reports binary F1 for "
+        "MRPC, so these scores are not directly comparable to either public leaderboard. "
+        "BERTScore uses a bert-base-uncased backbone and is rescaled against a baseline, "
+        "which is why its values fall around 0.30 rather than the roughly 0.85 typical of "
+        "unrescaled scores; absolute BERTScore values should be treated as indicative."
+    ),
+    "hallucination": (
+        "Summarisation metrics do not detect factual errors. ROUGE-L and BERTScore measure "
+        "overlap and similarity with a reference summary, so a fluent summary that states a "
+        "wrong fact is not penalised. An informal manual check of a few summaries found "
+        "names that the source article does not support. One article refers to the athlete "
+        "Sanya Richards-Ross only by her surname; six of the seven techniques (all except "
+        "few-shot CoT) called her \"Emma\", the first name of the journalist who interviewed "
+        "her. Johnny Manziel, also named only by surname, was called \"Robert\", the first "
+        "name of a lawyer quoted in the same article, by few-shot and structured output. "
+        "Derek McInnes was called \"Jim\" by CoT and structured output, and the CoT summary "
+        "of an article about David Cameron referred to \"Prime Minister Boris Cameron\". The "
+        "check was not systematic, so how often such errors occur is not known."
+    ),
+}
 
 
 doc = Document()
@@ -97,26 +239,23 @@ doc.add_paragraph(
     "This study presents a controlled empirical comparison of eight prompting techniques "
     "across five natural language processing tasks, evaluating whether prompting technique "
     "effectiveness varies systematically by task type. Using a single open-weight large "
-    "language model (openai/gpt-oss-20b) under fixed inference settings (temperature 0.0, "
-    "except self-consistency at 0.7; random seed 42), thirty-eight technique-task "
-    "combinations were evaluated across sentiment classification (TweetEval), named entity "
-    "recognition (MultiNERD), abstractive summarisation (XSum), question answering "
-    "(TriviaQA), and paraphrase detection (GLUE MRPC). Results show that reasoning-oriented "
-    "techniques — chain-of-thought and self-consistency — do not reliably outperform simpler "
-    "techniques such as zero-shot, few-shot, or reformulation, despite substantially higher "
-    "inference cost in the case of self-consistency. Reformulation, which rephrases the task "
-    "instruction with explicit constraints, was the strongest technique on three of five "
-    "tasks (named entity recognition, question answering, and paraphrase detection) but the "
-    "near the bottom on the other two (second-to-last on sentiment classification and last "
-    "on summarisation ROUGE-L), so its "
-    "advantage is task-dependent. This suggests that, "
-    "for tasks with well-defined objectives, instruction clarity may matter more than "
-    "reasoning depth or demonstration count. The study is scoped to English-language tasks, "
-    "a single model, and a single random seed. Paired bootstrap 95% confidence intervals "
-    "show that most differences between techniques within a task are not statistically "
-    "distinguishable at 100 examples per task, so rankings should be read as indicative "
-    "rather than definitive. A planned cross-lingual extension to Urdu was scoped during "
-    "development but is not included in this release."
+    "language model (openai/gpt-oss-20b; temperature 0.0, except self-consistency at 0.7; "
+    "random seed 42), thirty-eight technique-task combinations were evaluated on 100 "
+    "examples each across sentiment classification (TweetEval), named entity recognition "
+    "(MultiNERD), abstractive summarisation (XSum), question answering (TriviaQA), and "
+    "paraphrase detection (GLUE MRPC). No technique reliably dominated. Reformulation, which "
+    "rephrases the task instruction with explicit constraints, scored highest on three tasks "
+    "(named entity recognition, question answering, and paraphrase detection) but lowest on "
+    "the other two (sentiment classification and summarisation). Few-shot chain-of-thought "
+    "scored highest on sentiment classification and summarisation but lowest on named "
+    "entity recognition. Zero-shot chain-of-thought and self-consistency did not score "
+    "highest on any task, although self-consistency costs three model calls per example. "
+    "Most differences are within sampling noise: paired bootstrap 95% confidence intervals "
+    "distinguish only 7 of the 33 comparisons between each task's top-scoring technique "
+    "and the others, and on no task is the top technique distinguishable from the "
+    "runner-up. The rankings should therefore be read as indicative rather than "
+    "definitive. The study is limited to English-language tasks, a single model, and a "
+    "single random seed; a planned extension to Urdu is not included in this release."
 )
 
 # ================= INTRODUCTION =================
@@ -154,7 +293,7 @@ doc.add_paragraph(
 )
 doc.add_paragraph(
     "The contribution of this work is a controlled, single-model, eight-technique by "
-    "five-task comparison conducted under matched conditions, with every result traceable "
+    "five-task comparison conducted under the same model and evaluation conditions, with every result traceable "
     "to a specific model, prompt template version, and random seed, and every reported "
     "metric independently recomputable from preserved raw model outputs. Rather than "
     "proposing a new prompting technique, this study asks a more fundamental question for "
@@ -171,7 +310,7 @@ doc.add_paragraph(
     "of prompting techniques as an open gap in the literature, along with cross-lingual "
     "prompting as an underexplored direction. This study directly addresses the first of "
     "these two gaps by evaluating the same eight techniques across five distinct task types "
-    "under matched conditions; the second gap — cross-lingual evaluation — was scoped "
+    "under the same model and evaluation conditions; the second gap — cross-lingual evaluation — was scoped "
     "during development but is not addressed in this release (see Limitations)."
 )
 doc.add_paragraph(
@@ -308,8 +447,8 @@ doc.add_paragraph(
     "The evaluation pipeline underwent iterative internal audit throughout development. "
     "Measurement validity — including metric computation correctness, prompt template "
     "consistency, and demonstration-sampling integrity — was verified iteratively during "
-    "data collection and refinement, with corrections disclosed in Limitations where they "
-    "affected already-collected results. Every reported result is traceable to a specific model name, prompt "
+    "data collection; corrections made after some results existed are disclosed in "
+    "Limitations. Every reported result is traceable to a specific model name, prompt "
     "template version, normaliser version, and random seed, recorded per experiment; raw "
     "model predictions for every example are preserved, allowing every reported metric to "
     "be independently recomputed from source data."
@@ -321,152 +460,105 @@ doc.add_paragraph(
     "Thirty-eight of thirty-eight planned English-language experiments were completed "
     "(eight techniques across five tasks, with self-consistency excluded from question "
     "answering and summarisation). Tables 1 through 5 report the complete results for each "
-    "task. \"Flagged\" indicates the number of examples, out of 100, for which a parse "
-    "failure occurred and the prediction was counted as incorrect."
+    "task. Techniques are ranked by the task's primary metric; techniques with identical "
+    "scores are listed alphabetically. \"Flagged\" indicates the number of examples, out "
+    "of 100, for which a parse failure occurred and the prediction was counted as "
+    "incorrect. The 95% confidence intervals come from the paired bootstrap described in "
+    "Section 4.6."
 )
 
 doc.add_heading("4.1 Sentiment Classification (Macro F1)", level=2)
-add_table(
-    doc,
-    ["Technique", "Macro F1", "95% CI", "Flagged"],
-    [
-        ["Few-shot CoT", "0.7159", "0.618–0.800", "0"],
-        ["Few-shot", "0.6924", "0.595–0.780", "0"],
-        ["Role", "0.6673", "0.573–0.750", "0"],
-        ["Zero-shot", "0.6663", "0.568–0.758", "0"],
-        ["Structured output", "0.6583", "0.567–0.745", "0"],
-        ["CoT", "0.6577", "0.563–0.746", "0"],
-        ["Reformulation", "0.6047", "0.504–0.699", "0"],
-        ["Self-consistency", "0.6015", "0.499–0.693", "0"],
-    ],
-)
+add_table(doc, *result_table_rows("sentiment"))
 doc.add_paragraph(
-    "Combining demonstrations with reasoning (few-shot CoT) produced the strongest result. "
-    "CoT alone did not outperform zero-shot, suggesting explicit reasoning adds limited "
-    "value for sentiment classification without accompanying examples. Self-consistency, "
-    "despite requiring three times the inference cost, underperformed simple zero-shot "
-    "prompting."
+    "Few-shot CoT, which combines demonstrations with reasoning, scored highest (0.7159), "
+    "but its lead over few-shot prompting (0.6924) is within sampling noise; the bootstrap "
+    "distinguishes it only from self-consistency and reformulation (Section 4.6). CoT alone "
+    "(0.6577) scored slightly below zero-shot (0.6663). Self-consistency, despite three "
+    "model calls per example, scored below zero-shot (0.6309), and reformulation scored "
+    "lowest of the eight techniques (0.6047)."
 )
 
 doc.add_heading("4.2 Named Entity Recognition (Entity-Level F1)", level=2)
-add_table(
-    doc,
-    ["Technique", "Entity F1", "95% CI", "Flagged"],
-    [
-        ["Reformulation", "0.7692", "0.694–0.834", "4"],
-        ["Few-shot", "0.7573", "0.689–0.814", "0"],
-        ["Self-consistency", "0.7539", "0.693–0.810", "0"],
-        ["CoT", "0.7524", "0.691–0.808", "1"],
-        ["Structured output", "0.7516", "0.680–0.815", "2"],
-        ["Zero-shot", "0.7500", "0.680–0.814", "2"],
-        ["Role", "0.7483", "0.678–0.813", "3"],
-        ["Few-shot CoT", "0.6957", "0.612–0.776", "0"],
-    ],
-)
+add_table(doc, *result_table_rows("ner"))
 doc.add_paragraph(
-    "Performance clustered tightly across most techniques (0.75-0.77), with few-shot CoT "
-    "as a notable underperformer — the combination of demonstrations and reasoning appears "
-    "to introduce noise for extraction tasks rather than improving precision."
+    "Seven of the eight techniques scored between 0.748 and 0.769. Reformulation scored "
+    "highest despite four flagged examples, but its lead over few-shot prompting is within "
+    "sampling noise. Self-consistency and zero-shot tied at exactly 0.7500. Few-shot CoT "
+    "scored lowest (0.6957) and is the only technique the bootstrap distinguishes from "
+    "reformulation; one possible reading is that combining demonstrations with reasoning "
+    "added noise to entity extraction rather than improving precision."
 )
 
 doc.add_heading("4.3 Abstractive Summarisation (ROUGE-L / BERTScore)", level=2)
-add_table(
-    doc,
-    ["Technique", "ROUGE-L", "95% CI", "BERTScore F1", "Flagged"],
-    [
-        ["Few-shot CoT", "0.1801", "0.168–0.193", "0.3044", "0"],
-        ["Structured output", "0.1800", "0.162–0.196", "0.2997", "6"],
-        ["Zero-shot", "0.1774", "0.163–0.192", "0.3105", "0"],
-        ["Few-shot", "0.1761", "0.163–0.190", "0.3020", "0"],
-        ["Role", "0.1739", "0.158–0.188", "0.3032", "0"],
-        ["CoT", "0.1715", "0.159–0.184", "0.3056", "0"],
-        ["Reformulation", "0.1709", "0.155–0.186", "0.2977", "0"],
-    ],
-)
+add_table(doc, *result_table_rows("summarisation"))
 doc.add_paragraph(
     "All techniques scored well below the fine-tuned PEGASUS baseline (approximately 0.40 "
     "ROUGE-L), consistent with expectations for zero/few-shot prompting versus fine-tuned "
-    "models. Scores clustered closely across techniques, suggesting prompting strategy has "
-    "limited impact on abstractive summarisation quality relative to the underlying "
-    "model's capability."
+    "models. All seven techniques fell within 0.010 ROUGE-L of each other (0.1709 to "
+    "0.1801), suggesting that prompting strategy has limited impact on summarisation "
+    "scores relative to the underlying model's capability. Few-shot CoT ranked first on "
+    "ROUGE-L, 0.0001 ahead of structured output, while zero-shot had the highest BERTScore; "
+    "reformulation was lowest on both metrics. These metrics also do not detect factual "
+    "errors in the summaries (see Limitations)."
 )
 
 doc.add_heading("4.4 Question Answering (Exact Match / Token F1)", level=2)
-add_table(
-    doc,
-    ["Technique", "Exact Match", "95% CI", "Token F1", "Flagged"],
-    [
-        ["Reformulation", "0.59", "0.50–0.68", "0.6453", "0"],
-        ["Few-shot", "0.55", "0.46–0.64", "0.6296", "0"],
-        ["Role", "0.55", "0.46–0.64", "0.6131", "0"],
-        ["Structured output", "0.55", "0.46–0.64", "0.5999", "2"],
-        ["CoT", "0.53", "0.43–0.63", "0.5894", "1"],
-        ["Few-shot CoT", "0.52", "0.43–0.62", "0.5963", "1"],
-        ["Zero-shot", "0.51", "0.42–0.61", "0.5777", "2"],
-    ],
-)
+add_table(doc, *result_table_rows("qa"))
 doc.add_paragraph(
-    "Reformulation performed best on QA, suggesting that rephrasing the instruction with "
-    "explicit constraints helps the model produce more precise short-answer outputs. "
-    "Reasoning-based techniques (CoT, few-shot CoT) did not outperform simpler approaches "
-    "on this closed-book factual QA task."
+    "Reformulation scored highest on exact match (0.59) and token F1, four percentage points ahead of "
+    "few-shot, role and structured output (0.55 each); this lead is within sampling noise, "
+    "and the bootstrap distinguishes reformulation only from zero-shot (0.51), which "
+    "scored lowest. CoT (0.53) and few-shot CoT (0.52) scored below few-shot, role and "
+    "structured output on this closed-book factual task, and above zero-shot."
 )
 
 doc.add_heading("4.5 Paraphrase Detection (Macro F1)", level=2)
-add_table(
-    doc,
-    ["Technique", "Macro F1", "95% CI", "Flagged"],
-    [
-        ["Reformulation", "0.7472", "0.647–0.840", "0"],
-        ["Role", "0.7335", "0.631–0.826", "1"],
-        ["Self-consistency", "0.7143", "0.616–0.802", "0"],
-        ["Zero-shot", "0.7040", "0.603–0.790", "1"],
-        ["Few-shot", "0.6970", "0.596–0.785", "2"],
-        ["Few-shot CoT", "0.6923", "0.597–0.787", "0"],
-        ["Structured output", "0.6495", "0.549–0.740", "1"],
-        ["CoT", "0.6464", "0.543–0.741", "1"],
-    ],
-)
+add_table(doc, *result_table_rows("paraphrase"))
 doc.add_paragraph(
-    "Reformulation again performed best, reinforcing a pattern across tasks: explicit "
-    "rephrasing of the instruction outperforms both minimal prompting and reasoning-heavy "
-    "techniques for binary classification-style judgments, though this did not extend to "
-    "sentiment classification, the other classification task, where reformulation ranked "
-    "second-to-last."
+    "Reformulation scored highest on paraphrase detection (0.7472), followed by role "
+    "prompting (0.7335) and self-consistency (0.7270), but its lead over role prompting is "
+    "within sampling noise. Structured output (0.6495) and CoT (0.6464) scored lowest, and "
+    "these are the only two techniques the bootstrap distinguishes from reformulation. "
+    "Reformulation's result did not carry over to sentiment classification, the other "
+    "classification task, where it scored lowest."
 )
 
 doc.add_heading("4.6 Cross-Task Synthesis", level=2)
 doc.add_paragraph(
-    "Across all five tasks, a consistent pattern emerges: elaborate reasoning-oriented "
-    "techniques (chain-of-thought, self-consistency) do not reliably outperform simpler "
-    "techniques (zero-shot, few-shot, reformulation) on this model, and in several cases "
-    "underperform despite substantially higher computational cost. Self-consistency, which "
-    "requires three times the inference calls, was never the best-performing technique on "
-    "any task, and was the lowest-scoring technique on sentiment classification (0.6015, "
-    "narrowly below reformulation at 0.6047). Reformulation — simply rephrasing the instruction with explicit "
-    "constraints — was the strongest technique on three of five tasks (NER, QA, paraphrase "
-    "detection) but near the bottom on the other two (second-to-last on sentiment "
-    "classification and last on summarisation ROUGE-L), so its advantage is task-dependent."
+    "No technique reliably dominated across the five tasks, and most differences are within "
+    "sampling noise. The top-scoring technique changed with the task: reformulation on "
+    "named entity recognition, question answering and paraphrase detection, and few-shot "
+    "CoT on sentiment classification and summarisation (ROUGE-L). Each of these two "
+    "techniques also scored lowest somewhere: reformulation on sentiment classification "
+    "and on both summarisation metrics, and few-shot CoT on named entity recognition. "
+    "Zero-shot CoT never scored highest, and ranked last on paraphrase detection. "
+    "Self-consistency, which requires three model calls per example, never scored highest: "
+    "it ranked seventh of eight on sentiment classification, tied with zero-shot in the "
+    "middle of the named entity recognition table, and third of eight on paraphrase "
+    "detection. Simple prompting was competitive throughout: few-shot prompting ranked "
+    "second on sentiment classification, named entity recognition and question answering "
+    "(tied on question answering), and zero-shot had the highest summarisation BERTScore."
 )
 doc.add_paragraph(
     "These rankings carry substantial uncertainty. A paired bootstrap (1,000 resamples of "
     "the 100 examples per task, with every technique scored on the same resampled "
-    "examples) found that only 8 of the 33 comparisons between each task's best technique "
-    "and the others were statistically distinguishable at the 95% level: few-shot CoT over "
-    "reformulation and self-consistency on sentiment classification; reformulation over "
-    "structured output and CoT on paraphrase detection, over few-shot CoT on named entity "
-    "recognition, and over zero-shot on question answering; and few-shot CoT over CoT on "
-    "summarisation, by a margin of 0.0001 at the lower bound. Reformulation's lead over the "
-    "second-ranked technique was not statistically distinguishable on any of the three "
-    "tasks it led. No correction for multiple comparisons was applied, so even these eight "
-    "differences should be read cautiously. Full intervals are in "
-    "outputs/tables/bootstrap_ci.csv."
+    "examples) compared each task's top-scoring technique with each of the others, 33 "
+    "comparisons in all. Only 7 were distinguishable at the 95% level: few-shot CoT over "
+    "self-consistency and over reformulation on sentiment classification; reformulation "
+    "over few-shot CoT on named entity recognition; few-shot CoT over CoT on summarisation, "
+    "with a lower bound of 0.0001; reformulation over zero-shot on question answering; and "
+    "reformulation over structured output and over CoT on paraphrase detection. On no task "
+    "was the top-scoring technique distinguishable from the runner-up; in particular, "
+    "reformulation's lead was not distinguishable on any of the three tasks it led. No "
+    "correction for multiple comparisons was applied, so even these seven differences "
+    "should be read cautiously. Full intervals are provided with the project materials."
 )
 doc.add_paragraph(
-    "This suggests that for tasks with well-defined, unambiguous objectives, prompt "
-    "clarity and instruction precision may matter more than reasoning depth or "
-    "demonstration count — a finding that has practical implications for practitioners "
-    "choosing prompting strategies under compute or latency constraints."
+    "Read together, the results are consistent with the possibility that, for tasks with "
+    "well-defined objectives, a clearly specified instruction matters as much as reasoning "
+    "depth or demonstration count. They do not establish this, because the leading "
+    "technique's advantage is never distinguishable from the runner-up and it reverses on "
+    "other tasks."
 )
 
 # ================= DISCUSSION =================
@@ -474,59 +566,60 @@ doc.add_heading("5. Discussion", level=1)
 doc.add_paragraph(
     "Reasoning-oriented techniques did not consistently outperform simpler alternatives. "
     "Zero-shot CoT never ranked first on any task, and few-shot CoT ranked first on "
-    "sentiment and summarisation (ROUGE-L) but last on NER. This mixed pattern invites "
-    "explanation. One "
-    "plausible interpretation is that chain-of-thought and self-consistency were designed "
-    "and validated primarily on tasks requiring multi-step deductive or arithmetic "
-    "reasoning — domains in which an intermediate reasoning trace can meaningfully "
-    "constrain and improve the final answer. The five tasks evaluated here, by contrast, "
-    "are largely tasks with a single well-defined correct answer that does not require "
-    "multi-step derivation: classifying the sentiment of a sentence, extracting named "
-    "entities, or identifying a paraphrase pair does not obviously benefit from an "
-    "intermediate reasoning trace in the way that a multi-step arithmetic problem does. "
-    "Wei et al. (2022) and Kojima et al. (2022) both validated their respective techniques "
-    "exclusively on reasoning benchmarks; the results here do not contradict their "
-    "findings so much as they clarify the boundary of where those findings apply — "
-    "chain-of-thought's benefit appears to be conditional on task structure rather than "
-    "universal."
+    "sentiment classification and summarisation (ROUGE-L) but last on named entity "
+    "recognition. This mixed pattern invites explanation. One plausible interpretation is "
+    "that chain-of-thought and self-consistency were designed and validated primarily on "
+    "tasks requiring multi-step deductive or arithmetic reasoning, where an intermediate "
+    "reasoning trace can meaningfully constrain and improve the final answer. The five "
+    "tasks evaluated here are largely tasks with a single well-defined answer that does not "
+    "require multi-step derivation: classifying the sentiment of a sentence, extracting "
+    "named entities, or identifying a paraphrase pair does not obviously benefit from an "
+    "intermediate reasoning trace in the way that a multi-step arithmetic problem does. A "
+    "second, model-specific factor is that gpt-oss-20b already reasons internally before "
+    "every answer, which likely narrows the room for an explicit reasoning instruction to "
+    "help (see Limitations). Wei et al. (2022) and Kojima et al. (2022) validated their "
+    "techniques on reasoning benchmarks; the results here do not contradict their findings "
+    "so much as suggest that chain-of-thought's benefit depends on the task and the model."
 )
 doc.add_paragraph(
-    "The performance of reformulation is a more direct point of interest. Reformulation "
-    "was the strongest technique on three of five tasks (named entity recognition, question "
-    "answering, and paraphrase detection) but near the bottom on the other two "
-    "(second-to-last on sentiment classification and last on summarisation ROUGE-L), so its "
-    "advantage is task-dependent. Where "
-    "it led, it required no demonstrations, no additional sampling, and no reasoning trace "
-    "— only a rephrased instruction with explicit output constraints. A plausible "
-    "explanation is that many of "
-    "the failures observed with other techniques were less about the model's underlying "
-    "task capability and more about output ambiguity: an explicit, tightly constrained "
-    "instruction may reduce the model's uncertainty about what form its answer should "
-    "take, independent of whether the model reasons about the task at all. This is "
-    "consistent with the observation that reformulation's advantage was strongest on QA "
-    "and paraphrase detection — tasks where the correct output format (a short factual "
-    "answer; a binary label) is easy to specify precisely, but where free-form model "
-    "responses can otherwise drift into hedged, verbose, or ambiguously formatted answers."
+    "Reformulation is the most uneven technique in this study. It scored highest on named "
+    "entity recognition, question answering and paraphrase detection, but lowest on "
+    "sentiment classification and on both summarisation metrics, and none of its leads is "
+    "distinguishable from the runner-up. Where it led, it required no demonstrations, no "
+    "additional sampling, and no reasoning trace, only a rephrased instruction with "
+    "explicit output constraints. One possible explanation is that some failures of other "
+    "techniques stem from output ambiguity rather than from the model's task capability: "
+    "an explicit, tightly constrained instruction may reduce uncertainty about what form "
+    "the answer should take. Its largest margin was on question answering, where the "
+    "expected output (a short factual answer) is easy to specify precisely. Its weak "
+    "results on sentiment classification and summarisation show that the same kind of "
+    "rewording can also hurt, so this explanation remains a hypothesis rather than a "
+    "finding."
 )
 doc.add_paragraph(
-    "This finding also complicates a straightforward reading of Wang et al. (2023): "
-    "self-consistency, despite requiring three times the inference cost of a single-sample "
-    "technique, was never the best-performing technique on any of the five tasks evaluated "
-    "here, and was the lowest-scoring technique on sentiment classification. Because self-"
-    "consistency was validated by its original authors on mathematical reasoning tasks "
-    "where multiple independent reasoning paths can meaningfully disagree and be resolved "
-    "by majority vote, its lack of benefit here is consistent with the same task-structure "
-    "explanation offered above — majority voting over three samples offers limited value "
-    "when the underlying source of error is not reasoning inconsistency but instruction "
-    "ambiguity or output formatting variance."
+    "These results also complicate a straightforward reading of Wang et al. (2023). "
+    "Self-consistency, despite requiring three model calls per example, never scored "
+    "highest: it ranked seventh of eight on sentiment classification, tied with zero-shot "
+    "on named entity recognition, and third on paraphrase detection. Two explanations are "
+    "possible, and this study cannot separate them. The first is task structure: majority "
+    "voting over three samples offers limited value when errors come from instruction "
+    "ambiguity or output formatting rather than from inconsistent reasoning, and the three "
+    "samples agreed on most examples (82 of 100 on sentiment classification, 70 on named "
+    "entity recognition, 86 on paraphrase detection). The second is temperature: "
+    "self-consistency samples at temperature 0.7, while every other technique runs at "
+    "0.0, so each individual sample is noisier than a single greedy answer, and voting "
+    "over only three samples may not recover that loss. Wang et al. used up to 40 "
+    "samples, so this three-sample configuration may understate the technique's benefit."
 )
 doc.add_paragraph(
-    "Taken together, these results suggest a practical heuristic: for tasks with a "
-    "well-defined, unambiguous objective, practitioners may achieve better results, at "
-    "lower inference cost, by investing effort in instruction clarity rather than adopting "
-    "the most sophisticated or most expensive available technique. This heuristic is "
-    "offered cautiously, as a pattern observed under a single model, single seed, and five "
-    "tasks, rather than a general theoretical claim."
+    "Taken together, these results support cautious, task-specific advice rather than a "
+    "single recommendation. Under a fixed model, the choice of technique changed the score "
+    "on each task, but by margins that 100 examples per task mostly cannot resolve, and the "
+    "technique that led on one task was often among the weakest on another. Practitioners "
+    "should therefore test a small set of inexpensive candidates, such as zero-shot, "
+    "few-shot and a reformulated instruction, on their own task before paying for more "
+    "expensive techniques. This advice is offered as a pattern observed under a single "
+    "model, a single seed and five tasks, not as a general claim."
 )
 
 # ================= LIMITATIONS =================
@@ -546,53 +639,12 @@ doc.add_paragraph(
     "processed, but prompt templates and experiments for these tasks were not completed in "
     "time for this release. Urdu evaluation is documented as future work."
 )
-doc.add_paragraph(
-    "Seven of the thirteen question-answering and summarisation results (zero-shot, "
-    "few-shot, role and structured output on QA; zero-shot, few-shot and structured output "
-    "on summarisation) were generated prior to the tuning of a reasoning-efficiency inference setting, finalised on "
-    "2026-07-28. One of these seven results was independently re-verified from raw model "
-    "output and confirmed accurate; the remaining six were not individually re-checked, "
-    "though no quality issues were observed in this group during review. This is disclosed "
-    "here rather than silently corrected, in keeping with this study's broader commitment "
-    "to auditable, traceable results."
-)
-doc.add_paragraph(
-    "The BERTScore metric used for summarisation evaluation uses a bert-base-uncased "
-    "backbone; absolute BERTScore values should be treated as indicative rather than "
-    "calibrated against stronger, more recent backbone models."
-)
-doc.add_paragraph(
-    "Model and inference caveats. openai/gpt-oss-20b is a reasoning model that produces "
-    "hidden internal reasoning before its visible answer. These reasoning tokens count "
-    "against the generation limit. As a result, every technique, including zero-shot, "
-    "involves some internal reasoning, which likely narrows the measurable benefit of "
-    "explicit chain-of-thought prompting. It is also the most likely cause of the "
-    "truncated, empty responses that make up 21 of the 30 remaining parse failures. To "
-    "limit truncation, question answering and summarisation were run with the provider's "
-    "reasoning_effort parameter set to \"low\", while the other three tasks used the "
-    "provider default. Seven of the thirteen QA and summarisation results were generated "
-    "before this setting was introduced, so comparisons within those two tasks span two "
-    "inference configurations. Examples that failed to parse were individually "
-    "re-queried: 70 re-queries were logged during data collection, of which 47 produced a "
-    "valid answer, and all remaining failures are scored as incorrect. Re-queries were not "
-    "applied uniformly across techniques, so flagged counts should not be compared "
-    "directly between techniques. Self-consistency results were regenerated in full "
-    "after an audit found that all three samples for each example had been sent with the "
-    "same random seed, which made them near-identical; each sample now uses its own seed "
-    "(42, 43 and 44), and API or network errors during this rerun were retried rather "
-    "than scored as failures. One example that had already produced a "
-    "valid answer and was re-queried in error has been restored to its original "
-    "prediction. Three failures caused by network errors rather than model output are "
-    "also scored as incorrect. BERTScore values are rescaled against the bert-base-uncased "
-    "baseline (rescale_with_baseline=True), which is why they fall around 0.30 rather than "
-    "the roughly 0.85 typical of unrescaled scores."
-)
-doc.add_paragraph(
-    "Paraphrase detection is reported using macro F1, consistent with this study's "
-    "evaluation convention across all classification tasks, rather than GLUE's official "
-    "binary-F1 convention. As a result, paraphrase scores reported here are not directly "
-    "comparable to the public MRPC leaderboard without conversion."
-)
+doc.add_paragraph(LIMITATIONS["model"])
+doc.add_paragraph(LIMITATIONS["inference"])
+doc.add_paragraph(LIMITATIONS["corrections"])
+doc.add_paragraph(LIMITATIONS["self_consistency"])
+doc.add_paragraph(LIMITATIONS["metrics"])
+doc.add_paragraph(LIMITATIONS["hallucination"])
 doc.add_paragraph(
     "Finally, the sentiment and paraphrase datasets exhibit class imbalance relative to a "
     "uniform label distribution (sentiment: Positive/Neutral/Negative = 18/48/34; "
@@ -603,35 +655,33 @@ doc.add_paragraph(
 # ================= CONCLUSION =================
 doc.add_heading("7. Conclusion", level=1)
 doc.add_paragraph(
-    "This study evaluated eight prompting techniques across five NLP tasks under the same "
-    "model and evaluation conditions, addressing a gap in the literature around systematic "
-    "cross-task comparison of prompting strategies. The central finding is that "
-    "reasoning-oriented techniques — chain-of-thought and self-consistency — do not "
-    "reliably outperform simpler techniques, and in several cases underperform despite "
-    "meaningfully higher inference cost; self-consistency, which requires three times the "
-    "inference calls of a single-sample technique, was never the best-performing technique "
-    "on any of the five tasks evaluated. Reformulation, one of the simplest and cheapest "
-    "techniques evaluated, was the strongest technique on three of five tasks (named entity "
-    "recognition, question answering, and paraphrase detection) but near the bottom "
-    "on the other two (second-to-last on sentiment classification and last on "
-    "summarisation ROUGE-L), so its advantage is "
-    "task-dependent, suggesting that instruction clarity may matter more than reasoning depth or "
-    "demonstration count for tasks with well-defined objectives."
+    "This study evaluated eight prompting techniques across five English NLP tasks with one "
+    "model, addressing a gap in the literature around systematic cross-task comparison of "
+    "prompting strategies. The central finding is that no technique reliably dominated and "
+    "that most differences between techniques are within sampling noise at 100 examples "
+    "per task. Reasoning-oriented techniques did not reliably outperform simpler ones: "
+    "zero-shot chain-of-thought never scored highest, few-shot chain-of-thought scored "
+    "highest on two tasks but lowest on a third, and self-consistency, at three model calls "
+    "per example, never scored highest. Reformulation, one of the simplest techniques, "
+    "scored highest on three tasks (named entity recognition, question answering and "
+    "paraphrase detection) but lowest on the other two (sentiment classification and "
+    "summarisation), and none of its leads is statistically distinguishable from the "
+    "runner-up."
 )
 doc.add_paragraph(
-    "Future work should extend this comparison along two directions: completing the "
+    "Future work should extend this comparison in two directions: completing the "
     "cross-lingual arm of this study, for which Urdu datasets have already been processed "
     "but prompt templates and experiments remain outstanding, and strengthening the "
-    "statistical evidence — larger evaluation sets, multi-seed replication, and additional "
-    "models — since the bootstrap intervals reported here cannot separate most techniques "
-    "at 100 examples per task."
+    "statistical evidence, through larger evaluation sets, multi-seed replication and "
+    "additional models, since the bootstrap intervals reported here cannot separate most "
+    "techniques at 100 examples per task."
 )
 doc.add_paragraph(
-    "For practitioners choosing a prompting strategy under real-world cost or latency "
-    "constraints, these results offer a concrete, if provisional, recommendation: a "
-    "carefully reformulated instruction is worth including among the candidates tested; it "
-    "was the best technique on three tasks but near the bottom on the other two, so it should be validated "
-    "per task rather than adopted by default."
+    "For practitioners choosing a prompting strategy under cost or latency constraints, "
+    "the practical lesson is to validate on the task at hand rather than adopt any "
+    "technique by default. Inexpensive options (zero-shot, few-shot and a carefully "
+    "reformulated instruction) were competitive with the more elaborate techniques here, "
+    "but which of them did best depended on the task."
 )
 
 # ================= REFERENCES =================

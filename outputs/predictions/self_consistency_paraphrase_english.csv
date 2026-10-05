@@ -767,3 +767,35 @@ id,text,reference,prediction,status,failure_reason,raw_response,input_tokens,out
 
 <<<sample 3, seed 44>>>
 <answer>Not Paraphrase</answer>",172.0,259.0
+96,"Added Mr. Prodi : "" Maybe , but the old age helps us to understand our strengths and our weakness . ",Not Paraphrase,Not Paraphrase,ok,,"<<<sample 1, seed 42>>>
+<answer>Not Paraphrase</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Not Paraphrase</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Not Paraphrase</answer>",175.0,158.0
+97,The banks neither admit nor deny the SEC charges under the settlements .,Paraphrase,Paraphrase,ok,,"<<<sample 1, seed 42>>>
+<answer>Paraphrase</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Paraphrase</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Paraphrase</answer>",155.0,352.3333333333333
+98,A bill that would have fully legalized marijuana for medical purposes in Connecticut was narrowly de,Paraphrase,Paraphrase,ok,,"<<<sample 1, seed 42>>>
+<answer>Paraphrase</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Paraphrase</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Paraphrase</answer>",176.0,224.66666666666666
+99,The union had not yet revealed which chain would be targeted .,Paraphrase,Not Paraphrase,ok,,"<<<sample 1, seed 42>>>
+<answer>Not Paraphrase</answer>
+
+<<<sample 2, seed 43>>>
+<answer>Not Paraphrase</answer>
+
+<<<sample 3, seed 44>>>
+<answer>Paraphrase</answer>",153.0,250.33333333333334

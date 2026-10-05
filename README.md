@@ -12,7 +12,7 @@ Sentiment classification (TweetEval), Named Entity Recognition (MultiNERD), Abst
 Complete: 38 of the 40 nominal technique–task combinations (5 tasks × 8 techniques). Self-consistency is excluded from QA and summarisation, where majority voting over free-text generation is undefined, so all 38 applicable combinations were run. Results in `outputs/results/results_master.csv`, raw predictions in `outputs/predictions/`.
 
 ## Key findings
-See `results_summary.md` for per-task results, bootstrap confidence intervals, and the cross-task synthesis. Methodology is in `methodology.md`; published baselines, dataset notes, and the full list of limitations are in `baselines.md`.
+No technique reliably dominated: the top-scoring technique changed from task to task, and most differences between techniques are within sampling noise at 100 examples per task. See `results_summary.md` for per-task results, bootstrap confidence intervals, and the cross-task synthesis. Methodology is in `methodology.md`; published baselines, dataset notes, and the full list of limitations are in `baselines.md`.
 
 ## Reproducibility
 Model: openai/gpt-oss-20b (Groq, temperature=0.0 except self-consistency at 0.7). Random seed: 42, fixed across all experiments (self-consistency's three samples use seeds 42, 43 and 44). Dataset sources, versions, and known limitations documented in `baselines.md`.

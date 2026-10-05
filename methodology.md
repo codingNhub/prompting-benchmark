@@ -44,7 +44,7 @@ All datasets sampled to 100 examples with fixed seed 42 for reproducibility. Ful
 
 All model outputs were extracted via a structured `<answer>` tag contract embedded in every prompt template, rather than free-text pattern matching, to ensure consistent and auditable parsing across all 8 techniques. Parse failures (missing tag, empty response, content-filter refusal) were counted as incorrect predictions in all metrics, not excluded — failure rates are reported alongside every score.
 
-The pipeline underwent iterative internal audit across development, identifying and correcting several measurement issues before final results were generated, including: a metric-computation bug that created a phantom label class when scoring parse failures, insufficient generation token budgets causing truncated responses on complex inputs, a few-shot demonstration selection bug that could expose a test example to its own gold label, and inconsistent brevity instructions across QA prompt templates. All fixes and their verification are documented in the project's audit history.
+The pipeline underwent iterative internal audit across development. Measurement validity was verified iteratively during data collection; corrections made after some results existed are disclosed in Limitations (see `baselines.md`). Issues identified and corrected include: a metric-computation bug that created a phantom label class when scoring parse failures, insufficient generation token budgets causing truncated responses on complex inputs, a few-shot demonstration selection bug that could expose a test example to its own gold label, inconsistent brevity instructions across QA prompt templates, and self-consistency samples that all shared one random seed.
 
 ## Reproducibility
 
@@ -52,7 +52,7 @@ Every result is traceable to model name, prompt template version, normaliser ver
 
 ## Limitations
 
-See `baselines.md` for the complete list, including: single-model/single-seed evaluation (bootstrap intervals cover example-sampling uncertainty only), the reasoning-model and `reasoning_effort` caveats, scope limited to English-language tasks in this release, and dataset-specific caveats (class imbalance in sentiment and paraphrase, BERTScore backbone choice).
+The complete Limitations list, with all counts, is in `baselines.md` and is identical in substance to Section 6 of the paper. In brief: single model and single seed (bootstrap intervals cover example-sampling uncertainty only, with no multiple-comparison correction); a reasoning model whose hidden reasoning tokens count against the output limit; the reasoning-effort setting used for QA and summarisation only, introduced after 7 of those 13 results existed; re-queries of failed examples applied unevenly across techniques; example 48 (CoT, sentiment) restored after an erroneous re-query; self-consistency regenerated with seeds 42, 43 and 44 after its samples were found to share one seed; three failures caused by network errors; rescaled BERTScore; macro-F1 conventions that differ from the TweetEval and GLUE leaderboards; summarisation metrics that do not detect factual errors; and English-only scope.
 
 ## Results
 
