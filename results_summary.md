@@ -9,11 +9,11 @@
 | Few-shot CoT | 0.7159 | 0 |
 | Few-shot | 0.6924 | 0 |
 | Role | 0.6673 | 0 |
-| CoT | 0.6664 | 0 |
 | Zero-shot | 0.6663 | 0 |
 | Structured output | 0.6583 | 0 |
-| Self-consistency | 0.6087 | 0 |
+| CoT | 0.6577 | 0 |
 | Reformulation | 0.6047 | 0 |
+| Self-consistency | 0.6015 | 0 |
 
 **Finding:** Combining demonstrations with reasoning (few-shot CoT) produced the strongest result. CoT alone did not outperform zero-shot, suggesting explicit reasoning adds limited value for sentiment classification without accompanying examples. Self-consistency, despite requiring 3x the inference cost, underperformed simple zero-shot prompting.
 
@@ -23,9 +23,9 @@
 |-----------|-----------|---------|
 | Reformulation | 0.7692 | 4 |
 | Few-shot | 0.7573 | 0 |
+| Self-consistency | 0.7539 | 0 |
 | CoT | 0.7524 | 1 |
 | Structured output | 0.7516 | 2 |
-| Self-consistency | 0.7500 | 0 |
 | Zero-shot | 0.7500 | 2 |
 | Role | 0.7483 | 3 |
 | Few-shot CoT | 0.6957 | 0 |
@@ -66,21 +66,23 @@
 |-----------|----------|---------|
 | Reformulation | 0.7472 | 0 |
 | Role | 0.7335 | 1 |
-| Self-consistency | 0.7052 | 0 |
+| Self-consistency | 0.7143 | 0 |
 | Zero-shot | 0.7040 | 1 |
 | Few-shot | 0.6970 | 2 |
 | Few-shot CoT | 0.6923 | 0 |
 | Structured output | 0.6495 | 1 |
 | CoT | 0.6464 | 1 |
 
-**Finding:** Reformulation again performed best, reinforcing a pattern across tasks: explicit rephrasing of the instruction outperforms both minimal prompting and reasoning-heavy techniques for binary classification-style judgments.
+**Finding:** Reformulation again performed best, reinforcing a pattern across tasks: explicit rephrasing of the instruction outperforms both minimal prompting and reasoning-heavy techniques for binary classification-style judgments, though this did not extend to sentiment classification, the other classification task, where reformulation ranked second-to-last.
 
 ## Cross-Task Synthesis
 
-Across all five tasks, a consistent pattern emerges: **elaborate reasoning-oriented techniques (chain-of-thought, self-consistency) do not reliably outperform simpler techniques (zero-shot, few-shot, reformulation)** on this model, and in several cases underperform despite substantially higher computational cost. Self-consistency, which requires 3x the inference calls, was never the best-performing technique on any task and was the worst performer on sentiment classification. Reformulation — simply rephrasing the instruction with explicit constraints — was the strongest or near-strongest technique on 3 of 5 tasks (NER, QA, paraphrase), despite being one of the simplest and cheapest techniques evaluated.
+Across all five tasks, a consistent pattern emerges: **elaborate reasoning-oriented techniques (chain-of-thought, self-consistency) do not reliably outperform simpler techniques (zero-shot, few-shot, reformulation)** on this model, and in several cases underperform despite substantially higher computational cost. Self-consistency, which requires 3x the inference calls, was never the best-performing technique on any task, and was the lowest-scoring technique on sentiment classification (0.6015, narrowly below reformulation at 0.6047). Reformulation — simply rephrasing the instruction with explicit constraints — was the strongest technique on 3 of 5 tasks (NER, QA, paraphrase detection) but near the bottom on the other two (second-to-last on sentiment classification and last on summarisation ROUGE-L), so its advantage is task-dependent.
+
+These rankings carry substantial uncertainty. A paired bootstrap (`python -m src.bootstrap`; 1,000 resamples of the 100 examples per task, every technique scored on the same resamples) found that only 8 of the 33 comparisons between each task's best technique and the others were statistically distinguishable at the 95% level: few-shot CoT over reformulation and self-consistency on sentiment; reformulation over structured output and CoT on paraphrase, over few-shot CoT on NER, and over zero-shot on QA; and few-shot CoT over CoT on summarisation (by 0.0001 at the lower bound). Reformulation's lead over the second-ranked technique was not statistically distinguishable on any of the three tasks it led. No multiple-comparison correction was applied. Full intervals: `outputs/tables/bootstrap_ci.csv`.
 
 This suggests that for tasks with well-defined, unambiguous objectives, prompt clarity and instruction precision may matter more than reasoning depth or demonstration count — a finding that has practical implications for practitioners choosing prompting strategies under compute or latency constraints.
 
 ## Known Limitations
 
-See `baselines.md` and `methodology.md` for the complete list of limitations, including single-model/single-seed evaluation, absence of statistical significance testing, and the current English-only scope of this release.
+See `baselines.md` and `methodology.md` for the complete list of limitations, including single-model/single-seed evaluation, bootstrap intervals that capture example-sampling uncertainty only (no run-to-run or cross-model variance, no multiple-comparison correction), and the current English-only scope of this release.

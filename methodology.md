@@ -6,7 +6,7 @@ Does the effectiveness of prompting techniques for large language models vary sy
 
 ## Model
 
-openai/gpt-oss-20b, accessed via Groq's inference API. Temperature 0.0 for all techniques except self-consistency (0.7, per Wang et al. 2022). Random seed fixed at 42 across all experiments.
+openai/gpt-oss-20b, accessed via Groq's inference API. Temperature 0.0 for all techniques except self-consistency (0.7, per Wang et al. 2023). Random seed fixed at 42 across all experiments, except that self-consistency's three samples use seeds 42, 43 and 44 so they are drawn independently.
 
 ## Techniques Evaluated
 
@@ -15,7 +15,7 @@ openai/gpt-oss-20b, accessed via Groq's inference API. Temperature 0.0 for all t
 3. **Chain-of-Thought (CoT)** — "let's think step by step" reasoning prompt (Kojima et al. 2022)
 4. **Role prompting** — model assigned a domain-expert persona
 5. **Reformulation** — task instruction rephrased with explicit constraints
-6. **Self-consistency** — 3 samples at temperature 0.7, majority vote (Wang et al. 2022). Excluded for QA and summarisation, where majority voting over free-text generation is undefined.
+6. **Self-consistency** — 3 samples at temperature 0.7, each with its own seed (42, 43, 44), majority vote (Wang et al. 2023). Excluded for QA and summarisation, where majority voting over free-text generation is undefined.
 7. **Structured output** — model required to produce output in a fixed schema
 8. **Few-shot CoT** — combines demonstrations with step-by-step reasoning
 
@@ -33,10 +33,11 @@ All datasets sampled to 100 examples with fixed seed 42 for reproducibility. Ful
 
 ## Evaluation Metrics
 
-- Sentiment: macro F1 (TweetEval convention)
+- Sentiment: macro F1 (note: TweetEval's official sentiment metric is macro-averaged recall, so these scores are not directly comparable to the TweetEval leaderboard)
 - NER: entity-level F1, exact span and type match (CoNLL convention)
 - Summarisation: ROUGE-L and BERTScore (bert-base-uncased backbone)
 - QA: exact match and token-level F1 (SQuAD convention, with article and punctuation normalisation)
+- Uncertainty: paired percentile bootstrap, 1,000 resamples, 95% intervals (`src/bootstrap.py`, output in `outputs/tables/bootstrap_ci.csv`)
 - Paraphrase: macro F1 (note: differs from GLUE's official binary-F1 convention; not directly comparable to the public leaderboard)
 
 ## Pipeline Integrity
@@ -51,7 +52,7 @@ Every result is traceable to model name, prompt template version, normaliser ver
 
 ## Limitations
 
-See `baselines.md` for the complete list, including: single-model/single-seed evaluation (no confidence intervals), scope limited to English-language tasks in this release, and dataset-specific caveats (class imbalance in sentiment and paraphrase, BERTScore backbone choice).
+See `baselines.md` for the complete list, including: single-model/single-seed evaluation (bootstrap intervals cover example-sampling uncertainty only), the reasoning-model and `reasoning_effort` caveats, scope limited to English-language tasks in this release, and dataset-specific caveats (class imbalance in sentiment and paraphrase, BERTScore backbone choice).
 
 ## Results
 

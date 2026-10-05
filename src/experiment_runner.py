@@ -20,6 +20,115 @@ logger = get_logger("experiment_runner")
 PARSE_FAILURE_LABEL = "[PARSE_FAILURE]"
 
 
+def predict_example(technique: str, task: str, example: dict, pool: list,
+                    config: dict, template: dict, seed: int) -> dict:
+    """Runs one example through the model and returns its prediction.
+
+    Shared by run_experiment and scripts/rerun_example.py so that a rerun
+    always uses exactly the same procedure as the original run.
+    """
+    valid_labels = template["tasks"][task].get("expected_labels", [])
+    result = {}
+    response = None
+    prediction = None
+
+    safe_pool = [e for e in pool if e["id"] != example["id"]]
+    prompt = build_prompt(technique, task, example,
+                          few_shot_pool=safe_pool,
+                          example_id=example["id"], seed=seed)
+
+    if technique == "self_consistency":
+        n_samples = template["tasks"][task].get("n_samples", 3)
+        sc_config = dict(config)
+        sc_config["inference"] = dict(config.get("inference", {}))
+        sc_config["inference"]["temperature_default"] = config.get(
+            "inference", {}).get("temperature_self_consistency", 0.7)
+
+        ner_task = task in ("ner", "urdu_ner")
+        votes = []
+        entity_samples = []
+        input_tokens_total = 0
+        output_tokens_total = 0
+        sample_texts = []
+
+        for i in range(n_samples):
+            # The provider's seed makes sampling near-deterministic, so each
+            # sample needs its own seed or the "independent" samples repeat.
+            sample_config = dict(sc_config)
+            sample_config["experiment"] = dict(config.get("experiment", {}))
+            sample_config["experiment"]["random_seed"] = seed + i
+            response = call_model(prompt, sample_config)
+            sample_texts.append(f"<<<sample {i + 1}, seed {seed + i}>>>\n{response['raw_text'] or ''}")
+            input_tokens_total += response["input_tokens"]
+            output_tokens_total += response["output_tokens"]
+            if ner_task:
+                tag_result = normalise(response["raw_text"])
+                result = tag_result
+                if tag_result["status"] == "ok":
+                    entity_samples.append(set(parse_ner_entities(tag_result["label"])))
+            else:
+                result = normalise(response["raw_text"], valid_labels)
+                if result["status"] == "ok":
+                    votes.append(result["label"])
+
+        input_tokens = input_tokens_total / n_samples
+        output_tokens = output_tokens_total / n_samples
+        raw_response = "\n\n".join(sample_texts)
+        majority = n_samples // 2 + 1
+
+        if ner_task:
+            entity_votes = Counter(e for sample in entity_samples for e in sample)
+            prediction = [e for e, c in entity_votes.items() if c >= majority]
+            # An empty vote is a valid "no entities" answer; only a vote with
+            # too few parseable samples counts as a failure.
+            status = "ok" if len(entity_samples) >= majority else "failed"
+        elif votes:
+            prediction = max(sorted(set(votes)), key=votes.count)
+            status = "ok"
+        else:
+            prediction = PARSE_FAILURE_LABEL
+            status = "failed"
+
+    else:
+        if task in ("summarisation", "qa"):
+            gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
+            gen_config = dict(config)
+            gen_config["inference"] = dict(config.get("inference", {}))
+            gen_config["inference"].setdefault("reasoning_effort", "low")
+            response = call_model(prompt, gen_config, max_tokens=gen_budget)
+        else:
+            response = call_model(prompt, config)
+
+        input_tokens = response["input_tokens"]
+        output_tokens = response["output_tokens"]
+        raw_response = response["raw_text"]
+
+        if task in ("ner", "urdu_ner"):
+            result = normalise(response["raw_text"])
+            if result["status"] == "ok":
+                prediction = parse_ner_entities(result["label"])
+                status = "ok"
+            else:
+                prediction = []
+                status = "failed"
+        else:
+            result = normalise(response["raw_text"], valid_labels)
+            prediction = result["label"]
+            status = result["status"]
+
+    if prediction is None:
+        prediction = PARSE_FAILURE_LABEL
+
+    return {
+        "prediction": prediction,
+        "status": status,
+        "failure_reason": result.get("reason", "") if isinstance(result, dict) else "",
+        "raw_response": raw_response or "",
+        "input_tokens": input_tokens,
+        "output_tokens": output_tokens,
+    }
+
+
 def run_experiment(technique: str, task: str, language: str = "english",
                    config_path: str = "configs/config.yaml") -> dict:
 
@@ -83,99 +192,12 @@ def run_experiment(technique: str, task: str, language: str = "english",
             f"APPLICABLE' note in prompts/templates/self_consistency/v1.0.yaml). "
             f"Skip this combination rather than running it."
         )
-    valid_labels = template["tasks"][task].get("expected_labels", [])
-
     for example in test_examples:
         try:
-            result = {}
-            response = None
-            input_tokens = 0
-            output_tokens = 0
-            prediction = None
-            status = "failed"
-
-            safe_pool = [e for e in pool if e["id"] != example["id"]]
-            prompt = build_prompt(technique, task, example,
-                                  few_shot_pool=safe_pool,
-                                  example_id=example["id"], seed=seed)
-
-            if technique == "self_consistency":
-                n_samples = template["tasks"][task].get("n_samples", 3)
-                sc_config = dict(config)
-                sc_config["inference"] = dict(config.get("inference", {}))
-                sc_config["inference"]["temperature_default"] = config.get(
-                    "inference", {}).get("temperature_self_consistency", 0.7)
-
-                ner_task = task in ("ner", "urdu_ner")
-                votes = []
-                entity_samples = []
-                input_tokens_total = 0
-                output_tokens_total = 0
-
-                for _ in range(n_samples):
-                    response = call_model(prompt, sc_config)
-                    input_tokens_total += response["input_tokens"]
-                    output_tokens_total += response["output_tokens"]
-                    if ner_task:
-                        tag_result = normalise(response["raw_text"])
-                        result = tag_result
-                        if tag_result["status"] == "ok":
-                            entity_samples.append(set(parse_ner_entities(tag_result["label"])))
-                    else:
-                        result = normalise(response["raw_text"], valid_labels)
-                        if result["status"] == "ok":
-                            votes.append(result["label"])
-
-                input_tokens = input_tokens_total / n_samples
-                output_tokens = output_tokens_total / n_samples
-
-                if ner_task:
-                    entity_votes = Counter(e for sample in entity_samples for e in sample)
-                    majority = n_samples // 2 + 1
-                    prediction = [e for e, c in entity_votes.items() if c >= majority]
-                    status = "ok" if prediction else "failed"
-                    if status == "failed":
-                        flagged_count += 1
-                elif votes:
-                    prediction = max(sorted(set(votes)), key=votes.count)
-                    status = "ok"
-                else:
-                    prediction = PARSE_FAILURE_LABEL
-                    status = "failed"
-                    flagged_count += 1
-
-            else:
-                if task in ("summarisation", "qa"):
-                    gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
-                    gen_config = dict(config)
-                    gen_config["inference"] = dict(config.get("inference", {}))
-                    gen_config["inference"].setdefault("reasoning_effort", "low")
-                    response = call_model(prompt, gen_config, max_tokens=gen_budget)
-                else:
-                    response = call_model(prompt, config)
-
-                input_tokens = response["input_tokens"]
-                output_tokens = response["output_tokens"]
-
-                if task in ("ner", "urdu_ner"):
-                    tag_result = normalise(response["raw_text"])
-                    if tag_result["status"] == "ok":
-                        entities = parse_ner_entities(tag_result["label"])
-                        prediction = entities
-                        status = "ok"
-                    else:
-                        prediction = []
-                        status = "failed"
-                        flagged_count += 1
-                else:
-                    result = normalise(response["raw_text"], valid_labels)
-                    prediction = result["label"]
-                    status = result["status"]
-                    if status != "ok":
-                        flagged_count += 1
-
-            if prediction is None:
-                prediction = PARSE_FAILURE_LABEL
+            out = predict_example(technique, task, example, pool, config, template, seed)
+            prediction = out["prediction"]
+            if out["status"] != "ok":
+                flagged_count += 1
 
             predictions.append(prediction)
             references.append(example["label"])
@@ -185,11 +207,11 @@ def run_experiment(technique: str, task: str, language: str = "english",
                 "text": example["text"][:100],
                 "reference": example["label"],
                 "prediction": str(prediction),
-                "status": status,
-                "failure_reason": result.get("reason", "") if isinstance(result, dict) else "",
-                "raw_response": response["raw_text"] if response else "",
-                "input_tokens": input_tokens,
-                "output_tokens": output_tokens
+                "status": out["status"],
+                "failure_reason": out["failure_reason"],
+                "raw_response": out["raw_response"],
+                "input_tokens": out["input_tokens"],
+                "output_tokens": out["output_tokens"]
             }
             raw_results.append(new_row)
 

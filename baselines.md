@@ -19,7 +19,7 @@
 - Cross-lingual prompting identified as underexplored
 - This is the foundational justification for our study
 
-### Wang et al. 2022 — Self-Consistency (ICLR 2023)
+### Wang et al. 2023 — Self-Consistency (ICLR 2023)
 - Self-consistency improves CoT by +17.9% on GSM8K
 - Only tested on reasoning tasks — NOT on sentiment, NER, summarisation
 - Limitation acknowledged by authors: higher computation cost
@@ -52,6 +52,7 @@ Urdu datasets (Roman Urdu sentiment, mirfan899/urdu-ner) were downloaded and pro
 
 ## Known Limitations
 - Single model (openai/gpt-oss-20b via Groq), single random seed (42) — no cross-model or run-to-run variance data.
-- No bootstrap confidence intervals — score differences between techniques are point estimates only.
+- Paired bootstrap 95% intervals (`outputs/tables/bootstrap_ci.csv`) cover example-sampling uncertainty only; most within-task differences are not statistically distinguishable at n=100, and no multiple-comparison correction was applied.
 - Seven QA/summarisation results were generated before a reasoning-efficiency setting was tuned on 2026-07-28. One of these seven was independently re-verified from raw model output and confirmed accurate. The remaining six were not individually re-checked, but no quality issues were observed in this group during review.
+- Model and inference caveats: openai/gpt-oss-20b is a reasoning model that produces hidden internal reasoning before its visible answer. These reasoning tokens count against the generation limit. As a result, every technique, including zero-shot, involves some internal reasoning, which likely narrows the measurable benefit of explicit chain-of-thought prompting. It is also the most likely cause of the truncated, empty responses that make up 21 of the 30 remaining parse failures. To limit truncation, question answering and summarisation were run with the provider's `reasoning_effort` parameter set to "low", while the other three tasks used the provider default. Seven of the thirteen QA and summarisation results were generated before this setting was introduced, so comparisons within those two tasks span two inference configurations. Examples that failed to parse were individually re-queried: 70 re-queries were logged during data collection (`outputs/rerun_log.csv`), of which 47 produced a valid answer, and all remaining failures are scored as incorrect. Re-queries were not applied uniformly across techniques, so flagged counts should not be compared directly between techniques. Self-consistency results were regenerated in full after an audit found that all three samples for each example had been sent with the same random seed, which made them near-identical; each sample now uses its own seed (42, 43 and 44), and API or network errors during this rerun were retried rather than scored as failures. One example that had already produced a valid answer and was re-queried in error has been restored to its original prediction. Three failures caused by network errors rather than model output are also scored as incorrect. BERTScore values are rescaled against the bert-base-uncased baseline (`rescale_with_baseline=True`), which is why they fall around 0.30 rather than the roughly 0.85 typical of unrescaled scores.
 - BERTScore backbone is bert-base-uncased — treat absolute BERTScore values as indicative, not calibrated against stronger backbones.

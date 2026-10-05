@@ -10,11 +10,10 @@ from datetime import datetime
 
 from src.config_manager import load_config
 from src.dataset_loader import load_dataset
-from src.prompt_manager import build_prompt, load_template
-from src.model_wrapper import call_model
-from src.normaliser import normalise, parse_ner_entities, NORMALISER_VERSION
+from src.prompt_manager import load_template
+from src.normaliser import NORMALISER_VERSION
 from src.metric_engine import compute_metrics
-from src.experiment_runner import PARSE_FAILURE_LABEL
+from src.experiment_runner import predict_example
 from src.logger import get_logger
 
 logger = get_logger("rerun_example")
@@ -34,35 +33,9 @@ def rerun_example(technique, task, language, example_id):
         return
 
     template = load_template(technique)
-    valid_labels = template["tasks"][task].get("expected_labels", [])
-
-    safe_pool = [e for e in examples if e["id"] != example["id"]]
-    prompt = build_prompt(technique, task, example,
-                          few_shot_pool=safe_pool,
-                          example_id=example["id"], seed=seed)
-
-    if task in ("summarisation", "qa"):
-        gen_budget = config.get("inference", {}).get("max_tokens_generation", 512)
-        gen_config = dict(config)
-        gen_config["inference"] = dict(config.get("inference", {}))
-        gen_config["inference"].setdefault("reasoning_effort", "low")
-        response = call_model(prompt, gen_config, max_tokens=gen_budget)
-    else:
-        response = call_model(prompt, config)
-
-    if task in ("ner", "urdu_ner"):
-        tag_result = normalise(response["raw_text"])
-        if tag_result["status"] == "ok":
-            prediction = parse_ner_entities(tag_result["label"])
-            status = "ok"
-        else:
-            prediction = []
-            status = "failed"
-        result = tag_result
-    else:
-        result = normalise(response["raw_text"], valid_labels)
-        prediction = result["label"] or PARSE_FAILURE_LABEL
-        status = result["status"]
+    out = predict_example(technique, task, example, examples, config, template, seed)
+    prediction = out["prediction"]
+    status = out["status"]
 
     new_row = {
         "id": example["id"],
@@ -70,10 +43,10 @@ def rerun_example(technique, task, language, example_id):
         "reference": str(example["label"]),
         "prediction": str(prediction),
         "status": status,
-        "failure_reason": result.get("reason", ""),
-        "raw_response": response["raw_text"],
-        "input_tokens": response["input_tokens"],
-        "output_tokens": response["output_tokens"]
+        "failure_reason": out["failure_reason"],
+        "raw_response": out["raw_response"],
+        "input_tokens": out["input_tokens"],
+        "output_tokens": out["output_tokens"]
     }
 
     print(f"Result: status={status} prediction={str(prediction)[:80]}")

@@ -69,3 +69,13 @@ timestamp,technique,task,language,example_id,before_status,before_prediction,aft
 2026-08-07 22:22:49,cot,summarisation,english,26,failed,[PARSE_FAILURE],ok,"The article reports that UK politicians, including Prime Minister Boris Cameron and Defence Secretary Michael Fallon, have apologized for falsely accusing London Mayor Sadiq Khan’s associate Suliman Gani of supporting the Islamic State, a claim that Gani has denied and said is defamatory, prompting calls for further apologies and a review of Islamophobia within the Conservative Party."
 2026-08-07 22:25:34,cot,summarisation,english,55,failed,[PARSE_FAILURE],ok,"Daniel Radcliffe, famed for Harry Potter, has earned praise for his role as Rosencrantz in a new Old Vic production of Tom Stoppard’s comedy, with critics noting his energetic performance while the play itself receives mixed reviews."
 2026-08-07 22:29:01,cot,summarisation,english,25,failed,[PARSE_FAILURE],ok,"Scientists report that a 2015/16 heatwave caused a 40% coral die‑off at Dongsha Atoll, showing that even a 2°C global temperature rise can trigger catastrophic bleaching in shallow reefs, underscoring the need for drastic climate action."
+2026-10-01 20:56:23,self_consistency,ner,english,0,ok,[],ok,[]
+2026-10-01 20:57:48,self_consistency,ner,english,3,ok,[],ok,[]
+2026-10-01 20:59:11,self_consistency,ner,english,5,ok,"[('1990', 'OTHER'), ('Bulgarian Communist Party', 'ORGANIZATION')]",ok,"[('Bulgarian Communist Party', 'ORGANIZATION'), ('1990', 'OTHER')]"
+2026-10-01 21:00:35,self_consistency,ner,english,18,ok,[],ok,"[('autism', 'OTHER')]"
+2026-10-01 21:01:57,self_consistency,ner,english,56,ok,[],ok,[]
+2026-10-01 21:03:20,self_consistency,ner,english,65,ok,[],ok,[]
+2026-10-01 21:04:43,self_consistency,ner,english,82,ok,[],ok,[]
+2026-10-01 21:06:08,self_consistency,paraphrase,english,59,ok,Paraphrase,ok,Paraphrase
+2026-10-01 21:07:33,self_consistency,paraphrase,english,80,ok,Not Paraphrase,ok,Paraphrase
+2026-10-01 21:08:58,self_consistency,sentiment,english,98,not_found,,ok,Positive
